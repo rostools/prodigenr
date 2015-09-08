@@ -1,0 +1,16 @@
+s: 
+bibliography: /home/luke/Documents/bibliography/bib-db/myrefs.bib
+csl: /home/luke/csl/vancouver.csl
+mathjax: 
+number-sections: 
+highlight-style: tango
+toc: 
+
+t: html
+columns: 80
+
+t: latex
+latex-engine: xelatex
+V: geometry:margin=1in
+dev: pdf
+

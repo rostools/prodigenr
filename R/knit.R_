@@ -1,0 +1,46 @@
+##' This script takes all the `scripts/` files and generates html
+##' documents from them.
+library(knitr)
+rm(list=ls())
+
+##' Create doc dir if none exists
+doc.dir <- '../output/doc/'
+doc.dir.fig <- paste0(doc.dir, 'figure/')
+dir.create(doc.dir)
+dir.create(doc.dir.fig)
+
+##' Loop through all files to check if they have been knit already,
+##' and if not to knit them, otherwise to do nothing.
+for (infile in list.files(pattern = "^[0-9][0-9]-.*\\.R$")) {
+
+    ## Create a variable for the knitted file
+    outfile <- paste0('../output/doc/', sub('R$', 'html', basename(infile)))
+
+    ## Compare whether this file exists already, otherwise don't knit
+    ## it
+    if (!file.exists(outfile) |
+        file.info(infile)$mtime > file.info(outfile)$mtime) {
+
+        ## Knit the files into html and pdf
+        print(paste0('Knit file: ', infile))
+        pandoc(knit(spin(infile, FALSE), quiet = TRUE),
+               config = 'opt/knitConfig.txt')
+
+        ## Move the generated files into the output/doc dir
+        for (f in list.files(pattern = '*.(html|pdf)$')) {
+            file.rename(f, paste0('../output/doc/', f))
+        }
+        file.copy('figure/.', '../output/doc/figure/',
+                  recursive = TRUE)
+
+    } else {
+        print(paste0('File already knitted: ', outfile))
+    }
+
+    ## Clean up the script dir of any files.
+    unlink(c('*.md', '*.Rmd', 'figure/'), recursive = TRUE)
+    rm(list=ls())
+}
+
+
+

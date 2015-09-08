@@ -1,0 +1,51 @@
+
+library(devtools)
+library(rmarkdown)
+
+load_all('../')
+
+
+?use_vignette
+use_vignette
+?use_package
+
+
+rmarkdown::draft('test/testing', 'html_vignette', package = 'rmarkdown', create_dir = FALSE, edit = FALSE)
+rmarkdown::render('test/testing.Rmd', output_dir = './test')
+
+?draft
+
+
+tables
+
+
+
+draft
+
+?system.file
+
+
+## functions:
+
+prodigen <- function(project.name, project.path, git.init = TRUE) {
+
+    directory <- paste0(project.path, project.name)
+    dir.create(directory)
+
+    if (git.init) {
+        setwd(directory)
+        system('git init')
+    }
+
+
+    sapply(list.dir
+    dir.create(c('data', 'output', 'doc'))
+
+
+template_eda
+
+template_manuscript
+
+fetch_data
+
+
