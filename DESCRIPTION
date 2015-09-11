@@ -1,8 +1,20 @@
 Package: prodigenr
-Title: What the package does (one line)
-Version: 0.1
-Authors@R: "First Last <first.last@example.com> [aut, cre]"
-Description: What the package does (one paragraph)
+Title: Project directory generator
+Version: 0.1.9000
+Authors@R: "Luke W. Johnston <lwjohnst@gmail.com> [aut, cre]"
+Description: 
+             Create a project or files from templates.  This allows
+             projects to be quickly and easily created, as well as for
+             them to be standardized.
+
 Depends: R (>= 3.1.2)
-License: What license is it under?
+License: MIT
 LazyData: true
+Imports: rmarkdown,
+    yaml,
+    captioner,
+    git2r
+Suggests: pander,
+    ggplot2,
+    tidyr,
+    dplyr
