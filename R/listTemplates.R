@@ -1,6 +1,5 @@
 ##' Get a list of available templates in a package
 ##'
-##' 
 ##' @title List templates within \pkg{prodigenr}.
 ##' @param type type of template (file or directory, aka project)
 ##' @param package name of package

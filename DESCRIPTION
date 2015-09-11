@@ -6,7 +6,6 @@ Description:
              Create a project or files from templates.  This allows
              projects to be quickly and easily created, as well as for
              them to be standardized.
-
 Depends: R (>= 3.1.2)
 License: MIT
 LazyData: true
