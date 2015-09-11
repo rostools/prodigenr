@@ -8,24 +8,33 @@
 #===================================================================
 # Settings
 SHELL := /bin/sh 
-R_PKG_DIR = /home/luke/R
+PKG = prodigenr
 #-------------------------------------------------------------------
-# To not lead to mistakes, use the default make target list the
-# commands, rather than run anything.
-all : commands
-##------------------------------------------------------------------
-## commands   : Show all commands in Makefile.
-commands :
+# Show options when typing just 'make'
+all :
 	@grep -E '^##' Makefile | sed -e 's/##//g'
 ##------------------------------------------------------------------
-## install    : Update the documentation and install the R package.
-install :
-	@Rscript install.R
+## These are the possible commands that make will accept.
+##------------------------------------------------------------------
+## install     : Update the documentation and install the R package.
+install : clean doc_pkg install_pkg
 
-## doc_pdf    : Create or update the pdf documentation
+## install_pkg : Only install the package
+install_pkg :
+	@Rscript -e "devtools::install()"
+
+## doc_pkg     : Update the documentation only
+doc_pkg :
+	@Rscript -e "devtools::document()"
+
+## pdf_pkg     : Create or update the pdf documentation
 doc_pdf :
 	@R CMD Rd2pdf --no-preview --force --batch \
-		--output=doc/rstatsToolkit.pdf \
-		$(R_PKG_DIR)/rstatsToolkit
+		--output=doc/$(PKG).pdf \
+		../$(PKG)
+## clean       : Remove extra files.
+clean :
+	@find . -type f -iname '*~' -delete
 ##------------------------------------------------------------------
 
+.PHONY : doc_pkg doc_pdf install_pkg install clean
