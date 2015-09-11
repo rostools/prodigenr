@@ -1,8 +1,8 @@
 ## This contains the configuration info for the research project
 
 author:
-project:
 
-database:
-database_path:
+data_file:
+bib_file:
+csl_file:
 

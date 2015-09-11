@@ -1,0 +1,70 @@
+---
+word_document:
+    reference_docx:
+    fig_height: 6
+    fig_width: 5
+    fig_caption: true
+    pandoc_args: [
+        "--bibliography", `r getBib('../config.yaml')`,
+        "--csl", `r getCSL('../config.yaml')`
+    ]
+
+---
+
+# Title page #
+
+Title:
+
+Author:
+
+Affiliations:
+
+Author last name:
+
+Disclaimers:
+
+Correspondence:
+
+Funding support:
+
+# Abstract #
+
+# Background #
+
+# Subjects and Methods #
+
+<!--
+## Load data ##
+-->
+
+```{r libraryData, message = FALSE, echo = FALSE}
+
+runSetup() ## include path to src folder
+loadData() ## include path to data folder
+
+## Include captions below using `captioner` package
+figNums <- captioner(prefix = 'Figure')
+supFigNums <- captioner(prefix = 'Supplementary Figure')
+tabNums <- captioner(prefix = 'Table')
+supTabNums <- captioner(prefix = 'Supplementary Table')
+
+```
+
+# Results #
+
+# Discussion #
+
+## Acknowledgements ##
+
+<!--
+# Session info #
+-->
+
+```{r sessioninfo}
+
+ #sessionInfo()
+
+```
+
+# References #
+

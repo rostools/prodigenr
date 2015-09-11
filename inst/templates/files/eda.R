@@ -1,27 +1,24 @@
-##' Template for creating a focused script (delete this line)
-##'
 ##' ---
-##' title: Script title
-##' author: Luke W. Johnston
-##' date: 
-##' abstract: |
-##'
-##'   Script description
-##'
-##'   * Project: faDiabetes
-##'   * Master dataset: PROMISE_data.csv.gz
-##' 
+##' title:
+##' author: `r getAuthor('../config.yaml')`
+##' output:
+##'   html_vignette:
+##'     toc: true
+##'     number_sections: true
+##'   word_document:
+##'     toc: true
+##'     number_sections: true
+##'     
 ##' ---
 ##' 
-##' Code preamble
-##' =============
+##' Preamble
+##' ========
 ##' 
 ##' Load in the options as well as the dataset.
 ##' 
-source("opt/options.R")
-source("functions.R")
-load("../data/faDiabetes_data.RData")
-names(df)
+runSetup('./')
+loadData('../data')
+names(ds)
 
 ##'
 ##' Setting custom object variables
@@ -33,8 +30,8 @@ names(df)
 ##' 
 
 
+##'
 ##' -----
-
 ##'
 ##' Section title
 ##' =============
