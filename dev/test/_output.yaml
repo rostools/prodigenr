@@ -1,9 +1,0 @@
-html_document:
-    toc: true
-    number_sections: true
-    theme: readable
-    highlight: tango
-md_document:
-    toc: true
-    variant: markdown_github
-
