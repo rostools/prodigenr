@@ -2,7 +2,7 @@
 ##' title:
 ##' author: `r getAuthor('../config.yaml')`
 ##' output:
-##'   html_vignette:
+##'   rmarkdown::html_vignette:
 ##'     toc: true
 ##'     number_sections: true
 ##'   word_document:
