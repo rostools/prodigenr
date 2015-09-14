@@ -1,8 +1,8 @@
 ---
 title: Introduction
-author: `r getAuthor('config.file')`
+author: `r prodigenr::getAuthor('config.file')`
 output:
-    rmarkdown::html_vignette
+    md_document
 ---
 
 This README details how this research directory is structured, how
