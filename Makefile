@@ -1,10 +1,6 @@
 #===================================================================
-# This makefile is for the rstatsToolkit package.  Running this
+# This makefile is for the prodigenr package.  Running this
 # Makefile will update the documentation and install the package.
-# 
-# @author Luke Johnston
-# @date 2014-11-04
-# 
 #===================================================================
 # Settings
 SHELL := /bin/sh 
@@ -30,7 +26,7 @@ doc_pkg :
 ## pdf_pkg     : Create or update the pdf documentation
 doc_pdf :
 	@R CMD Rd2pdf --no-preview --force --batch \
-		--output=doc/$(PKG).pdf \
+		--output=inst/doc/$(PKG).pdf \
 		../$(PKG)
 ## clean       : Remove extra files.
 clean :
