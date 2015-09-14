@@ -8,19 +8,19 @@ all :
 ##-------------------------------------------------------------------
 ## These are the options available to use in Make:
 ##-------------------------------------------------------------------
-## abstract      : Run all Make targets, creating the final manuscript file.
-abstract : abstract.Rmd
+## abstract : Run all Make targets, creating the final manuscript file.
+abstract : abstract.R
 	Rscript -e 'rmarkdown::render($<)'
-## clean      : Clean up any extra or output files
-clean :
-	@find output -type f -delete
-	@find doc -type f \( \
-		-iname "*.docx" -o \
-		-iname "*.pdf" -o \
-		-iname "*.html" \) \
-		-delete
+
+## get_data : Run the fetchData.R script
+get_data :
+	(cd src/ && Rscript fetchData.R)
+
+## readme   : Only need to run if you have edited the README file.
+readme : README.Rmd
+	@Rscript -e 'rmarkdown::render("README.Rmd")'
 
 ##-------------------------------------------------------------------
 
-.PHONY : abstract clean
+.PHONY : abstract get_data readme
 
