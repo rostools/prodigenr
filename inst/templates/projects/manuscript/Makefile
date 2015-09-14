@@ -26,8 +26,8 @@ clean :
 	@find output -type f -delete
 
 ## readme : Only need to run if you have edited the README file.
-readme : README.md
-	@pandoc $< --highlight-style tango -o README.pdf
+readme : README.Rmd
+	@Rscript -e 'rmarkdown::render("README.Rmd")'
 
 ##-------------------------------------------------------------------
 
