@@ -1,6 +1,6 @@
 ##' ---
 ##' title:
-##' author: `r getAuthor('../config.yaml')`
+##' author: `r prodigenr::getAuthor('../config.yaml')`
 ##' output:
 ##'   rmarkdown::html_vignette:
 ##'     toc: true
@@ -16,7 +16,7 @@
 ##' 
 ##' Load in the options as well as the dataset.
 ##' 
-runSetup('./')
+prodigenr::runSetup('./')
 loadData('../data')
 names(ds)
 
