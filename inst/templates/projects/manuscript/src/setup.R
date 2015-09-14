@@ -5,7 +5,8 @@
 ##' Install packages if they are not installed.
 ##'
 ##' Use template: if (!require('package')) install.packages('package')
-if (!require(rstatsToolkit)) devtools::install_github("lwjohnst86/rstatsToolkit")
+if (!require(prodigenr)) devtools::install_github('lwjohnst86/prodigenr')
+if (!require(rstatsToolkit)) devtools::install_github('lwjohnst86/rstatsToolkit')
 if (!require(captioner)) install.packages('captioner')
 if (!require(rmarkdown)) install.packages('rmarkdown')
 if (!require(ggplot2)) install.packages('ggplot2')
@@ -15,6 +16,7 @@ if (!require(pander)) install.packages('pander')
 
 
 ##' Load relevant libraries
+library(prodigenr)
 library(rstatsToolkit) ## personal library
 library(captioner)
 library(rmarkdown)
