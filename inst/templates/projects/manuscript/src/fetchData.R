@@ -23,5 +23,6 @@ rm(list=setdiff(ls(), "ds"))
 ##' Save the dataset as an RData file.  Create a data directory in
 ##' case none exists.
 ## Name and location to save dataset
+dir.create(file.path('..', 'data'))
 save(ds, file = file.path('..', 'data', 'dataset.RData'))
 
