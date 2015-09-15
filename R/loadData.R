@@ -5,7 +5,9 @@
 ##' @export
 ##' @author Luke W. Johnston
 loadData <- function(path) {
-    data.files <- list.files(path, pattern = '*.RData$', ignore.case = TRUE)
+    data.files <- list.files(path, pattern = '*.RData$',
+                             ignore.case = TRUE,
+                             full.names = TRUE)
     data.exists <- length(which(file.exists(data.files)))
     if (data.exists >= 1) {
         sapply(data.files, load, .GlobalEnv)
