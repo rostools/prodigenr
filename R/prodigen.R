@@ -28,14 +28,11 @@ prodigen <- function(proj.name, proj.path = '.', proj.type = "manuscript",
               proj.path, recursive = TRUE)
     file.rename(proj.type, proj.name)
 
-    dirList <- c('data', 'output', 'doc', 'eda')
-    print(dirList)
-    sapply(dirList, function(x) {
-               dir.create(file.path(proj.name, x))
-           })
-    print(file.path('doc', 'manuscript.Rmd'))
-
     if (proj.type == 'manuscript') {
+        dirList <- c('data', 'output', 'doc', 'eda')
+        sapply(dirList, function(x) {
+                   dir.create(file.path(proj.name, x))
+               })
         fileTemplate('manuscript.Rmd',
                      output.file = file.path(proj.name, 'doc', 'manuscript.Rmd'))
         fileTemplate('eda.R',
