@@ -2,6 +2,10 @@
 
 export(createDoc)
 export(fileTemplate)
+export(getAuthor)
+export(getBib)
+export(getCSL)
+export(getData)
 export(listTemplates)
 export(loadData)
 export(prodigen)
