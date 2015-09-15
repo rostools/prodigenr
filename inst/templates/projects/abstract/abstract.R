@@ -32,7 +32,6 @@ ds
 ##' **Discussion**:
 ##' 
 ##+ figureChunk, fig.cap = `r figNums('short')`
-plotForestGEE(fitPL.pct, ylab = 'Phospholipids\n(mol%)')
 
 ##'
 ##' <!-- Session info -->
