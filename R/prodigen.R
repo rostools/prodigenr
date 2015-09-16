@@ -29,7 +29,7 @@ prodigen <- function(proj.name, proj.path = '.', proj.type = "manuscript",
     file.rename(proj.type, proj.name)
 
     if (proj.type == 'manuscript') {
-        dirList <- c('data', 'output', 'doc', 'eda')
+        dirList <- c('output', 'doc', 'eda')
         sapply(dirList, function(x) {
                    dir.create(file.path(proj.name, x))
                })
