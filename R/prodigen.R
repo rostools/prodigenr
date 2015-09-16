@@ -5,15 +5,17 @@
 ##' such as a Makefile.
 ##' @title Create a project directory based on a template
 ##' @param proj.name name of the new project directory
-##' @param proj.path location of where the new project will be created
 ##' @param proj.type type of project to create, based on the templates
 ##' found in \code{\link[prodigenr]{listTemplates}} function
+##' @param proj.path location of where the new project will be created
 ##' @param git.init Logical, whether to initialize the new project
 ##' with git
 ##' @return Creates a project directory with files and subdirectories
 ##' @export
 ##' @author Luke W. Johnston
-prodigen <- function(proj.name, proj.path = '.', proj.type = "manuscript",
+prodigen <- function(proj.name,
+                     proj.type,
+                     proj.path = '.',
                      git.init = TRUE) {
 
     if (length(nzchar(proj.type)) > 1) {

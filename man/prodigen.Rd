@@ -4,16 +4,15 @@
 \alias{prodigen}
 \title{Create a project directory based on a template}
 \usage{
-prodigen(proj.name, proj.path = ".", proj.type = "manuscript",
-  git.init = TRUE)
+prodigen(proj.name, proj.type, proj.path = ".", git.init = TRUE)
 }
 \arguments{
 \item{proj.name}{name of the new project directory}
 
-\item{proj.path}{location of where the new project will be created}
-
 \item{proj.type}{type of project to create, based on the templates
 found in \code{\link[prodigenr]{listTemplates}} function}
+
+\item{proj.path}{location of where the new project will be created}
 
 \item{git.init}{Logical, whether to initialize the new project
 with git}
