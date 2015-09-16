@@ -5,46 +5,23 @@
 # manuscript, type "make" to see all the commands to run and create
 # the final report
 # ==================================================================
-# Settings
-# Tells make to use shell for shell commands
-SHELL:=/bin/sh 
-
-# Location of project, report, scripts and functions folder
-SCRIPTS_DIR = ./scripts
-REP_DIR = ./report
-
-#-------------------------------------------------------------------
 all : 
 	@grep -E '^##' Makefile | sed -e 's/##//g'
 ##-------------------------------------------------------------------
 ## These are the options available to use in Make:
 ##-------------------------------------------------------------------
 
-## final      : Run all Make targets, creating the final manuscript file.
-final : clean analysis report
+## create_slides      : Create the pdf slides.
+create_slides : slides. pdf
 
-## analysis   : Run all statistical programs to output results.
-analysis : 
-	$(MAKE) -C $(SCRIPTS_DIR)
+slides.pdf : slides.Rmd
+	Rscript -e 'rmarkdown::render($<)'
 
-## doc     : Create the manuscript in its final format. 
-doc : 
-	$(MAKE) -C $(REP_DIR)
-
-## clean      : Clean up any extra or output files
-clean :
-	@find output -type f -delete
-	@find doc -type f \( \
-		-iname "*.docx" -o \
-		-iname "*.pdf" -o \
-		-iname "*.html" \) \
-		-delete
-
-## readme     : Only need to run if you have edited the README file.
-readme : README.md
-	@pandoc $< --highlight-style tango -o README.pdf
+## readme : Only need to run if you have edited the README file.
+readme : README.Rmd
+	@Rscript -e 'rmarkdown::render($<)'
 
 ##-------------------------------------------------------------------
 
-.PHONY : doc analysis clean readme
+.PHONY : create_slides readme
 

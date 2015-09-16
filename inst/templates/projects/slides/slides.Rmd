@@ -1,0 +1,51 @@
+---
+title: "**Title**"
+subtitle:
+date:
+author: 
+  - \textbf{`r prodigenr::getAuthor('config.yaml')`}
+fontsize: 9pt
+output:
+  beamer_presentation:
+      slide_level: 2
+      fig_caption: false
+      includes:
+        in_header: ./src/preamble.tex
+      pandoc_args: [
+        "--bibliography", "`r prodigenr::getBib('../config.yaml')`",
+        "--csl", "`r prodigenr::getCSL('../config.yaml')`"
+        ]
+
+---
+
+<!-- slide 1 -->
+## Disclosures ##
+
+## Introduction slide ##
+
+* This is a footer[^footer]
+
+. . .
+
+* You can use citations using the syntax `@AuthorYear`, based on your
+  BibKey in your `.bib` file.
+
+[^footer]: Footer text
+
+```{r loadData, echo = FALSE, message = FALSE}
+
+prodigenr::runSetup() ## include path to src folder
+loadData() ## include path to data folder
+names(ds)
+
+```
+
+```{r inlineCode, results = 'hide'}
+
+```
+
+## Acknowledgements ##
+
+## References ##
+
+\tiny
