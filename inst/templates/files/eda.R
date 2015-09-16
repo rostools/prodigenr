@@ -16,7 +16,7 @@
 ##' 
 ##' Load in the options as well as the dataset.
 ##' 
-prodigenr::runSetup('./')
+prodigenr::runSetup('../src')
 loadData('../data')
 names(ds)
 

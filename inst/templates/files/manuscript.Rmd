@@ -5,8 +5,8 @@ word_document:
     fig_width: 5
     fig_caption: true
     pandoc_args: [
-        "--bibliography", `r prodigenr::getBib('../config.yaml')`,
-        "--csl", `r prodigenr::getCSL('../config.yaml')`
+        "--bibliography", "`r prodigenr::getBib('../config.yaml')`",
+        "--csl", "`r prodigenr::getCSL('../config.yaml')`"
     ]
 
 ---
