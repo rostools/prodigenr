@@ -1,6 +1,5 @@
 ##' ---
 ##' title:
-##' author: `r prodigenr::getAuthor('../config.yaml')`
 ##' output:
 ##'   rmarkdown::html_vignette:
 ##'     toc: true

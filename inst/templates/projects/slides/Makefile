@@ -12,16 +12,22 @@ all :
 ##-------------------------------------------------------------------
 
 ## create_slides      : Create the pdf slides.
-create_slides : slides. pdf
+create_slides : slides.pdf
 
-slides.pdf : slides.Rmd
-	Rscript -e 'rmarkdown::render($<)'
+slides.pdf : slides.Rmd _output.Ryaml
+	Rscript -e 'knitr::knit("_output.Ryaml", "_output.yaml")' \
+		-e 'rmarkdown::render("$<")'
+		-e 'unlink("_output.yaml")'
+
+## get_data   : Run the fetchData.R script
+get_data :
+	(cd src/ && Rscript fetchData.R)
 
 ## readme : Only need to run if you have edited the README file.
 readme : README.Rmd
-	@Rscript -e 'rmarkdown::render($<)'
+	@Rscript -e 'rmarkdown::render("$<")'
 
 ##-------------------------------------------------------------------
 
-.PHONY : create_slides readme
+.PHONY : get_data create_slides readme
 

@@ -9,8 +9,10 @@ all :
 ## These are the options available to use in Make:
 ##-------------------------------------------------------------------
 ## abstract : Run all Make targets, creating the final manuscript file.
-abstract : abstract.R
-	Rscript -e 'rmarkdown::render($<)'
+abstract : abstract.R _output.Ryaml
+	Rscript -e 'knitr::knit("_output.Ryaml", "_output.yaml")' \
+		-e 'rmarkdown::render($<)'
+		-e 'unlink("_output.yaml")'
 
 ## get_data : Run the fetchData.R script
 get_data :

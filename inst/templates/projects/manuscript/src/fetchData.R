@@ -1,6 +1,5 @@
 ##' ---
 ##' title: Fetch and Process the Data
-##' author: `r prodigenr::getAuthor('../config.yaml')`
 ##' ---
 ##' 
 ##' This script fetchs the main dataset, keeps variables relevant to

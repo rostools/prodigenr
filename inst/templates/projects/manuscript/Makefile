@@ -18,8 +18,10 @@ output/%.html : eda/%.R
 	Rscript -e 'prodigenr::createDoc($<)'
 
 ## doc    : Create the manuscript in its final format. 
-doc : doc/manuscript.Rmd
-	Rscript -e 'prodigenr::createDoc($<)'
+doc : doc/manuscript.Rmd doc/_output.Ryaml
+	Rscript -e 'knitr::knit("doc/_output.Ryaml", "doc/_output.yaml")' \
+		-e 'prodigenr::createDoc($<)'
+		-e 'unlink("_output.yaml")'
 
 ## clean  : Clean up any extra or output files
 clean :

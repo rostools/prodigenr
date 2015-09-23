@@ -1,0 +1,10 @@
+fontsize: 9pt
+bibliography: "`r prodigenr::getBib('config.yaml')`"
+csl: "`r prodigenr::getCSL('config.yaml')`"
+output:
+  beamer_presentation:
+      slide_level: 2
+      fig_caption: false
+      includes:
+        in_header: src/preamble.tex
+

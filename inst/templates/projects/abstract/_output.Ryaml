@@ -1,0 +1,7 @@
+bibliography: "`r prodigenr::getBib('config.yaml')`"
+csl: "`r prodigenr::getCSL('config.yaml')`"
+output: 
+  word_document:
+    reference_docx: 
+    fig_caption: true
+

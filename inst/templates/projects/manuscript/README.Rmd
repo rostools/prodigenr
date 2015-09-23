@@ -1,6 +1,5 @@
 ---
 title: Introduction
-author: `r prodigenr::getAuthor('config.file')`
 output:
     md_document
 ---

@@ -1,8 +1,3 @@
-##' ---
-##' output:
-##'   word_document:
-##'     fig_caption: yes
-##' ---
 ##'
 ##' Word count: 
 ##'
