@@ -1,17 +1,24 @@
-##' 
+##'
 ##' Code preamble
 ##' =============
-##' 
+##'
 ##' Install packages if they are not installed.
 ##'
 ##' Use template: if (!require('package')) install.packages('package')
-if (!require(rstatsToolkit)) devtools::install_github("lwjohnst86/rstatsToolkit")
-if (!require(captioner)) install.packages('captioner')
-
-
-##' Load relevant libraries
-library(rstatsToolkit) ## personal library
-library(captioner)
+gh_pkgs <- c('prodigenr', 'rstatsToolkit', 'mason', 'seer')
+pkgs <- c('rmarkdown', 'ggplot2', 'dplyr', 'tidyr', 'pander')
+for (pkg in pkgs) {
+    if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+        install.packages(pkg)
+        library(pkg, character.only = TRUE)
+    }
+}
+for (pkg in gh_pkgs) {
+    if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+        devtools::install_github(paste0('lwjohnst86/', x))
+        library(pkg, character.only = TRUE)
+    }
+}
 
 ##' Custom options for pander
 panderOptions('table.split.table', Inf)
@@ -21,6 +28,6 @@ panderOptions('table.alignment.default',
 
 ##' Knitr global options
 knitr::opts_chunk$set(warning = FALSE, echo = FALSE,
-                      fig.width = 8, dpi = 150,
-                      message = FALSE, dev = c('png', 'pdf'))
+                      message = FALSE, dev = c('pdf'),
+                      collapse = TRUE)
 
