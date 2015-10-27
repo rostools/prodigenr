@@ -8,12 +8,6 @@ all :
 ##-------------------------------------------------------------------
 ## These are the options available to use in Make:
 ##-------------------------------------------------------------------
-## abstract : Run all Make targets, creating the final manuscript file.
-abstract : abstract.R _output.Ryaml
-	Rscript -e 'knitr::knit("_output.Ryaml", "_output.yaml")' \
-		-e 'rmarkdown::render($<)'
-		-e 'unlink("_output.yaml")'
-
 ## get_data : Run the fetchData.R script
 get_data :
 	(cd src/ && Rscript fetchData.R)
@@ -24,5 +18,5 @@ readme : README.Rmd
 
 ##-------------------------------------------------------------------
 
-.PHONY : abstract get_data readme
+.PHONY : get_data readme
 
