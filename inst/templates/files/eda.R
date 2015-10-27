@@ -4,9 +4,6 @@
 ##'   rmarkdown::html_vignette:
 ##'     toc: true
 ##'     number_sections: true
-##'   word_document:
-##'     toc: true
-##'     number_sections: true
 ##'     
 ##' ---
 ##' 
