@@ -8,8 +8,7 @@ loadData <- function(path) {
     data.files <- list.files(path, pattern = '*.RData$',
                              ignore.case = TRUE,
                              full.names = TRUE)
-    data.exists <- length(which(file.exists(data.files)))
-    if (data.exists >= 1) {
+    if (any(file.exists(data.files))) {
         sapply(data.files, load, .GlobalEnv)
     } else {
         stop('Please fetch or save your data in the data folder.')
