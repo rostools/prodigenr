@@ -1,0 +1,106 @@
+\ProvidesPackage{beamerthemeLWJposter} % this style was created by Luke
+                                % Johnston and is an adaption of Rob J
+                                % Hyndman which is adapted from i6dv by David Vilar
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% custom colors
+\definecolor{darkcompliment}{HTML}{D39664}
+\definecolor{blocktitlebg}{HTML}{5F9797} % Block title bg
+\definecolor{mainbg}{HTML}{C8E1E1}  % poster background
+\definecolor{headfootbg}{HTML}{1F6565}  % header and footer bg
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=headfootbg}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=lightgray}
+\setbeamercolor{institute in headline}{fg=lightgray}
+\setbeamercolor{logo in headline}{fg=black, bg=lightgray}
+\setbeamercolor{separation line}{bg=darkcompliment}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=white, bg=headfootbg}
+\setbeamerfont{footline}{size=\normalsize}
+
+% poster background colors (bg) and font colors (fg)
+\setbeamercolor*{normal text}{fg=black,bg=mainbg}
+
+% block environment
+\setbeamercolor*{block body}{bg=white, fg=black}
+\setbeamercolor*{block title}{fg=white, bg=blocktitlebg}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+% example environment
+\setbeamercolor*{example title}{fg=white, bg=darkcompliment}
+%\setbeamerfont{example title}{size=\large,series=\bf, bg=darkcompliment,fg=white}
+\setbeamerfont{example title}{size=\large,series=\bf}
+
+\setbeamercolor{alerted text}{fg=darkcompliment}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+\setbeamertemplate{block}[rounded]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[leftskip=1cm,colsep*=.75ex,rounded=true]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[colsep*=.75ex,sep=.75ex,vmode,rounded=true]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+        \begin{columns}[T]
+              \begin{column}{.85\paperwidth}
+                    \vskip4ex
+                    \raggedright
+                    \usebeamercolor{title in
+                      headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+                    \usebeamercolor{author in
+                      headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+                    \usebeamercolor{institute in
+                      headline}{\color{fg}\small{\insertinstitute}\\[1ex]}
+                    \vskip4ex
+              \end{column}
+        \end{columns}
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{4pt}{12pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{4pt}{12pt}
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
+    \hfill \raisebox{-0.4cm}{\insertfooter}
+    \vskip1ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{2pt}{4pt}
+  \end{beamercolorbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+\def\footer#1{\def\insertfooter{#1}}

@@ -1,0 +1,45 @@
+---
+title: "**Title**"
+theme: CustomPoster
+poster-height: 
+poster-width: 
+font-scale: 1.5
+author: 
+  - name: First Last
+    affiliation: 1
+address:
+  - code: 1
+    address: 'Department, University, City, Country'
+bibliography: 
+csl: 
+output:
+    pdf_document:
+        template: src/poster.tex
+---
+
+<!------------------>
+<!-- First column -->
+\columnBegin{.29\linewidth}
+\blockBegin{Background}
+\blockEnd
+
+\blockBegin{Methods:}
+\blockEnd
+\columnEnd
+
+<!------------------->
+<!-- Second column -->
+\columnBegin{.29\linewidth}
+\blockBegin{Results:}
+\blockEnd
+\columnEnd
+
+<!------------------>
+<!-- Third column -->
+\columnBegin{0.29\linewidth}
+\blockBegin{Discussion}
+\blockEnd
+
+\blockBegin{References}
+\scriptsize
+
