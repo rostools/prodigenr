@@ -1,0 +1,51 @@
+---
+output:
+    word_document:
+      fig_caption: true
+      pandoc_args: [
+        "--bibliography", "/path/to/bibliography",
+        "--csl", "/path/to/bibstyle/csl"
+        ]
+---
+
+Word count: 
+
+**Title here**
+
+Author list here
+
+**Background**: 
+
+```{r libData, message = FALSE, echo = FALSE}
+prodigenr::runSetup('src/')
+loadData('data/')
+
+figNums <- captioner(prefix = 'Figure')
+figNums('short', 'Long caption')
+```
+
+**Methods**: 
+
+```{r wrangle}
+ds
+```
+
+```{r inlineCode}
+
+```
+
+
+**Results**:
+`r figNums('short', display = 'cite')`
+
+**Discussion**:
+
+```{r figureChunk, fig.cap = `r figNums('short')`}
+
+```
+
+<!-- Session info -->
+```{r}
+##sessionInfo()
+```
+
