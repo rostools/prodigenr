@@ -18,30 +18,24 @@ prodigen <- function(proj.name,
                      proj.path = '.',
                      git.init = TRUE) {
 
-    if (length(nzchar(proj.type)) > 1) {
-        stop(paste0('Please supply only one of the following project types:\n',
-                    paste(listTemplates('projects'), collapse = ', ')))
-    } else if (length(which(listTemplates('projects') %in% proj.type)) > 1) {
-        stop(paste0('Please use only these templates:\n',
-                   paste(listTemplates('projects'), collapse = ', ')))
-    }
+    proj.type <- match.arg(proj.type, listTemplates('projects'))
 
-    file.copy(system.file("templates", 'projects', proj.type, package = "prodigenr"),
-              proj.path, recursive = TRUE)
-    file.rename(proj.type, proj.name)
+    file.copy(
+        system.file('templates', 'projects',
+                    proj.type, package = 'prodigenr'),
+        proj.path, recursive = TRUE
+    )
+    file.rename(paste0(proj.path, proj.type),
+                paste0(proj.path, proj.name))
 
     if (proj.type == 'manuscript') {
-        dirList <- c('output', 'eda')
-        sapply(dirList, function(x) {
-                   dir.create(file.path(proj.name, x))
-               })
-        fileTemplate('eda.R',
-                     output.file = file.path(proj.name, 'eda', 'eda.R'))
+        fileTemplate('eda.R', output.file = file.path(proj.name, 'eda', 'eda.R'))
     }
 
     if (git.init) {
         repo <- git2r::init(proj.name)
-        writeLines('.RData\noutput/\n.Rout', file.path(proj.name, '.gitignore'))
+        writeLines('.RData\noutput/\n.Rout\ndata/\n.Rhistory',
+                   file.path(proj.name, '.gitignore'))
         git2r::add(repo, unlist(git2r::status(repo, verbose = FALSE)))
         git2r::commit(repo, 'Initial commit')
     }
