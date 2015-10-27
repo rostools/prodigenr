@@ -12,19 +12,13 @@
 ##' @author Luke W. Johnston
 fileTemplate <- function(template, output.file = NULL) {
 
-    if (is.null(output.file)) output.file <- template
+    temp <- match.arg(template, listTemplates('files'))
 
-    if (length(nchar(output.file)) > 1) stop('Please supply a single filename.')
+    if (is.null(output.file)) output.file <- temp
 
-    if (length(nzchar(template)) > 1) {
-        stop('Please supply only one template.')
-    } else if (length(which(listTemplates('files') %in% template)) > 1) {
-        stop(paste('Please use only these templates:\n',
-                   paste(listTemplates('files'), collapse = ', ')))
-    }
-
-    template.location <- system.file('templates','files', template,
-                                     package = 'prodigenr')
+    template.location <-
+        system.file('templates','files', temp,
+                    package = 'prodigenr')
 
     file.copy(template.location, output.file)
 }
