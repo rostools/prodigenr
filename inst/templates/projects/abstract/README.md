@@ -1,8 +1,4 @@
----
-title: Introduction
-output:
-    md_document
----
+# Introduction #
 
 This README details how this research abstract directory is structured, how
 files should be run, and what the different files do.
