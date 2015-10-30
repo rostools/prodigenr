@@ -1,11 +1,9 @@
 ---
+bibliography: '/path/to/bibliography'
+csl: '/path/to/bibstyle/csl'
 output:
     word_document:
       fig_caption: true
-      pandoc_args: [
-        "--bibliography", "/path/to/bibliography",
-        "--csl", "/path/to/bibstyle/csl"
-        ]
 ---
 
 Word count: 
