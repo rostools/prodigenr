@@ -6,7 +6,8 @@
 ##'
 ##' Use template: if (!require('package')) install.packages('package')
 gh_pkgs <- c('prodigenr', 'rstatsToolkit', 'mason', 'seer')
-pkgs <- c('rmarkdown', 'ggplot2', 'dplyr', 'tidyr', 'pander')
+pkgs <- c('rmarkdown', 'ggplot2', 'dplyr', 'tidyr', 'pander',
+          'captioner')
 for (pkg in pkgs) {
     if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
         install.packages(pkg)

@@ -17,6 +17,15 @@ output:
         template: src/poster.tex
 ---
 
+```{r loadData, echo = FALSE, message = FALSE}
+prodigenr::runSetup('src') 
+loadData('data') 
+names(ds)
+
+figNums <- captioner(prefix = 'Figure')
+figNums('short', 'Long caption')
+```
+
 <!------------------>
 <!-- First column -->
 \columnBegin{.29\linewidth}
