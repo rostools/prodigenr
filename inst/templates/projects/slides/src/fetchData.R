@@ -1,18 +1,21 @@
 ##' ---
 ##' title: Fetch and Process the Data
 ##' ---
-##' 
+##'
 ##' This script fetchs the main dataset, keeps variables relevant to
 ##' the analysis, restrict the sample size as needed, and lastly save
 ##' the new dataset as an `.RData` file.
-##' 
+##'
 ##' Load the options for the R session.
 prodigenr::runSetup('./')
+data_file <- 'path/to/data'
 
-##' Load the master dataset, 
-ds.prep <- tbl_df(read.table(getData('../config.yaml'),
-                             header = TRUE, na = "",
-                             sep = ","))
+##' Load the master dataset,
+ds.prep <- tbl_df(read.table(
+    data_file,
+    header = TRUE, na = "",
+    sep = ","
+))
 
 ds <- ds.prep
 

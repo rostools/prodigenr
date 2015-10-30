@@ -1,6 +1,15 @@
 ---
 title: "**Title**"
-date:
+bibliography: 'path/to/bibliography/'
+csl: '/path/to/bib/style/csl'
+fontsize: 9pt
+classoption: xcolor=dvipsnames
+output:
+    beamer_presentation:
+      slide_level: 2
+      fig_caption: false
+      includes:
+        in_header: "src/preamble.tex"
 ---
 
 <!-- slide 1 -->
@@ -18,11 +27,9 @@ date:
 [^footer]: Footer text
 
 ```{r loadData, echo = FALSE, message = FALSE}
-
-prodigenr::runSetup() ## include path to src folder
-loadData() ## include path to data folder
+prodigenr::runSetup('src') 
+loadData('data') 
 names(ds)
-
 ```
 
 ```{r inlineCode, results = 'hide'}
