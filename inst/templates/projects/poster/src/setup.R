@@ -20,6 +20,7 @@ for (pkg in gh_pkgs) {
         library(pkg, character.only = TRUE)
     }
 }
+if (!require(broom)) devtools::install_github('dgrtwo/broom')
 
 ##' Custom options for pander
 panderOptions('table.split.table', Inf)

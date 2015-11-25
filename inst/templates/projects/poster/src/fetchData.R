@@ -7,7 +7,7 @@
 ##' the new dataset as an `.RData` file.
 ##'
 ##' Load the options for the R session.
-prodigenr::runSetup('./')
+prodigenr::runSetup('src')
 data_file <- 'path/to/data'
 
 ##' Load the master dataset,
