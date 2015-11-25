@@ -14,12 +14,9 @@ Author list here
 
 **Background**: 
 
-```{r libData, message = FALSE, echo = FALSE}
+```{r libData, message=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
 prodigenr::runSetup('src/')
 loadData('data/')
-
-figNums <- captioner(prefix = 'Figure')
-figNums('short', 'Long caption')
 ```
 
 **Methods**: 
@@ -34,11 +31,10 @@ ds
 
 
 **Results**:
-`r figNums('short', display = 'cite')`
 
 **Discussion**:
 
-```{r figureChunk, fig.cap = `r figNums('short')`}
+```{r figureChunk, fig.cap = 'Figure Caption'}
 
 ```
 

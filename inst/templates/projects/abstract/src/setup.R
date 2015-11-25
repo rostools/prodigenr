@@ -8,7 +8,7 @@
 ##'
 ##' gh = github packages.
 gh_pkgs <- c('prodigenr', 'rstatsToolkit', 'mason', 'seer')
-pkgs <- c('ggplot2', 'pander', 'rmarkdown', 'dplyr', 'tidyr')
+pkgs <- c('ggplot2', 'dplyr', 'tidyr')
 for (pkg in pkgs) {
     if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
         install.packages(pkg)
@@ -21,15 +21,11 @@ for (pkg in gh_pkgs) {
         library(pkg, character.only = TRUE)
     }
 }
-
-##' Custom options for pander
-panderOptions('table.split.table', Inf)
-panderOptions('table.style', 'rmarkdown')
-panderOptions('table.alignment.default',
-              function(df) ifelse(sapply(df, is.numeric), 'center', 'left'))
+if (!require(broom)) devtools::install_github('dgrtwo/broom')
 
 ##' Knitr global options
 knitr::opts_chunk$set(warning = FALSE, echo = FALSE,
-                      message = FALSE, dev = c('pdf'),
+                      dpi = 150,
+                      message = FALSE, dev = c('png'),
                       collapse = TRUE)
 

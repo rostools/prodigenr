@@ -7,24 +7,16 @@ The files were created by the
 [`prodigenr`](http://github.com/lwjohnst86/prodigenr) package and use
 the following programs:
 
-* [GNU Make](http://www.gnu.org/software/make/) (automating executing
-  file scripts)
-* [Pandoc](http://johnmacfarlane.net/pandoc/) (for Markdown (`.md` or
-  `.Rmd`) conversion)
 * [R](http://www.r-project.org) (stats)
     * Package: [knitr](http://yihui.name/knitr/) (reproducibility)
 * [Git](http://git-scm.com/) (version control system)
-* Shell script (e.g. [Bash](http://www.gnu.org/software/bash/); to use
-  most of the above programs)
 
 Directory structure and explanation
 ===================================
 
 The project directory is generally structured with `data`, `src`, and
 a version control `.git` folder.  There may be folders other than the
-below that were created for an ad hoc purpose.  The parent directory
-contains a `Makefile` that provides options and commands to run the
-analysis.
+below that were created for an ad hoc purpose.  
 
 `data` folder:
 --------------
