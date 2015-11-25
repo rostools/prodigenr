@@ -13,20 +13,33 @@
 ##' @return Creates a project directory with files and subdirectories
 ##' @export
 ##' @author Luke W. Johnston
-prodigen <- function(proj.name,
-                     proj.type,
+##' @examples
+##'
+##' \dontrun{
+##' ## Get a list of possible project templates
+##' listTemplates('projects')
+##' prodigen('testing', 'poster', 'dev/', FALSE)
+##' prodigen('posterName', 'poster', 'path/to/dir/', FALSE)
+##' prodigen('posterName', 'poster', 'path/to/dir/', TRUE)
+##' prodigen('presentationName', 'slides', './', TRUE)
+##' prodigen('abstractName', 'abstract', './', FALSE)
+##' prodigen('manuscriptName', 'manuscript', './', FALSE)
+##' }
+prodigen <- function(proj.type,
+                     proj.name = NULL,
                      proj.path = '.',
                      git.init = TRUE) {
 
     proj.type <- match.arg(proj.type, listTemplates('projects'))
+    if (is.null(proj.name)) proj.name <- proj.type
 
     file.copy(
         system.file('templates', 'projects',
                     proj.type, package = 'prodigenr'),
         proj.path, recursive = TRUE
     )
-    file.rename(paste0(proj.path, proj.type),
-                paste0(proj.path, proj.name))
+    file.rename(file.path(proj.path, proj.type),
+                file.path(proj.path, proj.name))
 
     if (proj.type == 'manuscript') {
         fileTemplate('eda.R', output.file = file.path(proj.name, 'eda', 'eda.R'))

@@ -6,12 +6,13 @@
 ##' @return Vector of templates available
 ##' @export
 ##' @author Luke W. Johnston
-##' @example
+##' @examples
 ##'
+##' \dontrun{
 ##' listTemplates('files')
 ##' listTemplates('projects')
 ##' listTemplates()
-##'
+##' }
 listTemplates <- function(type = c('projects', 'files'), package = 'prodigenr') {
     temp.type <- match.arg(type)
     if (temp.type == 'files') {
