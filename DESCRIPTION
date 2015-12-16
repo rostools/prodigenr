@@ -1,23 +1,16 @@
 Package: prodigenr
 Title: Project directory generator
-Version: 0.1.3.9000
+Version: 0.2.0.9000
 Authors@R: "Luke W. Johnston <lwjohnst@gmail.com> [aut, cre]"
 Description: Create a project or files from templates.  This allows
     projects to be quickly and easily created, as well as for
-    them to be standardized.
-Depends: 
+    them to be standardized. Designed with scientists in mind.
+Depends:
     R (>= 3.1.2)
 License: MIT
 LazyData: true
-Imports: 
+Suggests:
     rmarkdown,
-    yaml,
-    captioner,
     git2r,
-    devtools
-Suggests: 
-    pander,
-    ggplot2,
-    tidyr,
-    dplyr
-RoxygenNote: 5.0.0
+    packrat
+RoxygenNote: 5.0.1
