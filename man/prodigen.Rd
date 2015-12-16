@@ -4,18 +4,21 @@
 \alias{prodigen}
 \title{Create a project directory based on a template}
 \usage{
-prodigen(proj.type, proj.name = NULL, proj.path = ".", git.init = TRUE)
+prodigen(proj.type, proj.name = NULL, proj.path = ".", git.init = TRUE,
+  packrat.init = FALSE)
 }
 \arguments{
-\item{proj.type}{type of project to create, based on the templates
-found in \code{\link[prodigenr]{listTemplates}} function}
+\item{proj.type}{type of project to create, based on the templates found in
+\code{\link[prodigenr]{listTemplates}} function}
 
 \item{proj.name}{name of the new project directory}
 
 \item{proj.path}{location of where the new project will be created}
 
-\item{git.init}{Logical, whether to initialize the new project
-with git}
+\item{git.init}{Logical, whether to initialize the new project with git}
+
+\item{packrat.init}{Logical, whether to track the R package usage with
+packrat.}
 }
 \value{
 Creates a project directory with files and subdirectories
@@ -25,20 +28,20 @@ Create a project directory and associated files.
 }
 \details{
 The main workhorse of the \pkg{prodigenr} package.  Creates a
-project directory layout, with template files and helper scripts
-such as a Makefile.
+project directory layout, with template files and helper scripts.
 }
 \examples{
 
 \dontrun{
 ## Get a list of possible project templates
-listTemplates('projects')
-prodigen('testing', 'poster', 'dev/', FALSE)
-prodigen('posterName', 'poster', 'path/to/dir/', FALSE)
-prodigen('posterName', 'poster', 'path/to/dir/', TRUE)
-prodigen('presentationName', 'slides', './', TRUE)
-prodigen('abstractName', 'abstract', './', FALSE)
-prodigen('manuscriptName', 'manuscript', './', FALSE)
+list_templates('projects')
+# Create a project. Best done in a fresh R console.
+prodigen('poster', 'poster', 'dev/', FALSE, FALSE)
+prodigen('poster', 'poster', 'path/to/dir/', FALSE)
+prodigen('poster', 'posterName', git.init = FALSE)
+prodigen('slides', 'conference-presentation', packrat.init = FALSE)
+prodigen('abstract', 'name', './', FALSE)
+prodigen('manuscript', proj.path = './', git.init = FALSE)
 }
 }
 \author{
