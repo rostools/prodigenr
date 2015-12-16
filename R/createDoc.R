@@ -9,6 +9,11 @@
 ##' @export
 ##' @author Luke W. Johnston
 createDoc <- function(file, output.dir = './output') {
-    rmarkdown::render(file, output_format = 'all',
-                      output_dir = output.dir)
+    .Deprecated('render', msg = 'No longer needed for new workflow.')
+    if (requireNamespace('rmarkdown', quietly = TRUE)) {
+        rmarkdown::render(file, output_format = 'all',
+                          output_dir = output.dir)
+    } else {
+        stop('Need Rmarkdown.')
+    }
 }

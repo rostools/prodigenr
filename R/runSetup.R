@@ -6,6 +6,7 @@
 ##' @export
 ##' @author Luke W. Johnston
 runSetup <- function(path) {
+    .Deprecated('run_setup', msg ='No longer needed for current workflow.')
     source(file.path(path, 'setup.R'))
     source(file.path(path, 'functions.R'))
 }

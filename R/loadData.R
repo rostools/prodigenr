@@ -5,6 +5,7 @@
 ##' @export
 ##' @author Luke W. Johnston
 loadData <- function(path) {
+    .Deprecated('load_data', msg = 'Not needed for current workflow.')
     data.files <- list.files(path, pattern = '*.RData$',
                              ignore.case = TRUE,
                              full.names = TRUE)
