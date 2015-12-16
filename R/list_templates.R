@@ -9,16 +9,13 @@
 ##' @examples
 ##'
 ##' \dontrun{
-##' listTemplates('files')
-##' listTemplates('projects')
-##' listTemplates()
+##' list_templates('projects')
+##' list_templates()
 ##' }
-listTemplates <- function(type = c('projects', 'files'), package = 'prodigenr') {
+list_templates <- function(type = 'projects', package = 'prodigenr') {
     temp.type <- match.arg(type)
-    if (temp.type == 'files') {
-        list.files(system.file('templates', temp.type, package = package), '\\w$')
-    } else if (temp.type == 'projects') {
-        list.dirs(system.file('templates', temp.type, package = 'prodigenr'),
+    if (temp.type == 'projects') {
+        list.dirs(system.file('templates', temp.type, package = package),
                   full.names = FALSE, recursive = FALSE)
     }
 }
