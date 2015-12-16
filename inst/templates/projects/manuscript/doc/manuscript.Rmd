@@ -1,3 +1,14 @@
+---
+bibliography: path/to/bib/file
+csl: path/to/bib/style/file
+output:
+    word_document:
+      reference_docx: path/to/ref/doc
+      fig_height: 6 
+      fig_width: 5 
+      fig_caption: true
+---
+
 # Title page #
 
 Title:
@@ -5,8 +16,6 @@ Title:
 Author:
 
 Affiliations:
-
-Author last name:
 
 Disclaimers:
 
@@ -24,17 +33,18 @@ Funding support:
 ## Load data ##
 -->
 
-```{r libraryData, message = FALSE, echo = FALSE}
+```{r setup, message = FALSE, echo = FALSE}
+sapply(list.files('R', pattern = '*.R'), source, .GlobalEnv)
+run_setup()
+load_data(master.dataset = '/path/to/master/dataset')
+```
 
-prodigenr::runSetup() ## include path to src folder
-loadData() ## include path to data folder
-
+```{r caption_setup}
 ## Include captions below using `captioner` package
 figNums <- captioner(prefix = 'Figure')
 supFigNums <- captioner(prefix = 'Supplementary Figure')
 tabNums <- captioner(prefix = 'Table')
 supTabNums <- captioner(prefix = 'Supplementary Table')
-
 ```
 
 # Results #
@@ -43,15 +53,4 @@ supTabNums <- captioner(prefix = 'Supplementary Table')
 
 ## Acknowledgements ##
 
-<!--
-# Session info #
--->
-
-```{r sessioninfo}
-
- #sessionInfo()
-
-```
-
 # References #
-
