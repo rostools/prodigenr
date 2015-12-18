@@ -15,26 +15,21 @@ run_setup <- function() {
     # if (!require(package)) install.packages('package')
     # Or, for github packages:
     # if (!require(package)) packrat::install_github('username/package')
-    if (!require(pander)) install.packages('pander')
-    if (!require(captioner)) install.packages('captioner')
-    if (!require(ggplot2)) install.packages('ggplot2')
-    if (!require(dplyr)) install.packages('dplyr')
-    if (!require(tidyr)) install.packages('tidyr')
 }
 
 .set_options <- function() {
     # Set the options here for individual packages
 
     # For tables (pander)
-    panderOptions('table.split.table', Inf)
-    panderOptions('table.style', 'rmarkdown')
-    panderOptions('table.alignment.default',
-                  function(df)
-                      ifelse(sapply(df, is.numeric), 'center', 'left'))
+#     panderOptions('table.split.table', Inf)
+#     panderOptions('table.style', 'rmarkdown')
+#     panderOptions('table.alignment.default',
+#                   function(df)
+#                       ifelse(sapply(df, is.numeric), 'center', 'left'))
 
     # For the document (knitr)
-    knitr::opts_chunk$set(
-        warning = FALSE, message = FALSE, collapse = TRUE
-    )
+#     knitr::opts_chunk$set(
+#         warning = FALSE, message = FALSE, collapse = TRUE
+#     )
 }
 
