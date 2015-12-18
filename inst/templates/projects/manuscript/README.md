@@ -1,70 +1,47 @@
-# Introduction #
+# Introduction
 
-This README details how this research directory is structured, how
-files should be run and what the different files do.
+This README details how this research directory is structured, how files should
+be run and what the different files do. Most of the files here work best with
+[RStudio](https://www.rstudio.com/). For instance, to generate the `.Rmd` files,
+all you need to do is type `Ctrl-Shift-K` in RStudio. Otherwise, you can run the
+`rmarkdown::render('file.Rmd')` command.
 
-The files were created by the
-[`prodigenr`](http://github.com/lwjohnst86/prodigenr) package and use
-the following programs:
+# Project details
 
-* [GNU Make](http://www.gnu.org/software/make/) (automating executing
-  file scripts)
-* [Pandoc](http://johnmacfarlane.net/pandoc/) (for Markdown (`.md` or
-  `.Rmd`) conversion)
-* [R](http://www.r-project.org) (stats)
-    * Package: [knitr](http://yihui.name/knitr/) (reproducibility)
-* [Git](http://git-scm.com/) (version control system)
-* Shell script (e.g. [Bash](http://www.gnu.org/software/bash/); to use
-  most of the above programs)
+# Directory details
 
-Directory structure and explanation
-===================================
+The project directory is generally structured with `data`, `R`, and `doc`
+folders, as well as an optional version control `.git` folder and a `packrat`
+folder.  As a caveat, there may be folders other than the below that were
+created for an ad hoc purpose.
 
-The project directory is generally structured with `data`,
-`src`, `output`, `doc`, and `eda` folders, as well as a version
-control `.git` folder.  As a caveat, there may be folders other than
-the below that were created for an ad hoc purpose.
+## `R` folder:
 
-`data` folder:
---------------
+The `R` folder contains the R functions and commands used by all subsequent `.R`
+or `.Rmd` files files.  There are at least four files:
 
-The `data` folder contains the analysis-specific dataset.  Meaning
-this dataset may be a subset of an original dataset, keeping the data
-relevant to the research question.
+- `fetch_data.R` to get, process, and save a dataset
+- `load_data.R` to compare the `fetch_data.R` to the local `data/ds.RData` 
+dataset and either run `fetch_data.R` again and load it or just load the dataset
+into memory.
+- `setup.R` to load packages and set options for packages
+- `functions.R` to hold all custom functions used for the analysis
 
-`src` folder:
--------------
+## `doc` folder:
 
-The `src` folder contains the R commands and scripts used by all
-subsequent scripts and R Markdown files.  There are at least three
-files: `fetchData.R` to get, process, and save a dataset; `setup.R` to
-load libraries and run options for packages; and, `functions.R` to
-hold all custom functions used for the analysis.
+The `doc` folder contains the manuscript as well as additional exploratory 
+analysis files. Either can be generated simply by running `rmarkdown::render` or
+typing `Ctrl-Shift-K` in RStudio.
 
-`eda` folder:
------------------
+## `data` folder (optionally present):
 
-The `eda` folder contains the scripts which runs the exploratory data
-analyses.  This folder may or may not be empty, depending on the
-demands of the project.  Generating the output from the `eda` scripts
-is done through the Makefile (type `make` in the shell to see a list
-of options).
+The `data` folder contains the analysis-specific dataset.  Meaning this dataset
+may be a subset of an original dataset, keeping the data relevant to the
+research question.
 
-`output` folder
----------------
+# How this project was generated:
 
-The `output` folder may contain output files generated from the R
-scripts or R Markdown files.  The idea behind the output folder is
-that you should be able to delete all the files contained within the
-folder, run the scripts again, and generate all the necessary result
-and report files.  In the parent directory of the project folder, the
-Makefile has a command `make clean` that will delete all output files
-and as such keeping a clean analysis.
-
-`doc` folder
----------------
-
-The `doc` folder contains the final R Markdown manuscript file(s) for
-the project.  Generating the final output document for the manuscript
-is done through the Makefile (type `make` to see a list of options).
-
+The files and folders, along with the git and packrat initialization (optional),
+were created by the [`prodigenr`](http://github.com/lwjohnst86/prodigenr)
+package. They work best when using [RStudio](https://www.rstudio.com/), though
+nothing is stopping you from using other programs.
