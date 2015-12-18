@@ -10,20 +10,23 @@ author:
 address:
   - code: 1
     address: 'Department, University, City, Country'
-bibliography: 
-csl: 
+bibliography: path/to/bib/file
+csl: path/to/bib/style/file
 output:
     pdf_document:
-        template: src/poster.tex
+        template: template.tex
 ---
 
-```{r loadData, echo = FALSE, message = FALSE}
-prodigenr::runSetup('src') 
-loadData('data') 
-names(ds)
+```{r setup, message = FALSE, echo = FALSE}
+sapply(list.files('R', pattern = '*.R'), source, .GlobalEnv)
+run_setup()
+load_data(master.dataset = '/path/to/master/dataset')
+```
 
+```{r caption_setup}
+## Include captions below using `captioner` package
 figNums <- captioner(prefix = 'Figure')
-figNums('short', 'Long caption')
+tabNums <- captioner(prefix = 'Table')
 ```
 
 <!------------------>

@@ -1,7 +1,7 @@
 ---
 title: "**Title**"
-bibliography: 'path/to/bibliography/'
-csl: '/path/to/bib/style/csl'
+bibliography: path/to/bib/file
+csl: path/to/bib/style/file
 fontsize: 9pt
 classoption: xcolor=dvipsnames
 output:
@@ -9,7 +9,7 @@ output:
       slide_level: 2
       fig_caption: false
       includes:
-        in_header: "src/preamble.tex"
+        in_header: template.tex
 ---
 
 <!-- slide 1 -->
@@ -26,10 +26,16 @@ output:
 
 [^footer]: Footer text
 
-```{r loadData, echo = FALSE, message = FALSE}
-prodigenr::runSetup('src') 
-loadData('data') 
-names(ds)
+```{r setup, message = FALSE, echo = FALSE}
+sapply(list.files('R', pattern = '*.R'), source, .GlobalEnv)
+run_setup()
+load_data(master.dataset = '/path/to/master/dataset')
+```
+
+```{r caption_setup}
+## Include captions below using `captioner` package
+figNums <- captioner(prefix = 'Figure')
+tabNums <- captioner(prefix = 'Table')
 ```
 
 ```{r inlineCode, results = 'hide'}
