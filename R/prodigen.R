@@ -52,23 +52,25 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = '.',
     file.rename(Rproj_old, Rproj_new)
 
     if (packrat.init & requireNamespace('packrat', quietly = TRUE)) {
-        packrat::init(proj_new, options = list(
-            vcs.ignore.lib = TRUE,
-            vcs.ignore.src = TRUE
-        ))
-    } else {
-        stop('Please install packrat to use the packrat.init argument.')
+        packrat::init(
+            proj_new, enter = FALSE, restart = FALSE,
+            options = list(
+                vcs.ignore.lib = TRUE,
+                vcs.ignore.src = TRUE,
+                ignored.packages = c('tidyr', 'dplyr', 'knitr', 'rmarkdown', 'ggplot2')
+            )
+        )
     }
 
     if (git.init & requireNamespace('git2r', quietly = TRUE)) {
         repo <- git2r::init(proj_new)
         gitignore.file <- file.path(proj_new, '.gitignore')
-        file.create(gitignore.file, showWarnings = FALSE)
+        if (!file.exists(gitignore.file))
+            file.create(gitignore.file, showWarnings = FALSE)
         write('.RData\n.Rout\ndata/\n.Rhistory\n.Rproj.user',
               file = gitignore.file, append = TRUE)
         git2r::add(repo, unlist(git2r::status(repo, verbose = FALSE)))
         git2r::commit(repo, 'Initial commit')
-    } else {
-        stop('Please install git2r to use the git.init argument.')
     }
+
 }
