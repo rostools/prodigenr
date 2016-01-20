@@ -27,9 +27,10 @@ output:
 [^footer]: Footer text
 
 ```{r setup, message = FALSE, echo = FALSE}
-sapply(list.files('R', pattern = '*.R'), source, .GlobalEnv)
+source('.Rprofile')
 run_setup()
-load_data(master.dataset = '/path/to/master/dataset')
+load_data('/path/to/master/dataset/')
+dim(ds)
 ```
 
 ```{r caption_setup}
