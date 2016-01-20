@@ -51,9 +51,18 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = '.',
     Rproj_new <- file.path(proj_new, paste0(proj.name, '.Rproj'))
     file.rename(Rproj_old, Rproj_new)
 
+    if (git.init & requireNamespace('git2r', quietly = TRUE)) {
+        repo <- git2r::init(proj_new)
+        gitignore.file <- file.path(proj_new, '.gitignore')
+        if (!file.exists(gitignore.file))
+            file.create(gitignore.file, showWarnings = FALSE)
+        write('.RData\n.Rout\ndata/\n.Rhistory\n.Rproj.user',
+              file = gitignore.file, append = TRUE)
+    }
+
     if (packrat.init & requireNamespace('packrat', quietly = TRUE)) {
         packrat::init(
-            proj_new, enter = FALSE, restart = FALSE,
+            proj_new, enter = FALSE,
             options = list(
                 vcs.ignore.lib = TRUE,
                 vcs.ignore.src = TRUE,
@@ -63,12 +72,6 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = '.',
     }
 
     if (git.init & requireNamespace('git2r', quietly = TRUE)) {
-        repo <- git2r::init(proj_new)
-        gitignore.file <- file.path(proj_new, '.gitignore')
-        if (!file.exists(gitignore.file))
-            file.create(gitignore.file, showWarnings = FALSE)
-        write('.RData\n.Rout\ndata/\n.Rhistory\n.Rproj.user',
-              file = gitignore.file, append = TRUE)
         git2r::add(repo, unlist(git2r::status(repo, verbose = FALSE)))
         git2r::commit(repo, 'Initial commit')
     }
