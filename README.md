@@ -1,11 +1,10 @@
-> This program is still in development.
-
 This is a *pro*ject *di*rectory *gen*erato*r* (`prodigenr`) that will
 create a project directory structure with template files necessary for
 managing and analyzing data for a variety of projects.  This allows
 for a standardized approach to having a modular research project.
 This package can be found at
-[on the GitHub `prodigenr` repo](https://github.com/lwjohnst86/prodigenr).
+[on the GitHub `prodigenr` repo](https://github.com/lwjohnst86/prodigenr). Note,
+this is still in development.
 
 # How to install
 
@@ -33,3 +32,16 @@ For a more detailed tutorial, see the vignette (still in development):
 
     vignette('introduction', 'prodigenr')
 
+# Related packages or projects
+
+There are several ways of creating projects, each of which has it's pros and cons.
+
+- [`ProjectTemplate`](http://projecttemplate.net/) 
+- [`makeProject`](https://cran.r-project.org/web/packages/makeProject/index.html)
+- R package structure via
+[`devtools`](https://cran.r-project.org/web/packages/devtools/README.html), argued for in this
+[blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) 
+
+`prodigenr` tries to use ideas from R packages/`devtools` but still be as simple
+as possible. However, it can always improve! I welcome any suggestions, just 
+submit a [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
