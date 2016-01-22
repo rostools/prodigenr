@@ -4,12 +4,12 @@
 \alias{prodigen}
 \title{Create a project directory based on a template}
 \usage{
-prodigen(proj.type, proj.name = NULL, proj.path = ".", git.init = TRUE,
-  packrat.init = FALSE)
+prodigen(proj.type, proj.name = NULL, proj.path = getwd(),
+  git.init = FALSE, packrat.init = FALSE)
 }
 \arguments{
 \item{proj.type}{type of project to create, based on the templates found in
-\code{\link[prodigenr]{listTemplates}} function}
+\code{\link[prodigenr]{list_templates}} function}
 
 \item{proj.name}{name of the new project directory}
 
@@ -36,12 +36,12 @@ project directory layout, with template files and helper scripts.
 ## Get a list of possible project templates
 list_templates('projects')
 # Create a project. Best done in a fresh R console.
-prodigen('poster', 'poster', 'dev/', FALSE, FALSE)
+prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
 prodigen('poster', 'poster', 'path/to/dir/', FALSE)
 prodigen('poster', 'posterName', git.init = FALSE)
 prodigen('slides', 'conference-presentation', packrat.init = FALSE)
 prodigen('abstract', 'name', './', FALSE)
-prodigen('manuscript', proj.path = './', git.init = FALSE)
+prodigen('manuscript', proj.path = './', git.init = TRUE)
 }
 }
 \author{
