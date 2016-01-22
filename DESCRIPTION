@@ -1,6 +1,6 @@
 Package: prodigenr
 Title: Project directory generator
-Version: 0.2.2.9000
+Version: 0.2.4
 Authors@R: "Luke W. Johnston <lwjohnst@gmail.com> [aut, cre]"
 Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
@@ -8,7 +8,7 @@ Description: Create a project directory structure, along with typical files
     in mind (mainly biomedical researchers, but likely applies to other fields).
 Depends:
     R (>= 3.1.2)
-License: MIT
+License: MIT + file LICENSE
 LazyData: true
 Suggests:
     rmarkdown,
@@ -17,3 +17,4 @@ Suggests:
     knitr
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+BugReports: https://github.com/lwjohnst86/prodigenr/issues
