@@ -5,7 +5,7 @@
 ##' @title Create a project directory based on a template
 ##'
 ##' @param proj.type type of project to create, based on the templates found in
-##'   \code{\link[prodigenr]{listTemplates}} function
+##'   \code{\link[prodigenr]{list_templates}} function
 ##' @param proj.name name of the new project directory
 ##' @param proj.path location of where the new project will be created
 ##' @param git.init Logical, whether to initialize the new project with git
@@ -20,19 +20,25 @@
 ##' ## Get a list of possible project templates
 ##' list_templates('projects')
 ##' # Create a project. Best done in a fresh R console.
-##' prodigen('poster', 'poster', 'dev/', FALSE, FALSE)
+##' prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
 ##' prodigen('poster', 'poster', 'path/to/dir/', FALSE)
 ##' prodigen('poster', 'posterName', git.init = FALSE)
 ##' prodigen('slides', 'conference-presentation', packrat.init = FALSE)
 ##' prodigen('abstract', 'name', './', FALSE)
-##' prodigen('manuscript', proj.path = './', git.init = FALSE)
+##' prodigen('manuscript', proj.path = './', git.init = TRUE)
 ##' }
-prodigen <- function(proj.type, proj.name = NULL, proj.path = '.',
-                     git.init = TRUE, packrat.init = FALSE) {
+prodigen <- function(proj.type, proj.name = NULL, proj.path = getwd(),
+                     git.init = FALSE, packrat.init = FALSE) {
 
     proj.type <- match.arg(proj.type, list_templates())
-    if (is.null(proj.name))
+    if (is.null(proj.name)) {
         proj.name <- proj.type
+    } else if (!is.character(proj.name)) {
+        stop('Please use a character string (ie. in quotes) for the project name.')
+    }
+
+    if (!dir.exists(proj.path))
+        stop('Please use a proj.path that currently exists on your computer.')
 
     proj_old <- file.path(proj.path, proj.type)
     proj_new <- file.path(proj.path, proj.name)
@@ -65,8 +71,7 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = '.',
             proj_new, enter = FALSE,
             options = list(
                 vcs.ignore.lib = TRUE,
-                vcs.ignore.src = TRUE,
-                ignored.packages = c('tidyr', 'dplyr', 'knitr', 'rmarkdown', 'ggplot2')
+                vcs.ignore.src = TRUE
             )
         )
     }
