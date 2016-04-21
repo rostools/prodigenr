@@ -14,9 +14,11 @@
     # Data wrangling commands
 
     # Final dataset object
+    ds <- ds.prep
+
     # Save the dataset as an RData file.
     data.file <- file.path('data', 'data.RData')
     if (!file.exists(data.file))
         dir.create('data')
-    saveRDS(ds, file = file.path('data', 'data.RData'))
+    saveRDS(ds, file = data.file)
 }
