@@ -1,48 +1,18 @@
-# Introduction
 
-This README details how this research directory is structured, how files should
-be run and what the different files do. Most of the files here work best with
-[RStudio](https://www.rstudio.com/). For instance, to generate the `.Rmd` files,
-all you need to do is type `Ctrl-Shift-K` in RStudio. Otherwise, you can run the
-`rmarkdown::render('file.Rmd')` command.
+# Project specific details
 
-# Project details
+The poster project creates a poster using the 
+[`beamer`](https://www.ctan.org/pkg/beamer?lang=en) class in 
+[LaTeX](https://latex-project.org/intro.html). As such, it requires some extra
+helper files that are included in the main folder:
 
-# Directory details
+- `beamerthemeCustomPoster.sty` contains LaTeX code for the specific styling of
+the poster, such as colour, block formatting, font, etc. This file can be
+customized to fit your preferences.
+- `template.tex` contains a slightly revised [pandoc](http://pandoc.org/)
+`beamer` template. In general, this file does not need to be changed or edited.
 
-The project directory is generally structured with `data`, `R`, and `doc`
-folders, as well as an optional version control `.git` folder and a `packrat`
-folder.  As a caveat, there may be folders other than the below that were
-created for an ad hoc purpose.
-
-## `./` folder (top level):
-
-This main important file here is the R Markdown poster file. This file can be
-generated using `rmarkdown::render` or by typing `Ctrl-Shift-K` in RStudio. The
-other two important files are the beamer `.sty` file and the template `.tex`
-file. These both work to create the theme of the beamer poster.
-
-## `R` folder:
-
-The `R` folder contains the R functions and commands used by all subsequent `.R`
-or `.Rmd` files files.  There are at least four files:
-
-- `fetch_data.R` to get, process, and save a dataset
-- `load_data.R` to compare the `fetch_data.R` to the local `data/ds.RData` 
-dataset and either run `fetch_data.R` again and load it or just load the dataset
-into memory.
-- `setup.R` to load packages and set options for packages
-- `functions.R` to hold all custom functions used for the analysis
-
-## `data` folder (optionally present):
-
-The `data` folder contains the analysis-specific dataset.  Meaning this dataset
-may be a subset of an original dataset, keeping the data relevant to the
-research question.
-
-# How this project was generated:
-
-The files and folders, along with the git and packrat initialization (optional),
-were created by the [`prodigenr`](http://github.com/lwjohnst86/prodigenr)
-package. They work best when using [RStudio](https://www.rstudio.com/), though
-nothing is stopping you from using other programs.
+Other than these helper files, the main file here is the `poster.Rmd` file. This
+file can be converted to a poster pdf format, with all R code computed, using
+`rmarkdown::render('poster.Rmd')` or by typing `Ctrl-Shift-K` in
+RStudio. 

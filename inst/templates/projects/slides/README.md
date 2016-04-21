@@ -1,48 +1,9 @@
-# Introduction
 
-This README details how this research directory is structured, how files should
-be run and what the different files do. Most of the files here work best with
-[RStudio](https://www.rstudio.com/). For instance, to generate the `.Rmd` files,
-all you need to do is type `Ctrl-Shift-K` in RStudio. Otherwise, you can run the
-`rmarkdown::render('file.Rmd')` command.
+# Project specific details
 
-# Project details
-
-# Directory details
-
-The project directory is generally structured with `data`, `R`, and `doc`
-folders, as well as an optional version control `.git` folder and a `packrat`
-folder.  As a caveat, there may be folders other than the below that were
-created for an ad hoc purpose.
-
-## `./` folder (top level):
-
-This main important file here is the R Markdown slides file. This file can be
-generated using `rmarkdown::render` or by typing `Ctrl-Shift-K` in RStudio. The
-other important file is the template `.tex` file, which works to make the theme
-for the beamer presentation.
-
-## `R` folder:
-
-The `R` folder contains the R functions and commands used by all subsequent `.R`
-or `.Rmd` files files.  There are at least four files:
-
-- `fetch_data.R` to get, process, and save a dataset
-- `load_data.R` to compare the `fetch_data.R` to the local `data/ds.RData` 
-dataset and either run `fetch_data.R` again and load it or just load the dataset
-into memory.
-- `setup.R` to load packages and set options for packages
-- `functions.R` to hold all custom functions used for the analysis
-
-## `data` folder (optionally present):
-
-The `data` folder contains the analysis-specific dataset.  Meaning this dataset
-may be a subset of an original dataset, keeping the data relevant to the
-research question.
-
-# How this project was generated:
-
-The files and folders, along with the git and packrat initialization (optional),
-were created by the [`prodigenr`](http://github.com/lwjohnst86/prodigenr)
-package. They work best when using [RStudio](https://www.rstudio.com/), though
-nothing is stopping you from using other programs.
+This main file is the `slides.Rmd` file. It uses the 
+[`beamer`](https://www.ctan.org/pkg/beamer?lang=en) class in 
+[LaTeX](https://latex-project.org/intro.html). There is one helper file
+`template.tex` that provides the theme, colouring, font family, etc and can be
+edited to your preferences. To create the slides pdf, with all R code computed,
+run `rmarkdown::render('slides.Rmd')` or type `Ctrl-Shift-K` in RStudio.
