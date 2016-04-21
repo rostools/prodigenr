@@ -1,21 +1,29 @@
-#' Code preamble
-#' =============
-#'
-#' Install packages if they are not installed and load them. Set options for
-#' the packages.
-#'
-#' *No need to edit*
+# Setup description -------------------------------------------------------
+#
+# These functions are used to load multiple packages (or install them if not
+# installed) and set options to be used across your analysis files.
+#
+# Instead of including all your `library()` commands in each of your files, you
+# simply need to include these two commands:
+#
+#   source('.Rprofile')
+#   run_setup()
+#
+# (Note: The dot in front of the two last functions hides them in the
+# environment)
+
+# *No need to edit*
 run_setup <- function() {
     # Run the following packages for setup
     .load_packages()
     .set_options()
-    # Run twice just in case some weren't loaded.
+    # Run twice just in case some packages weren't loaded.
     .load_packages()
 }
 
 # Edit as needed
 .load_packages <- function() {
-    # Add your packages you want to use here, using the following format:
+    # Add your packages you want to use here, using the following formats:
     # - For pre-bundled packages:
     # library(package)
 
