@@ -1,16 +1,23 @@
 # ---(LIKELY) NO NEED TO EDIT---
 #
-#' Load or fetch the dataset for the project
-#'
-#' @param local.dataset File path to the local dataset (eg. \code{data/}).
-#' @param fetch.script File path to the \code{fetch_data} function.
-#'
-#' @return Either updates the dataset or loads it in the working environment.
-#' @examples
-#' ds <- load_data()
-#' ds <- load_data(
-#'      'data/dsname.RData',
-#'      'R/fetchScript.R')
+# `load_data()` either loads the dataset inside the `data/` folder or, if the
+# `fetch_data.R` file has been changed, will re-run the `fetch_data.R` function
+# to update the dataset in `data/` and then loads the dataset.
+#
+# There are three arguments to this function:
+#
+# - `local.dataset`: Set the file path to the local dataset (eg. `data/`).
+# - `fetch.script`: Set the file path to the `fetch_data.R` function.
+# - `force`: Force updating the dataset in `data/` by running the `fetch_data.R`
+# function.
+#
+# Examples for usage:
+#
+#   ds <- load_data()
+#   ds <- load_data(
+#       'data/dsname.RData',
+#       'R/fetchScript.R')
+#
 load_data <- function(local.dataset = file.path('data', 'data.RData'),
                       fetch.script = file.path('R', 'fetch_data.R'),
                       force = FALSE) {
