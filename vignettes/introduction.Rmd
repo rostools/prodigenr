@@ -30,6 +30,7 @@ To use `prodigenr`, you simply need to use the `prodigen` command. At present,
 there are only four template projects that you can view using:
 
 ```{r templates, collapse=TRUE}
+library(prodigenr)
 list_templates()
 ```
 
@@ -39,7 +40,7 @@ However, if you have a suggestion or want to add a template, please create a
 
 Starting a manuscript? Create a project directory like so:
 
-```{r startProj, eval=FALSE}
+```{r, eval=FALSE}
 prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project')
 ```
 
@@ -73,6 +74,20 @@ information on good practices to use in making an analysis project, see
 [here](http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project)
 or 
 [here](http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/))
+
+## Workflow when using projects created from `prodigenr`
+
+A typical workflow would be to:
+
+1. Write up your analysis and associated written explanations of the results, as
+you would for any research project, in the abstract, poster, slides, or
+manuscript `.Rmd` ([R Markdown](http://rmarkdown.rstudio.com/)) file.
+2. Any piece of code you use more than once or is fairly complex, convert it
+into a function. Put this new function into the `R/functions.R` file.
+3. Fetch and wrangle your data in the `R/fetch_data.R` and to use the data, load
+it using `load_data()`.
+4. Knit the `.Rmd` file. You now have your final abstract, poster, slides, or
+manuscript to use for your research.
 
 ## Related packages or projects
 
