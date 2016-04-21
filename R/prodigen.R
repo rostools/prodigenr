@@ -53,9 +53,15 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = getwd(),
     )
     file.rename(proj_old, proj_new)
 
-    Rproj_old <- list.files(proj_new, pattern = '*.Rproj', full.names = TRUE)
-    Rproj_new <- file.path(proj_new, paste0(proj.name, '.Rproj'))
-    file.rename(Rproj_old, Rproj_new)
+    # Copy over the RStudio, Rprofile, and R/ files
+    template.files <- system.file('templates', 'files',
+                                  package = 'prodigenr')
+    file.copy(
+        list.files(template.files, all.files = TRUE, full.names = TRUE),
+        proj_new, recursive = TRUE
+    )
+    file.rename(file.path(proj_new, 'rstudio.Rproj'),
+                file.path(proj_new, paste0(proj.name, '.Rproj')))
 
     if (git.init & requireNamespace('git2r', quietly = TRUE)) {
         repo <- git2r::init(proj_new)

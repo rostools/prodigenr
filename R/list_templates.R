@@ -1,17 +1,16 @@
-##' Get a list of available templates in a package
-##'
-##' @title List templates within \pkg{prodigenr}.
-##' @param type type of template (file or directory, aka project)
-##' @param package name of package
-##' @return Vector of templates available
-##' @export
-##' @author Luke W. Johnston
-##' @examples
-##'
-##' \dontrun{
-##' list_templates('projects')
-##' list_templates()
-##' }
+#' List project templates within \pkg{prodigenr}.
+#'
+#' Get a list of available templates in a package.
+#'
+#' @param type Type of template (file or directory, aka project)
+#' @param package Name of package
+#' @return Vector of templates available
+#' @export
+#' @examples
+#'
+#' list_templates('projects')
+#' list_templates()
+#'
 list_templates <- function(type = 'projects', package = 'prodigenr') {
     temp.type <- match.arg(type)
     if (temp.type == 'projects') {
