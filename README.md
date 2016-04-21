@@ -42,6 +42,8 @@ There are several ways of creating projects, each of which has it's pros and con
 [`devtools`](https://cran.r-project.org/web/packages/devtools/README.html), argued for in this
 [blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) 
 
-`prodigenr` tries to use ideas from R packages/`devtools` but still be as simple
-as possible. However, it can always improve! I welcome any suggestions, just 
-submit a [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
+`prodigenr` tries to use ideas from R packages/`devtools` while still being as simple
+as possible and be more specific to academic researchers primarily in
+biomedical/non-computer science fields. However, it can always improve! I
+welcome any suggestions, just submit a 
+[GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
