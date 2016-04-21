@@ -46,22 +46,26 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = getwd(),
     if (file.exists(proj_new))
         stop('Project already exists, please use a different proj.name.')
 
-    file.copy(
-        system.file('templates', 'projects',
-                    proj.type, package = 'prodigenr'),
-        proj.path, recursive = TRUE
-    )
+    proj.files <- system.file('templates', 'projects', proj.type, package = 'prodigenr')
+    file.copy(proj.files,
+              proj.path, recursive = TRUE)
     file.rename(proj_old, proj_new)
 
     # Copy over the RStudio, Rprofile, and R/ files
     template.files <- system.file('templates', 'files',
                                   package = 'prodigenr')
-    file.copy(
-        list.files(template.files, all.files = TRUE, full.names = TRUE),
-        proj_new, recursive = TRUE
-    )
+    template.files <- list.files(template.files, all.files = TRUE,
+                                 full.names = TRUE,
+                                 include.dirs = FALSE)[-1:-2]
+    file.copy(template.files,
+              file.path(proj_new), recursive = TRUE)
+
     file.rename(file.path(proj_new, 'rstudio.Rproj'),
                 file.path(proj_new, paste0(proj.name, '.Rproj')))
+
+    file.append(file.path(proj_new, 'README.md'),
+                file.path(proj_new, 'README-append.md'))
+    file.remove(file.path(proj_new, 'README-append.md'))
 
     if (git.init & requireNamespace('git2r', quietly = TRUE)) {
         repo <- git2r::init(proj_new)
