@@ -2,29 +2,25 @@
 % Please edit documentation in R/list_templates.R
 \name{list_templates}
 \alias{list_templates}
-\title{List templates within \pkg{prodigenr}.}
+\title{List project templates within \pkg{prodigenr}.}
 \usage{
 list_templates(type = "projects", package = "prodigenr")
 }
 \arguments{
-\item{type}{type of template (file or directory, aka project)}
+\item{type}{Type of template (file or directory, aka project)}
 
-\item{package}{name of package}
+\item{package}{Name of package}
 }
 \value{
 Vector of templates available
 }
 \description{
-Get a list of available templates in a package
+Get a list of available templates in a package.
 }
 \examples{
 
-\dontrun{
 list_templates('projects')
 list_templates()
-}
-}
-\author{
-Luke W. Johnston
+
 }
 

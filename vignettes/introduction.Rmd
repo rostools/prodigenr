@@ -29,10 +29,6 @@ directory with all the necessary files and organization.
 To use `prodigenr`, you simply need to use the `prodigen` command. At present,
 there are only four template projects that you can view using:
 
-```{r, echo=FALSE}
-library(prodigenr)
-```
-
 ```{r templates, collapse=TRUE}
 list_templates()
 ```
@@ -43,7 +39,7 @@ However, if you have a suggestion or want to add a template, please create a
 
 Starting a manuscript? Create a project directory like so:
 
-```{r, eval=FALSE}
+```{r startProj, eval=FALSE}
 prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project')
 ```
 
