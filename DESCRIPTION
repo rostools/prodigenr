@@ -1,6 +1,6 @@
 Package: prodigenr
 Title: Project directory generator
-Version: 0.2.4
+Version: 0.2.5
 Authors@R: "Luke W. Johnston <lwjohnst@gmail.com> [aut, cre]"
 Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
