@@ -41,7 +41,7 @@ For a more detailed tutorial, see the vignette (still in development):
 There are several ways of creating projects, each of which has it's pros and cons.
 
 - [`ProjectTemplate`](http://projecttemplate.net/) 
-- [`makeProject`](https://cran.r-project.org/web/packages/makeProject/index.html)
+- [`makeProject`](https://cran.r-project.org/package=makeProject)
 - R package structure via
 [`devtools`](https://cran.r-project.org/web/packages/devtools/README.html), argued for in this
 [blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) 
