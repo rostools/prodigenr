@@ -102,7 +102,7 @@ complex in the project workflow it creates.
 is very simple and stripped down in what it creates and in it's use. Downside is
 that it wasn't updated since 2012.
 - Use of the R package structure via
-[`devtools`](https://cran.r-project.org/web/packages/devtools/README.html),
+[`devtools`](https://cran.r-project.org/package=devtools),
 which is argued for in this
 [blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) and
 compared to `ProjectTemplate` in this

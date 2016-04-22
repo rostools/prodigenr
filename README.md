@@ -43,7 +43,7 @@ There are several ways of creating projects, each of which has it's pros and con
 - [`ProjectTemplate`](http://projecttemplate.net/) 
 - [`makeProject`](https://cran.r-project.org/package=makeProject)
 - R package structure via
-[`devtools`](https://cran.r-project.org/web/packages/devtools/README.html), argued for in this
+[`devtools`](https://cran.r-project.org/package=devtools), argued for in this
 [blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) 
 
 `prodigenr` tries to use ideas from R packages/`devtools` while still being as simple
