@@ -11,7 +11,7 @@
 
 <meta name="author" content="Luke W. Johnston" />
 
-<meta name="date" content="2016-04-21" />
+<meta name="date" content="2016-04-22" />
 
 <title>Introduction to prodigenr</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title">Introduction to prodigenr</h1>
 <h4 class="author"><em>Luke W. Johnston</em></h4>
-<h4 class="date"><em>2016-04-21</em></h4>
+<h4 class="date"><em>2016-04-22</em></h4>
 
 </div>
 
@@ -81,7 +81,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="the-main-command-prodigen" class="section level2">
 <h2>The main command: <code>prodigen</code></h2>
 <p>To use <code>prodigenr</code>, you simply need to use the <code>prodigen</code> command. At present, there are only four template projects that you can view using:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list_templates</span>()
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(prodigenr)
+<span class="kw">list_templates</span>()
 ## [1] &quot;abstract&quot;   &quot;manuscript&quot; &quot;poster&quot;     &quot;slides&quot;</code></pre></div>
 <p>These templates are projects that an academic researcher typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
 <p>Starting a manuscript? Create a project directory like so:</p>
@@ -96,13 +97,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>A <code>README.md</code> file is contained within each project that explains more about what each folder does and what some of the files do that were created.</p>
 <p>The end goal of each project is to be as self contained as possible. So that if you ever need to go back to the analysis, it is easy to re-run the code and get the results that you say you got. This is especially useful if others such as reviewers ask for something or want to confirm your results. For more information on good practices to use in making an analysis project, see <a href="http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project">here</a> or <a href="http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/">here</a>)</p>
 </div>
+<div id="workflow-when-using-projects-created-from-prodigenr" class="section level2">
+<h2>Workflow when using projects created from <code>prodigenr</code></h2>
+<p>A typical workflow would be to:</p>
+<ol style="list-style-type: decimal">
+<li>Write up your analysis and associated written explanations of the results, as you would for any research project, in the abstract, poster, slides, or manuscript <code>.Rmd</code> (<a href="http://rmarkdown.rstudio.com/">R Markdown</a>) file.</li>
+<li>Any piece of code you use more than once or is fairly complex, convert it into a function. Put this new function into the <code>R/functions.R</code> file.</li>
+<li>Fetch and wrangle your data in the <code>R/fetch_data.R</code> and to use the data, load it using <code>load_data()</code>.</li>
+<li>Knit the <code>.Rmd</code> file. You now have your final abstract, poster, slides, or manuscript to use for your research.</li>
+</ol>
+</div>
 <div id="related-packages-or-projects" class="section level2">
 <h2>Related packages or projects</h2>
 <p>There are several ways of handling a project. There is at least two packages that have similar goals as <code>prodigenr</code> as well as through the use of the R package structure:</p>
 <ul>
 <li><a href="http://projecttemplate.net/"><code>ProjectTemplate</code></a> is well documented and still actively developed. Only downside is that it is fairly complicated to use and complex in the project workflow it creates.</li>
-<li><a href="https://cran.r-project.org/web/packages/makeProject/index.html"><code>makeProject</code></a> is very simple and stripped down in what it creates and in it’s use. Downside is that it wasn’t updated since 2012.</li>
-<li>Use of the R package structure via <a href="https://cran.r-project.org/web/packages/devtools/README.html"><code>devtools</code></a>, which is argued for in this <a href="https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html">blog</a> and compared to <code>ProjectTemplate</code> in this <a href="https://rmflight.github.io/posts/2014/07/zpackages_vs_projectTemplate.html">blog</a>).</li>
+<li><a href="https://cran.r-project.org/package=makeProject"><code>makeProject</code></a> is very simple and stripped down in what it creates and in it’s use. Downside is that it wasn’t updated since 2012.</li>
+<li>Use of the R package structure via <a href="https://cran.r-project.org/package=devtools"><code>devtools</code></a>, which is argued for in this <a href="https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html">blog</a> and compared to <code>ProjectTemplate</code> in this <a href="https://rmflight.github.io/posts/2014/07/zpackages_vs_projectTemplate.html">blog</a>).</li>
 </ul>
 <p>It’s up to you to decide which style to use. The goal behind creating <code>prodigenr</code> was to incorporate the ideas behind R packages and mesh well with RStudio, while also trying to be as simple as possible so it is in some ways a hybrid between <code>ProjectTemplate</code> and <code>makeProject</code>. It can always be improved, so if you have suggestions just submit a <a href="https://github.com/lwjohnst86/prodigenr/issues">GitHub issue</a>!</p>
 </div>

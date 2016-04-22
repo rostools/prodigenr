@@ -1,7 +1,8 @@
 ## ----templates, collapse=TRUE--------------------------------------------
+library(prodigenr)
 list_templates()
 
-## ----startProj, eval=FALSE-----------------------------------------------
+## ---- eval=FALSE---------------------------------------------------------
 #  prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project')
 
 ## ---- eval=FALSE---------------------------------------------------------
