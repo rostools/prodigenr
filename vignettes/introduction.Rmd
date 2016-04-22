@@ -98,7 +98,7 @@ package structure:
 - [`ProjectTemplate`](http://projecttemplate.net/) is well documented and still
 actively developed. Only downside is that it is fairly complicated to use and
 complex in the project workflow it creates.
-- [`makeProject`](https://cran.r-project.org/web/packages/makeProject/index.html)
+- [`makeProject`](https://cran.r-project.org/package=makeProject)
 is very simple and stripped down in what it creates and in it's use. Downside is
 that it wasn't updated since 2012.
 - Use of the R package structure via

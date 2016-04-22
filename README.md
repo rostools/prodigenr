@@ -1,3 +1,7 @@
+# prodigenr
+
+[![Build Status](https://travis-ci.org/lwjohnst86/prodigenr.svg?branch=master)](https://travis-ci.org/lwjohnst86/prodigenr)
+
 This is a *pro*ject *di*rectory *gen*erato*r* (`prodigenr`) that will
 create a project directory structure with template files necessary for
 managing and analyzing data for a variety of projects.  This allows

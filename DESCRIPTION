@@ -1,11 +1,11 @@
 Package: prodigenr
-Title: Project directory generator
+Title: Research Project Directory Generator
 Version: 0.2.6
-Authors@R: "Luke W. Johnston <lwjohnst@gmail.com> [aut, cre]"
+Authors@R: person("Luke", "Johnston", , "lwjohnst@gmail.com", c("aut", "cre"))
 Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
     as well as for them to be standardized. Designed specifically with scientists
-    in mind (mainly biomedical researchers, but likely applies to other fields).
+    in mind (mainly bio-medical researchers, but likely applies to other fields).
 Depends:
     R (>= 3.1.2)
 License: MIT + file LICENSE
