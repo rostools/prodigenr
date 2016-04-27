@@ -14,7 +14,8 @@ Suggests:
     rmarkdown,
     git2r,
     packrat,
-    knitr
+    knitr,
+    testthat
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
 BugReports: https://github.com/lwjohnst86/prodigenr/issues
