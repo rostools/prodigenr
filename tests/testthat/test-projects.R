@@ -38,6 +38,10 @@ test_that("projects successfully created with default options (no git or packrat
                                                   all.files = TRUE, no.. = TRUE)))
         expected.files <- sort(unname(unlist(expected.files)))
 
+        differences <- setdiff(project.files, expected.files)
+        if (length(differences) > 0)
+            print(paste0(differences))
+
         expect_true(dir.exists(project.dir))
         expect_true(dir.exists(file.path(project.dir, 'R')))
         expect_identical(project.files, expected.files)
