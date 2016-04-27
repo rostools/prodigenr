@@ -1,6 +1,6 @@
 context('projects')
 
-test_that("projects successfully created with default options (no git or packrat)", {
+test_that("projects created (no git or packrat)", {
 
     skip_on_cran()
 
@@ -40,7 +40,7 @@ test_that("projects successfully created with default options (no git or packrat
 
         differences <- setdiff(project.files, expected.files)
         if (length(differences) > 0)
-            print(paste0(differences))
+            warning(paste0(differences))
 
         expect_true(dir.exists(project.dir))
         expect_true(dir.exists(file.path(project.dir, 'R')))
