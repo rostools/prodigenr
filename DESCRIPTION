@@ -18,4 +18,5 @@ Suggests:
     testthat
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+URL: https://github.com/lwjohnst86/prodigenr
 BugReports: https://github.com/lwjohnst86/prodigenr/issues
