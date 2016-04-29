@@ -1,5 +1,7 @@
-This is a new submission. It's not a big project and I don't plan on updating it
-frequently.
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Fixed the LICENSE file to be the CRAN template for MIT.
 
 ## Test environments
 * local ubuntu 12.04 install, R 3.2.5
