@@ -6,14 +6,14 @@ This is a *pro*ject *di*rectory *gen*erato*r* (`prodigenr`) that will
 create a project directory structure with template files necessary for
 managing and analyzing data for a variety of projects.  This allows
 for a standardized approach to having a modular research project.
-This package can be found at
-[on the GitHub `prodigenr` repo](https://github.com/lwjohnst86/prodigenr). Note,
-this is still in development.
 
 # How to install
 
-Install by forking or cloning this repo, or by using the R command:
+Install via CRAN or using `devtools` for the development version:
 
+    install.packages('prodigenr')
+    
+    # Development version
     devtools::install_github('lwjohnst86/prodigenr')
 
 # Usage
