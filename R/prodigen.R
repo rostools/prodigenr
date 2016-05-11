@@ -60,8 +60,11 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = getwd(),
     file.copy(template.files,
               file.path(proj_new), recursive = TRUE)
 
-    file.rename(file.path(proj_new, 'rstudio.Rproj'),
+    file.rename(file.path(proj_new, 'rstudio'),
                 file.path(proj_new, paste0(proj.name, '.Rproj')))
+
+    file.rename(file.path(proj_new, 'Rprofile'),
+                file.path(proj_new, '.Rprofile'))
 
     file.append(file.path(proj_new, 'README.md'),
                 file.path(proj_new, 'README-append.md'))
