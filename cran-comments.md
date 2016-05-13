@@ -1,20 +1,13 @@
-## Resubmission
-This is a resubmission. In this version I have:
-
-* Fixed the LICENSE file to be the CRAN template for MIT.
+## Hotfix
+There was a minor bug preventing certain files from being created. This release fixes that.
 
 ## Test environments
-* local ubuntu 12.04 install, R 3.2.5
-* OS X (on travis-ci and on a labmates Mac), R 3.2.5
-* win-builder (devel and release) as well as lab's Win 7 install
+* local ubuntu 14.04.3 install, R 3.3.0
+* OS X (on travis-ci and on a labmates Mac), R 3.3.0
+* win-builder (devel and release) as well as lab's Win 7 and Win 10 install
 
 ## R CMD check results
-
-On local install and travis-ci there were no ERRORs, WARNINGs, or NOTEs.
-
-On win-builder there was one NOTE that as far as I can tell relate to the
-package being a new submission.
+There were no ERRORs, WARNINGs, or NOTEs.
 
 ## Reverse dependencies
-
-This is a new release, so there are no reverse dependencies.
+There are no reverse dependencies.
