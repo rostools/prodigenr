@@ -32,9 +32,11 @@ a PR if you want another template included!):
 
     list_templates('projects') ## Shows project templates
 
-For a more detailed tutorial, see the vignette (still in development):
+For a more detailed tutorial, see the vignette:
 
     vignette('introduction', 'prodigenr')
+    
+Or to directly [preview it here](https://htmlpreview.github.io/?https://github.com/lwjohnst86/prodigenr/blob/master/vignettes/introduction.html).
 
 # Related packages or projects
 
