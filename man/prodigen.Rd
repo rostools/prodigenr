@@ -5,7 +5,8 @@
 \title{Create a project directory based on a template}
 \usage{
 prodigen(proj.type, proj.name = NULL, proj.path = getwd(),
-  git.init = FALSE, packrat.init = FALSE)
+  git.init = FALSE, packrat.init = FALSE, style = c("current",
+  "previous"))
 }
 \arguments{
 \item{proj.type}{type of project to create, based on the templates found in
@@ -18,7 +19,11 @@ prodigen(proj.type, proj.name = NULL, proj.path = getwd(),
 \item{git.init}{Logical, whether to initialize the new project with git}
 
 \item{packrat.init}{Logical, whether to track the R package usage with
-packrat.}
+packrat (not available for 'current' version).}
+
+\item{style}{'current' is the currently developed style for projects,
+'previous' is the old style of projects. Current is based more around
+\code{\link[devtools]{devtools}} and it's use in RStudio.}
 }
 \value{
 Creates a project directory with files and subdirectories
@@ -34,7 +39,7 @@ project directory layout, with template files and helper scripts.
 
 \dontrun{
 ## Get a list of possible project templates
-list_templates('projects')
+template_list
 # Create a project. Best done in a fresh R console.
 prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
 prodigen('poster', 'poster', 'path/to/dir/', FALSE)
@@ -43,8 +48,5 @@ prodigen('slides', 'conference-presentation', packrat.init = FALSE)
 prodigen('abstract', 'name', './', FALSE)
 prodigen('manuscript', proj.path = './', git.init = TRUE)
 }
-}
-\author{
-Luke W. Johnston
 }
 
