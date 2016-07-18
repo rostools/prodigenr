@@ -59,7 +59,8 @@ prodigen_current <-
         }
 
         proj_path <- file.path(proj.path, proj.name)
-        devtools::create(proj_path)
+        message("* Creating project '", proj.name, "' in '", proj_path, "'.")
+        null <- capture.output(suppressMessages(devtools::create(proj_path)))
         include_readme(proj_path)
         include_project_document(proj.type, proj_path)
         include_rbase_files(proj_path)
@@ -69,6 +70,7 @@ prodigen_current <-
         } else {
             null <- file.remove(file.path(proj_path, '.gitignore'))
         }
+        invisible(TRUE)
     }
 
 prodigen_previous <- function(proj.type, proj.name = NULL, proj.path = getwd(),
