@@ -10,15 +10,17 @@
 ##' @param proj.path location of where the new project will be created
 ##' @param git.init Logical, whether to initialize the new project with git
 ##' @param packrat.init Logical, whether to track the R package usage with
-##'   packrat.
+##'   packrat (not available for 'current' version).
+##' @param style 'current' is the currently developed style for projects,
+##'   'previous' is the old style of projects. Current is based more around
+##'   \code{\link[devtools]{devtools}} and it's use in RStudio.
 ##' @return Creates a project directory with files and subdirectories
 ##' @export
-##' @author Luke W. Johnston
 ##' @examples
 ##'
 ##' \dontrun{
 ##' ## Get a list of possible project templates
-##' list_templates('projects')
+##' template_list
 ##' # Create a project. Best done in a fresh R console.
 ##' prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
 ##' prodigen('poster', 'poster', 'path/to/dir/', FALSE)
@@ -28,7 +30,50 @@
 ##' prodigen('manuscript', proj.path = './', git.init = TRUE)
 ##' }
 prodigen <- function(proj.type, proj.name = NULL, proj.path = getwd(),
+                     git.init = FALSE, packrat.init = FALSE,
+                     style = c('current', 'previous')) {
+    style <- match.arg(style)
+    switch(style,
+           current = {
+               prodigen_current(proj.type = proj.type, proj.name = proj.name,
+                                proj.path = proj.path, git.init = git.init)
+           },
+           previous = {
+               prodigen_previous(proj.type = proj.type, proj.name = proj.name,
+                                 proj.path = proj.path, git.init = git.init,
+                                 packrat.init = packrat.init)
+           })
+
+}
+
+
+prodigen_current <-
+    function(proj.type,
+             proj.name = NULL,
+             proj.path = getwd(),
+             git.init = FALSE) {
+        proj.type <- match.arg(proj.type, template_list)
+        stopifnot(is.character(proj.name))
+        if (is.null(proj.name)) {
+            proj.name <- proj.type
+        }
+
+        proj_path <- file.path(proj.path, proj.name)
+        devtools::create(proj_path)
+        include_readme(proj_path)
+        include_project_document(proj.type, proj_path)
+        include_rbase_files(proj_path)
+        suppressMessages(devtools::use_package('devtools'))
+        if (git.init) {
+            devtools::use_git(pkg = proj_path)
+        } else {
+            null <- file.remove(file.path(proj_path, '.gitignore'))
+        }
+    }
+
+prodigen_previous <- function(proj.type, proj.name = NULL, proj.path = getwd(),
                      git.init = FALSE, packrat.init = FALSE) {
+    .Deprecated('prodigen_current', msg = 'The previous style of projects will be discontinued soon. Please use the arg `style = "current"` (which is the default), to use the currently developed project style.')
 
     proj.type <- match.arg(proj.type, list_templates())
     if (is.null(proj.name)) {
@@ -46,13 +91,13 @@ prodigen <- function(proj.type, proj.name = NULL, proj.path = getwd(),
     if (file.exists(proj_new))
         stop('Project already exists, please use a different proj.name.')
 
-    proj.files <- system.file('templates', 'projects', proj.type, package = 'prodigenr')
+    proj.files <- system.file('templates_old', 'projects', proj.type, package = 'prodigenr')
     file.copy(proj.files,
               proj.path, recursive = TRUE)
     file.rename(proj_old, proj_new)
 
     # Copy over the RStudio, Rprofile, and R/ files
-    template.files <- system.file('templates', 'files',
+    template.files <- system.file('templates_old', 'files',
                                   package = 'prodigenr')
     template.files <- list.files(template.files, all.files = TRUE,
                                  full.names = TRUE,

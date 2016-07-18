@@ -1,0 +1,58 @@
+---
+title: "**Title**"
+theme: CustomPoster
+poster-height: 
+poster-width: 
+font-scale: 1.5
+author: 
+  - name: First Last
+    affiliation: 1
+address:
+  - code: 1
+    address: 'Department, University, City, Country'
+bibliography: path/to/bib/file
+csl: path/to/bib/style/file
+output:
+    pdf_document:
+        template: template.tex
+---
+
+```{r setup, message = FALSE, echo = FALSE}
+source('.Rprofile')
+run_setup()
+load_data('/path/to/master/dataset')
+dim(ds)
+```
+
+```{r caption_setup}
+## Include captions below using `captioner` package
+figNums <- captioner(prefix = 'Figure')
+tabNums <- captioner(prefix = 'Table')
+```
+
+<!------------------>
+<!-- First column -->
+\columnBegin{.29\linewidth}
+\blockBegin{Background}
+\blockEnd
+
+\blockBegin{Methods:}
+\blockEnd
+\columnEnd
+
+<!------------------->
+<!-- Second column -->
+\columnBegin{.29\linewidth}
+\blockBegin{Results:}
+\blockEnd
+\columnEnd
+
+<!------------------>
+<!-- Third column -->
+\columnBegin{0.29\linewidth}
+\blockBegin{Discussion}
+\blockEnd
+
+\blockBegin{References}
+\scriptsize
+

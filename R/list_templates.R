@@ -12,9 +12,14 @@
 #' list_templates()
 #'
 list_templates <- function(type = 'projects', package = 'prodigenr') {
+    .Deprecated('template_list')
     temp.type <- match.arg(type)
     if (temp.type == 'projects') {
-        list.dirs(system.file('templates', temp.type, package = package),
+        list.dirs(system.file('templates_old', temp.type, package = package),
                   full.names = FALSE, recursive = FALSE)
     }
 }
+
+#' @rdname list_templates
+#' @export
+template_list <- c('abstract', 'manuscript', 'poster', 'slides')
