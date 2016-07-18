@@ -1,0 +1,14 @@
+.
+├── DESCRIPTION
+├── ManuscriptName.Rproj
+├── NAMESPACE
+├── R
+│   ├── fetch_data.R
+│   ├── functions.R
+│   ├── load_data.R
+│   └── setup.R
+├── README.md
+└── vignettes
+    └── manuscript.Rmd
+
+2 directories, 9 files

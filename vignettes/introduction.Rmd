@@ -9,6 +9,14 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
 Are you an academic researcher who often writes up abstracts for conferences or
 submits manuscripts to journals? Do you often have to make slides or posters for
 presentations? Is your usual workflow to copy a previous project and start 
@@ -31,29 +39,31 @@ there are only four template projects that you can view using:
 
 ```{r templates, collapse=TRUE}
 library(prodigenr)
-list_templates()
+template_list
+path <- tempdir()
 ```
 
 These templates are projects that an academic researcher typically encounters.
 However, if you have a suggestion or want to add a template, please create a
 [Github issue](https://github.com/lwjohnst86/prodigenr/issues) or submit a [Pull Request](https://github.com/lwjohnst86/prodigenr/pulls)!
 
-Starting a manuscript? Create a project directory like so:
+Starting a manuscript? Create a project directory like so (using [Git](https://git-scm.com/)):
 
-```{r, eval=FALSE}
-prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project')
+```{r manuscriptProj}
+prodigen('manuscript', 'ManuscriptName', path, git.init = TRUE)
 ```
 
-Do you use [Git](https://git-scm.com/)? You can start a git repository in the new project simply through the `git.init` argument:
-
-```{r, eval=FALSE}
-prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project', git.init = TRUE)
+```{r shell_command, echo = FALSE}
+# run only on computer
+cat(paste(system(paste0('cd ', path, '/ManuscriptName && tree'), intern = TRUE), collapse = '\n'),
+    file = 'vignettes/file_structure.txt')
+unlink(file.path(path, 'ManuscriptName'))
 ```
 
-Or if you need to use [Packrat](https://rstudio.github.io/packrat/), start it with `packrat.init`:
+The resulting file structure should look something like this:
 
-```{r, eval=FALSE}
-prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project', packrat.init = TRUE)
+```{r file_structure, eval = TRUE, echo = FALSE, results='markup', comment=''}
+cat(readLines('file_structure.txt', warn = FALSE), sep = '\n')
 ```
 
 The same procedure is used for making the other project templates.
@@ -83,7 +93,8 @@ A typical workflow would be to:
 you would for any research project, in the abstract, poster, slides, or
 manuscript `.Rmd` ([R Markdown](http://rmarkdown.rstudio.com/)) file.
 2. Any piece of code you use more than once or is fairly complex, convert it
-into a function. Put this new function into the `R/functions.R` file.
+into a function. Put this new function into the `R/` directory. Load that function 
+using `devtools::load_all()` (Ctrl-Shift-L).
 3. Fetch and wrangle your data in the `R/fetch_data.R` and to use the data, load
 it using `load_data()`.
 4. Knit the `.Rmd` file. You now have your final abstract, poster, slides, or
@@ -107,6 +118,9 @@ which is argued for in this
 [blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) and
 compared to `ProjectTemplate` in this
 [blog](https://rmflight.github.io/posts/2014/07/zpackages_vs_projectTemplate.html)).
+
+There is also a list of other similar projects 
+[on the rOpenSci GitHub repository](https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia).
 
 It's up to you to decide which style to use. The goal behind creating 
 `prodigenr` was to incorporate the ideas behind R packages and mesh well with 
