@@ -55,9 +55,12 @@ prodigen('manuscript', 'ManuscriptName', path, git.init = TRUE)
 
 ```{r shell_command, echo = FALSE}
 # run only on computer
-cat(paste(system(paste0('cd ', path, '/ManuscriptName && tree'), intern = TRUE), collapse = '\n'),
+cat(paste(system(
+    paste0('cd ', path, '/ManuscriptName && tree -a -I .git --dirsfirst -v'),
+    intern = TRUE
+    ), collapse = '\n'),
     file = 'vignettes/file_structure.txt')
-unlink(file.path(path, 'ManuscriptName'))
+unlink(file.path(path, 'ManuscriptName'), recursive = TRUE)
 ```
 
 The resulting file structure should look something like this:

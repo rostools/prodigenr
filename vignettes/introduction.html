@@ -12,7 +12,7 @@
 
 <meta name="author" content="Luke W. Johnston" />
 
-<meta name="date" content="2016-07-18" />
+<meta name="date" content="2016-07-28" />
 
 <title>Introduction to prodigenr</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to prodigenr</h1>
 <h4 class="author"><em>Luke W. Johnston</em></h4>
-<h4 class="date"><em>2016-07-18</em></h4>
+<h4 class="date"><em>2016-07-28</em></h4>
 
 
 
@@ -82,36 +82,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>To use <code>prodigenr</code>, you simply need to use the <code>prodigen</code> command. At present, there are only four template projects that you can view using:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(prodigenr)
 template_list
-<span class="co">#&gt; [1] &quot;abstract&quot;   &quot;manuscript&quot; &quot;poster&quot;     &quot;slides&quot;</span>
 path &lt;-<span class="st"> </span><span class="kw">tempdir</span>()</code></pre></div>
 <p>These templates are projects that an academic researcher typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
-<p>Starting a manuscript? Create a project directory like so:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prodigen</span>(<span class="st">'manuscript'</span>, <span class="st">'ManuscriptName'</span>, path, <span class="dt">git.init =</span> <span class="ot">TRUE</span>)
-<span class="co">#&gt; * Creating project 'ManuscriptName' in '/tmp/RtmpxYQT2U/ManuscriptName'.</span>
-<span class="co">#&gt; * Adding a README.md file to the project.</span>
-<span class="co">#&gt; * Adding the main project manuscript document to the vignettes/ folder.</span>
-<span class="co">#&gt; * Creating `vignettes`.</span>
-<span class="co">#&gt; * Adding `inst/doc` to ./.gitignore</span>
-<span class="co">#&gt; * Adding some basic R functions to the R/ folder.</span>
-<span class="co">#&gt; * Initialising repo</span>
-<span class="co">#&gt; * Adding `.Rproj.user`, `.Rhistory`, `.RData` to ./.gitignore</span>
-<span class="co">#&gt; * Adding files and committing</span></code></pre></div>
+<p>Starting a manuscript? Create a project directory like so (using <a href="https://git-scm.com/">Git</a>):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prodigen</span>(<span class="st">'manuscript'</span>, <span class="st">'ManuscriptName'</span>, path, <span class="dt">git.init =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p>The resulting file structure should look something like this:</p>
 <pre><code>.
-├── DESCRIPTION
-├── ManuscriptName.Rproj
-├── NAMESPACE
 ├── R
 │   ├── fetch_data.R
 │   ├── functions.R
 │   ├── load_data.R
 │   └── setup.R
-├── README.md
-└── vignettes
-    └── manuscript.Rmd
+├── doc
+│   └── manuscript.Rmd
+├── vignettes
+│   ├── extra-analyses.Rmd
+│   └── file_structure.txt
+├── .Rbuildignore
+├── .gitignore
+├── DESCRIPTION
+├── ManuscriptName.Rproj
+├── NAMESPACE
+└── README.md
 
-2 directories, 9 files</code></pre>
-<p>Do you use <a href="https://git-scm.com/">Git</a>? You can start a git repository in the new project simply through the <code>git.init</code> argument:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prodigen</span>(<span class="st">'manuscript'</span>, <span class="st">'ManuscriptName'</span>, <span class="st">'~/path/to/new/project'</span>, <span class="dt">git.init =</span> <span class="ot">TRUE</span>)</code></pre></div>
+3 directories, 13 files</code></pre>
 <p>The same procedure is used for making the other project templates.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prodigen</span>(<span class="st">'slides'</span>, <span class="st">'PresentationName'</span>, <span class="st">'~/path'</span>)
 <span class="kw">prodigen</span>(<span class="st">'abstract'</span>, <span class="st">'Name'</span>, <span class="st">'.'</span>) <span class="co"># Current directory</span></code></pre></div>

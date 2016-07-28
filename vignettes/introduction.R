@@ -2,28 +2,28 @@
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  eval = FALSE
 )
 
 ## ----templates, collapse=TRUE--------------------------------------------
-library(prodigenr)
-template_list
-path <- tempdir()
+#  library(prodigenr)
+#  template_list
+#  path <- tempdir()
 
 ## ----manuscriptProj------------------------------------------------------
-prodigen('manuscript', 'ManuscriptName', path, git.init = TRUE)
+#  prodigen('manuscript', 'ManuscriptName', path, git.init = TRUE)
 
-## ----shell_command, eval = FALSE, echo = FALSE---------------------------
+## ----shell_command, echo = FALSE-----------------------------------------
 #  # run only on computer
-#  cat(paste(system(paste0('cd ', path, '/ManuscriptName && tree'), intern = TRUE), collapse = '\n'),
+#  cat(paste(system(
+#      paste0('cd ', path, '/ManuscriptName && tree -a -I .git --dirsfirst -v'),
+#      intern = TRUE
+#      ), collapse = '\n'),
 #      file = 'vignettes/file_structure.txt')
+#  unlink(file.path(path, 'ManuscriptName'), recursive = TRUE)
 
-## ----file_structure, echo = FALSE, results='markup', comment=''----------
-unlink(file.path(path, 'ManuscriptName'))
+## ----file_structure, eval = TRUE, echo = FALSE, results='markup', comment=''----
 cat(readLines('file_structure.txt', warn = FALSE), sep = '\n')
-
-## ---- eval=FALSE---------------------------------------------------------
-#  prodigen('manuscript', 'ManuscriptName', '~/path/to/new/project', git.init = TRUE)
 
 ## ---- eval=FALSE---------------------------------------------------------
 #  prodigen('slides', 'PresentationName', '~/path')

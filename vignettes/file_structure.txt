@@ -1,14 +1,19 @@
 .
-├── DESCRIPTION
-├── ManuscriptName.Rproj
-├── NAMESPACE
 ├── R
 │   ├── fetch_data.R
 │   ├── functions.R
 │   ├── load_data.R
 │   └── setup.R
-├── README.md
-└── vignettes
-    └── manuscript.Rmd
+├── doc
+│   └── manuscript.Rmd
+├── vignettes
+│   ├── extra-analyses.Rmd
+│   └── file_structure.txt
+├── .Rbuildignore
+├── .gitignore
+├── DESCRIPTION
+├── ManuscriptName.Rproj
+├── NAMESPACE
+└── README.md
 
-2 directories, 9 files
+3 directories, 13 files
