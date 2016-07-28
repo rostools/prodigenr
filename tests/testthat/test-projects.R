@@ -64,11 +64,10 @@ test_prodigen <-
         path <- tempdir()
 
         utils::capture.output(prodigen(
-            proj.type = type,
-            proj.name = name,
-            proj.path = path,
-            git.init = git,
-            style = 'current'
+            type = type,
+            name = name,
+            path = path,
+            git.init = git
         ))
 
         path <- file.path(path, name)
