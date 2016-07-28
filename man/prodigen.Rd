@@ -2,51 +2,43 @@
 % Please edit documentation in R/prodigen.R
 \name{prodigen}
 \alias{prodigen}
-\title{Create a project directory based on a template}
+\title{Create a project directory based on a template.}
 \usage{
-prodigen(proj.type, proj.name = NULL, proj.path = getwd(),
-  git.init = FALSE, packrat.init = FALSE, style = c("current",
-  "previous"))
+prodigen(type, name = NULL, path = getwd(), git.init = FALSE)
 }
 \arguments{
-\item{proj.type}{type of project to create, based on the templates found in
-\code{\link[prodigenr]{list_templates}} function}
+\item{type}{type of project to create, based on the templates found in
+\code{\link[prodigenr]{template_list}} function}
 
-\item{proj.name}{name of the new project directory}
+\item{name}{name of the new project directory}
 
-\item{proj.path}{location of where the new project will be created}
+\item{path}{location of where the new project will be created}
 
 \item{git.init}{Logical, whether to initialize the new project with git}
-
-\item{packrat.init}{Logical, whether to track the R package usage with
-packrat (not available for 'current' version).}
-
-\item{style}{'current' is the currently developed style for projects,
-'previous' is the old style of projects. Current is based more around
-\code{\link[devtools]{devtools}} and it's use in RStudio.}
 }
 \value{
 Creates a project directory with files and subdirectories
 }
 \description{
-Create a project directory and associated files.
-}
-\details{
-The main workhorse of the \pkg{prodigenr} package.  Creates a
-project directory layout, with template files and helper scripts.
+Create a project directory and associated files. Is based on using RStudio
+and the \link[devtools]{devtools} package development way of working with
+files and code. So commands/keybindings like
+\code{\link[devtools]{load_all}} (Ctrl-Shift-L) and
+\code{\link[devtools]{document}} (Ctrl-Shift-D) work to update your code and
+allow an continuous and integrated approach to analyzing your data and
+writing up your research product.
 }
 \examples{
 
-\dontrun{
-## Get a list of possible project templates
+\dontrun{\donttest{
+# Get a list of possible project templates
 template_list
 # Create a project. Best done in a fresh R console.
 prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
 prodigen('poster', 'poster', 'path/to/dir/', FALSE)
 prodigen('poster', 'posterName', git.init = FALSE)
-prodigen('slides', 'conference-presentation', packrat.init = FALSE)
 prodigen('abstract', 'name', './', FALSE)
-prodigen('manuscript', proj.path = './', git.init = TRUE)
-}
+prodigen('manuscript', path = './', git.init = TRUE)
+}}
 }
 
