@@ -5,10 +5,14 @@ include_readme <- function(path) {
 }
 
 include_project_document <- function(type, path) {
-    message('* Adding the main project ', type, ' document to the vignettes/ folder.')
-    devtools::use_vignette('placeholder', path)
-    file.remove(file.path(path, 'vignettes', 'placeholder.Rmd'))
-    copy_template_files(type, file.path(path, 'vignettes'))
+    message('* Adding the main project ', type, ' document to the doc/ folder.')
+    dir.create(file.path(path, 'doc'))
+    copy_template_files(type, file.path(path, 'doc'))
+}
+
+include_extra_analyses <- function(path) {
+    message('* Creating a vignette file for documenting additional analyses.')
+    devtools::use_vignette('extra-analyses', path)
 }
 
 include_rbase_files <- function(path) {
@@ -23,6 +27,8 @@ include_rbase_files <- function(path) {
 #' @return Creates a MIT LICENSE file.
 #' @export
 include_mit_license <- function(path = '.') {
+    if (!requireNamespace('xml2', quietly = TRUE))
+        stop('Please install the `xml2` package.')
     if (!requireNamespace('rvest', quietly = TRUE))
         stop('Please install the `rvest` package.')
     path <- devtools::as.package(path)$path
@@ -32,7 +38,7 @@ include_mit_license <- function(path = '.') {
     mit <- rvest::html_text(mit)
     devtools::use_mit_license(path)
     license_path <- file.path(path, 'LICENSE')
-    capture.output(cat(readLines(license_path), mit, file = license_path))
+    utils::capture.output(cat(readLines(license_path), mit, file = license_path))
     invisible()
 }
 
@@ -65,6 +71,6 @@ include_strobe <- function(path = '.') {
     strobe <- xml2::read_html('https://raw.githubusercontent.com/lwjohnst86/scientific-checklists/master/STROBE.md')
     strobe <- rvest::html_text(strobe)
     file_path <- file.path(path, 'vignettes', 'strobe-checklist.md')
-    capture.output(cat(strobe, file = file_path))
+    utils::capture.output(cat(strobe, file = file_path))
     invisible()
 }
