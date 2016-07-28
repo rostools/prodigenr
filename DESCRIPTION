@@ -1,6 +1,6 @@
 Package: prodigenr
 Title: Research Project Directory Generator
-Version: 0.2.7.9000
+Version: 0.3.0.9000
 Authors@R: person("Luke", "Johnston", , "lwjohnst@gmail.com", c("aut", "cre"))
 Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
@@ -12,15 +12,15 @@ License: MIT + file LICENSE
 LazyData: true
 Suggests:
     rmarkdown,
-    git2r,
-    packrat,
     knitr,
     testthat,
     rvest,
-    utils,
     xml2
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
 URL: https://github.com/lwjohnst86/prodigenr
 BugReports: https://github.com/lwjohnst86/prodigenr/issues
-Imports: devtools
+Imports:
+    devtools,
+    stats,
+    utils
