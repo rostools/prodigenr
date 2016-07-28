@@ -49,6 +49,8 @@ include_mit_license <- function(path = '.') {
 #' @return Creates an rfigshare script.
 #' @export
 include_rfigshare_script <- function(path = '.') {
+    if (!requireNamespace('rfigshare', quietly = TRUE))
+        stop('Please install the `rfigshare` package.')
     message('* Adding rfigshare.R to the R/ folder. Use this to send code to figshare.')
     path <- devtools::as.package(path)$path
     devtools::use_package('rfigshare', pkg = path)

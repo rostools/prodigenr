@@ -15,7 +15,8 @@ Suggests:
     knitr,
     testthat,
     rvest,
-    xml2
+    xml2,
+    rfigshare
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
 URL: https://github.com/lwjohnst86/prodigenr
