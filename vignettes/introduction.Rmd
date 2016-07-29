@@ -26,7 +26,9 @@ mind!
 `prodigenr`, or *pro*ject *di*rectory *gen*erator, simplifies the process of
 creating these new projects and can help make your workflow more reproducible.
 Standard files and folders are created for specific projects (e.g. abstracts or
-manuscripts), along with a workflow that tries to be simple and easy to use.
+manuscripts), along with a workflow that tries to be simple and easy to use,
+while making use of the infrastructure and processes already well-developed and
+maintained (e.g. RStudio and devtools).
 
 Because researchers often write or create many papers, slides, posters, and
 abstracts, it can quickly become tedious and messy to always make a new
@@ -37,10 +39,10 @@ directory with all the necessary files and organization.
 To use `prodigenr`, you simply need to use the `prodigen` command. At present,
 there are only four template projects that you can view using:
 
-```{r templates, collapse=TRUE}
+```{r templates, collapse=TRUE, eval=TRUE}
 library(prodigenr)
-template_list
 path <- tempdir()
+template_list
 ```
 
 These templates are projects that an academic researcher typically encounters.
@@ -53,7 +55,7 @@ Starting a manuscript? Create a project directory like so (using [Git](https://g
 prodigen('manuscript', 'ManuscriptName', path, git.init = TRUE)
 ```
 
-```{r shell_command, echo = FALSE}
+```{r shell_command, echo=FALSE}
 # run only on computer
 cat(paste(system(
     paste0('cd ', path, '/ManuscriptName && tree -a -I .git --dirsfirst -v'),
@@ -65,7 +67,7 @@ unlink(file.path(path, 'ManuscriptName'), recursive = TRUE)
 
 The resulting file structure should look something like this:
 
-```{r file_structure, eval = TRUE, echo = FALSE, results='markup', comment=''}
+```{r file_structure, echo=FALSE, eval=TRUE, results='markup', comment=''}
 cat(readLines('file_structure.txt', warn = FALSE), sep = '\n')
 ```
 
@@ -86,22 +88,48 @@ reviewers ask for something or want to confirm your results. For more
 information on good practices to use in making an analysis project, see 
 [here](http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project)
 or 
-[here](http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/))
+[here](http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/)
+
+In addition to the main `prodigen()` function, there are several `include_*()`
+style functions available to add other, maybe less common, files. So far
+there are:
+
+- `include_rfigshare_script()` to send portions (or all) of your code to
+[figshare](https://figshare.com/) for others to confirm or use your code and
+analysis workflow.
+- `include_mit_license()` to add a MIT license to your code, so that you
+explicitly allow others to re-use your code without legal issues coming up.
+Works well in conjunction with the above function.
+- `include_strobe()` to add a STROBE checklist. This is very specific to
+epidemiological research (which I do), so not all users will need this.
+
+You can use them by opening up the new project `.Rproj` (RStudio) file and run
+them in the console as:
+
+```{r}
+prodigenr::include_rfigshare_script()
+prodigenr::include_mit_license()
+prodigenr::include_strobe()
+```
 
 ## Workflow when using projects created from `prodigenr`
 
-A typical workflow would be to:
+A typical workflow, which is also outlined in the README.md of the created
+project, would be to:
 
 1. Write up your analysis and associated written explanations of the results, as
 you would for any research project, in the abstract, poster, slides, or
-manuscript `.Rmd` ([R Markdown](http://rmarkdown.rstudio.com/)) file.
+manuscript `.Rmd` ([R Markdown](http://rmarkdown.rstudio.com/)) file in the
+`doc/` folder.
 2. Any piece of code you use more than once or is fairly complex, convert it
-into a function. Put this new function into the `R/` directory. Load that function 
-using `devtools::load_all()` (Ctrl-Shift-L).
+into a function. Put this new function into a file (or the `functions.R` file) the
+`R/` directory. Load that function using `devtools::load_all()` (Ctrl-Shift-L).
 3. Fetch and wrangle your data in the `R/fetch_data.R` and to use the data, load
 it using `load_data()`.
-4. Knit the `.Rmd` file. You now have your final abstract, poster, slides, or
-manuscript to use for your research.
+4. Use the Rmd files in the `vignettes/` folder to add analyses that will
+supplement the main document, but aren't necessary to be included.
+5. Knit the `.Rmd` file in `doc/`. You now have your final abstract, poster,
+slides, or manuscript to use for your research.
 
 ## Related packages or projects
 
@@ -123,11 +151,8 @@ compared to `ProjectTemplate` in this
 [blog](https://rmflight.github.io/posts/2014/07/zpackages_vs_projectTemplate.html)).
 
 There is also a list of other similar projects 
-[on the rOpenSci GitHub repository](https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia).
+[on the rOpenSci GitHub repository](https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia). 
+It's up to you to decide which style to use. 
 
-It's up to you to decide which style to use. The goal behind creating 
-`prodigenr` was to incorporate the ideas behind R packages and mesh well with 
-RStudio, while also trying to be as simple as possible so it is in some ways a
-hybrid between `ProjectTemplate` and `makeProject`. It can always be improved, 
-so if you have suggestions just submit a 
+If you have ideas to improve prodigenr, just submit a 
 [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!

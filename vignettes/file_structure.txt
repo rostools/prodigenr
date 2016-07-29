@@ -7,8 +7,7 @@
 ├── doc
 │   └── manuscript.Rmd
 ├── vignettes
-│   ├── extra-analyses.Rmd
-│   └── file_structure.txt
+│   └── extra-analyses.Rmd
 ├── .Rbuildignore
 ├── .gitignore
 ├── DESCRIPTION
@@ -16,4 +15,4 @@
 ├── NAMESPACE
 └── README.md
 
-3 directories, 13 files
+3 directories, 12 files
