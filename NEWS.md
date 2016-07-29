@@ -1,8 +1,8 @@
-# prodigenr 0.3.0.9000
+# prodigenr 0.3.0
 
 ## New features/functionality
 
-* `prodigen()` creates a new project structure that mimics R package development
+* `prodigen()` now creates a new project structure that mimics R package development
 more, specifically `devtools` (since it is well documented and actively
 maintained) (#18, #15, #14). The old style has been removed.
 * Added a function to include a [STROBE](http://www.strobe-statement.org/index.php?id=strobe-home) 
