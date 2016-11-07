@@ -1,0 +1,4 @@
+Name: Knit `doc/` files
+Description: Run `rmarkdown::render` on all `.Rmd` files in the `doc/` folder.
+Binding: render_docs
+Interactive: true
