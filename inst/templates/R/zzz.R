@@ -13,11 +13,11 @@
 #' load_data(update = TRUE)
 #'
 load_data <- function(update = FALSE) {
-    pkg <- system.file(package = devtools::as.package('.')$package)
+    pkg <- devtools::as.package('.')$path
     rfile <- normalizePath(file.path(pkg, 'R', 'fetch_data.R'))
     datadir <- normalizePath(file.path(pkg, 'data'))
     if (length(rfile) == 0)
-        stop("Oops, fetch_data.R file must have been deleted, please keep it.")
+        stop("Oops, fetch_data.R file must have been deleted, please keep it.", .call = FALSE)
     if (!dir.exists(datadir))
         fetch_data()
     datafile <- list.files(datadir, pattern = 'rda$', full.names = TRUE)
