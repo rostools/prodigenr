@@ -1,6 +1,7 @@
 # prodigenr
 
 [![Build Status](https://travis-ci.org/lwjohnst86/prodigenr.svg?branch=master)](https://travis-ci.org/lwjohnst86/prodigenr)
+[![CRAN Status Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
 
 This is a *pro*ject *di*rectory *gen*erato*r* (`prodigenr`) that will
 create a project directory structure with template files necessary for
