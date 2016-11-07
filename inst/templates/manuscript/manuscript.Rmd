@@ -25,15 +25,7 @@ Funding support:
 # Subjects and Methods 
 
 ```{r setup, collapse=TRUE}
-# Only set if the Rmd file is not in the parent directory (ie. 'projectname/')
-knitr::opts_knit$set(root.dir = '../')
-```
-
-```{r loadData, message=FALSE}
-source('.Rprofile')
-run_setup()
-load_data('path/to/master/dataset')
-dim(ds)
+devtools::load_all()
 ```
 
 ```{r caption_setup}

@@ -27,10 +27,7 @@ output:
 [^footer]: Footer text
 
 ```{r setup, message = FALSE, echo = FALSE}
-source('.Rprofile')
-run_setup()
-load_data('/path/to/master/dataset/')
-dim(ds)
+devtools::load_all()
 ```
 
 ```{r caption_setup}
