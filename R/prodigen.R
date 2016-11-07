@@ -34,10 +34,10 @@ prodigen <-
              path = getwd(),
              git.init = FALSE) {
         type <- match.arg(type, template_list)
-        stopifnot(is.character(name))
         if (is.null(name)) {
             name <- type
         }
+        stopifnot(is.character(name))
 
         proj_path <- file.path(path, name)
         message("* Creating project '", name, "' in '", proj_path, "'.")
