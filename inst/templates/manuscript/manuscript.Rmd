@@ -4,7 +4,7 @@ csl: path/to/bib/style/file
 output: word_document
 ---
 
-# Title page #
+# Title page
 
 Title:
 
@@ -18,15 +18,11 @@ Correspondence:
 
 Funding support:
 
-# Abstract #
+# Abstract 
 
-# Background #
+# Background 
 
-# Subjects and Methods #
-
-<!--
-## Load data ##
--->
+# Subjects and Methods 
 
 ```{r setup, collapse=TRUE}
 # Only set if the Rmd file is not in the parent directory (ie. 'projectname/')
@@ -48,10 +44,10 @@ tabNums <- captioner(prefix = 'Table')
 supTabNums <- captioner(prefix = 'Supplementary Table')
 ```
 
-# Results #
+# Results 
 
-# Discussion #
+# Discussion 
 
-## Acknowledgements ##
+## Acknowledgements 
 
-# References #
+# References 

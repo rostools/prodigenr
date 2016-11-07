@@ -13,9 +13,9 @@ output:
 ---
 
 <!-- slide 1 -->
-## Disclosures ##
+## Disclosures
 
-## Introduction slide ##
+## Introduction slide
 
 * This is a footer[^footer]
 
@@ -43,8 +43,8 @@ tabNums <- captioner(prefix = 'Table')
 
 ```
 
-## Acknowledgements ##
+## Acknowledgements
 
-## References ##
+## References
 
 \tiny
