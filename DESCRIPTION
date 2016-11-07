@@ -1,6 +1,6 @@
 Package: prodigenr
 Title: Research Project Directory Generator
-Version: 0.3.0
+Version: 0.3.0.9000
 Authors@R: person("Luke", "Johnston", , "lwjohnst@gmail.com", c("aut", "cre"))
 Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,

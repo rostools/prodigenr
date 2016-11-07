@@ -1,3 +1,11 @@
+# prodigenr 0.3.0.9000
+
+## Minor fixes
+
+* Moved all functions commonly loaded in each Rmd file into the `.onLoad`
+functionality (#26, #28, #33).
+* Added additional information to template README.md (#29, #30, #32)
+
 # prodigenr 0.3.0
 
 ## New features/functionality
