@@ -20,7 +20,7 @@ expected <- function(path, type, name, license = FALSE, strobe = FALSE,
             ifelse(license, 'LICENSE', NA),
             ifelse(git, '.gitignore', NA)
         ),
-        R = c('functions.R', 'setup.R', 'load_data.R', 'fetch_data.R',
+        R = c('functions.R', 'setup.R', 'zzz.R', 'fetch_data.R',
               ifelse(figshare, 'rfigshare.R', NA)),
         vignettes = c('extra-analyses.Rmd',
             ifelse(strobe, 'strobe-checklist.md', NA),
