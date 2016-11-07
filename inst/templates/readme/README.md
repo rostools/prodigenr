@@ -6,14 +6,28 @@ was designed for using [RStudio](https://www.rstudio.com/) and
 [devtools](https://github.com/hadley/devtools). It is set up this way to make it
 easy for others to run your code and analyses for themselves and to skaffold
 onto devtools (used for R package development) because it is well documented and
-actively maintained.
+actively maintained. See the excellent [R for Data Science](http://r4ds.had.co.nz/)
+online book for more details on how to work with this directory format.
 
 Typical commands used in this workflow include:
 
 - *Ctrl-Shift-L* (`devtools::load_all()`)
 - *Ctrl-Shift-D* (`devtools::document()`)
 - *Ctrl-Shift-K* (`rmarkdown::render('file.Rmd')`)
-- `devtools::use_package('packagename')` (when using a new R package)
+- `devtools::use_package('packagename')` (when using another R package)
+
+# Using and installing other packages
+
+There is no need to use `library()` functions when using a package. Use 
+`devtools::use_package('packagename')`, followed by `packagename::function_name()`
+when using the functions. This approach allows you to make use of devtools features
+of using and installing the necessary packages.
+
+To install the dependency packages for this project, simply use:
+
+```r
+devtools::install(dependencies = TRUE)
+```
 
 # General folder details
 
@@ -22,6 +36,7 @@ The project directory is generally structured with the following folders:
 - Base folder (`./`)
 - `R/`
 - `vignettes/`
+- `doc/`
 - `data/` (optional)
 - `.git` (optional)
 
@@ -52,6 +67,13 @@ There are at least four files (probably more):
 dataset in the `data/` folder.
 - `setup.R` to run options for the packages.
 - `functions.R` to hold all custom functions used for the analysis.
+- `zzz.R` holds functions or code that will run automatically after using
+`devtools::load_all()`.
+
+## `doc/` folder:
+
+Contains the main product of the project: the slides, manuscripts, or other
+final products.
 
 ## `vignettes/` folder:
 
