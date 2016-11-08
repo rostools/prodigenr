@@ -1,5 +1,10 @@
 # prodigenr 0.3.0.9000
 
+## New feature
+
+* Added an RStudio addin (`render_docs()`) for rendering all the `doc/.Rmd`
+files (#31).
+
 ## Minor fixes
 
 * Moved all functions commonly loaded in each Rmd file into the `.onLoad`
