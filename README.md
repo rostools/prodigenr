@@ -8,7 +8,9 @@ create a project directory structure with template files necessary for
 managing and analyzing data for a variety of projects.  This allows
 for a standardized approach to having a modular research project, while also
 taking advantage of existing well-developed and maintained infrastructures and
-processes (Rstudio and devtools).
+processes (Rstudio and devtools). This package aims to make it easier to adhere
+to open scientific practices, presently in making a consistent and established
+folder and file structure.
 
 # How to install
 
