@@ -58,3 +58,10 @@ as possible and be more specific to academic researchers primarily in
 biomedical/non-computer science fields. However, it can always improve! I
 welcome any suggestions, just submit a 
 [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
+
+# Interested in contributing?
+
+See the [contributing documentation](CONTRIBUTING.md) for information on how to
+contribute. Please note that this project is released with a 
+[Contributor Code of Conduct](CONDUCT.md). By participating in this project you
+agree to abide by its terms.
