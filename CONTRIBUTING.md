@@ -1,6 +1,9 @@
 
 # Interested in contributing? Great!
 
+First and foremost, please read over the [Contributor Code of Conduct](CONDUCT.md). 
+By participating in this project you agree to abide by its terms.
+
 Before getting into too much detail, I wanted to get into some detail about the
 aim of this package (and future packages). The aim is to provide a toolkit that
 automates and simplifies the process of having an open scientific workflow, 
