@@ -22,3 +22,9 @@ researchers.
 | Manifesto completed (at least with main points) | May 1st, 2018 |
 | Contributing document completed | March 28th, 2018 |
 | Issues organized and categorized | March 14th, 2018 |
+
+# Contributing
+
+If you want to contribute, check out the [contributing guidelines](CONTRIBUTING.md)
+and the [project boards](https://github.com/lwjohnst86/prodigenr/projects) for 
+areas to help out with.
