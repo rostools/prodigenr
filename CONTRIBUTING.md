@@ -14,4 +14,4 @@ I am looking for any and all ideas and contributions. Mostly this project needs
 help on the R development side, the user interface side, and for ideas on what 
 needs to be included to simplify doing open science.
 
-This document is still in development, so bare with me :)
+This document is still in development, so bear with me :)
