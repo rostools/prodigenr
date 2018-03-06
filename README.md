@@ -62,6 +62,7 @@ welcome any suggestions, just submit a
 # Interested in contributing?
 
 See the [contributing documentation](CONTRIBUTING.md) for information on how to
-contribute. Please note that this project is released with a 
+contribute. There is also the [roadmap](roadmap.md) for an overview of the goals 
+and timelines. Please note that this project is released with a 
 [Contributor Code of Conduct](CONDUCT.md). By participating in this project you
 agree to abide by its terms.
