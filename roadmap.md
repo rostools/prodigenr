@@ -1,15 +1,24 @@
 
-# Project Mission & Summary
+# Project goals and objectives
 
-Start with the project name along with a shorted version of your project
-description from the readme, or you can use your vision statement. Since this is
-key information that all contributors need to understand, it’s okay for some it
-to be repeated in different places, in different documents.
+This project's main goal is to provide a simple interface to doing open science,
+and aims to as much as possible automate conducting and adhering to open
+scientific practices. Currently, the target audience is biomedical or health
+researchers.
 
-# Milestones
+**Current specific goal:**
 
-- Mozilla Global Sprint
-- Website up (?)
-- Issues organized into priorities (high, medium, low)
-- Next version released and submitted to CRAN!
-- Document describing philosophy behind the toolkit
+- Create a website of the package. This website will contain:
+    - Information on contributing
+    - An opinionated manifesto on doing open science
+
+# Timeline of milestones and deliverables
+
+| Deliverable or milestone | Deadline |
+|:-------------------------|:---------|
+| CRAN release of next version | TBD |
+| Participating in Mozilla Global Sprint | May 10th, 2018 |
+| Package website put up | May 8th, 2018 |
+| Manifesto completed (at least with main points) | May 1st, 2018 |
+| Contributing document completed | March 28th, 2018 |
+| Issues organized and categorized | March 14th, 2018 |
