@@ -9,7 +9,9 @@ create a project directory structure with template files necessary for
 managing and analyzing data for a variety of projects.  This allows
 for a standardized approach to having a modular research project, while also
 taking advantage of existing well-developed and maintained infrastructures and
-processes (Rstudio and devtools).
+processes (Rstudio and devtools). This package aims to make it easier to adhere
+to open scientific practices, presently in making a consistent and established
+folder and file structure.
 
 # How to install
 
@@ -58,7 +60,11 @@ biomedical/non-computer science fields. However, it can always improve! I
 welcome any suggestions, just submit a 
 [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
 
-# Code of Conduct
+# Interested in contributing?
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
-By participating in this project you agree to abide by its terms.
+See the [contributing documentation](CONTRIBUTING.md) for information on how to
+contribute. There is also the [roadmap](roadmap.md) for an overview of the goals 
+and timelines. Please note that this project is released with a 
+[Contributor Code of Conduct](CONDUCT.md). By participating in this project you
+agree to abide by its terms.
+
