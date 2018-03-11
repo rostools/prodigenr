@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lwjohnst86/prodigenr.svg?branch=master)](https://travis-ci.org/lwjohnst86/prodigenr)
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
+[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](http://www.r-pkg.org/pkg/prodigenr)
 
 This is a *pro*ject *di*rectory *gen*erato*r* (`prodigenr`) that will
 create a project directory structure with template files necessary for
@@ -56,3 +57,8 @@ as possible and be more specific to academic researchers primarily in
 biomedical/non-computer science fields. However, it can always improve! I
 welcome any suggestions, just submit a 
 [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
+
+# Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
+By participating in this project you agree to abide by its terms.
