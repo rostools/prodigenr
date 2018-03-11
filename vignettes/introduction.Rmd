@@ -156,3 +156,11 @@ It's up to you to decide which style to use.
 
 If you have ideas to improve prodigenr, just submit a 
 [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
+
+
+## Additions
+
+Save all results as package datasets (devtools::use_data).
+
+Use unit tests to confirm the results (dim in particular) are as expected and 
+that the data itself is as exp (dim)
