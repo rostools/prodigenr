@@ -1,0 +1,40 @@
+---
+title: "Vignette Title"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+- Strong opinion on how projects should be structured or organized and how to be open/where to send code
+    - Specific fields so far included (biomedical, biology)
+    - Use R (obvs, since this is an R package)
+    - Use RMarkdown to write up doc
+    - Use R files in R/, functions to load/clean dataset, etc.
+    - Use R package framework
+    - Use GitHub or GitLab
+    - Use travis or gitlab-ci
+    - Use RStudio
+    - Use devtools and it's ecosystem
+    - Use Zenodo or figshare
+    - Some type of CI should be able to generate your manuscript without errors
+    - Use bioarxiv
+    - Create new branch for each submission/sending to co-authors
+    - How collaboration should be done
+        - PR?
+        - Comments on commits?
+        -
+    - Use version numbers to keep track of
+    - Specific workflow:
+        -
