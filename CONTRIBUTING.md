@@ -11,7 +11,7 @@ packages) so that biomedical researchers can adhere to and use open scientific
 practices in an easy and as automated way as possible so that the barrier to
 being open and reproducible is as low as possible. Currently, the project is
 aimed at R users, but I would like to eventually make it more language agnostic
-(I know, this is still an R package).
+(I know... this is an *R* package).
 
 One of the current challenges of being open is that it is hard to start doing it,
 since it is still so new and in constant discussion and development. There are
@@ -44,6 +44,32 @@ This project adheres to the [tidyverse coding style](http://style.tidyverse.org/
 so please stick to writing code in that form if you want to contribute, fix, or
 enhance R functions.
 
-Git messages should be clear and concisely describe the change made in the commit.
+This is a *Git* repository on *GitHub*, so there are certain procedures you will 
+have to follow in order to contribute code or text. First and foremost is, well,
+you need to use Git and GitHub. GitHub has very good documentation on 
+[using Git with GitHub](https://guides.github.com/activities/hello-world/). If
+you are a beginner to Git, there is an excellent [interactive tutorial](https://try.github.io/levels/1/challenges/1)
+you can use to learn Git.
 
-This document is still in development, so bear with me :)
+Some specifics about contributing:
+
+- You'll need to [fork the repository](https://help.github.com/articles/fork-a-repo/)
+before you can contribute.
+- Git messages should be clear and concisely describe the change made in the commit.
+- Each commit should be fairly small and/or focused. Don't commit all changes in
+one commit, but rather break it up into smaller commits.
+- The [Pull Request](https://help.github.com/articles/about-pull-requests/) should 
+describe the change fairly concisely, preferably referencing an existing problem or
+feature request from the [Issues](https://github.com/lwjohnst86/prodigenr/issues)
+(but it doesn't have to be).
+
+I'll try to label issues that would be good first attempts for new contributors
+with a "Good First Task" label. I also label issues with "easy" and "hard", which
+is a proxy for how difficult it is to address the issue.
+
+No matter how you contribute, your help and thoughts and ideas are truly appreciated!!
+
+## Contacting for specific questions.
+
+For questions that don't really belong as an Issue or for other questions such
+as about contributing, you can contact me by my email (lwjohnst@gmail.com)
