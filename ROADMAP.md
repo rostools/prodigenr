@@ -1,5 +1,5 @@
 
-# Project goals and objectives
+# Overarching project goals and objectives
 
 This project's main goal is to provide a simple interface to doing open science,
 and aims to as much as possible automate conducting and adhering to open
@@ -14,14 +14,14 @@ researchers.
 
 # Timeline of milestones and deliverables
 
-| Deliverable or milestone | Deadline |
-|:-------------------------|:---------|
-| CRAN release of next version | TBD |
-| Participating in Mozilla Global Sprint | May 10th, 2018 |
-| Package website put up | May 8th, 2018 |
-| Manifesto completed (at least with main points) | May 1st, 2018 |
-| Contributing document completed | March 28th, 2018 |
-| Issues organized and categorized | March 14th, 2018 |
+| Deliverable or milestone | Deadline | Completed |
+|:-------------------------|:---------|:----------|
+| CRAN release of next version | TBD | |
+| Participating in Mozilla Global Sprint | May 10th, 2018 | |
+| Package website put up | May 8th, 2018 | |
+| Manifesto completed (at least with main points) | May 1st, 2018 | |
+| Contributing document completed | March 28th, 2018 | DONE |
+| Issues organized and categorized | March 14th, 2018 | DONE |
 
 # Contributing
 
