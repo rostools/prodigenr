@@ -16,25 +16,80 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Mission statement
+
+{{reiterate. Include mention of audience aka biomedical researchers}}
+
+## External tools and services  
+
+The number and possible tools and services to conduct open science is broad and 
+diverse. This gives a lot of strength, especially since this is the time for open
+science to grow and evolve. However, this is also a huge barrier for those
+researchers and scientists who are just starting out. There is too much choices
+and little guidance on what to use and choose. Given the possible choices
+available, this is toolkit with a strong opinion on what to use. So, let's start
+with the opinions! A quick overview of the larger steps involved in creating
+scientific output.
+
+- *File management* will be done using Git{{link}} and either stored on
+GitHub{{link}} or on GitLab{{link}}. This keeps track of changes to the files
+and code, focuses the project into a single folder structure and emphasizes a final
+"product" from the coding and writing. It also makes it easier to disseminate 
+and publish later on.
+- *Coding and analyses* will all be done in R{{link}}. This obvious for now,
+since this is an R package! However, I would like this toolkit to eventually be
+more language agnostic... but baby steps.
+- *Writing* will be done in R Markdown{{link}} files. This provides the ability
+to insert R code chunk so that figures, tables, and results can be regenerated
+easily and reproducibly. This also includes not just manuscripts, but slides and
+posters (more on this below).
+- *Dissemination* of the whole project will be done using Zenodo{{link}} to create
+a DOI onces the manuscript has been submitted, or the poster or slides presented.
+Manuscripts will be submitted to bioRxiv{{link}} while posters and slides will be
+submitted to figshare{{link}}.
+- *All activities* will be done in RStudio{{link}}.
+
+### Managing files and tracking changes
+
+All projects, files, coding, writing, and other activities will be done in
+RStudio{{link}}. RStudio is an exceptional environment to use R{{link}} in
+and has many features that make it easier to follow open scientific workflows.
+
+Version control{{link}} is vital to an open scientific workflow. Since Git{{link}}
+is well established in the open source, software development, and R package
+development world, it is the natural choice for version control. In addition,
+RStudio has an excellent and fairly easy to use interface{{link}} with Git
+
+### The coding and analysis phase
+
+Analyses should follow the style similar to creating R packages (read this
+excellent and easy to read book{{link}} on R package creation).
+
+- R code should as much as possible be written as functions{{link}} in the `R/`
+folder.
+- Use devtools, usethis, etc workflow (`load_all()`)
+- Data, results output, etc will be saved in `data/`
+
+### The writing phase:
+
+- After sending out for general feedback from co-authors, increase version number
+- General collaboration should be done through GitHub Pull Requests{{link}} or
+through GitLab Merge Requests{{link}}. If technical skill of Git is low, designate
+a team member as the "Git liaison".
+
+### Dissemination
+
+- After submitting, increase version number
+
+Notes:
+- Bibliography files... as long as it interacts with R Markdown{{link to biblio}}
+- CSL{{link}} for citation styling.
+- Slides created using any of the output options (preferably html, since pdf
+will involve latex installation).
+- Posters ... still need to figure this out...
 
 - Strong opinion on how projects should be structured or organized and how to be open/where to send code
-    - Specific fields so far included (biomedical, biology)
-    - Use R (obvs, since this is an R package)
-    - Use RMarkdown to write up doc
-    - Use R files in R/, functions to load/clean dataset, etc.
     - Use R package framework
-    - Use GitHub or GitLab
     - Use travis or gitlab-ci
-    - Use RStudio
-    - Use devtools and it's ecosystem
-    - Use Zenodo or figshare
     - Some type of CI should be able to generate your manuscript without errors
-    - Use bioarxiv
     - Create new branch for each submission/sending to co-authors
-    - How collaboration should be done
-        - PR?
-        - Comments on commits?
-        -
-    - Use version numbers to keep track of
-    - Specific workflow:
-        -
