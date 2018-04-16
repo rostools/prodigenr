@@ -39,41 +39,45 @@ available, this is toolkit with a strong opinion on what to use. So, let's start
 with the opinions! Below is a brief overview of the tools used in the larger
 steps involved in creating scientific output.
 
-- *File management* will be done using Git{{link}} and either stored on
-GitHub{{link}} or on GitLab{{link}}. This keeps track of changes to the files
+- *File management* will be done using [Git] and either stored on
+[GitHub] or on [GitLab]. This keeps track of changes to the files
 and code, focuses the project into a single folder structure and emphasizes a final
 "product" from the coding and writing. It also makes it easier to disseminate 
 and publish later on.
 - *Bibliography management* {{need to expand on this... Likely bibtex, but I
 don't care as long as it is open source or available in plain text}}.
-- *Coding and analyses* will all be done in R{{link}}. This obvious for now,
+- *Coding and analyses* will all be done in [R]. This obvious for now,
 since this is an R package! However, I would like this toolkit to eventually be
 more language agnostic... but baby steps.
-- *Writing* will be done in R Markdown{{link}} files. This provides the ability
+- *Writing* will be done in [R Markdown] files. This provides the ability
 to insert R code chunk so that figures, tables, and results can be regenerated
 easily and reproducibly. This also includes not just manuscripts, but slides and
 posters (more on this below).
-- *Dissemination* of the whole project will be done using Zenodo{{link}} to create
+- *Dissemination* of the whole project will be done using [Zenodo] to create
 a DOI onces the manuscript has been submitted, or the poster or slides presented.
-Manuscripts will be submitted to bioRxiv{{link}} while posters and slides will be
-submitted to figshare{{link}}.
-- *All activities* will be done in RStudio{{link}}.
+Manuscripts will be submitted to [bioRxiv] while posters and slides will be
+submitted to [figshare].
+- *All activities* will be done in [RStudio].
+- *Reproducibility* (more advanced and optional) {{use travis, set up a docker/rocker}}
 
 ### Managing files and tracking changes
 
 All projects, files, coding, writing, and other activities will be done in
-RStudio{{link}}. RStudio is an exceptional environment to use R{{link}} in
+[RStudio]. RStudio is an exceptional environment to use [R] in
 and has many features that make it easier to follow open scientific workflows.
 
-Version control{{link}} is vital to an open scientific workflow. Since Git{{link}}
+[Version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+is vital to an open scientific workflow. Since [Git]
 is well established in the open source, software development, and R package
-development world, it is the natural choice for version control. In addition,
-RStudio has an excellent and fairly easy to use interface{{link}} with Git
+development world, it is the natural choice for version control.
+RStudio also has an excellent and fairly easy to use 
+[interface](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) 
+with Git.
 
 ### The coding and analysis phase
 
 Analyses should follow the style similar to creating R packages (read this
-excellent and easy to read book{{link}} on R package creation).
+excellent [book on R package](http://r-pkgs.had.co.nz/) creation).
 
 - R code should as much as possible be written as functions{{link}} in the `R/`
 folder.
@@ -103,3 +107,13 @@ will involve latex installation).
     - Use travis or gitlab-ci
     - Some type of CI should be able to generate your manuscript without errors
     - Create new branch for each submission/sending to co-authors
+
+[R]: https://cran.r-project.org/
+[Git]: https://git-scm.com/
+[RStudio]: https://www.rstudio.com/
+[Zenodo]: https://zenodo.org/
+[figshare]: https://figshare.com/
+[GitHub]: https://github.com/
+[GitLab]: https://gitlab.com/
+[bioRxiv]: https://www.biorxiv.org/
+[R Markdown]: https://rmarkdown.rstudio.com/
