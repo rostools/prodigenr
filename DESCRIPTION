@@ -27,3 +27,4 @@ Imports:
     devtools,
     stats,
     utils
+Roxygen: list(markdown = TRUE)
