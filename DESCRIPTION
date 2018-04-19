@@ -7,24 +7,24 @@ Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
     as well as for them to be standardized. Designed specifically with scientists
     in mind (mainly bio-medical researchers, but likely applies to other fields).
-Depends:
-    R (>= 3.1.2)
 License: MIT + file LICENSE
-LazyData: true
-Suggests:
-    rmarkdown,
-    knitr,
-    testthat,
-    rvest,
-    xml2,
-    rfigshare,
-    rstudioapi
-RoxygenNote: 6.0.1
-VignetteBuilder: knitr
 URL: https://github.com/lwjohnst86/prodigenr
 BugReports: https://github.com/lwjohnst86/prodigenr/issues
-Imports:
-    devtools,
-    stats,
-    utils
+Depends: 
+    R (>= 3.4.0)
+Imports: 
+    devtools (>= 1.13.5),
+    stats (>= 3.4.4),
+    utils (>= 3.4.4)
+Suggests: 
+    knitr (>= 1.20),
+    rfigshare (>= 0.3.7),
+    rmarkdown (>= 1.9),
+    rstudioapi (>= 0.7),
+    rvest (>= 0.3.2),
+    testthat (>= 2.0.0),
+    xml2 (>= 1.2.0)
+VignetteBuilder: knitr
+LazyData: true
 Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
