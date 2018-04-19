@@ -4,13 +4,13 @@
 #' Create a project directory and associated files. Is based on using RStudio
 #' and the \link[devtools]{devtools} package development way of working with
 #' files and code. So commands/keybindings like
-#' \code{\link[devtools]{load_all}} (Ctrl-Shift-L) and
-#' \code{\link[devtools]{document}} (Ctrl-Shift-D) work to update your code and
+#' [devtools::load_all()] (Ctrl-Shift-L) and
+#' [devtools::document()] (Ctrl-Shift-D) work to update your code and
 #' allow an continuous and integrated approach to analyzing your data and
 #' writing up your research product.
 #'
 #' @param type type of project to create, based on the templates found in
-#'   \code{\link[prodigenr]{template_list}} function
+#'   [prodigenr::template_list()] function
 #' @param name name of the new project directory
 #' @param path location of where the new project will be created
 #' @param git.init Logical, whether to initialize the new project with git
