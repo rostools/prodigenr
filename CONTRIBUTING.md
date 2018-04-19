@@ -1,14 +1,15 @@
 
-# Contributing to this project
+# Contributing to this project :tada: :mega:
 
-Thanks for being interested in contributing to this package and overall project!
-This document contains guidelines for getting started with contributing.
+Thanks for being interested in contributing to this package :star2: :confetti_ball: 
+and overall project! This document contains guidelines for getting started with
+contributing.
 
 ## Overall mission
 
-My hope from this toolkit/package is to build a R toolkit (or ecosystem of
+My hope from this toolkit/package is to build a R toolkit (or a series of
 packages) so that biomedical researchers can adhere to and use open scientific
-practices in an easy and as automated way as possible so that the barrier to
+practices in as easy and as automated way as possible so that the barrier to
 being open and reproducible is as low as possible. Currently, the project is
 aimed at R users, but I would like to eventually make it more language agnostic
 (I know... this is an *R* package).
@@ -20,7 +21,7 @@ about it. This project hopes to start fixing those issues.
 
 ## Things to know before starting
 
-Please read over the [Contributor Code of Conduct](CONDUCT.md). By participating
+Please read over the [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating
 in this project you agree to abide by its terms. For more information on a big
 picture overview of what is happening, check out the [roadmap](ROADMAP.md). For
 other details, check out the [README](README.md).
@@ -64,12 +65,12 @@ feature request from the [Issues](https://github.com/lwjohnst86/prodigenr/issues
 (but it doesn't have to be).
 
 I'll try to label issues that would be good first attempts for new contributors
-with a "Good First Task" label. I also label issues with "easy" and "hard", which
-is a proxy for how difficult it is to address the issue.
+with a `easy` label. I also label issues with `hard` if the task is a bit more 
+difficult and `low priority` or `high priority` for issues to focus more on.
 
 No matter how you contribute, your help and thoughts and ideas are truly appreciated!!
 
 ## Contacting for specific questions.
 
 For questions that don't really belong as an Issue or for other questions such
-as about contributing, you can contact me by my email (lwjohnst@gmail.com)
+as about contributing, you can contact me by my email (lwjohnst@gmail.com).
