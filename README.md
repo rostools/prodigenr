@@ -31,11 +31,14 @@ open science, check out the [manifesto](link)
 
 # How to install
 
-Install via CRAN or using `devtools` for the development version:
+Install using the R console via [CRAN]:
 
     install.packages('prodigenr')
-    
+
+Or for the development version:
+
     # Development version
+    # install.packages("remotes")
     remotes::install_github('lwjohnst86/prodigenr')
 
 # Usage
