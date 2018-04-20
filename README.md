@@ -1,4 +1,4 @@
-# A component of reproducible and open scientific projects: Project creation with prodigenr
+# A component of reproducible and open scientific projects: Project creation with prodigenr <img src="man/figures/logo.png" align="right" />
 
 [![Build Status](https://travis-ci.org/lwjohnst86/prodigenr.svg?branch=master)](https://travis-ci.org/lwjohnst86/prodigenr)
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
@@ -90,4 +90,6 @@ agree to abide by its terms.
 [RStudio]: https://www.rstudio.com/
 [devtools]: https://CRAN.R-project.org/package=devtools
 [usethis]: https://CRAN.R-project.org/package=usethis
+[CRAN]: https://cran.r-project.org
 
+Special thanks to @zsemnani for creating the logo!
