@@ -12,4 +12,3 @@ Generated rmarkdown output.
 \description{
 Rstudio addin to render all files in the doc/ folder.
 }
-

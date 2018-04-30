@@ -15,4 +15,3 @@ Creates an rfigshare script.
 \description{
 Add an R script to send code to figshare.
 }
-

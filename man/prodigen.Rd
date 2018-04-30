@@ -8,7 +8,7 @@ prodigen(type, name = NULL, path = getwd(), git.init = FALSE)
 }
 \arguments{
 \item{type}{type of project to create, based on the templates found in
-\code{\link[prodigenr]{template_list}} function}
+\code{\link[prodigenr:template_list]{prodigenr::template_list()}} function}
 
 \item{name}{name of the new project directory}
 
@@ -21,10 +21,10 @@ Creates a project directory with files and subdirectories
 }
 \description{
 Create a project directory and associated files. Is based on using RStudio
-and the \link[devtools]{devtools} package development way of working with
+and the devtools package development way of working with
 files and code. So commands/keybindings like
-\code{\link[devtools]{load_all}} (Ctrl-Shift-L) and
-\code{\link[devtools]{document}} (Ctrl-Shift-D) work to update your code and
+\code{\link[devtools:load_all]{devtools::load_all()}} (Ctrl-Shift-L) and
+\code{\link[devtools:document]{devtools::document()}} (Ctrl-Shift-D) work to update your code and
 allow an continuous and integrated approach to analyzing your data and
 writing up your research product.
 }
@@ -41,4 +41,3 @@ prodigen('abstract', 'name', './', FALSE)
 prodigen('manuscript', path = './', git.init = TRUE)
 }}
 }
-
