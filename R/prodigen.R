@@ -2,7 +2,7 @@
 #'
 #'
 #' Create a project directory and associated files. Is based on using RStudio
-#' and the \link[devtools]{devtools} package development way of working with
+#' and the devtools package development way of working with
 #' files and code. So commands/keybindings like
 #' [devtools::load_all()] (Ctrl-Shift-L) and
 #' [devtools::document()] (Ctrl-Shift-D) work to update your code and
