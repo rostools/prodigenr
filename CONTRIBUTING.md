@@ -69,8 +69,3 @@ with a `easy` label. I also label issues with `hard` if the task is a bit more
 difficult and `low priority` or `high priority` for issues to focus more on.
 
 No matter how you contribute, your help and thoughts and ideas are truly appreciated!!
-
-## Contacting for specific questions.
-
-For questions that don't really belong as an Issue or for other questions such
-as about contributing, you can contact me by my email (lwjohnst@gmail.com).
