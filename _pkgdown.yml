@@ -1,0 +1,34 @@
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - articles
+    - reference
+    - news
+    - contributing
+    right: github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    intro:
+      text: Get started
+      href: articles/prodigenr.html
+    articles:
+      text: Articles
+      menu:
+      - text: Open and reproducible manifesto
+        href: articles/manifesto.html
+    contributing:
+      text: Contributing
+      href: CONTRIBUTING.html
+    news:
+      text: Changelog
+      href: news/index.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/lwjohnst86/prodigenr
