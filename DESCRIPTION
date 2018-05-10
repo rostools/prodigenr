@@ -15,11 +15,12 @@ Depends:
 Imports: 
     devtools (>= 1.13.5),
     stats (>= 3.4.4),
-    utils (>= 3.4.4)
+    utils (>= 3.4.4),
+    rmarkdown,
+    rprojroot
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
-    rmarkdown (>= 1.9),
     rstudioapi (>= 0.7),
     rvest (>= 0.3.2),
     testthat (>= 2.0.0),
