@@ -17,11 +17,9 @@ Imports:
     usethis,
     devtools,
     desc,
-    utils (>= 3.4.4),
+    utils,
     rmarkdown,
     rprojroot,
-    usethis,
-    devtools,
     withr
 Suggests: 
     knitr (>= 1.20),

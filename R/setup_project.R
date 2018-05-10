@@ -33,7 +33,9 @@ setup_project <-
             new = proj_path,
             {
                 usethis::use_description()
-                capture.output(usethis::use_package('devtools'))
+                utils::capture.output(usethis::use_package('devtools'))
+                utils::capture.output(usethis::use_package('knitr'))
+                utils::capture.output(usethis::use_package('rmarkdown'))
                 usethis::use_git()
             })
         invisible(TRUE)

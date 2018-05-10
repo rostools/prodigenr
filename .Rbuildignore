@@ -1,11 +1,10 @@
-^dev*$
-^\./dev/*$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-TODO
 ^\.travis\.yml$
 ^cran-comments\.md$
-^CONDUCT\.md$
+^CODE_OF_CONDUCT\.md$
 ^CONTRIBUTING\.md$
-
 ^codecov\.yml$
+^_pkgdown\.yml$
+^docs$
+^ROADMAP\.md$

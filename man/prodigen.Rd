@@ -20,6 +20,7 @@ prodigen(type, name = NULL, path = getwd(), git.init = FALSE)
 Creates a project directory with files and subdirectories
 }
 \description{
+Deprecated. Use \code{\link[=setup_project]{setup_project()}}.
 Create a project directory and associated files. Is based on using RStudio
 and the devtools package development way of working with
 files and code. So commands/keybindings like
