@@ -11,3 +11,10 @@ copy_template_files <- function(from, to) {
 is_rproj_folder <- function() {
     rprojroot::is.root_criterion(rprojroot::is_rstudio_project)
 }
+
+stop_if_not_rproj_folder <- function() {
+    if (!is_rproj_folder()) {
+        stop("Run this function in the console while in the R project created from setup_project()",
+             call. = FALSE)
+    }
+}

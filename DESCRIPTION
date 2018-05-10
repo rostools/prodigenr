@@ -14,6 +14,9 @@ Depends:
     R (>= 3.4.0)
 Imports: 
     stats (>= 3.4.4),
+    usethis,
+    devtools,
+    desc,
     utils (>= 3.4.4),
     rmarkdown,
     rprojroot,
