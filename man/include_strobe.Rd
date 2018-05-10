@@ -15,4 +15,3 @@ Creates a file with the STROBE checklist.
 \description{
 Include a STROBE checklist in the project.
 }
-

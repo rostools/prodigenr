@@ -15,4 +15,3 @@ Creates a MIT LICENSE file.
 \description{
 License the project under MIT.
 }
-

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Luke Johnston" />
+
+<meta name="date" content="2018-04-30" />
+
+<title>An opinionated and practical manifesto for doing reproducible, open scientific projects with R</title>
+
+
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">An opinionated and practical manifesto for doing reproducible, open scientific projects with R</h1>
+<h4 class="author"><em>Luke Johnston</em></h4>
+<h4 class="date"><em>2018-04-30</em></h4>
+
+
+
+<blockquote>
+<p>Note: The exact practice of and tools to do open science are in constant development. As such this is living document and is often updated and evolving, so that over time it becomes more refined. Because of this, some parts of this document may be incomplete.</p>
+</blockquote>
+<div id="underlying-philosophy" class="section level2">
+<h2>Underlying philosophy</h2>
+<p>The main philosophy of this toolkit is to encourage reproducible and open scientific practices by automating difficult tasks and providing a (strongly) opinionated view on which tools and processes to use when doing open science. The goal here is to reduce the burden on researchers to actually do open and reproducible science, in particular for creating abstracts, slides, posters, and manuscripts. Currently, the target users are biomedical, medical, and health researchers, though this toolkit could easily be used by other disciplines.</p>
+</div>
+<div id="tools-and-services-to-use" class="section level2">
+<h2>Tools and services to use</h2>
+<p>The number of and possible tools and services to use to do open science is broad and diverse. This gives a lot of advantages, especially as this is the time for open science to grow and evolve. However, this is also a huge barrier for those researchers and scientists who are just starting out. There are too many choices and very little guidance on what to use. Given the possible choices available, this toolkit takes a strong stance on what tools and services to use. So, described below is a brief overview of the tools used in the larger steps involved in creating scientific output, which is then followed by more detailed explanations.</p>
+<ul>
+<li><em>File management</em> will be done using <a href="https://git-scm.com/">Git</a> and either stored on <a href="https://github.com/">GitHub</a> or on <a href="https://gitlab.com/">GitLab</a>. This keeps track of changes to the files and code, focuses the project into a single folder structure and emphasizes a final “product” from the coding and writing. It also makes it easier to disseminate and publish later on.</li>
+<li><em>Bibliography management</em> … This is still in development. <!--{{need to
+expand on this... Likely bibtex, but I don't care as long as it is open source
+or available in plain text}}.--></li>
+<li><em>Coding and analyses</em> will all be done in <a href="https://cran.r-project.org/">R</a>. This obvious for now, since this is an R package! However, I would like this toolkit to eventually be more language agnostic… but baby steps.</li>
+<li><em>Writing</em> will be done in <a href="https://rmarkdown.rstudio.com/">R Markdown</a> files. This provides the ability to insert R code chunk so that figures, tables, and results can be regenerated easily and reproducibly. This also includes not just manuscripts, but slides and posters (more on this below).</li>
+<li><em>Dissemination</em> of the whole project will be done using <a href="https://zenodo.org/">Zenodo</a> to create a DOI once the manuscript has been submitted, or the poster or slides have been presented. Manuscripts will be submitted to <a href="https://www.biorxiv.org/">bioRxiv</a> while posters and slides will be submitted to <a href="https://figshare.com/">figshare</a>.</li>
+<li><em>All activities</em> will be done in <a href="https://www.rstudio.com/">RStudio</a>.</li>
+<li><em>Reproducibility</em> (more advanced users and currently optional) … This is still in development. <!--{{use travis, set up a docker/rocker}}--></li>
+</ul>
+<div id="managing-files-and-tracking-changes" class="section level3">
+<h3>Managing files and tracking changes</h3>
+<p>All projects, files, coding, writing, and other activities will be done in <a href="https://www.rstudio.com/">RStudio</a>. RStudio is an exceptional environment to work with <a href="https://cran.r-project.org/">R</a> (and other languages) and has many features that make it simpler to follow open scientific workflows.</p>
+<p><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Version control</a> is vital to an open scientific workflow. Since <a href="https://git-scm.com/">Git</a> is well established in the open source, software development, and R package development world, it is the natural choice for version control. RStudio also has an excellent and fairly easy to use <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">interface</a> with Git.</p>
+</div>
+<div id="the-coding-and-analysis-phase" class="section level3">
+<h3>The coding and analysis phase</h3>
+<p>Analyses should follow the style similar to creating R packages (read this excellent <a href="http://r-pkgs.had.co.nz/">book on R package</a> creation for more details).</p>
+<ul>
+<li>R code should as much as possible be written as <a href="https://swcarpentry.github.io/r-novice-inflammation/02-func-R/">functions</a> in the <code>R/</code> folder.</li>
+<li>Data, results output, and other output should be saved in <code>data/</code>.</li>
+<li>Use devtools and usethis workflow and commands to load and use the data and R code (e.g. <code>load_all()</code>).</li>
+</ul>
+</div>
+<div id="the-writing-phase" class="section level3">
+<h3>The writing phase:</h3>
+<p>All writing should be done using <a href="https://rmarkdown.rstudio.com/">R Markdown</a>. Big picture output such as figures and tables should be created as single purpose functions (e.g. <code>table_one()</code> or <code>figure_two()</code>) and inserted into a single code chunk (especially important for figures). Inserting citations is <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">fairly simple</a>, with the bibliography file preferably saved in the same folder as the manuscript or other scientific output (in the <code>doc/</code> folder). Exploratory analyses should be done in a R Markdown file in the <code>doc/</code> folder as well.</p>
+<p>General collaboration should be done through GitHub <a href="https://help.github.com/articles/about-pull-requests/">Pull Requests</a> or through GitLab <a href="https://docs.gitlab.com/ee/user/project/merge_requests/">Merge Requests</a>. If technical skill of Git is low, designate a team member with a bit more skill in Git (or willing/able to put time into learning) as the “Git liaison”.</p>
+<p>Slides should preferably be created using the <a href="https://rmarkdown.rstudio.com/lesson-11.html">options available</a> in R Markdown. The best way to create posters is still in development.</p>
+</div>
+<div id="dissemination" class="section level3">
+<h3>Dissemination</h3>
+<p>Once the manuscript, slides, or poster have been finalized, several actions should be taken:</p>
+<ol style="list-style-type: decimal">
+<li>Increase the version number of the project (more will be added to this).</li>
+<li>The GitHub/GitLab project should be made public (if sensitive data is in the project, that should be excluded) and should be uploaded to <a href="https://zenodo.org/">Zenodo</a> to obtain an DOI.</li>
+<li>The manuscript should be submitted to <a href="https://www.biorxiv.org/">bioRxiv</a> and the slides or posters should be uploaded to <a href="https://figshare.com/">figshare</a> (can add an embargo time if presenting at a conference).</li>
+<li>Give your presentation or submit your manuscript to a journal!</li>
+</ol>
+<p>For number 1 above, increasing the version number of the project can be used to track bigger picture milestones in the project. For small abstracts this isn’t really necessary, since they are likely part of a bigger scientific output.</p>
+<!--
+Notes:
+
+- Strong opinion on how projects should be structured or organized and how to be open/where to send code
+    - Use R package framework
+    - Use travis or gitlab-ci
+    - Some type of CI should be able to generate your manuscript without errors
+
+- Bibliography files... as long as it interacts with R Markdown{{link to biblio}}
+- CSL{{link}} for citation styling.
+
+-->
+</div>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
