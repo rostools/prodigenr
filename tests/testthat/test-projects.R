@@ -177,6 +177,8 @@ test_that("(old version) project directory and files created (using figshare)", 
 
 
 test_that("project is set up", {
+    skip_on_cran()
+
     path <- tempdir()
     capture_output(setup_project("testing", path = path))
     proj_path <- file.path(path, "testing")
