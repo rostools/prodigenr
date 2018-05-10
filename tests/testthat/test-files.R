@@ -8,7 +8,7 @@ test_that("Manuscript, slides, posters, abstract created", {
     skip_on_cran()
 
     path <- tempdir()
-    capture.output(setup_project("test.files", path = path))
+    capture_output(setup_project("test.files", path = path))
 
     withr::local_dir(new = file.path(path, "test.files"))
 
