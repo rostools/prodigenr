@@ -15,7 +15,7 @@
 load_data <- function(update = FALSE) {
     pkg <- devtools::as.package('.')$path
     rfile <- normalizePath(file.path(pkg, 'R', 'fetch_data.R'))
-    datadir <- normalizePath(file.path(pkg, 'data'))
+    datadir <- file.path(pkg, 'data')
     if (length(rfile) == 0)
         stop("Oops, fetch_data.R file must have been deleted, please keep it.", .call = FALSE)
     if (!dir.exists(datadir))
