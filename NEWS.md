@@ -8,6 +8,7 @@ files (#31).
 abstract (#70, #75). See `create_*` type commands.
 * New function to setup a general project, but excluding the individual document 
 types such manuscript, slides, etc (#72). `prodigen` function is deprecated.
+* Function to add first author and coauthor to project metadata (DESCRIPTION file).
 
 ## Minor fixes
 
