@@ -8,6 +8,9 @@ copy_template_files <- function(from, to) {
     file.copy(template_files, to, recursive = TRUE)
 }
 
+is_rproj_folder <- function() {
+    rprojroot::is.root_criterion(rprojroot::is_rstudio_project)
+}
 
 stop_if_not_rproj_folder <- function() {
     if (!is_rproj_folder()) {

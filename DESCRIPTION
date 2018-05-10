@@ -14,14 +14,18 @@ Depends:
     R (>= 3.4.0)
 Imports: 
     stats (>= 3.4.4),
-    utils,
     usethis,
     devtools,
-    desc
+    desc,
+    utils (>= 3.4.4),
+    rmarkdown,
+    rprojroot,
+    usethis,
+    devtools,
+    withr
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
-    rmarkdown (>= 1.9),
     rstudioapi (>= 0.7),
     rvest (>= 0.3.2),
     testthat (>= 2.0.0),

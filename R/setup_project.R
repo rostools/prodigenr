@@ -1,5 +1,5 @@
 
-#' Setup a research project.
+#' Setup a research analysis project.
 #'
 #' This starts the project by setting up a common folder and file infrastructure,
 #' as well as adding some useful files to start.
@@ -7,7 +7,7 @@
 #' @param name Name of project.
 #' @param path Path/location of project.
 #'
-#' @return
+#' @return Folders and files created for a research project.
 #' @export
 #'
 #' @examples
@@ -26,12 +26,15 @@ setup_project <-
 
         proj_path <- normalizePath(path = file.path(path, name), mustWork = FALSE)
         usethis:::done("Creating project '", name, "' in '", proj_path, "'.")
-        usethis::create_project(proj_path)
-        usethis::proj_set(path = proj_path)
+        usethis::create_project(proj_path, rstudio = TRUE)
         include_readme(proj_path)
         include_r_files(proj_path)
-        usethis::use_description()
-        capture.output(usethis::use_package('devtools'))
-        usethis::use_git()
+        withr::with_dir(
+            new = proj_path,
+            {
+                usethis::use_description()
+                capture.output(usethis::use_package('devtools'))
+                usethis::use_git()
+            })
         invisible(TRUE)
     }

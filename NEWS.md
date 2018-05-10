@@ -4,6 +4,8 @@
 
 * Added an RStudio addin (`render_docs()`) for rendering all the `doc/.Rmd`
 files (#31).
+* Use RMarkdown template files to draft the posters, slides, manuscripts, and 
+abstract (#70, #75). See `create_*` type commands.
 * New function to setup a general project, but excluding the individual document 
 types such manuscript, slides, etc (#72). `prodigen` function is deprecated.
 

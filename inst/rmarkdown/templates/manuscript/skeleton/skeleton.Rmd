@@ -1,0 +1,71 @@
+---
+bibliography: 
+    - /path/to/bib
+csl:
+    - /path/to/csl # something like vancouver
+output: word_document
+---
+
+```{r knit_setup, include=FALSE}
+# root directory one down if using `prodigenr`
+knitr::opts_chunk$set(echo = FALSE, dev = c('png', 'postscript'))
+devtools::load_all()
+```
+
+```{r caption_setup}
+## Include captions below using `captioner` package via library(captioner)
+fig <- captioner(prefix = 'Figure')
+cite_f <- pryr::partial(fig, display = 'cite')
+sfig <- captioner(prefix = 'Supplemental Figure S')
+cite_sf <- pryr::partial(sfig, display = 'cite')
+tab <- captioner(prefix = 'Table')
+cite_t <- pryr::partial(tab, display = 'cite')
+stab <- captioner(prefix = 'Supplemental Table S')
+cite_st <- pryr::partial(stab, display = 'cite')
+```
+
+# Title page
+
+Title:
+
+<!-- First, middle initial, last, highest academic degree -->
+Authors:
+
+<!-- During time of study. -->
+Affiliation:
+
+Corresponding author:
+
+- Name:
+- Current address:
+- Phone number:
+- Fax number:
+- Email:
+
+# Abstract
+
+Objective:
+
+Research Design and Methods:
+
+Results:
+
+Conclusions:
+
+# Introduction 
+
+# Research Design and Methods
+
+# Results
+
+# Conclusions
+
+# Acknowledgements
+
+# References
+
+# Tables
+
+# Figures
+
+# Supplemental Material
