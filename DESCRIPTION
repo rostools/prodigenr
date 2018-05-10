@@ -13,9 +13,10 @@ BugReports: https://github.com/lwjohnst86/prodigenr/issues
 Depends: 
     R (>= 3.4.0)
 Imports: 
-    devtools (>= 1.13.5),
     stats (>= 3.4.4),
-    utils (>= 3.4.4)
+    utils (>= 3.4.4),
+    usethis,
+    devtools
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
