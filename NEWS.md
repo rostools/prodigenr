@@ -4,6 +4,8 @@
 
 * Added an RStudio addin (`render_docs()`) for rendering all the `doc/.Rmd`
 files (#31).
+* New function to setup a general project, but excluding the individual document 
+types such manuscript, slides, etc (#72). `prodigen` function is deprecated.
 
 ## Minor fixes
 
