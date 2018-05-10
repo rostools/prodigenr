@@ -18,7 +18,8 @@ Imports:
     rmarkdown,
     rprojroot,
     usethis,
-    devtools
+    devtools,
+    withr
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
