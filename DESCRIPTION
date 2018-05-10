@@ -14,9 +14,10 @@ Depends:
     R (>= 3.4.0)
 Imports: 
     stats (>= 3.4.4),
-    utils (>= 3.4.4),
+    utils,
     usethis,
-    devtools
+    devtools,
+    desc
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
