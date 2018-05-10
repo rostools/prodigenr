@@ -1,0 +1,31 @@
+---
+bibliography: path/to/bib/file
+csl: path/to/bib/style/file
+output:
+    word_document:
+      fig_caption: true
+---
+
+Word count: 
+
+**Title here**
+
+Author list here
+
+**Background**: 
+
+```{r setup, include=FALSE}
+devtools::load_all()
+```
+
+```{r caption_setup}
+## Include captions below using `captioner` package
+figs <- captioner(prefix = 'Figure')
+tabs <- captioner(prefix = 'Table')
+```
+
+**Methods**: 
+
+**Results**:
+
+**Discussion**:

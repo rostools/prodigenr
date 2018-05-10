@@ -1,0 +1,14 @@
+---
+bibliography: 
+    - /path/to/bib
+csl:
+    - /path/to/csl
+output: # maybe beamer?
+---
+
+```{r knit_setup, include=FALSE}
+# root directory one down if using `prodigenr`
+knitr::opts_knit$set(root.dir = '../')
+knitr::opts_chunk$set(echo = FALSE, dev = c('png', 'postscript'))
+```
+
