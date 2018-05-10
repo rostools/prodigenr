@@ -6,7 +6,7 @@ test_that("the number of listed templates is correct", {
     expect_length(template_list, 4)
 })
 
-# Current style -----------------------------------------------------------
+# old style -----------------------------------------------------------
 
 expected <- function(path, type, name, license = FALSE, strobe = FALSE,
                      figshare = FALSE, git = FALSE) {
@@ -121,7 +121,7 @@ test_prodigen <-
         project_files
     }
 
-test_that("(current version) project directory and files created (default)", {
+test_that("(old version) project directory and files created (default)", {
     skip_on_cran()
     #skip_on_travis()
 
@@ -129,7 +129,7 @@ test_that("(current version) project directory and files created (default)", {
     test_prodigen(project)
 })
 
-test_that("(current version) project directory and files created (using name)", {
+test_that("(old version) project directory and files created (using name)", {
     skip_on_cran()
     #skip_on_travis()
 
@@ -137,7 +137,7 @@ test_that("(current version) project directory and files created (using name)", 
     test_prodigen(project, 'testname')
 })
 
-test_that("(current version) project directory and files created (using strobe)", {
+test_that("(old version) project directory and files created (using strobe)", {
     skip_on_cran()
     skip_on_travis()
 
@@ -145,7 +145,7 @@ test_that("(current version) project directory and files created (using strobe)"
     test_prodigen(project, strobe = TRUE)
 })
 
-test_that("(current version) project directory and files created (using license)", {
+test_that("(old version) project directory and files created (using license)", {
     skip_on_cran()
     skip_on_travis()
 
@@ -153,7 +153,7 @@ test_that("(current version) project directory and files created (using license)
     test_prodigen(project, license = TRUE)
 })
 
-test_that("(current version) project directory and files created (using figshare)", {
+test_that("(old version) project directory and files created (using figshare)", {
     skip_on_cran()
     #skip_on_travis()
 
@@ -161,7 +161,7 @@ test_that("(current version) project directory and files created (using figshare
     test_prodigen(project, figshare = TRUE)
 })
 
-# test_that("(current version) project directory and files created (using git)", {
+# test_that("(old version) project directory and files created (using git)", {
 #     skip_on_cran()
 #     #skip_on_travis()
 #
@@ -171,3 +171,14 @@ test_that("(current version) project directory and files created (using figshare
 #     test_prodigen('slides', git = TRUE)
 #     test_prodigen('poster', git = TRUE)
 # })
+
+
+# current style -----------------------------------------------------------
+
+
+test_that("project is set up", {
+    path <- tempdir()
+    capture_output(setup_project("testing", path = path))
+    proj_path <- file.path(path, "testing")
+    expect_true(dir.exists(proj_path))
+})

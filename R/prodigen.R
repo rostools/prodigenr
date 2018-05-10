@@ -1,6 +1,7 @@
 #' Create a project directory based on a template.
 #'
 #'
+#' Deprecated. Use [setup_project()].
 #' Create a project directory and associated files. Is based on using RStudio
 #' and the devtools package development way of working with
 #' files and code. So commands/keybindings like
@@ -33,6 +34,7 @@ prodigen <-
              name = NULL,
              path = getwd(),
              git.init = FALSE) {
+        .Deprecated("setup_project")
         type <- match.arg(type, template_list)
         if (is.null(name)) {
             name <- type
