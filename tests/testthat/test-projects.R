@@ -183,4 +183,7 @@ test_that("project is set up", {
     capture_output(setup_project("testing", path = path))
     proj_path <- file.path(path, "testing")
     expect_true(dir.exists(proj_path))
+
+    files_created <- list.files(file.path(proj_path))
+    expect_equal(length(grep("R/", files_created)), 3)
 })

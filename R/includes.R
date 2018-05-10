@@ -17,7 +17,9 @@ include_extra_analyses <- function(path) {
 
 include_r_files <- function(path) {
     usethis:::done('Adding some basic R functions to the R/ folder.')
-    copy_template_files('R', file.path(path, 'R'))
+    copy_template("R/README.md")
+    copy_template("R/setup.R")
+    copy_template("R/fetch_data.R")
 }
 # for deprecated functions
 include_rbase_files <- include_r_files
