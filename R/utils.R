@@ -1,4 +1,8 @@
 
+copy_template <- function(.file) {
+    usethis::use_template(template = .file, package = "prodigenr")
+}
+
 copy_template_files <- function(from, to) {
     template_files <- system.file('templates', from,
                                   package = 'prodigenr')
