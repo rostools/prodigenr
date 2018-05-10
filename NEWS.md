@@ -4,6 +4,8 @@
 
 * Added an RStudio addin (`render_docs()`) for rendering all the `doc/.Rmd`
 files (#31).
+* Use RMarkdown template files to draft the posters, slides, manuscripts, and 
+abstract (#70, #77, #75).
 
 ## Minor fixes
 
