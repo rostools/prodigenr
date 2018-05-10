@@ -11,6 +11,10 @@ files (#31).
 functionality (#26, #28, #33).
 * Added additional information to template README.md (#29, #30, #32)
 
+## Misc additions
+
+* Added code coverage #65
+
 # prodigenr 0.3.0
 
 ## New features/functionality

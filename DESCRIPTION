@@ -23,7 +23,8 @@ Suggests:
     rstudioapi (>= 0.7),
     rvest (>= 0.3.2),
     testthat (>= 2.0.0),
-    xml2 (>= 1.2.0)
+    xml2 (>= 1.2.0),
+    covr
 VignetteBuilder: knitr
 LazyData: true
 Roxygen: list(markdown = TRUE)
