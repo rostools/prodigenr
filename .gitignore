@@ -3,3 +3,6 @@
 .RData
 dev/
 inst/doc
+vignettes/*.html
+vignettes/*.R
+
