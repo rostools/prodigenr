@@ -1,6 +1,6 @@
 
 include_readme <- function(path) {
-    message('* Adding a README.md file to the project.')
+    usethis:::done('Adding a README.md file to the project.')
     copy_template_files('readme', path)
 }
 
@@ -15,10 +15,12 @@ include_extra_analyses <- function(path) {
     devtools::use_vignette('extra-analyses', path)
 }
 
-include_rbase_files <- function(path) {
-    message('* Adding some basic R functions to the R/ folder.')
+include_r_files <- function(path) {
+    usethis:::done('Adding some basic R functions to the R/ folder.')
     copy_template_files('R', file.path(path, 'R'))
 }
+# for deprecated functions
+include_rbase_files <- include_r_files
 
 #' License the project under MIT.
 #'
