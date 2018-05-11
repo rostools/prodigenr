@@ -17,6 +17,6 @@ test_that("project is set up", {
     proj_path <- file.path(path, "testing")
     expect_true(dir.exists(proj_path))
 
-    files_created <- list.files(file.path(proj_path))
-    expect_equal(length(grep("R/", files_created)), 3)
+    files_created <- fs::dir_ls(proj_path, recursive = TRUE)
+    expect_equal(length(grep("/R/", files_created)), 3)
 })
