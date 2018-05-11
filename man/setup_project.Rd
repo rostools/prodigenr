@@ -20,8 +20,7 @@ as well as adding some useful files to start.
 }
 \examples{
 \dontrun{
-setup_project("DiabetesAge", "~/Documents/research")
-setup_project("cvd.mortality", "~/Desktop")
-setup_project("cancer_pollutants")
+path <- tempdir()
+setup_project("DiabetesCancer8", path)
 }
 }

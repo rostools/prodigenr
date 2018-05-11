@@ -12,9 +12,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' setup_project("DiabetesAge", "~/Documents/research")
-#' setup_project("cvd.mortality", "~/Desktop")
-#' setup_project("cancer_pollutants")
+#' path <- tempdir()
+#' setup_project("DiabetesCancer", path)
 #' }
 setup_project <-
     function(name, path = getwd()) {
@@ -27,15 +26,16 @@ setup_project <-
         proj_path <- normalizePath(path = file.path(path, name), mustWork = FALSE)
         usethis:::done("Creating project '", name, "' in '", proj_path, "'.")
         usethis::create_project(proj_path, rstudio = TRUE)
-        include_readme(proj_path)
-        include_r_files(proj_path)
         withr::with_dir(
             new = proj_path,
             {
+                fs::dir_create("R")
                 usethis::use_description()
                 utils::capture.output(usethis::use_package('devtools'))
                 utils::capture.output(usethis::use_package('knitr'))
                 utils::capture.output(usethis::use_package('rmarkdown'))
+                include_readme()
+                include_r_files()
                 usethis::use_git()
             })
         invisible(TRUE)

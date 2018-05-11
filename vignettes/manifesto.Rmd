@@ -6,7 +6,6 @@ output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{An opinionated and practical manifesto for doing reproducible, open scientific projects with R}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include = FALSE}
