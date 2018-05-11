@@ -1,12 +1,13 @@
 # Description of R/ folder and .R files
 
-This folder contains custom functions used for this project's analyses. It's
-recommended that if a piece of code is used more than once in your analysis
-files, make it into a function and put it here so that you "Don't Repeat
-Yourself" (DRY principle). Or even if the piece of code is complicated, put it
-into a function to then document what it does. The recommended approach is to
-create a function for each main output item (each figure, table, etc) in a
-scientific product (e.g. `figure_one()` to create figure one).
+This folder contains custom functions used for this project's analyses, such as
+in the `doc/` folder. It's recommended that if a piece of code is used more than
+once in your analysis files, make it into a function and put it here so that you
+"Don't Repeat Yourself" (DRY principle). Or even if the piece of code is
+complicated, put it into a function to then document what it does. The
+recommended approach is to create a function for each main output item (each
+figure, table, etc) in a scientific product (e.g. `figure_one()` to create
+figure one).
 
 Use RStudio's R script 'Insert Section' (Ctrl-Shift-R) to split up your
 functions by utility or purpose. You can see the contents of this file easily
