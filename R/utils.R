@@ -1,15 +1,7 @@
 
-copy_template <- function(.file) {
-    usethis::use_template(template = .file, package = "prodigenr")
-}
-
-copy_template_files <- function(from, to) {
-    template_files <- system.file('templates', from,
-                                  package = 'prodigenr')
-    template_files <- list.files(template_files, all.files = TRUE,
-                                 full.names = TRUE,
-                                 include.dirs = FALSE)[-1:-2]
-    file.copy(template_files, to, recursive = TRUE)
+copy_template_file <- function(template, save_as = template) {
+    template_file <- system.file('templates', template, package = 'prodigenr')
+    fs::file_copy(template_file, save_as)
 }
 
 is_rproj_folder <- function() {

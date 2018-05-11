@@ -1,28 +1,18 @@
 
-include_readme <- function(path) {
-    usethis:::done('Adding a README.md file to the project.')
-    copy_template_files('readme', path)
+include_readme <- function() {
+    copy_template_file('README.md')
+    usethis:::done('Adding a ', usethis:::value('README.md'), ' file to the project.')
 }
 
-include_project_document <- function(type, path) {
-    message('* Adding the main project ', type, ' document to the doc/ folder.')
-    dir.create(file.path(path, 'doc'))
-    copy_template_files(type, file.path(path, 'doc'))
+include_r_files <- function() {
+    copy_template_file("R-README.md", file.path("R", "README.md"))
+    usethis:::done('Adding ', usethis:::value("README.md"), ' functions to the ',
+        usethis:::value('R/'), ' folder.')
+    copy_template_file("setup.R", file.path("R", "setup.R"))
+    copy_template_file("fetch_data.R", file.path("R", "fetch_data.R"))
+    usethis:::done('Adding some basic R functions to the ',
+        usethis:::value('R/'), ' folder.')
 }
-
-include_extra_analyses <- function(path) {
-    message('* Creating a vignette file for documenting additional analyses.')
-    devtools::use_vignette('extra-analyses', path)
-}
-
-include_r_files <- function(path) {
-    usethis:::done('Adding some basic R functions to the R/ folder.')
-    copy_template("R/README.md")
-    copy_template("R/setup.R")
-    copy_template("R/fetch_data.R")
-}
-# for deprecated functions
-include_rbase_files <- include_r_files
 
 #' License the project under MIT.
 #'
