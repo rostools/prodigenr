@@ -20,7 +20,8 @@ Imports:
     utils,
     rmarkdown,
     rprojroot,
-    withr
+    withr,
+    fs
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
