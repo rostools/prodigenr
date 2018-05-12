@@ -50,8 +50,12 @@ The main function is the `prodigen` command.  So, for instance, if you
 want a manuscript project, type out:
 
     library(prodigenr)
-    prodigen(type = 'manuscript', name = 'cancerToxins',
-        path = '/path/to/new/project')
+    setup_project("DiseaseDiet", tempdir())
+    # open up the newly created project via the Rproj file. Then:
+    create_manuscript() 
+    # Or...
+    create_poster()
+    # etc.
 
 This then creates a directory tree, with template files for starting
 your analysis!  The main secondary function is the `template_list`
@@ -60,9 +64,9 @@ a PR if you want another template included!):
 
     template_list
 
-For a more detailed tutorial, see the vignette:
+For a more detailed tutorial, see the introduction vignette:
 
-    vignette('introduction', 'prodigenr')
+    vignette('prodigenr', 'prodigenr')
     
 # Related packages or projects
 

@@ -6,11 +6,13 @@
 ├── data
 │   └── README.md
 ├── doc
-│   └── README.md
+│   ├── README.md
+│   ├── abstract.Rmd
+│   └── poster.Rmd
 ├── .Rbuildignore
 ├── .gitignore
 ├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 └── README.md
 
-3 directories, 10 files
+3 directories, 12 files
