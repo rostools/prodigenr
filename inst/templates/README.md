@@ -1,6 +1,6 @@
 
 <!-- TODO: Add more to the title of your project here -->
-# {{{ ProjectName }}}:
+# {{ ProjectName }}
 
 <!-- TODO: Give a brief description of what your project is about -->
 
@@ -48,7 +48,8 @@ functions such as `devtools::load_all()`.
 a machine readable format for others to obtain information on about your
 project. It provides a description of what the project does and most importantly
 what R packages your project uses on.
-- `{{{ProjectName}}}.Rproj` is the file to dictate that the directory is a RStudio project.
+- The `.Rproj` file dictates that the directory is a RStudio project. Open the
+project by opening this file.
 
 All subsequent folders have their own README inside. See them for more details.
 
