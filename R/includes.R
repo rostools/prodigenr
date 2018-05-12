@@ -3,12 +3,11 @@ include_readmes <- function() {
     copy_template_file('README.md')
     copy_template_file('doc-README.md', file.path("doc", "README.md"))
     copy_template_file('data-README.md', file.path("data", "README.md"))
+    copy_template_file("R-README.md", file.path("R", "README.md"))
     done('Adding several ', usethis:::value('README.md'), ' files to the project.')
 }
 
 include_r_files <- function() {
-    copy_template_file("R-README.md", file.path("R", "README.md"))
-    done('Adding ', value("README.md"), ' functions to the ', value('R/'), ' folder.')
     copy_template_file("setup.R", file.path("R", "setup.R"))
     copy_template_file("fetch_data.R", file.path("R", "fetch_data.R"))
     done('Adding some basic R functions to the ', value('R/'), ' folder.')
@@ -48,7 +47,7 @@ include_rfigshare_script <- function(path = '.') {
     message('* Adding rfigshare.R to the R/ folder. Use this to send code to figshare.')
     path <- devtools::as.package(path)$path
     devtools::use_package('rfigshare', pkg = path)
-    copy_template_files('rfigshare', file.path(path, 'R'))
+    copy_template_file('rfigshare', file.path(path, 'R'))
 }
 
 #' Include a STROBE checklist in the project.

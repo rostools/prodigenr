@@ -21,7 +21,10 @@ Imports:
     rmarkdown,
     rprojroot,
     withr,
-    fs
+    fs,
+    crayon,
+    clisymbols,
+    clipr
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
@@ -34,3 +37,4 @@ VignetteBuilder: knitr
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
+Encoding: UTF-8

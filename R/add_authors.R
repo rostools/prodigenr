@@ -53,7 +53,7 @@ add_first_author <- function(first, last, role = c("aut", "cre"), email = NULL, 
         )
     )
 
-    usethis:::done("Adding ", x$get_maintainer(), " as first author and/or maintainer of project repository.")
+    done("Adding ", x$get_maintainer(), " as first author and/or maintainer of project repository.")
     invisible(x)
 }
 
@@ -72,7 +72,7 @@ add_coauthors <- function(first, last, role = "ctb", email = NULL, orcid = NULL)
     )
 
     added_author <- grep(paste0(first, " ", last), x$get_authors(), value = TRUE)
-    usethis:::done("Adding ", added_author[1], " as coauthor and contributor to the project.")
+    done("Adding ", added_author[1], " as coauthor and contributor to the project.")
     invisible(x)
 }
 

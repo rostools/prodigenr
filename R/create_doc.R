@@ -36,7 +36,7 @@ create_doc <- function(type = c("manuscript", "slides", "poster", "abstract")) {
             create_dir = FALSE,
             edit = FALSE
         )
-        usethis:::done("Creating '", type, "' file in the doc/ folder.")
+        done("Creating '", type, "' file in the doc/ folder.")
     }
 }
 

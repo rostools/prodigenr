@@ -24,8 +24,8 @@ setup_project <-
         }
 
         proj_path <- normalizePath(path = file.path(path, name), mustWork = FALSE)
-        usethis:::done("Creating project '", name, "' in '", proj_path, "'.")
-        usethis::create_project(proj_path, rstudio = TRUE)
+        done("Creating project '", name, "' in '", proj_path, "'.")
+        create_project(proj_path, rstudio = TRUE)
         withr::with_dir(
             new = proj_path,
             {
@@ -36,7 +36,7 @@ setup_project <-
                 utils::capture.output(use_package('rmarkdown'))
                 include_readmes()
                 include_r_files()
-                usethis::use_git()
+                use_git()
             })
         invisible(TRUE)
     }

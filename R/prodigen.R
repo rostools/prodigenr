@@ -35,25 +35,11 @@ prodigen <-
              path = getwd(),
              git.init = FALSE) {
         .Deprecated("setup_project")
-        type <- match.arg(type, template_list)
-        if (is.null(name)) {
-            name <- type
-        }
-        stopifnot(is.character(name))
-
-        proj_path <- file.path(path, name)
-        message("* Creating project '", name, "' in '", proj_path, "'.")
-        null <- utils::capture.output(suppressMessages(devtools::create(proj_path)))
-        include_readme(proj_path)
-        include_project_document(type, proj_path)
-        include_extra_analyses(proj_path)
-        include_rbase_files(proj_path)
-        suppressMessages(devtools::use_package('devtools', pkg = proj_path))
-        if (git.init) {
-            devtools::use_git(pkg = proj_path)
-        } else {
-            null <- file.remove(file.path(proj_path, '.gitignore'))
-        }
-        invisible(TRUE)
+        message("Using the new function setup_project.")
+        if (!missing(type))
+            warning("type argument doesn't work.")
+        if (!missing(git.init))
+            warning("git.init argument doesn't work.")
+        setup_project(name = name, path = path)
     }
 
