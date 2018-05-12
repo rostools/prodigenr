@@ -8,13 +8,13 @@ files (#31).
 abstract (#70, #75). See `create_*` type commands.
 * New function to setup a general project, but excluding the individual document 
 types such manuscript, slides, etc (#72). `prodigen` function is deprecated.
-* Function to add first author and coauthor to project metadata (DESCRIPTION file).
 * READMEs in each folder and section to fill out in main README for the project
 description (#38, #80).
 
 ## Minor fixes
 
 * Added additional information to template README.md (#29, #30, #32)
+* Moved `include_*()` functions over into [rostools](https://github.com/lwjohnst86/rostools) (#96)
 
 ## Misc additions
 
