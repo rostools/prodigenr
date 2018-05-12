@@ -1,7 +1,5 @@
 # prodigenr 0.4.0
 
-# prodigenr 0.3.0.9000
-
 ## New feature
 
 * Added an RStudio addin (`render_docs()`) for rendering all the `doc/.Rmd`
