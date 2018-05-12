@@ -14,12 +14,11 @@ description (#38, #80).
 
 ## Minor fixes
 
-* Moved all functions commonly loaded in each Rmd file into the `.onLoad`
-functionality (#26, #28, #33).
 * Added additional information to template README.md (#29, #30, #32)
 
 ## Misc additions
 
+* Todo items to created README
 * Added code coverage #65
 
 # prodigenr 0.3.0
