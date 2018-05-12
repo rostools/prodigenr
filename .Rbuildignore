@@ -7,4 +7,5 @@
 ^codecov\.yml$
 ^_pkgdown\.yml$
 ^docs$
+^vignettes/manifesto\.Rmd$
 ^ROADMAP\.md$

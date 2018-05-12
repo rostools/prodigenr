@@ -1,11 +1,9 @@
 ---
-title: "An opinionated and practical manifesto for doing reproducible, open scientific projects with R"
+title: "A manifesto for doing open science with R"
+subtitle: "Opinionated and practical for doing reproducible and open R projects"
 author: "Luke Johnston"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{An opinionated and practical manifesto for doing reproducible, open scientific projects with R}
-  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, include = FALSE}
