@@ -30,11 +30,11 @@ setup_project <-
             new = proj_path,
             {
                 fs::dir_create("R")
-                usethis::use_description()
-                utils::capture.output(usethis::use_package('devtools'))
-                utils::capture.output(usethis::use_package('knitr'))
-                utils::capture.output(usethis::use_package('rmarkdown'))
-                include_readme()
+                use_description()
+                utils::capture.output(use_package('devtools'))
+                utils::capture.output(use_package('knitr'))
+                utils::capture.output(use_package('rmarkdown'))
+                include_readmes()
                 include_r_files()
                 usethis::use_git()
             })

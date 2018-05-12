@@ -1,7 +1,11 @@
 
-copy_template_file <- function(template, save_as = template) {
-    template_file <- system.file('templates', template, package = 'prodigenr')
-    fs::file_copy(template_file, save_as)
+copy_template_file <- function(template, save_as = template, data = NULL) {
+    use_template(
+        template = template,
+        save_as = save_as,
+        data = data,
+        package = "prodigenr"
+    )
 }
 
 is_rproj_folder <- function() {

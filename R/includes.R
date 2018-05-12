@@ -1,17 +1,17 @@
 
-include_readme <- function() {
+include_readmes <- function() {
     copy_template_file('README.md')
-    usethis:::done('Adding a ', usethis:::value('README.md'), ' file to the project.')
+    copy_template_file('doc-README.md', file.path("doc", "README.md"))
+    copy_template_file('data-README.md', file.path("data", "README.md"))
+    done('Adding several ', usethis:::value('README.md'), ' files to the project.')
 }
 
 include_r_files <- function() {
     copy_template_file("R-README.md", file.path("R", "README.md"))
-    usethis:::done('Adding ', usethis:::value("README.md"), ' functions to the ',
-        usethis:::value('R/'), ' folder.')
+    done('Adding ', value("README.md"), ' functions to the ', value('R/'), ' folder.')
     copy_template_file("setup.R", file.path("R", "setup.R"))
     copy_template_file("fetch_data.R", file.path("R", "fetch_data.R"))
-    usethis:::done('Adding some basic R functions to the ',
-        usethis:::value('R/'), ' folder.')
+    done('Adding some basic R functions to the ', value('R/'), ' folder.')
 }
 
 #' License the project under MIT.
