@@ -48,7 +48,7 @@ include_rfigshare_script <- function(path = '.') {
     message('* Adding rfigshare.R to the R/ folder. Use this to send code to figshare.')
     path <- devtools::as.package(path)$path
     devtools::use_package('rfigshare', pkg = path)
-    copy_template_files('rfigshare', file.path(path, 'R'))
+    copy_template_file('rfigshare', file.path(path, 'R'))
 }
 
 #' Include a STROBE checklist in the project.
