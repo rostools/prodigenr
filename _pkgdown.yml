@@ -23,7 +23,7 @@ navbar:
     articles:
       text: Articles
       menu:
-      - text: Open and reproducible manifesto
+      - text: A manifesto for doing open science with R
         href: articles/manifesto.html
     contributing:
       text: Contributing
