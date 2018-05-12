@@ -4,7 +4,7 @@ include_readmes <- function() {
     copy_template_file('doc-README.md', file.path("doc", "README.md"))
     copy_template_file('data-README.md', file.path("data", "README.md"))
     copy_template_file("R-README.md", file.path("R", "README.md"))
-    done('Adding several ', usethis:::value('README.md'), ' files to the project.')
+    done('Adding several ', value('README.md'), ' files to the project.')
 }
 
 include_r_files <- function() {
