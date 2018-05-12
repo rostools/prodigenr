@@ -12,9 +12,6 @@ test_that("Manuscript, slides, posters, abstract created", {
 
     withr::local_dir(new = file.path(path, "test.files"))
 
-    # TODO: Will need to remove this eventually
-    dir.create("doc")
-
     quiet(create_manuscript())
     quiet(create_poster())
     quiet(create_slides())
