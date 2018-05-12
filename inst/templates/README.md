@@ -22,6 +22,12 @@ Typical commands used in this workflow include:
 
 For more detail on using this project workflow, see [prodigenr](https://lwjohnst86.github.io/prodigenr).
 
+To install all the packages necessary for this project (only if
+`usethis::use_package("packagename")` has been used often), run this command
+while in the project:
+
+    devtools::install_dev_deps()
+
 # General folder details
 
 The project directory is generally structured with the following folders:
