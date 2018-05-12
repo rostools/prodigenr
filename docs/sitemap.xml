@@ -4,19 +4,19 @@
     <loc>http://prodigenr.lukewjohnston.com/index.html</loc>
   </url>
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/include_mit_license.html</loc>
-  </url>
-  <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/include_rfigshare_script.html</loc>
-  </url>
-  <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/include_strobe.html</loc>
+    <loc>http://prodigenr.lukewjohnston.com/reference/create_doc.html</loc>
   </url>
   <url>
     <loc>http://prodigenr.lukewjohnston.com/reference/prodigen.html</loc>
   </url>
   <url>
+    <loc>http://prodigenr.lukewjohnston.com/reference/prodigenr-package.html</loc>
+  </url>
+  <url>
     <loc>http://prodigenr.lukewjohnston.com/reference/render_docs.html</loc>
+  </url>
+  <url>
+    <loc>http://prodigenr.lukewjohnston.com/reference/setup_project.html</loc>
   </url>
   <url>
     <loc>http://prodigenr.lukewjohnston.com/reference/template_list.html</loc>

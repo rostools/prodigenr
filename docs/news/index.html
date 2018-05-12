@@ -81,7 +81,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/manifesto.html">An opinionated and practical manifesto for doing reproducible, open scientific projects with R</a>
+      <a href="../articles/manifesto.html">A manifesto for doing open science with R</a>
     </li>
   </ul>
 </li>
@@ -128,14 +128,25 @@
 <a href="#new-feature" class="anchor"></a>New feature</h2>
 <ul>
 <li>Added an RStudio addin (<code><a href="../reference/render_docs.html">render_docs()</a></code>) for rendering all the <code>doc/.Rmd</code> files (<a href='https://github.com/lwjohnst86/prodigenr/issues/31'>#31</a>).</li>
+<li>Use RMarkdown template files to draft the posters, slides, manuscripts, and abstract (<a href='https://github.com/lwjohnst86/prodigenr/issues/70'>#70</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/75'>#75</a>). See <code>create_*</code> type commands.</li>
+<li>New function to setup a general project, but excluding the individual document types such manuscript, slides, etc (<a href='https://github.com/lwjohnst86/prodigenr/issues/72'>#72</a>). <code>prodigen</code> function is deprecated.</li>
+<li>READMEs in each folder and section to fill out in main README for the project description (<a href='https://github.com/lwjohnst86/prodigenr/issues/38'>#38</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/80'>#80</a>).</li>
 </ul>
 </div>
 <div id="minor-fixes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#minor-fixes" class="anchor"></a>Minor fixes</h2>
 <ul>
-<li>Moved all functions commonly loaded in each Rmd file into the <code>.onLoad</code> functionality (<a href='https://github.com/lwjohnst86/prodigenr/issues/26'>#26</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/28'>#28</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/33'>#33</a>).</li>
 <li>Added additional information to template README.md (<a href='https://github.com/lwjohnst86/prodigenr/issues/29'>#29</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/30'>#30</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/32'>#32</a>)</li>
+<li>Moved <code>include_*()</code> functions over into <a href="https://github.com/lwjohnst86/rostools">rostools</a> (<a href='https://github.com/lwjohnst86/prodigenr/issues/96'>#96</a>)</li>
+</ul>
+</div>
+<div id="misc-additions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#misc-additions" class="anchor"></a>Misc additions</h2>
+<ul>
+<li>Todo items to created README</li>
+<li>Added code coverage <a href='https://github.com/lwjohnst86/prodigenr/issues/65'>#65</a></li>
 </ul>
 </div>
 </div>

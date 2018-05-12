@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Include a STROBE checklist in the project. — include_strobe • prodigenr</title>
+<title>Setup a research analysis project. — setup_project • prodigenr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -28,9 +28,10 @@
 
 
 
-<meta property="og:title" content="Include a STROBE checklist in the project. — include_strobe" />
+<meta property="og:title" content="Setup a research analysis project. — setup_project" />
 
-<meta property="og:description" content="Include a STROBE checklist in the project." />
+<meta property="og:description" content="This starts the project by setting up a common folder and file infrastructure,
+as well as adding some useful files to start." />
 
 <meta property="og:image" content="http://prodigenr.lukewjohnston.com/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -83,7 +84,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/manifesto.html">An opinionated and practical manifesto for doing reproducible, open scientific projects with R</a>
+      <a href="../articles/manifesto.html">A manifesto for doing open science with R</a>
     </li>
   </ul>
 </li>
@@ -117,33 +118,43 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Include a STROBE checklist in the project.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/lwjohnst86/prodigenr/blob/master/R/includes.R'><code>R/includes.R</code></a></small>
-    <div class="hidden name"><code>include_strobe.Rd</code></div>
+    <h1>Setup a research analysis project.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/lwjohnst86/prodigenr/blob/master/R/setup_project.R'><code>R/setup_project.R</code></a></small>
+    <div class="hidden name"><code>setup_project.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Include a STROBE checklist in the project.</p>
+    <p>This starts the project by setting up a common folder and file infrastructure,
+as well as adding some useful files to start.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>include_strobe</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"."</span>)</pre>
+    <pre class="usage"><span class='fu'>setup_project</span>(<span class='no'>name</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='fu'>getwd</span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>name</th>
+      <td><p>Name of project.</p></td>
+    </tr>
+    <tr>
       <th>path</th>
-      <td><p>Path to the project.</p></td>
+      <td><p>Path/location of project.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Creates a file with the STROBE checklist.</p>
+    <p>Folders and files created for a research project.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='no'>path</span> <span class='kw'>&lt;-</span> <span class='fu'>tempdir</span>()
+<span class='fu'>setup_project</span>(<span class='st'>"DiabetesCancer"</span>, <span class='no'>path</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -151,7 +162,9 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
