@@ -1,6 +1,6 @@
 
 <!-- TODO: Add more to the title of your project here -->
-# {{{ ProjectName }}}:
+# {{ ProjectName }}
 
 <!-- TODO: Give a brief description of what your project is about -->
 
@@ -22,6 +22,12 @@ Typical commands used in this workflow include:
 
 For more detail on using this project workflow, see [prodigenr](https://lwjohnst86.github.io/prodigenr).
 
+To install all the packages necessary for this project (only if
+`usethis::use_package("packagename")` has been used often), run this command
+while in the project:
+
+    devtools::install_dev_deps()
+
 # General folder details
 
 The project directory is generally structured with the following folders:
@@ -42,7 +48,8 @@ functions such as `devtools::load_all()`.
 a machine readable format for others to obtain information on about your
 project. It provides a description of what the project does and most importantly
 what R packages your project uses on.
-- `{{{ProjectName}}}.Rproj` is the file to dictate that the directory is a RStudio project.
+- The `.Rproj` file dictates that the directory is a RStudio project. Open the
+project by opening this file.
 
 All subsequent folders have their own README inside. See them for more details.
 

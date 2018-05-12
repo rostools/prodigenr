@@ -34,7 +34,7 @@ setup_project <-
                 utils::capture.output(use_package('devtools'))
                 utils::capture.output(use_package('knitr'))
                 utils::capture.output(use_package('rmarkdown'))
-                include_readme()
+                include_readmes()
                 include_r_files()
                 use_git()
             })
