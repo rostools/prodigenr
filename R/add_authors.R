@@ -78,7 +78,7 @@ add_coauthors <- function(first, last, role = "ctb", email = NULL, orcid = NULL)
 
 check_orcid <- function(orcid) {
     if (!is.null(orcid)) {
-        # TODO: check that orcid is the person
+        # TODO: check that orcid is the person. Maybe rorcid package?
         orcid <- c(ORCID = orcid)
     }
     orcid
