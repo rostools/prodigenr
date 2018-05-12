@@ -21,6 +21,6 @@ as well as adding some useful files to start.
 \examples{
 \dontrun{
 path <- tempdir()
-setup_project("DiabetesCancer8", path)
+setup_project("DiabetesCancer", path)
 }
 }

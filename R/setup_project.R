@@ -24,19 +24,19 @@ setup_project <-
         }
 
         proj_path <- normalizePath(path = file.path(path, name), mustWork = FALSE)
-        usethis:::done("Creating project '", name, "' in '", proj_path, "'.")
-        usethis::create_project(proj_path, rstudio = TRUE)
+        done("Creating project '", name, "' in '", proj_path, "'.")
+        create_project(proj_path, rstudio = TRUE)
         withr::with_dir(
             new = proj_path,
             {
                 fs::dir_create("R")
-                usethis::use_description()
-                utils::capture.output(usethis::use_package('devtools'))
-                utils::capture.output(usethis::use_package('knitr'))
-                utils::capture.output(usethis::use_package('rmarkdown'))
+                use_description()
+                utils::capture.output(use_package('devtools'))
+                utils::capture.output(use_package('knitr'))
+                utils::capture.output(use_package('rmarkdown'))
                 include_readme()
                 include_r_files()
-                usethis::use_git()
+                use_git()
             })
         invisible(TRUE)
     }
