@@ -17,18 +17,7 @@
 #' @param git.init Logical, whether to initialize the new project with git
 #' @return Creates a project directory with files and subdirectories
 #' @export
-#' @examples
 #'
-#' \dontrun{\donttest{
-#' # Get a list of possible project templates
-#' template_list
-#' # Create a project. Best done in a fresh R console.
-#' prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
-#' prodigen('poster', 'poster', 'path/to/dir/', FALSE)
-#' prodigen('poster', 'posterName', git.init = FALSE)
-#' prodigen('abstract', 'name', './', FALSE)
-#' prodigen('manuscript', path = './', git.init = TRUE)
-#' }}
 prodigen <-
     function(type,
              name = NULL,
