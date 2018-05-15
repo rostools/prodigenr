@@ -37,6 +37,16 @@ setup_project <-
                 include_readmes()
                 include_r_files()
                 use_git()
+                if (is.null(git2r::config()$user.name) & is.null(git2r::config()$global$user.name)) {
+                    warning(
+                        "Please set your user.name and user.email in your Git config.",
+                        " Use git2r::config(user.name = 'name', user.email = 'email').",
+                        " After you add your config, open the project and run the command usethis::use_git().",
+                        call. = FALSE
+                    )
+                } else {
+                    use_git()
+                }
             })
         invisible(TRUE)
     }

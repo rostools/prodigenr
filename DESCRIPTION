@@ -24,7 +24,8 @@ Imports:
     fs,
     crayon,
     clisymbols,
-    clipr
+    clipr,
+    git2r
 Suggests: 
     knitr (>= 1.20),
     rfigshare (>= 0.3.7),
