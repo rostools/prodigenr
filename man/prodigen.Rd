@@ -29,16 +29,3 @@ files and code. So commands/keybindings like
 allow an continuous and integrated approach to analyzing your data and
 writing up your research product.
 }
-\examples{
-
-\dontrun{\donttest{
-# Get a list of possible project templates
-template_list
-# Create a project. Best done in a fresh R console.
-prodigen('poster', 'poster', 'dev/', TRUE, FALSE)
-prodigen('poster', 'poster', 'path/to/dir/', FALSE)
-prodigen('poster', 'posterName', git.init = FALSE)
-prodigen('abstract', 'name', './', FALSE)
-prodigen('manuscript', path = './', git.init = TRUE)
-}}
-}
