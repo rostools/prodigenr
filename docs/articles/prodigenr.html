@@ -9,7 +9,8 @@
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to prodigenr">
+<script src="../jquery.sticky-kit.min.js"></script><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Introduction to prodigenr">
 <meta property="og:description" content="">
 <meta property="og:image" content="http://prodigenr.lukewjohnston.com/logo.png">
 <meta name="twitter:card" content="summary">
@@ -89,7 +90,7 @@
       <h1>Introduction to prodigenr</h1>
                         <h4 class="author">Luke W. Johnston</h4>
             
-            <h4 class="date">2018-05-15</h4>
+            <h4 class="date">2018-05-23</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/lwjohnst86/prodigenr/blob/master/vignettes/prodigenr.Rmd"><code>vignettes/prodigenr.Rmd</code></a></small>
       <div class="hidden name"><code>prodigenr.Rmd</code></div>
@@ -106,12 +107,12 @@
 <a href="#the-main-command-setup_project" class="anchor"></a>The main command: <code>setup_project</code>
 </h2>
 <p>To use <code>prodigenr</code>, you start with using the <code><a href="../reference/setup_project.html">setup_project()</a></code> command. At present, there are only four template projects that you can view using:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(prodigenr)
-template_list</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(prodigenr)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">template_list</a></code></pre></div>
 <p>These templates are projects that an academic researcher typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
 <p>Starting a manuscript? Create a project directory like so (using <a href="https://git-scm.com/">Git</a>):</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">tempdir</span>()
-<span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(<span class="st">"HeartDiseaseExercise"</span>, path)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">path &lt;-<span class="st"> </span><span class="kw">tempdir</span>()</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(<span class="st">"HeartDiseaseExercise"</span>, path)</a></code></pre></div>
 <p>The resulting file structure should look something like this:</p>
 <pre><code>.
 ├── R
@@ -130,9 +131,9 @@ template_list</code></pre></div>
 
 3 directories, 10 files</code></pre>
 <p>Ok, now you can open up the newly created R project file (<code>.Rproj</code>). To add the main document type (e.g. poster, manuscript), run any of the <code>create_*()</code> commands (e.g. <code><a href="../reference/create_doc.html">create_poster()</a></code>) in the console of the project.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># you need to run these in the project's console</span>
-<span class="kw"><a href="../reference/create_doc.html">create_abstract</a></span>()
-<span class="kw"><a href="../reference/create_doc.html">create_poster</a></span>()</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># you need to run these in the project's console</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw"><a href="../reference/create_doc.html">create_abstract</a></span>()</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="../reference/create_doc.html">create_poster</a></span>()</a></code></pre></div>
 <p>Which will now add two more files to the <code>doc/</code> folder.</p>
 <p>The resulting file structure should look something like this:</p>
 <pre><code>.
