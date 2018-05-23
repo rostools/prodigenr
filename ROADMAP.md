@@ -14,8 +14,8 @@ researchers.
 
 # Timeline of milestones and deliverables
 
-| Deliverable or milestone                 | Deadline | Completed |
-|:-----------------------------------------|:---------|:----------|
+| Deliverable or milestone                 | Deadline      | Completed     |
+|:-----------------------------------------|:--------------|:--------------|
 | CRAN submission of next version | May 13th, 2018 | |
 | Participating in Mozilla Global Sprint | May 10th, 2018 | DONE |
 | Package website put up | May 8th, 2018 | DONE |
