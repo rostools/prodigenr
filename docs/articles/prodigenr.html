@@ -107,12 +107,12 @@
 <a href="#the-main-command-setup_project" class="anchor"></a>The main command: <code>setup_project</code>
 </h2>
 <p>To use <code>prodigenr</code>, you start with using the <code><a href="../reference/setup_project.html">setup_project()</a></code> command. At present, there are only four template projects that you can view using:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(prodigenr)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">template_list</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(prodigenr)
+template_list</code></pre></div>
 <p>These templates are projects that an academic researcher typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
 <p>Starting a manuscript? Create a project directory like so (using <a href="https://git-scm.com/">Git</a>):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">path &lt;-<span class="st"> </span><span class="kw">tempdir</span>()</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(<span class="st">"HeartDiseaseExercise"</span>, path)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">tempdir</span>()
+<span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(<span class="st">"HeartDiseaseExercise"</span>, path)</code></pre></div>
 <p>The resulting file structure should look something like this:</p>
 <pre><code>.
 ├── R
@@ -131,9 +131,9 @@
 
 3 directories, 10 files</code></pre>
 <p>Ok, now you can open up the newly created R project file (<code>.Rproj</code>). To add the main document type (e.g. poster, manuscript), run any of the <code>create_*()</code> commands (e.g. <code><a href="../reference/create_doc.html">create_poster()</a></code>) in the console of the project.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># you need to run these in the project's console</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw"><a href="../reference/create_doc.html">create_abstract</a></span>()</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="../reference/create_doc.html">create_poster</a></span>()</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># you need to run these in the project's console</span>
+<span class="kw"><a href="../reference/create_doc.html">create_abstract</a></span>()
+<span class="kw"><a href="../reference/create_doc.html">create_poster</a></span>()</code></pre></div>
 <p>Which will now add two more files to the <code>doc/</code> folder.</p>
 <p>The resulting file structure should look something like this:</p>
 <pre><code>.
