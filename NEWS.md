@@ -1,3 +1,10 @@
+
+# prodigenr 0.4.0.9000
+
+## Hotfix
+
+- Fix NOTES in CRAN results check for unused dependencies (clipr, desc, devtools)
+
 # prodigenr 0.4.0
 
 ## New feature
