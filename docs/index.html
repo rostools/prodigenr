@@ -6,10 +6,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research Project Directory Generator • prodigenr</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="jquery.sticky-kit.min.js"></script><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="Research Project Directory Generator">
 <meta property="og:description" content="Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
@@ -34,7 +34,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">prodigenr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.0.9000</span>
       </span>
     </div>
 
@@ -107,27 +107,27 @@ open science, check out the [manifesto](link)
 <h1 class="hasAnchor">
 <a href="#how-to-install" class="anchor"></a>How to install</h1>
 <p>Install using the R console via <a href="https://cran.r-project.org">CRAN</a>:</p>
-<div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">'prodigenr'</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">'prodigenr'</span>)</a></code></pre></div>
 <p>Or for the development version:</p>
-<div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r"><span class="co"># Development version</span>
-<span class="co"># install.packages("remotes")</span>
-remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">'lwjohnst86/prodigenr'</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Development version</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># install.packages("remotes")</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">'lwjohnst86/prodigenr'</span>)</a></code></pre></div>
 </div>
 <div id="usage" class="section level1">
 <h1 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h1>
 <p>The main function is the <code>prodigen</code> command. So, for instance, if you want a manuscript project, type out:</p>
-<div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r"><span class="kw">library</span>(prodigenr)
-<span class="kw"><a href="reference/setup_project.html">setup_project</a></span>(<span class="st">"DiseaseDiet"</span>, <span class="kw">tempdir</span>())
-<span class="co"># open up the newly created project via the Rproj file. Then:</span>
-<span class="kw"><a href="reference/create_doc.html">create_manuscript</a></span>() 
-<span class="co"># Or...</span>
-<span class="kw"><a href="reference/create_doc.html">create_poster</a></span>()
-<span class="co"># etc.</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(prodigenr)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="reference/setup_project.html">setup_project</a></span>(<span class="st">"DiseaseDiet"</span>, <span class="kw">tempdir</span>())</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co"># open up the newly created project via the Rproj file. Then:</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw"><a href="reference/create_doc.html">create_manuscript</a></span>() </a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co"># Or...</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw"><a href="reference/create_doc.html">create_poster</a></span>()</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co"># etc.</span></a></code></pre></div>
 <p>This then creates a directory tree, with template files for starting your analysis! The main secondary function is the <code>template_list</code> command, which lists the available template projects and files (submit a PR if you want another template included!):</p>
-<div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r">template_list</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">template_list</a></code></pre></div>
 <p>For a more detailed tutorial, see the introduction vignette:</p>
-<div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r"><span class="kw">vignette</span>(<span class="st">'prodigenr'</span>, <span class="st">'prodigenr'</span>)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">vignette</span>(<span class="st">'prodigenr'</span>, <span class="st">'prodigenr'</span>)</a></code></pre></div>
 </div>
 <div id="related-packages-or-projects" class="section level1">
 <h1 class="hasAnchor">

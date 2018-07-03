@@ -1,4 +1,7 @@
 url: "http://prodigenr.lukewjohnston.com"
+template:
+    params:
+        bootswatch: simplex
 
 navbar:
   structure:
