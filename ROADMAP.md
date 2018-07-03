@@ -11,12 +11,14 @@ researchers.
 - Create a website of the package. This website will contain:
     - Information on contributing
     - An opinionated manifesto on doing open science
+    
+**GOAL ACHIEVED!!** :clap: :clap:
 
 # Timeline of milestones and deliverables
 
 | Deliverable or milestone                 | Deadline      | Completed     |
 |:-----------------------------------------|:--------------|:--------------|
-| CRAN submission of next version | May 13th, 2018 | |
+| CRAN submission of next version | May ~~13th~~ 23rd, 2018 | DONE |
 | Participating in Mozilla Global Sprint | May 10th, 2018 | DONE |
 | Package website put up | May 8th, 2018 | DONE |
 | Manifesto completed (at least with main points) | May 1st, 2018 | DONE |
