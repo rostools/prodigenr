@@ -36,8 +36,8 @@ setup_project <-
                 utils::capture.output(use_package('rmarkdown'))
                 include_readmes()
                 include_r_files()
-                use_git()
-                if (is.null(git2r::config()$user.name) & is.null(git2r::config()$global$user.name)) {
+                git_config <- git2r::config()$global
+                if (is.null(git_config$user.name) || is.null(git_config$user.email)) {
                     warning(
                         "Please set your user.name and user.email in your Git config.",
                         " Use git2r::config(user.name = 'name', user.email = 'email').",
