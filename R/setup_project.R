@@ -36,6 +36,7 @@ setup_project <-
                 utils::capture.output(use_package('rmarkdown'))
                 include_readmes()
                 include_r_files()
+                use_blank_slate("project")
                 git_config <- git2r::config()$global
                 if (is.null(git_config$user.name) || is.null(git_config$user.email)) {
                     warning(

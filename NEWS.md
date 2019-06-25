@@ -1,9 +1,18 @@
 
 # prodigenr 0.4.0.9000
 
+## Additions
+
+- Setup projects to be "blank slates" (i.e. don't save `.RData`) (#105)
+
 ## Hotfix
 
 - Fix NOTES in CRAN results check for unused dependencies (clipr, desc, devtools)
+
+## Misc
+
+- Remove deprecated `prodigen()` function (#107)
+
 
 # prodigenr 0.4.0
 
