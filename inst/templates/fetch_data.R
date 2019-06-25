@@ -1,25 +1,20 @@
-#' Fetch data from the original source
-#'
-#' This function fetches from the main dataset, keeps variables and observations
-#' relevant to this specific analysis project, restricts the sample size as
-#' needed, and lastly saves the new dataset as an `.rda` file in the `data/`
-#' folder. The newly created dataset can be accessed anywhere while in the
-#' RStudio project using `devtools::load_all()`.
-#'
-#' @return Saves the wrangled data into the data/ folder.
-#'
-#' @examples
-#' # Run this command in the console to create the data file.
-#' fetch_data()
-#'
-fetch_data <- function() {
-    # Load the main dataset and wrangle as necessary.
-    # project_data <- read.table('path/to/file', na = "")
-    # Or project_data <- package::package_data
-    # Or project_data <- readr::read_csv()
+# Fetch external data -----------------------------------------------------
 
-    # Data wrangling commands
+# Write code in this file that fetches original/external data, processes and
+# wrangles it, and saves it in the `data/` folder. The project dataset saved
+# in the `data/` folder should only be relevant to the project at hand. Can
+# be either one or more functions or is a script that can be called via `source()`.
 
-    # Save the dataset to the data/ folder.
-    devtools::use_data(project_data, overwrite = TRUE)
-}
+# Load the main dataset and wrangle as necessary.
+# project_data <- ...
+
+# Data wrangling commands
+
+# Save the dataset to the data/ folder.
+
+# Will need to install devtools
+# Uncomment to use this:
+# devtools::use_data(project_data, overwrite = TRUE)
+
+# Or base version (need to install the here package):
+# save(project_data, file = here::here("data/project_data.rda"))

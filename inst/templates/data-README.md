@@ -1,4 +1,3 @@
-
 # Contents of data folder
 
 Should contain the data used specifically for the scientific project and product.
