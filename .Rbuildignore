@@ -8,5 +8,6 @@
 ^_pkgdown\.yml$
 ^docs$
 ^vignettes/manifesto\.Rmd$
-^ROADMAP\.md$
 ^pkgdown$
+^appveyor\.yml$
+^LICENSE\.md$
