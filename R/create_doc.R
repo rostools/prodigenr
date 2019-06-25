@@ -25,7 +25,7 @@ create_doc <- function(type = c("manuscript", "slides", "poster", "abstract")) {
 
     type <- match.arg(type)
     file_name <- normalizePath(file.path("doc", paste0(type, ".Rmd")), mustWork = FALSE)
-    template_file <- system.file("rmarkdown", "templates", type, package = "prodigenr", mustWork = TRUE)
+    template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
     if (file.exists(file_name)) {
         warning("The file '", type, ".Rmd' already exists in the doc folder.")
     } else {
@@ -36,7 +36,7 @@ create_doc <- function(type = c("manuscript", "slides", "poster", "abstract")) {
             create_dir = FALSE,
             edit = FALSE
         )
-        done("Creating ", value(type), " file in the ", value("doc/"), " folder.")
+        ui_done("Creating a {ui_value(type)} file in the {ui_value('doc/')} folder")
     }
 }
 

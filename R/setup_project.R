@@ -24,8 +24,8 @@ setup_project <-
         }
 
         proj_path <- normalizePath(path = file.path(path, name), mustWork = FALSE)
-        done("Creating project '", name, "' in '", proj_path, "'.")
         create_project(proj_path, rstudio = TRUE)
+        ui_done("Creating project at {ui_value(proj_path)}")
         withr::with_dir(
             new = proj_path,
             {
@@ -37,6 +37,7 @@ setup_project <-
                 include_readmes()
                 include_r_files()
                 use_blank_slate("project")
+
                 git_config <- git2r::config()$global
                 if (is.null(git_config$user.name) || is.null(git_config$user.email)) {
                     warning(
@@ -46,8 +47,11 @@ setup_project <-
                         call. = FALSE
                     )
                 } else {
+                    ui_todo("Adding git")
                     use_git()
                 }
             })
-        invisible(TRUE)
+        ui_done("Project setup has been completed!")
+        ui_todo("Now open {ui_value({paste0(basename(proj_path), '.Rproj'')})} to get started on the project!")
+        invisible()
     }
