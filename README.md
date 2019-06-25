@@ -1,11 +1,14 @@
 # A component of reproducible and open scientific projects: Project creation with prodigenr <img src="man/figures/logo.png" align="right" />
 
+<!-- badges: start -->
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
 [![Build Status](https://travis-ci.org/lwjohnst86/prodigenr.svg?branch=master)](https://travis-ci.org/lwjohnst86/prodigenr)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/lwjohnst86/prodigenr?branch=master&svg=true)](https://ci.appveyor.com/project/lwjohnst86/prodigenr)
 [![Coverage status](https://codecov.io/gh/lwjohnst86/prodigenr/branch/master/graph/badge.svg)](https://codecov.io/github/lwjohnst86/prodigenr?branch=master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](http://www.r-pkg.org/pkg/prodigenr)
 [![Join the chat at https://gitter.im/prodigenr/Lobby](https://badges.gitter.im/lwjohnst86/prodigenr.svg)](https://gitter.im/prodigenr/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<!-- badges: end -->
 
 This [R] package is part of a series of (planned) packages that are aimed at
 creating a toolkit for doing reproducible and open science. Many researchers 
