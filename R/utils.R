@@ -1,16 +1,4 @@
 
-copy_template_file <- function(template, save_as = template) {
-    # usethis use_template doesn't work very well right now.
-    # use_template(
-    #     template = template,
-    #     save_as = save_as,
-    #     data = data,
-    #     package = "prodigenr"
-    # )
-    template_file <- system.file("templates", template, package = "prodigenr")
-    fs::file_copy(template_file, save_as)
-}
-
 is_rproj_folder <- function() {
     rprojroot::is.root_criterion(rprojroot::is_rstudio_project)
 }
