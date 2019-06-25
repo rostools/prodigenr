@@ -1,31 +1,30 @@
-
-#' Setup a research analysis project.
+#' Setup a standardized folder and file structure for a research analysis project.
 #'
 #' This starts the project by setting up a common folder and file infrastructure,
-#' as well as adding some useful files to start.
+#' as well as adding some useful files to start the project.
 #'
-#' @param name Name of project.
-#' @param path Path/location of project.
+#' @param path A path to a new directory.
 #'
-#' @return Folders and files created for a research project.
+#' @return Project setup with folders and files necessary for a standard research project.
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' path <- tempdir()
-#' setup_project("DiabetesCancer", path)
+#' # Use a temporary location
+#' new_proj_name <- fs::path_temp("DiabetesCancer4")
+#' setup_project(new_proj_name)
 #' }
 setup_project <-
-    function(name, path = getwd()) {
-        stopifnot(is.character(name))
-        if (grepl("-| ", name)) {
-            warning("name has a space or dash in it. Replacing with '.'", call. = FALSE)
-            name <- gsub("-| ", ".", name)
+    function(path) {
+        stopifnot(is.character(path))
+        proj_path <- fs::path_real(path)
+
+        if (grepl("-| ", basename(proj_path))) {
+            stop("New project name has a space or dash in it. Please replace it with either a space or dot '.'", call. = FALSE)
         }
 
-        proj_path <- normalizePath(path = file.path(path, name), mustWork = FALSE)
-        create_project(proj_path, rstudio = TRUE)
         ui_done("Creating project at {ui_value(proj_path)}")
+        create_project(proj_path, rstudio = TRUE, open = FALSE)
         withr::with_dir(
             new = proj_path,
             {
