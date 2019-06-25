@@ -50,23 +50,15 @@ However, if you have a suggestion or want to add a template, please create a
 Starting a manuscript? Create a project directory like so (using [Git](https://git-scm.com/)):
 
 ```{r manuscriptProj}
-path <- tempdir()
-setup_project("HeartDiseaseExercise", path)
-```
-
-```{r shell_command, echo=FALSE, eval=FALSE}
-# run only on computer
-cat(paste(system(
-    paste0('cd ', path, '/HeartDiseaseExercise && tree -a -I ".git|.Rproj.user" --dirsfirst -v'),
-    intern = TRUE
-    ), collapse = '\n'),
-    file = 'file_structure.txt')
+new_project_path <- file.path(tempdir(), "HeartDiseaseExercise")
+setup_project(new_project_path)
 ```
 
 The resulting file structure should look something like this:
 
-```{r file_structure, echo=FALSE, eval=TRUE, results='markup', comment=''}
-cat(readLines('file_structure.txt', warn = FALSE), sep = '\n')
+```{r folder_tree, echo=FALSE, comment="", results="markup"}
+# run only on computer
+fs::dir_tree(new_project_path)
 ```
 
 Ok, now you can open up the newly created R project file (`.Rproj`). To add the
@@ -81,30 +73,20 @@ create_poster()
 
 ```{r poster_abstract_hide, echo=FALSE}
 # you need to run these in the project's console
-withr::with_dir(
-    file.path(path, "HeartDiseaseExercise"),
-    {
+usethis::with_project(
+    path = new_project_path,
+    code = {
         create_abstract()
         create_poster()
     }
 )
 ```
 
-Which will now add two more files to the `doc/` folder.
+Which will now add two more files to the `doc/` folder. The resulting file
+structure should look something like this:
 
-```{r shell_command_doc, echo=FALSE, eval=FALSE}
-# run only on computer
-cat(paste(system(
-    paste0('cd ', path, '/HeartDiseaseExercise && tree -a -I ".git|.Rproj.user" --dirsfirst -v'),
-    intern = TRUE
-    ), collapse = '\n'),
-    file = 'file_structure_with_doc.txt')
-```
-
-The resulting file structure should look something like this:
-
-```{r file_structure_with_doc, echo=FALSE, eval=TRUE, results='markup', comment=''}
-cat(readLines('file_structure_with_doc.txt', warn = FALSE), sep = '\n')
+```{r file_structure_with_doc, echo=FALSE, results="markup", comment=""}
+fs::dir_tree(new_project_path)
 ```
 
 A `README.md` file is contained within each project and each folder that
@@ -168,6 +150,3 @@ online, data science content.
 There is also a list of other similar projects 
 [on the rOpenSci GitHub repository](https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia). 
 It's up to you to decide which style to use. 
-
-If you have ideas to improve prodigenr, just submit a 
-[GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)!
