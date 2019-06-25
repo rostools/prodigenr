@@ -22,9 +22,8 @@ about it. This project hopes to start fixing those issues.
 ## Things to know before starting
 
 Please read over the [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating
-in this project you agree to abide by its terms. For more information on a big
-picture overview of what is happening, check out the [roadmap](ROADMAP.md). For
-other details, check out the [README](README.md).
+in this project you agree to abide by its terms. For other details, check out
+the [README](README.md).
 
 ## How and what to contribute
 
