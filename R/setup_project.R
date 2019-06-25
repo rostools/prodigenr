@@ -27,12 +27,14 @@ setup_project <-
         create_project(proj_path, rstudio = TRUE, open = FALSE)
         withr::with_dir(
             new = proj_path,
-            {
+            code = {
                 fs::dir_create("R")
                 use_description()
-                utils::capture.output(use_package('devtools'))
-                utils::capture.output(use_package('knitr'))
-                utils::capture.output(use_package('rmarkdown'))
+                ops <- options(usethis.quiet = TRUE)
+                on.exit(options(ops))
+
+                use_package('knitr')
+                use_package('rmarkdown')
                 include_readmes()
                 include_r_files()
                 use_blank_slate("project")
