@@ -38,6 +38,8 @@ setup_project <-
                 include_readmes()
                 include_r_files()
                 use_blank_slate("project")
+                ui_done("Added {ui_value('README.md')} files to the {ui_value('doc/')}, {ui_value('R/')}, {ui_value('data/')}, and parent folders")
+                ui_done("Added some template R scripts to the {ui_value('R/')} folder")
 
                 git_config <- git2r::config()$global
                 if (is.null(git_config$user.name) || is.null(git_config$user.email)) {
