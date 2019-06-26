@@ -22,7 +22,7 @@ presentations? Is your usual workflow to copy a previous project and start
 replacing the old text for the new text? This R package was designed with you in
 mind!
 
-`prodigenr`, or *pro*ject *di*rectory *gen*erator, simplifies the process of
+prodigenr, or *pro*ject *di*rectory *gen*erator, simplifies the process of
 creating these new projects and can help make your workflow more reproducible.
 Standard files and folders are created for specific projects (e.g. abstracts or
 manuscripts), along with a workflow that tries to be simple and easy to use,
@@ -35,7 +35,7 @@ directory with all the necessary files and organization.
 
 ## The main command: `setup_project`
 
-To use `prodigenr`, you start with using the `setup_project()` command. At
+To use prodigenr, you start with using the `setup_project()` command. At
 present, there are only four template projects that you can view using:
 
 ```{r templates}
@@ -47,12 +47,17 @@ These templates are projects that an academic researcher typically encounters.
 However, if you have a suggestion or want to add a template, please create a
 [Github issue](https://github.com/lwjohnst86/prodigenr/issues) or submit a [Pull Request](https://github.com/lwjohnst86/prodigenr/pulls)!
 
-Starting a manuscript? Create a project directory like so (using [Git](https://git-scm.com/)):
+Starting a research project? Create a project directory like so:
 
 ```{r manuscriptProj}
-new_project_path <- file.path(tempdir(), "HeartDiseaseExercise")
+# Create a temporary folder using the fs package
+new_project_path <- fs::path_temp("HeartDiseaseExercise")
 setup_project(new_project_path)
 ```
+
+Or via RStudio's interface (with RStudio version >1.1):
+
+![Creating a prodigenr project in RStudio](../man/figures/rstudio-projects.gif)
 
 The resulting file structure should look something like this:
 
@@ -100,8 +105,10 @@ reviewers ask for something or want to confirm your results. For more
 information on good practices to use in making an analysis project, see 
 [here](http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project)
 or 
-[here](http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/). See the [manifesto](manifesto.html) for more details on 
-the underlying philosophy behind this package (and soon to be others).
+[here](http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/). See the [manifesto](https://rostools.gitlab.io/manifesto.html) for more details on 
+the underlying philosophy behind this package (and soon to be others). 
+
+<!-- TODO: Add typical workflow in the rostools manifesto and link to there -->
 
 ## Workflow when using projects created from `prodigenr`
 
