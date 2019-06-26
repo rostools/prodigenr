@@ -30,16 +30,15 @@ setup_project <-
         withr::with_dir(
             new = proj_path,
             code = {
-                fs::dir_create("R")
-                use_description()
-                ops <- options(usethis.quiet = TRUE)
-                on.exit(options(ops))
 
-                use_package('knitr')
-                use_package('rmarkdown')
-                include_readmes()
-                include_r_files()
-                use_blank_slate("project")
+                quiet({
+                    use_description()
+                    use_package('knitr')
+                    use_package('rmarkdown')
+                    include_readmes()
+                    include_r_files()
+                    use_blank_slate("project")
+                })
                 ui_done("Added {ui_value('README.md')} files to the {ui_value('doc/')}, {ui_value('R/')}, {ui_value('data/')}, and parent folders")
                 ui_done("Added some template R scripts to the {ui_value('R/')} folder")
 
