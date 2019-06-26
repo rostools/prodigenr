@@ -23,8 +23,10 @@ setup_project <-
             ui_stop("Project name {ui_value(basename(proj_path))} has a space or dash in it. Please replace it with either an underline or a dot '.'")
         }
 
-        create_project(proj_path, rstudio = TRUE, open = FALSE)
         ui_done("Created project at {ui_value(proj_path)}")
+        # TODO: This keeps sending warning about recursive... need to figure that out
+        quiet(proj_set(proj_path, force = TRUE))
+        quiet(suppressWarnings(create_project(proj_path, rstudio = TRUE, open = FALSE)))
         withr::with_dir(
             new = proj_path,
             code = {
