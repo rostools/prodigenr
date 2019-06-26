@@ -1,4 +1,3 @@
-
 # prodigenr 0.4.0.9000
 
 ## Major change
@@ -7,7 +6,9 @@
 
 ## Additions
 
+- Can now use RStudio's "New Project" interface for a GUI creation of the project (#109, #111)
 - Setup projects to be "blank slates" (i.e. don't save `.RData`) (#105)
+- Add TODO list to project to complete after project creation (#39)
 
 ## Hotfix
 
