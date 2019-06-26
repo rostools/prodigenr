@@ -23,11 +23,6 @@ navbar:
     intro:
       text: Get started
       href: articles/prodigenr.html
-    articles:
-      text: Articles
-      menu:
-      - text: A manifesto for doing open science with R
-        href: articles/manifesto.html
     contributing:
       text: Contributing
       href: CONTRIBUTING.html
