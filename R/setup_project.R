@@ -37,6 +37,7 @@ setup_project <-
                     use_package('rmarkdown')
                     include_readmes()
                     include_r_files()
+                    use_template("TODO.md", package = "prodigenr")
                     use_blank_slate("project")
                 })
                 ui_done("Added {ui_value('README.md')} files to the {ui_value('doc/')}, {ui_value('R/')}, {ui_value('data/')}, and parent folders")
