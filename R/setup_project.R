@@ -51,8 +51,9 @@ setup_project <-
                         " After you add your config, open the project and run the command usethis::use_git()."
                     ))
                 } else {
-                    ui_todo("Adding git")
-                    use_git()
+                    git2r::init(proj_path)
+                    quiet(use_git_ignore(c(".Rhistory", ".RData", ".Rproj.user")))
+                    ui_done("Project placed under Git version control")
                 }
             })
         ui_done("Project setup has been completed!")
