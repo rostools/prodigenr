@@ -20,7 +20,7 @@ setup_project <-
         proj_path <- fs::path_real(path)
 
         if (grepl("-| ", basename(proj_path))) {
-            stop("New project name has a space or dash in it. Please replace it with either a space or dot '.'", call. = FALSE)
+            ui_stop("Project name {ui_value(basename(proj_path))} has a space or dash in it. Please replace it with either an underline or a dot '.'")
         }
 
         ui_done("Creating project at {ui_value(proj_path)}")
@@ -41,12 +41,11 @@ setup_project <-
 
                 git_config <- git2r::config()$global
                 if (is.null(git_config$user.name) || is.null(git_config$user.email)) {
-                    warning(
+                    ui_warn(c(
                         "Please set your user.name and user.email in your Git config.",
-                        " Use git2r::config(user.name = 'name', user.email = 'email').",
-                        " After you add your config, open the project and run the command usethis::use_git().",
-                        call. = FALSE
-                    )
+                        " Use {ui_value('git2r::config(user.name = \"name\", user.email = \"email\")')}.",
+                        " After you add your config, open the project and run the command usethis::use_git()."
+                    ))
                 } else {
                     ui_todo("Adding git")
                     use_git()
