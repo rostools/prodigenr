@@ -2,25 +2,24 @@
 % Please edit documentation in R/setup_project.R
 \name{setup_project}
 \alias{setup_project}
-\title{Setup a research analysis project.}
+\title{Setup a standardized folder and file structure for a research analysis project.}
 \usage{
-setup_project(name, path = getwd())
+setup_project(path)
 }
 \arguments{
-\item{name}{Name of project.}
-
-\item{path}{Path/location of project.}
+\item{path}{A path to a new directory.}
 }
 \value{
-Folders and files created for a research project.
+Project setup with folders and files necessary for a standard research project.
 }
 \description{
 This starts the project by setting up a common folder and file infrastructure,
-as well as adding some useful files to start.
+as well as adding some useful files to start the project.
 }
 \examples{
 \dontrun{
-path <- tempdir()
-setup_project("DiabetesCancer", path)
+# Use a temporary location
+new_proj_name <- fs::path_temp("DiabetesCancer")
+setup_project(new_proj_name)
 }
 }
