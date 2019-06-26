@@ -12,7 +12,7 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  eval = FALSE
+  eval = TRUE
 )
 ```
 
@@ -62,7 +62,6 @@ Or via RStudio's interface (with RStudio version >1.1):
 The resulting file structure should look something like this:
 
 ```{r folder_tree, echo=FALSE, comment="", results="markup"}
-# run only on computer
 fs::dir_tree(new_project_path)
 ```
 
@@ -78,8 +77,8 @@ create_poster()
 
 ```{r poster_abstract_hide, echo=FALSE}
 # you need to run these in the project's console
-usethis::with_project(
-    path = new_project_path,
+withr::with_dir(
+    new = new_project_path,
     code = {
         create_abstract()
         create_poster()
