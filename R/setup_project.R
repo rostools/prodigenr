@@ -23,8 +23,8 @@ setup_project <-
             ui_stop("Project name {ui_value(basename(proj_path))} has a space or dash in it. Please replace it with either an underline or a dot '.'")
         }
 
-        ui_done("Creating project at {ui_value(proj_path)}")
         create_project(proj_path, rstudio = TRUE, open = FALSE)
+        ui_done("Created project at {ui_value(proj_path)}")
         withr::with_dir(
             new = proj_path,
             code = {
@@ -54,6 +54,6 @@ setup_project <-
                 }
             })
         ui_done("Project setup has been completed!")
-        ui_todo("Now open {ui_value({paste0(basename(proj_path), '.Rproj'')})} to get started on the project!")
+        ui_todo("Now open {ui_value(paste0(basename(proj_path), '.Rproj'))} to get started on the project!")
         invisible()
     }
