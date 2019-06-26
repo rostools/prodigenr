@@ -11,7 +11,7 @@
 #' @examples
 #' \dontrun{
 #' # Use a temporary location
-#' new_proj_name <- fs::path_temp("DiabetesCancer4")
+#' new_proj_name <- fs::path_temp("DiabetesCancer")
 #' setup_project(new_proj_name)
 #' }
 setup_project <-

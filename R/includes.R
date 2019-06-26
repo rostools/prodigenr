@@ -2,7 +2,7 @@
 include_readmes <- function() {
     use_template(
         "base-README.md",
-        "README-testing.md",
+        "README.md",
         data = list(ProjectName = basename(fs::path_wd())),
         package = "prodigenr"
     )
