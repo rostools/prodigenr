@@ -11,3 +11,4 @@
 ^pkgdown$
 ^appveyor\.yml$
 ^LICENSE\.md$
+^README\.Rmd$
