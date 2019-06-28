@@ -12,8 +12,6 @@ test_that("the number of listed templates is correct", {
 test_that("project is set up", {
     skip_on_cran()
 
-    new_project <- fs::path_temp("testing")
-    capture_output(setup_project(new_project))
     expect_true(fs::dir_exists(new_project))
 
     files_created <- fs::dir_ls(new_project, recurse = TRUE)
