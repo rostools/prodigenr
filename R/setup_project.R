@@ -17,7 +17,7 @@
 setup_project <-
     function(path) {
         stopifnot(is.character(path))
-        proj_path <- fs::path_real(path)
+        proj_path <- fs::path_abs(path)
 
         if (grepl("-| ", basename(proj_path))) {
             ui_stop("Project name {ui_value(basename(proj_path))} has a space or dash in it. Please replace it with either an underline or a dot '.'")
@@ -25,6 +25,7 @@ setup_project <-
 
         ui_done("Created project at {ui_value(proj_path)}")
         # TODO: This keeps sending warning about recursive... need to figure that out
+        fs::dir_create(proj_path)
         quiet(proj_set(proj_path, force = TRUE))
         quiet(suppressWarnings(create_project(proj_path, rstudio = TRUE, open = FALSE)))
         withr::with_dir(
