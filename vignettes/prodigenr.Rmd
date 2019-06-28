@@ -33,23 +33,12 @@ Because researchers often write or create many papers, slides, posters, and
 abstracts, it can quickly become tedious and messy to always make a new
 directory with all the necessary files and organization. 
 
-## The main command: `setup_project`
-
-To use prodigenr, you start with using the `setup_project()` command. At
-present, there are only four template projects that you can view using:
-
-```{r templates}
-library(prodigenr)
-template_list
-```
-
-These templates are projects that an academic researcher typically encounters.
-However, if you have a suggestion or want to add a template, please create a
-[Github issue](https://github.com/lwjohnst86/prodigenr/issues) or submit a [Pull Request](https://github.com/lwjohnst86/prodigenr/pulls)!
+## Setting up a project with prodigenr
 
 Starting a research project? Create a project directory like so:
 
 ```{r manuscriptProj}
+library(prodigenr)
 # Create a temporary folder using the fs package
 new_project_path <- fs::path_temp("HeartDiseaseExercise")
 setup_project(new_project_path)
@@ -65,9 +54,11 @@ The resulting file structure should look something like this:
 fs::dir_tree(new_project_path)
 ```
 
-Ok, now you can open up the newly created R project file (`.Rproj`). To add the
-main document type (e.g. poster, manuscript), run any of the `create_*()`
-commands (e.g. `create_poster()`) in the console of the project.
+Ok, now you can open up the newly created R project file (`.Rproj`). A
+`README.md` file is contained within each project and each folder that explains
+more about what each folder does and what some of the files do that were
+created. To add the main document type (e.g. poster, manuscript), run any of the
+`create_*()` commands (e.g. `create_poster()`) in the console of the project.
 
 ```{r poster_abstract_show, eval=FALSE}
 # you need to run these in the project's console
@@ -93,9 +84,15 @@ structure should look something like this:
 fs::dir_tree(new_project_path)
 ```
 
-A `README.md` file is contained within each project and each folder that
-explains more about what each folder does and what some of the files do that
-were created.
+At present, there are only four template files that you can view using:
+
+```{r templates}
+template_list
+```
+
+These template files are what an academic researcher likely typically encounters.
+However, if you have a suggestion or want to add a template, please create a
+[Github issue](https://github.com/lwjohnst86/prodigenr/issues) or submit a [Pull Request](https://github.com/lwjohnst86/prodigenr/pulls)!
 
 The end goal of each project is to be as self contained as possible. So that if
 you ever need to go back to the analysis, it is easy to re-run the code and get
