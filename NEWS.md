@@ -1,4 +1,4 @@
-# prodigenr 0.4.0.9000
+# prodigenr 0.5.0
 
 ## Major change
 
