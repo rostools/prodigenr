@@ -18,12 +18,12 @@ Imports:
     rmarkdown (>= 1.9),
     rprojroot (>= 1.3.2),
     usethis (>= 1.3.0),
-    withr,
-    knitr
+    withr
 Suggests: 
     devtools (>= 1.13.5),
     covr (>= 3.0.1),
-    testthat (>= 2.0.0)
+    testthat (>= 2.0.0),
+    knitr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
