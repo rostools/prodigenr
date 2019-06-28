@@ -97,31 +97,26 @@
 <p>Are you an academic researcher who often writes up abstracts for conferences or submits manuscripts to journals? Do you often have to make slides or posters for presentations? Is your usual workflow to copy a previous project and start replacing the old text for the new text? This R package was designed with you in mind!</p>
 <p>prodigenr, or <em>pro</em>ject <em>di</em>rectory <em>gen</em>erator, simplifies the process of creating these new projects and can help make your workflow more reproducible. Standard files and folders are created for specific projects (e.g. abstracts or manuscripts), along with a workflow that tries to be simple and easy to use, while making use of the infrastructure and processes already well-developed and maintained (e.g. RStudio and devtools).</p>
 <p>Because researchers often write or create many papers, slides, posters, and abstracts, it can quickly become tedious and messy to always make a new directory with all the necessary files and organization.</p>
-<div id="the-main-command-setup_project" class="section level2">
+<div id="setting-up-a-project-with-prodigenr" class="section level2">
 <h2 class="hasAnchor">
-<a href="#the-main-command-setup_project" class="anchor"></a>The main command: <code>setup_project</code>
-</h2>
-<p>To use prodigenr, you start with using the <code><a href="../reference/setup_project.html">setup_project()</a></code> command. At present, there are only four template projects that you can view using:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(prodigenr)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">template_list</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt; [1] "abstract"   "manuscript" "poster"     "slides"</span></a></code></pre></div>
-<p>These templates are projects that an academic researcher typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
+<a href="#setting-up-a-project-with-prodigenr" class="anchor"></a>Setting up a project with prodigenr</h2>
 <p>Starting a research project? Create a project directory like so:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Create a temporary folder using the fs package</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">new_project_path &lt;-<span class="st"> </span>fs<span class="op">::</span><span class="kw"><a href="http://fs.r-lib.org/reference/file_temp.html">path_temp</a></span>(<span class="st">"HeartDiseaseExercise"</span>)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(new_project_path)</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; ✔ Created project at '/tmp/RtmppYD6TY/HeartDiseaseExercise'</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; ✔ Added 'README.md' files to the 'doc/', 'R/', 'data/', and parent folders</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; ✔ Added some template R scripts to the 'R/' folder</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; ✔ Project placed under Git version control</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; ✔ Project setup has been completed!</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; ● Now open 'HeartDiseaseExercise.Rproj' to get started on the project!</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(prodigenr)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># Create a temporary folder using the fs package</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">new_project_path &lt;-<span class="st"> </span>fs<span class="op">::</span><span class="kw"><a href="http://fs.r-lib.org/reference/file_temp.html">path_temp</a></span>(<span class="st">"HeartDiseaseExercise"</span>)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(new_project_path)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt; ✔ Created project at '/tmp/RtmpD3VRfM/HeartDiseaseExercise'</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt; ✔ Added 'README.md' files to the 'doc/', 'R/', 'data/', and parent folders</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt; ✔ Added some template R scripts to the 'R/' folder</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt; ✔ Project placed under Git version control</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt; ✔ Project setup has been completed!</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt; ● Now open 'HeartDiseaseExercise.Rproj' to get started on the project!</span></a></code></pre></div>
 <p>Or via RStudio’s interface (with RStudio version &gt;1.1):</p>
 <div class="figure">
 <img src="../man/figures/rstudio-projects.gif" alt="Creating a prodigenr project in RStudio"><p class="caption">Creating a prodigenr project in RStudio</p>
 </div>
 <p>The resulting file structure should look something like this:</p>
-<pre><code>/tmp/RtmppYD6TY/HeartDiseaseExercise
+<pre><code>/tmp/RtmpD3VRfM/HeartDiseaseExercise
 ├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 ├── R
@@ -134,14 +129,14 @@
 │   └── README.md
 └── doc
     └── README.md</code></pre>
-<p>Ok, now you can open up the newly created R project file (<code>.Rproj</code>). To add the main document type (e.g. poster, manuscript), run any of the <code>create_*()</code> commands (e.g. <code><a href="../reference/create_doc.html">create_poster()</a></code>) in the console of the project.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># you need to run these in the project's console</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw"><a href="../reference/create_doc.html">create_abstract</a></span>()</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="../reference/create_doc.html">create_poster</a></span>()</a></code></pre></div>
+<p>Ok, now you can open up the newly created R project file (<code>.Rproj</code>). A <code>README.md</code> file is contained within each project and each folder that explains more about what each folder does and what some of the files do that were created. To add the main document type (e.g. poster, manuscript), run any of the <code>create_*()</code> commands (e.g. <code><a href="../reference/create_doc.html">create_poster()</a></code>) in the console of the project.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># you need to run these in the project's console</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="../reference/create_doc.html">create_abstract</a></span>()</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="../reference/create_doc.html">create_poster</a></span>()</a></code></pre></div>
 <pre><code>#&gt; ✔ Creating a 'abstract' file in the 'doc/' folder
 #&gt; ✔ Creating a 'poster' file in the 'doc/' folder</code></pre>
 <p>Which will now add two more files to the <code>doc/</code> folder. The resulting file structure should look something like this:</p>
-<pre><code>/tmp/RtmppYD6TY/HeartDiseaseExercise
+<pre><code>/tmp/RtmpD3VRfM/HeartDiseaseExercise
 ├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 ├── R
@@ -156,7 +151,10 @@
     ├── README.md
     ├── abstract.Rmd
     └── poster.Rmd</code></pre>
-<p>A <code>README.md</code> file is contained within each project and each folder that explains more about what each folder does and what some of the files do that were created.</p>
+<p>At present, there are only four template files that you can view using:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">template_list</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; [1] "abstract"   "manuscript" "poster"     "slides"</span></a></code></pre></div>
+<p>These template files are what an academic researcher likely typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
 <p>The end goal of each project is to be as self contained as possible. So that if you ever need to go back to the analysis, it is easy to re-run the code and get the results that you say you got. This is especially useful if others such as reviewers ask for something or want to confirm your results. For more information on good practices to use in making an analysis project, see <a href="http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project">here</a> or <a href="http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/">here</a>. See the <a href="https://rostools.gitlab.io/manifesto.html">manifesto</a> for more details on the underlying philosophy behind this package (and soon to be others).</p>
 <!-- TODO: Add typical workflow in the rostools manifesto and link to there -->
 </div>
@@ -197,7 +195,7 @@
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#the-main-command-setup_project">The main command: <code>setup_project</code></a></li>
+<li><a href="#setting-up-a-project-with-prodigenr">Setting up a project with prodigenr</a></li>
       <li><a href="#workflow-when-using-projects-created-from-prodigenr">Workflow when using projects created from <code>prodigenr</code></a></li>
       <li><a href="#related-packages-or-projects">Related packages or projects</a></li>
       </ul>
