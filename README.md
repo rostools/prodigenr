@@ -132,9 +132,11 @@ a [GitHub issue](https://github.com/lwjohnst86/prodigenr/issues)\!
 
 ## Interested in contributing?
 
-See the [contributing documentation](CONTRIBUTING.md) for information on
-how to contribute. Please note that this project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
-this project you agree to abide by its terms.
+See the [contributing
+documentation](http://prodigenr.lukewjohnston.com/CONTRIBUTING.html) for
+information on how to contribute. Please note that this project is
+released with a [Contributor Code of
+Conduct](http://prodigenr.lukewjohnston.com/CODE_OF_CONDUCT.html). By
+participating in this project you agree to abide by its terms.
 
 Special thanks to @zsemnani for creating the logo\!

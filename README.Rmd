@@ -126,9 +126,9 @@ welcome any suggestions, just submit a
 
 ## Interested in contributing?
 
-See the [contributing documentation](CONTRIBUTING.md) for information on how to
+See the [contributing documentation](http://prodigenr.lukewjohnston.com/CONTRIBUTING.html) for information on how to
 contribute. Please note that this project is released with a 
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you
+[Contributor Code of Conduct](http://prodigenr.lukewjohnston.com/CODE_OF_CONDUCT.html). By participating in this project you
 agree to abide by its terms.
 
 [R]: https://cran.r-project.org
