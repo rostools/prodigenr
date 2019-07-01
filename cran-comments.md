@@ -1,13 +1,11 @@
 
 ## Test environments
-
-* local ubuntu 16.04 install and on travis-ci, R 3.4.4
-* win-builder (devel and release)
+- R-hub windows-x86_64-devel (r-devel)
+- R-hub ubuntu-gcc-release (r-release)
+- R-hub fedora-clang-devel (r-devel)
 
 ## R CMD check results
-
-There were no ERRORs, WARNINGs, or NOTEs.
+0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
 ## Reverse dependencies
-
 There are no reverse dependencies.
