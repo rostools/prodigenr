@@ -12,3 +12,4 @@
 ^appveyor\.yml$
 ^LICENSE\.md$
 ^README\.Rmd$
+^CRAN-RELEASE$
