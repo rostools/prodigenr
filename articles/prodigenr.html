@@ -105,7 +105,7 @@
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># Create a temporary folder using the fs package</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">new_project_path &lt;-<span class="st"> </span>fs<span class="op">::</span><span class="kw"><a href="http://fs.r-lib.org/reference/file_temp.html">path_temp</a></span>(<span class="st">"HeartDiseaseExercise"</span>)</a>
 <a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw"><a href="../reference/setup_project.html">setup_project</a></span>(new_project_path)</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt; ✔ Created project at '/tmp/RtmpBIFyr8/HeartDiseaseExercise'</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt; ✔ Created project at '/tmp/Rtmp4oTMGu/HeartDiseaseExercise'</span></a>
 <a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt; ✔ Added 'README.md' files to the 'doc/', 'R/', 'data/', and parent folders</span></a>
 <a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt; ✔ Added some template R scripts to the 'R/' folder</span></a>
 <a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt; ✔ Project placed under Git version control</span></a>
@@ -116,7 +116,7 @@
 <img src="../man/figures/rstudio-projects.gif" alt="Creating a prodigenr project in RStudio"><p class="caption">Creating a prodigenr project in RStudio</p>
 </div>
 <p>The resulting file structure should look something like this:</p>
-<pre><code>/tmp/RtmpBIFyr8/HeartDiseaseExercise
+<pre><code>/tmp/Rtmp4oTMGu/HeartDiseaseExercise
 ├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 ├── R
@@ -136,7 +136,7 @@
 <pre><code>#&gt; ✔ Creating a 'abstract' file in the 'doc/' folder
 #&gt; ✔ Creating a 'poster' file in the 'doc/' folder</code></pre>
 <p>Which will now add two more files to the <code>doc/</code> folder. The resulting file structure should look something like this:</p>
-<pre><code>/tmp/RtmpBIFyr8/HeartDiseaseExercise
+<pre><code>/tmp/Rtmp4oTMGu/HeartDiseaseExercise
 ├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 ├── R
@@ -155,7 +155,7 @@
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">template_list</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; [1] "abstract"   "manuscript" "poster"     "slides"</span></a></code></pre></div>
 <p>These template files are what an academic researcher likely typically encounters. However, if you have a suggestion or want to add a template, please create a <a href="https://github.com/lwjohnst86/prodigenr/issues">Github issue</a> or submit a <a href="https://github.com/lwjohnst86/prodigenr/pulls">Pull Request</a>!</p>
-<p>The end goal of each project is to be as self contained as possible. So that if you ever need to go back to the analysis, it is easy to re-run the code and get the results that you say you got. This is especially useful if others such as reviewers ask for something or want to confirm your results. For more information on good practices to use in making an analysis project, see <a href="http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project">here</a> or <a href="http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/">here</a>. See the <a href="https://rostools.gitlab.io/manifesto.html">manifesto</a> for more details on the underlying philosophy behind this package (and soon to be others).</p>
+<p>The end goal of each project is to be as self contained as possible. So that if you ever need to go back to the analysis, it is easy to re-run the code and get the results that you say you got. This is especially useful if others such as reviewers ask for something or want to confirm your results. For more information on good practices to use in making an analysis project, see <a href="http://stats.stackexchange.com/questions/2910/how-to-efficiently-manage-a-statistical-analysis-project">here</a> or <a href="http://www.r-bloggers.com/managing-a-statistical-analysis-project-%E2%80%93-guidelines-and-best-practices/">here</a>. See the <a href="https://rostools.gitlab.io/manifesto">manifesto</a> for more details on the underlying philosophy behind this package (and soon to be others).</p>
 <!-- TODO: Add typical workflow in the rostools manifesto and link to there -->
 </div>
 <div id="workflow-when-using-projects-created-from-prodigenr" class="section level2">
