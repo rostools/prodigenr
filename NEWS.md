@@ -36,7 +36,7 @@ description (#38, #80).
 
 ## Removals
 
-* Moved `include_*()` functions over into [rostools](https://github.com/lwjohnst86/rostools) (#96)
+* Moved `include_*()` functions over into [rostools](https://github.com/rostools/rostools) (#96)
 
 ## Minor fixes
 

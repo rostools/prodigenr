@@ -92,7 +92,7 @@ template_list
 
 These template files are what an academic researcher likely typically encounters.
 However, if you have a suggestion or want to add a template, please create a
-[Github issue](https://github.com/lwjohnst86/prodigenr/issues) or submit a [Pull Request](https://github.com/lwjohnst86/prodigenr/pulls)!
+[Github issue](https://github.com/rostools/prodigenr/issues) or submit a [Pull Request](https://github.com/rostools/prodigenr/pulls)!
 
 The end goal of each project is to be as self contained as possible. So that if
 you ever need to go back to the analysis, it is easy to re-run the code and get

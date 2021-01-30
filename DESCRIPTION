@@ -8,8 +8,8 @@ Description: Create a project directory structure, along with typical files
     as well as for them to be standardized. Designed specifically with scientists
     in mind (mainly bio-medical researchers, but likely applies to other fields).
 License: MIT + file LICENSE
-URL: https://github.com/lwjohnst86/prodigenr
-BugReports: https://github.com/lwjohnst86/prodigenr/issues
+URL: https://github.com/rostools/prodigenr
+BugReports: https://github.com/rostools/prodigenr/issues
 Depends: 
     R (>= 3.4.0)
 Imports: 
