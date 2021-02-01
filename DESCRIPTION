@@ -18,7 +18,9 @@ Imports:
     rmarkdown (>= 1.9),
     rprojroot (>= 1.3.2),
     usethis (>= 1.3.0),
-    withr
+    withr,
+    rlang,
+    cli
 Suggests: 
     devtools (>= 1.13.5),
     covr (>= 3.0.1),
