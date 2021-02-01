@@ -6,9 +6,7 @@ include_readmes <- function() {
         data = list(ProjectName = basename(fs::path_wd())),
         package = "prodigenr"
     )
-    fs::dir_create("doc")
     use_template("doc-README.md", "doc/README.md", package = "prodigenr")
-    fs::dir_create("data")
     use_template("data-README.md", "data/README.md", package = "prodigenr")
     use_template("R-README.md", "R/README.md", package = "prodigenr")
 }
