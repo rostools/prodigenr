@@ -1,27 +1,15 @@
 ---
-title: "**Title**"
-bibliography: path/to/bib/file
-csl: path/to/bib/style/file
-output: ioslides_presentation
+title: ""
+author: ""
+date: ""
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
 ---
 
-<!-- slide 1 -->
-## Disclosures
-
-## Introduction slide
-
-* This is a footer[^footer]
-
-* You can use citations using the syntax `@AuthorYear`, based on your
-  BibKey in your `.bib` file.
-
-[^footer]: Footer text
-
-```{r setup, include=FALSE}
-devtools::load_all()
-```
-
-## Acknowledgements
-
-## References
-
+<!-- Instructions on use are found in https://github.com/yihui/xaringan -->

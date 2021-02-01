@@ -35,7 +35,7 @@ needs to be included to simplify doing open science.
 
 Have a suggestion, idea, or comment, but don't have the time or expertise to 
 contribute code or documentation? No worries! Head over to the
-[Issues](https://github.com/lwjohnst86/prodigenr/issues) page, create a new Issue,
+[Issues](https://github.com/rostools/prodigenr/issues) page, create a new Issue,
 and type out those thoughts and ideas!
 
 ### Code or documentation
@@ -60,7 +60,7 @@ before you can contribute.
 one commit, but rather break it up into smaller commits.
 - The [Pull Request](https://help.github.com/articles/about-pull-requests/) should 
 describe the change fairly concisely, preferably referencing an existing problem or
-feature request from the [Issues](https://github.com/lwjohnst86/prodigenr/issues)
+feature request from the [Issues](https://github.com/rostools/prodigenr/issues)
 (but it doesn't have to be).
 
 I'll try to label issues that would be good first attempts for new contributors

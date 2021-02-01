@@ -1,3 +1,3 @@
-name: Slides
+name: Empty slides (from xaringan)
 description: >
- Template for creating a generic scientific slides file.
+ Template for creating slides, empty except for the xaringan package YAML metadata.
