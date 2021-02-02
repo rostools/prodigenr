@@ -25,7 +25,7 @@ create_doc <- function(type = c("report", "slides")) {
     file_name <- normalizePath(file.path("doc", paste0(type, ".Rmd")), mustWork = FALSE)
     template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
     if (file.exists(file_name)) {
-        rlang::warn("The file '", type, ".Rmd' already exists in the doc folder.")
+        rlang::abort(paste0("The file '", type, ".Rmd' already exists in the doc folder."))
     } else {
         rmarkdown::draft(
             file = file_name,
@@ -36,6 +36,7 @@ create_doc <- function(type = c("report", "slides")) {
         )
         cli::cli_alert_success("Creating a {.val {type}} file in the {.val {'doc/'}} folder.")
     }
+    invisible()
 }
 
 #' @describeIn create_doc Creates a report R Markdown document in the `doc/` folder.
