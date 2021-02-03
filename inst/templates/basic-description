@@ -1,0 +1,7 @@
+Package: {{ ProjectName }}
+Version: 0.0.1
+Imports:
+    knitr,
+    rmarkdown,
+    distill
+Encoding: UTF-8
