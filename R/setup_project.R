@@ -61,3 +61,14 @@ setup_project <-
         ui_todo("Now open {ui_value(paste0(basename(proj_path), '.Rproj'))} to get started on the project!")
         invisible()
     }
+set_git_ignore_files <- function() {
+    base::writeLines(c(".Rhistory", ".RData", ".Rproj.user"),
+                     ".gitignore")
+}
+
+path_remove_spaces <- function(path) {
+    path_as_vector <- fs::path_split(path)[[1]]
+    last_dir <- length(path_as_vector)
+    path_as_vector[last_dir] <- gsub(" +", "-", path_as_vector[last_dir])
+    fs::path_join(path_as_vector)
+}
