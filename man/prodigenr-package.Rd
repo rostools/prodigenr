@@ -6,7 +6,7 @@
 \alias{prodigenr-package}
 \title{prodigenr: Research Project Directory Generator}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
@@ -22,7 +22,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Luke Johnston \email{lwjohnst@gmail.com} (0000-0003-4169-2616)
+\strong{Maintainer}: Luke Johnston \email{lwjohnst@gmail.com} (\href{https://orcid.org/0000-0003-4169-2616}{ORCID})
 
 }
 \keyword{internal}

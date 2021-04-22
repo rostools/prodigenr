@@ -9,10 +9,8 @@
 Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
 [![R build
 status](https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg)](https://github.com/rostools/prodigenr/actions)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/rostools/prodigenr?branch=master&svg=true)](https://ci.appveyor.com/project/rostools/prodigenr)
 [![Coverage
-status](https://codecov.io/gh/rostools/prodigenr/branch/master/graph/badge.svg)](https://codecov.io/github/rostools/prodigenr?branch=master)
+status](https://codecov.io/gh/rostools/prodigenr/branch/main/graph/badge.svg)](https://codecov.io/github/rostools/prodigenr?branch=main)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](http://www.r-pkg.org/pkg/prodigenr)
@@ -97,7 +95,7 @@ included!):
 
 ``` r
 template_list
-#> [1] "abstract"   "manuscript" "poster"     "slides"
+#> [1] "report" "slides"
 ```
 
 <!-- TODO: Add gif for using RStudio "new file" -->
