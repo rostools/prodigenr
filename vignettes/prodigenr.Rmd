@@ -37,7 +37,7 @@ directory with all the necessary files and organization.
 
 Starting a research project? Create a project directory like so:
 
-```{r manuscriptProj}
+```{r manuscript-proj}
 library(prodigenr)
 # Create a temporary folder using the fs package
 new_project_path <- fs::path_temp("HeartDiseaseExercise")
@@ -57,13 +57,13 @@ fs::dir_tree(new_project_path)
 Ok, now you can open up the newly created R project file (`.Rproj`). A
 `README.md` file is contained within each project and each folder that explains
 more about what each folder does and what some of the files do that were
-created. To add the main document type (e.g. poster, manuscript), run any of the
-`create_*()` commands (e.g. `create_poster()`) in the console of the project.
+created. To add the main document type (e.g. slides, manuscript), run any of the
+`create_*()` commands (e.g. `create_manuscript()`) in the console of the project.
 
-```{r poster_abstract_show, eval=FALSE}
+```{r example-create-function, eval=FALSE}
 # you need to run these in the project's console
-create_abstract()
-create_poster()
+create_manuscript()
+create_slides()
 ```
 
 ```{r poster_abstract_hide, echo=FALSE}
@@ -71,8 +71,8 @@ create_poster()
 withr::with_dir(
     new = new_project_path,
     code = {
-        create_abstract()
-        create_poster()
+        create_manuscript()
+        create_slides()
     }
 )
 ```
@@ -84,7 +84,7 @@ structure should look something like this:
 fs::dir_tree(new_project_path)
 ```
 
-At present, there are only four template files that you can view using:
+At present, there are only two template files that you can view using:
 
 ```{r templates}
 template_list
@@ -153,3 +153,56 @@ online, data science content.
 There is also a list of other similar projects 
 [on the rOpenSci GitHub repository](https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia). 
 It's up to you to decide which style to use. 
+
+
+
+
+
+## Folders and files
+
+This standard folder and file structure is a step toward being more
+reproducible. The project directory is generally structured with the
+following folders:
+
+- `R/`: Contains R scripts.
+- `doc/`: Contains files related to presenting the project's scientific output
+(e.g. manuscript).
+- `data/`: Contains the original or simulated data and the results of the project analyses.
+- `.git`: The Git version control history and related files. Used *only* by Git,
+do not manually edit.
+
+The base folder contains a few files:
+
+- `.gitignore` tells [Git](https://git-scm.com/) to ignore certain files from
+being tracked and prevents them from entering the version control history.
+- `DESCRIPTION` is a standard file that includes metadata about your project, in
+a machine readable format for others to obtain information on about your
+project. It provides a description of what the project does and most importantly
+what R packages your project uses on.
+- The `{{ProjectName}}.Rproj` file dictates that the directory is a RStudio
+project. Open the project by opening this file.
+
+All folders have their own README files inside with more specific details.
+
+for details on this setup and workflow. As this layout is also based
+on R packages, check out the online book on [R packages](http://r-pkgs.had.co.nz/)
+to learn more about how to make the most use out of this project layout.
+
+It's recommended that if a piece of code
+is used more than once in your analysis files, make it into a function and put
+it here so that you "Don't Repeat Yourself" (DRY principle). Or even if the
+piece of code is complicated, put it into a function to then document what it
+does. One recommended approach is to create a function or script for each main
+output item (each figure, table, etc) in a scientific product (e.g.
+`figure_one()` to create figure one).
+
+Use 'Insert Roxygen Skeleton' (Ctrl-Alt-Shift-R) to document
+individual functions.
+
+Best practice is to split the functions/code up into individual files based on what
+the functions or code do. For example, have one file for plotting functions (plots.R),
+another for data wrangling functions (wrangle.R), and so on. The code in
+the `R/` folder can be accessible by either: running `devtools::load_all()`
+(Ctrl-Shift-L) for interactive use or within the Rmd files so that another
+document format (e.g. Word) can be knitted; or, by running `source(here::here("R/filename.R"))`
+if the code has been written as a script.
