@@ -14,7 +14,7 @@
 #' new_proj_name <- fs::path_temp("DiabetesCancer")
 #' setup_project(new_proj_name)
 #' # After the new project opens up, add Git with:
-#' setup_project_with_git()
+#' set_git_to_project()
 #' }
 setup_project <-
     function(path) {
@@ -79,7 +79,7 @@ include_readmes <- function(proj_name) {
 #' @export
 #' @seealso [setup_project()] for starting the project.
 #'
-setup_project_with_git <- function() {
+set_git_to_project <- function() {
     if (!requireNamespace("gert", quietly = TRUE)) {
         rlang::abort(c("This function relies on the gert package, please install it and then run the function again.",
                        "install.packages('gert')"))
@@ -88,14 +88,14 @@ setup_project_with_git <- function() {
     if (!is_rproj_folder())
         rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
 
-    if (!has_git()) {
+    if (has_git()) {
         rlang::abort("The project already has Git added.")
     }
 
     gert::git_init()
     set_git_ignore_files()
     cli::cli_alert_info("You'll need to restart RStudio to see the Git pane.")
-    return(invisible())
+    return(invisible(NULL))
 }
 
 # Utilities -----------------------------------------------------
