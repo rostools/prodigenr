@@ -18,7 +18,6 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
 [![R build status](https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg)](https://github.com/rostools/prodigenr/actions)
-[![Coverage status](https://codecov.io/gh/rostools/prodigenr/branch/main/graph/badge.svg)](https://codecov.io/github/rostools/prodigenr?branch=main)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](http://www.r-pkg.org/pkg/prodigenr)
 <!-- badges: end -->
@@ -33,7 +32,7 @@ and simplify the process of doing open and reproducible science.
 This specific package is a *pro*ject *di*rectory *gen*erato*r* (prodigenr). It
 will create a standardized project folder structure with the necessary template
 files for managing and analyzing data and for creating common scientific output
-(posters, slides, abstracts, manuscripts). Because of the standardized structure
+(e.g. manuscripts). Because of the standardized structure
 and because of the focus on a "one project, one scientific output", this allows
 the final code and documents to be fairly modular, self-contained, easy to share
 and make public... and be as reproducible as possible. This folder structure also
@@ -83,7 +82,6 @@ Once in the project, you can add a manuscript R Markdown file or poster using:
 create_manuscript() 
 # Or...
 create_poster()
-# etc.
 ```
 
 The main secondary function is the `template_list` command, which lists the
@@ -137,4 +135,4 @@ agree to abide by its terms.
 [rostools-github]: https://github.com/rostools
 [rostools-manifesto]: https://rostools.gitlab.io/manifesto
 
-Special thanks to @zsemnani for creating the logo!
+Special thanks to [@zsemnani](https://twitter.com/zsemnani?lang=en) for creating the logo!
