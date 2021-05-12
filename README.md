@@ -7,8 +7,7 @@
 
 [![CRAN Status
 Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
-[![R build
-status](https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg)](https://github.com/rostools/prodigenr/actions)
+[![R-CMD-check](https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg)](https://github.com/rostools/prodigenr/actions)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](https://www.r-pkg.org:443/pkg/prodigenr)
