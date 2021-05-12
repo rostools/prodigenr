@@ -53,7 +53,7 @@ read_utf8 <- function(path, n = -1L) {
 add_rproj_file <- function(proj_name) {
     rproj_file <- paste0(proj_name, ".Rproj")
     new <- use_template(
-        "template.Rproj",
+        "template-rproj",
         rproj_file
     )
 }
