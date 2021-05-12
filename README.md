@@ -9,9 +9,9 @@
 Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
 [![R build
 status](https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg)](https://github.com/rostools/prodigenr/actions)
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](http://www.r-pkg.org/pkg/prodigenr)
+downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](https://www.r-pkg.org:443/pkg/prodigenr)
 <!-- badges: end -->
 
 This [R](https://cran.r-project.org) package is part of a
@@ -126,10 +126,10 @@ However, it can always improve! I welcome any suggestions, just submit a
 ## Interested in contributing?
 
 See the [contributing
-documentation](http://prodigenr.lukewjohnston.com/CONTRIBUTING.html) for
-information on how to contribute. Please note that this project is
+documentation](http://rostools.github.io/prodigenr/CONTRIBUTING.html)
+for information on how to contribute. Please note that this project is
 released with a [Contributor Code of
-Conduct](http://prodigenr.lukewjohnston.com/CODE_OF_CONDUCT.html). By
+Conduct](http://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html). By
 participating in this project you agree to abide by its terms.
 
 Special thanks to \[@zsemnani\](<https://twitter.com/zsemnani?lang=en>)
