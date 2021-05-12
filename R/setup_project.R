@@ -14,7 +14,7 @@
 #' new_proj_name <- fs::path_temp("DiabetesCancer")
 #' setup_project(new_proj_name)
 #' # After the new project opens up, add Git with:
-#' set_git_to_project()
+#' setup_with_git()
 #' }
 setup_project <-
     function(path) {
@@ -79,7 +79,7 @@ include_readmes <- function(proj_name) {
 #' @export
 #' @seealso [setup_project()] for starting the project.
 #'
-set_git_to_project <- function() {
+setup_with_git <- function() {
     if (!requireNamespace("gert", quietly = TRUE)) {
         rlang::abort(c("This function relies on the gert package, please install it and then run the function again.",
                        "install.packages('gert')"))

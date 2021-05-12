@@ -21,7 +21,7 @@ test_that("project is set up", {
 
 test_that("git gets added", {
     withr::local_dir(new = new_project)
-    capture_output(set_git_to_project())
+    capture_output(setup_with_git())
     expect_true(fs::dir_exists(".git"))
     expect_true(fs::file_exists(".gitignore"))
 })
