@@ -2,36 +2,43 @@
 % Please edit documentation in R/create_doc.R
 \name{create_doc}
 \alias{create_doc}
+\alias{create_report}
 \alias{create_manuscript}
-\alias{create_poster}
 \alias{create_slides}
-\alias{create_abstract}
-\title{Create an R Markdown document from template.}
+\title{Create a basic R Markdown document from a template.}
 \usage{
-create_doc(type = c("manuscript", "slides", "poster", "abstract"))
+create_doc(type = c("report", "slides"))
+
+create_report()
 
 create_manuscript()
 
-create_poster()
-
 create_slides()
-
-create_abstract()
 }
 \arguments{
-\item{type}{The file type (e.g. manuscript, slides, etc.)}
+\item{type}{The file type (e.g. report, slides).}
 }
 \value{
-A created Rmd file.
+A created \code{.Rmd} file in the \verb{doc/} folder.
 }
 \description{
-Creates manuscript, slide, poster, or abstract R Markdown files into the doc folder.
+Creates manuscript/report or slide R Markdown file and saves it into
+the \verb{doc/} folder.
 }
+\section{Functions}{
+\itemize{
+\item \code{create_report}: Creates a report R Markdown document in the \verb{doc/} folder.
+
+\item \code{create_manuscript}: Creates a manuscript R Markdown document in
+the \verb{doc/} folder. Is the same as \code{\link[=create_report]{create_report()}}.
+
+\item \code{create_slides}: Creates a R Markdown document for making slides in the \verb{doc/} folder.
+}}
+
 \examples{
 \dontrun{
 create_manuscript()
-create_poster()
+create_report()
 create_slides()
-create_abstract()
 }
 }

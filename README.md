@@ -9,10 +9,6 @@
 Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.org/package=prodigenr)
 [![R build
 status](https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg)](https://github.com/rostools/prodigenr/actions)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/rostools/prodigenr?branch=master&svg=true)](https://ci.appveyor.com/project/rostools/prodigenr)
-[![Coverage
-status](https://codecov.io/gh/rostools/prodigenr/branch/master/graph/badge.svg)](https://codecov.io/github/rostools/prodigenr?branch=master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](http://www.r-pkg.org/pkg/prodigenr)
@@ -31,13 +27,13 @@ science.
 This specific package is a *pro*ject *di*rectory *gen*erato*r*
 (prodigenr). It will create a standardized project folder structure with
 the necessary template files for managing and analyzing data and for
-creating common scientific output (posters, slides, abstracts,
-manuscripts). Because of the standardized structure and because of the
-focus on a “one project, one scientific output”, this allows the final
-code and documents to be fairly modular, self-contained, easy to share
-and make public… and be as reproducible as possible. This folder
-structure also makes use of the existing and established applications
-and workflows ([RStudio](https://www.rstudio.com/),
+creating common scientific output (e.g. manuscripts). Because of the
+standardized structure and because of the focus on a “one project, one
+scientific output”, this allows the final code and documents to be
+fairly modular, self-contained, easy to share and make public… and be as
+reproducible as possible. This folder structure also makes use of the
+existing and established applications and workflows
+([RStudio](https://www.rstudio.com/),
 [devtools](https://CRAN.R-project.org/package=devtools), and
 [usethis](https://CRAN.R-project.org/package=usethis)). This package
 aims to make it easier to adhere to open scientific practices by
@@ -88,7 +84,6 @@ using:
 create_manuscript() 
 # Or...
 create_poster()
-# etc.
 ```
 
 The main secondary function is the `template_list` command, which lists
@@ -97,7 +92,7 @@ included!):
 
 ``` r
 template_list
-#> [1] "abstract"   "manuscript" "poster"     "slides"
+#> [1] "report" "slides"
 ```
 
 <!-- TODO: Add gif for using RStudio "new file" -->
@@ -137,4 +132,5 @@ released with a [Contributor Code of
 Conduct](http://prodigenr.lukewjohnston.com/CODE_OF_CONDUCT.html). By
 participating in this project you agree to abide by its terms.
 
-Special thanks to @zsemnani for creating the logo!
+Special thanks to \[@zsemnani\](<https://twitter.com/zsemnani?lang=en>)
+for creating the logo!

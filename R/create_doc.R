@@ -43,10 +43,11 @@ create_doc <- function(type = c("report", "slides")) {
 #' @export
 create_report <- function() {
     create_doc(type = "report")
+    return(invisible())
 }
 
 #' @describeIn create_doc Creates a manuscript R Markdown document in
-#'   the `doc/` folder. Is the same as `create_report()`.
+#'   the `doc/` folder. Is the same as [create_report()].
 #' @export
 create_manuscript <- create_report
 

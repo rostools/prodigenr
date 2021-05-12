@@ -21,5 +21,7 @@ as well as adding some useful files to start the project.
 # Use a temporary location
 new_proj_name <- fs::path_temp("DiabetesCancer")
 setup_project(new_proj_name)
+# After the new project opens up, add Git with:
+setup_with_git()
 }
 }

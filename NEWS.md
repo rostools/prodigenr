@@ -1,5 +1,18 @@
 # prodigenr (development version)
 
+## Major changes
+
+- Removed abstract and poster templates. Abstracts are so small it isn't
+an important addition and (I sense) posters will for a while be created
+with other software tools (e.g. PowerPoint). Plus there aren't many 
+mature and well-established poster packages in R at this point in time.
+- Tidied up and trim down all the README files and include pointers to
+the prodigenr online documentation instead.
+- Removed R script template files. Projects might be too diverse for
+these template scripts to make sense.
+- Removed several dependencies, including the usethis package.
+- Moved Git initialization setup out
+
 # prodigenr 0.5.0
 
 ## Major change
