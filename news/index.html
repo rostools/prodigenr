@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,10 +47,10 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Changelog" />
 
-<meta property="og:image" content="http://prodigenr.lukewjohnston.com/logo.png" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:title" content="Changelog" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -56,9 +64,10 @@
 <![endif]-->
 
 
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -72,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">prodigenr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0.9000</span>
       </span>
     </div>
 
@@ -80,7 +89,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,11 +106,10 @@
   <a href="../CONTRIBUTING.html">Contributing</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/lwjohnst86/prodigenr">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/rostools/prodigenr">
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -112,33 +120,50 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/lwjohnst86/prodigenr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+      <h1 data-toc-skip>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/rostools/prodigenr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="prodigenr-0-5-0" class="section level1">
-<h1 class="page-header">
-<a href="#prodigenr-0-5-0" class="anchor"></a>prodigenr 0.5.0<small> Unreleased </small>
+    <div id="prodigenr-development-version" class="section level1">
+<h1 class="page-header" data-toc-text="development version">
+<a href="#prodigenr-development-version" class="anchor"></a>prodigenr (development version)<small> Unreleased </small>
+</h1>
+<div id="major-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#major-changes" class="anchor"></a>Major changes</h2>
+<ul>
+<li>Removed abstract and poster templates. Abstracts are so small it isn’t an important addition and (I sense) posters will for a while be created with other software tools (e.g. PowerPoint). Plus there aren’t many mature and well-established poster packages in R at this point in time.</li>
+<li>Tidied up and trim down all the README files and include pointers to the prodigenr online documentation instead.</li>
+<li>Removed R script template files. Projects might be too diverse for these template scripts to make sense.</li>
+<li>Removed several dependencies, including the usethis package.</li>
+<li>Moved Git initialization setup out</li>
+</ul>
+</div>
+</div>
+    <div id="prodigenr-050" class="section level1">
+<h1 class="page-header" data-toc-text="0.5.0">
+<a href="#prodigenr-050" class="anchor"></a>prodigenr 0.5.0<small> 2019-07-01 </small>
 </h1>
 <div id="major-change" class="section level2">
 <h2 class="hasAnchor">
 <a href="#major-change" class="anchor"></a>Major change</h2>
 <ul>
-<li>Switch to having only one argument for <code><a href="../reference/setup_project.html">setup_project()</a></code> called <code>path</code> (<a href='https://github.com/lwjohnst86/prodigenr/issues/102'>#102</a>)</li>
+<li>Switch to having only one argument for <code><a href="../reference/setup_project.html">setup_project()</a></code> called <code>path</code> (<a href='https://github.com/rostools/prodigenr/issues/102'>#102</a>)</li>
 </ul>
 </div>
 <div id="additions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#additions" class="anchor"></a>Additions</h2>
 <ul>
-<li>Can now use RStudio’s “New Project” interface for a GUI creation of the project (<a href='https://github.com/lwjohnst86/prodigenr/issues/109'>#109</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/111'>#111</a>)</li>
-<li>Setup projects to be “blank slates” (i.e. don’t save <code>.RData</code>) (<a href='https://github.com/lwjohnst86/prodigenr/issues/105'>#105</a>)</li>
-<li>Add TODO list to project to complete after project creation (<a href='https://github.com/lwjohnst86/prodigenr/issues/39'>#39</a>)</li>
+<li>Can now use RStudio’s “New Project” interface for a GUI creation of the project (<a href='https://github.com/rostools/prodigenr/issues/109'>#109</a>, <a href='https://github.com/rostools/prodigenr/issues/111'>#111</a>)</li>
+<li>Setup projects to be “blank slates” (i.e. don’t save <code>.RData</code>) (<a href='https://github.com/rostools/prodigenr/issues/105'>#105</a>)</li>
+<li>Add TODO list to project to complete after project creation (<a href='https://github.com/rostools/prodigenr/issues/39'>#39</a>)</li>
 </ul>
 </div>
 <div id="hotfix" class="section level2">
@@ -152,39 +177,39 @@
 <h2 class="hasAnchor">
 <a href="#misc" class="anchor"></a>Misc</h2>
 <ul>
-<li>Remove deprecated <code>prodigen()</code> function (<a href='https://github.com/lwjohnst86/prodigenr/issues/107'>#107</a>)</li>
+<li>Remove deprecated <code>prodigen()</code> function (<a href='https://github.com/rostools/prodigenr/issues/107'>#107</a>)</li>
 <li>Replace current interactive messaging with <code>usethis::ui_*</code> functions</li>
-<li>Reduced opinionated content and moved over to <a href="https://github.com/rostools/rostools">rostools</a> and its <a href="https://gitlab.com/rostools/manifesto">manifesto</a> (<a href='https://github.com/lwjohnst86/prodigenr/issues/108'>#108</a>)</li>
+<li>Reduced opinionated content and moved over to <a href="https://github.com/rostools/rostools">rostools</a> and its <a href="https://gitlab.com/rostools/manifesto">manifesto</a> (<a href='https://github.com/rostools/prodigenr/issues/108'>#108</a>)</li>
 <li>Removed some dependencies by using functions from usethis</li>
-<li>Incorporate <code>use_template()</code> instead of custom function (<a href='https://github.com/lwjohnst86/prodigenr/issues/101'>#101</a>)</li>
+<li>Incorporate <code>use_template()</code> instead of custom function (<a href='https://github.com/rostools/prodigenr/issues/101'>#101</a>)</li>
 </ul>
 </div>
 </div>
-    <div id="prodigenr-0-4-0" class="section level1">
-<h1 class="page-header">
-<a href="#prodigenr-0-4-0" class="anchor"></a>prodigenr 0.4.0<small> 2018-05-23 </small>
+    <div id="prodigenr-040" class="section level1">
+<h1 class="page-header" data-toc-text="0.4.0">
+<a href="#prodigenr-040" class="anchor"></a>prodigenr 0.4.0<small> 2018-05-23 </small>
 </h1>
 <div id="new-feature" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-feature" class="anchor"></a>New feature</h2>
 <ul>
-<li>Use RMarkdown template files to draft the posters, slides, manuscripts, and abstract (<a href='https://github.com/lwjohnst86/prodigenr/issues/70'>#70</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/75'>#75</a>). See <code>create_*</code> type commands.</li>
-<li>New function to setup a general project, but excluding the individual document types such manuscript, slides, etc (<a href='https://github.com/lwjohnst86/prodigenr/issues/72'>#72</a>). <code>prodigen</code> function is deprecated.</li>
-<li>READMEs in each folder and section to fill out in main README for the project description (<a href='https://github.com/lwjohnst86/prodigenr/issues/38'>#38</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/80'>#80</a>).</li>
+<li>Use RMarkdown template files to draft the posters, slides, manuscripts, and abstract (<a href='https://github.com/rostools/prodigenr/issues/70'>#70</a>, <a href='https://github.com/rostools/prodigenr/issues/75'>#75</a>). See <code>create_*</code> type commands.</li>
+<li>New function to setup a general project, but excluding the individual document types such manuscript, slides, etc (<a href='https://github.com/rostools/prodigenr/issues/72'>#72</a>). <code>prodigen</code> function is deprecated.</li>
+<li>READMEs in each folder and section to fill out in main README for the project description (<a href='https://github.com/rostools/prodigenr/issues/38'>#38</a>, <a href='https://github.com/rostools/prodigenr/issues/80'>#80</a>).</li>
 </ul>
 </div>
 <div id="removals" class="section level2">
 <h2 class="hasAnchor">
 <a href="#removals" class="anchor"></a>Removals</h2>
 <ul>
-<li>Moved <code>include_*()</code> functions over into <a href="https://github.com/lwjohnst86/rostools">rostools</a> (<a href='https://github.com/lwjohnst86/prodigenr/issues/96'>#96</a>)</li>
+<li>Moved <code>include_*()</code> functions over into <a href="https://github.com/rostools/rostools">rostools</a> (<a href='https://github.com/rostools/prodigenr/issues/96'>#96</a>)</li>
 </ul>
 </div>
 <div id="minor-fixes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#minor-fixes" class="anchor"></a>Minor fixes</h2>
 <ul>
-<li>Added additional information to template README.md (<a href='https://github.com/lwjohnst86/prodigenr/issues/29'>#29</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/30'>#30</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/32'>#32</a>)</li>
+<li>Added additional information to template README.md (<a href='https://github.com/rostools/prodigenr/issues/29'>#29</a>, <a href='https://github.com/rostools/prodigenr/issues/30'>#30</a>, <a href='https://github.com/rostools/prodigenr/issues/32'>#32</a>)</li>
 </ul>
 </div>
 <div id="misc-additions" class="section level2">
@@ -192,29 +217,29 @@
 <a href="#misc-additions" class="anchor"></a>Misc additions</h2>
 <ul>
 <li>Todo items to created README</li>
-<li>Added code coverage <a href='https://github.com/lwjohnst86/prodigenr/issues/65'>#65</a></li>
+<li>Added code coverage <a href='https://github.com/rostools/prodigenr/issues/65'>#65</a></li>
 </ul>
 </div>
 </div>
-    <div id="prodigenr-0-3-0" class="section level1">
-<h1 class="page-header">
-<a href="#prodigenr-0-3-0" class="anchor"></a>prodigenr 0.3.0<small> 2016-07-29 </small>
+    <div id="prodigenr-030" class="section level1">
+<h1 class="page-header" data-toc-text="0.3.0">
+<a href="#prodigenr-030" class="anchor"></a>prodigenr 0.3.0<small> 2016-07-29 </small>
 </h1>
 <div id="new-featuresfunctionality" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-featuresfunctionality" class="anchor"></a>New features/functionality</h2>
 <ul>
 <li>
-<code>prodigen()</code> now creates a new project structure that mimics R package development more, specifically <code>devtools</code> (since it is well documented and actively maintained) (<a href='https://github.com/lwjohnst86/prodigenr/issues/18'>#18</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/15'>#15</a>, <a href='https://github.com/lwjohnst86/prodigenr/issues/14'>#14</a>). The old style has been removed.</li>
-<li>Added a function to include a <a href="http://www.strobe-statement.org/index.php?id=strobe-home">STROBE</a> checklist for reporting guidelines (<a href='https://github.com/lwjohnst86/prodigenr/issues/21'>#21</a>).</li>
-<li>Added function to include an <code>rfigshare</code> script to send to <a href="https://figshare.com/">figshare</a> (<a href='https://github.com/lwjohnst86/prodigenr/issues/19'>#19</a>).</li>
-<li>Added function to include a more complete MIT license (<a href='https://github.com/lwjohnst86/prodigenr/issues/20'>#20</a>).</li>
+<code>prodigen()</code> now creates a new project structure that mimics R package development more, specifically <code>devtools</code> (since it is well documented and actively maintained) (<a href='https://github.com/rostools/prodigenr/issues/18'>#18</a>, <a href='https://github.com/rostools/prodigenr/issues/15'>#15</a>, <a href='https://github.com/rostools/prodigenr/issues/14'>#14</a>). The old style has been removed.</li>
+<li>Added a function to include a <a href="http://www.strobe-statement.org/index.php?id=strobe-home">STROBE</a> checklist for reporting guidelines (<a href='https://github.com/rostools/prodigenr/issues/21'>#21</a>).</li>
+<li>Added function to include an <code>rfigshare</code> script to send to <a href="https://figshare.com/">figshare</a> (<a href='https://github.com/rostools/prodigenr/issues/19'>#19</a>).</li>
+<li>Added function to include a more complete MIT license (<a href='https://github.com/rostools/prodigenr/issues/20'>#20</a>).</li>
 </ul>
 </div>
 </div>
-    <div id="prodigenr-0-2-7" class="section level1">
-<h1 class="page-header">
-<a href="#prodigenr-0-2-7" class="anchor"></a>prodigenr 0.2.7<small> 2016-05-14 </small>
+    <div id="prodigenr-027" class="section level1">
+<h1 class="page-header" data-toc-text="0.2.7">
+<a href="#prodigenr-027" class="anchor"></a>prodigenr 0.2.7<small> 2016-05-14 </small>
 </h1>
 <ul>
 <li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
@@ -223,19 +248,14 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#prodigenr-0-5-0">0.5.0</a></li>
-        <li><a href="#prodigenr-0-4-0">0.4.0</a></li>
-        <li><a href="#prodigenr-0-3-0">0.3.0</a></li>
-        <li><a href="#prodigenr-0-2-7">0.2.7</a></li>
-      </ul>
-    </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -243,13 +263,16 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 
