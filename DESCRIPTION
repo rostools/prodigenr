@@ -22,7 +22,6 @@ Imports:
     cli,
     whisker
 Suggests: 
-    covr,
     testthat,
     knitr,
     gert
