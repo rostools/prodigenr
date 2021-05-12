@@ -11,7 +11,7 @@ the prodigenr online documentation instead.
 - Removed R script template files. Projects might be too diverse for
 these template scripts to make sense.
 - Removed several dependencies, including the usethis package.
-- Moved Git initialization setup out
+- Moved Git initialization setup out into new function called `setup_with_git()`.
 
 # prodigenr 0.5.0
 
