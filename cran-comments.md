@@ -1,4 +1,6 @@
 
+- Re-submission to fix some URLs (http -> https)
+
 ## Test environments
 
 - Ubunto 20.04 (local), R 4.0.5

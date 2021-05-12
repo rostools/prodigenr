@@ -17,7 +17,7 @@ Create a project directory structure, along with typical files
 Useful links:
 \itemize{
   \item \url{https://github.com/rostools/prodigenr}
-  \item \url{http://rostools.github.io/prodigenr/}
+  \item \url{https://rostools.github.io/prodigenr/}
   \item Report bugs at \url{https://github.com/rostools/prodigenr/issues}
 }
 

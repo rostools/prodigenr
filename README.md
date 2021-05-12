@@ -125,10 +125,10 @@ However, it can always improve! I welcome any suggestions, just submit a
 ## Interested in contributing?
 
 See the [contributing
-documentation](http://rostools.github.io/prodigenr/CONTRIBUTING.html)
+documentation](https://rostools.github.io/prodigenr/CONTRIBUTING.html)
 for information on how to contribute. Please note that this project is
 released with a [Contributor Code of
-Conduct](http://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html). By
+Conduct](https://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html). By
 participating in this project you agree to abide by its terms.
 
 Special thanks to \[@zsemnani\](<https://twitter.com/zsemnani?lang=en>)
