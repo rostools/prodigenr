@@ -35,10 +35,8 @@ setup_project <-
                 add_rproj_file(proj_name)
                 add_description_file(proj_name)
                 create_directories()
-                quiet({
-                    include_readmes(proj_name)
-                    use_template("TODO.md")
-                })
+                include_readmes(proj_name)
+                use_template("TODO.md")
             })
     }
 
