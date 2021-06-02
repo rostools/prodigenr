@@ -1,5 +1,5 @@
 
-- Re-submission to fix some URLs (http -> https)
+- Minor bug patch
 
 ## Test environments
 

@@ -1,5 +1,9 @@
 # prodigenr (development version)
 
+## Bug fix
+
+- DESCRIPTION file actually needs a `Package` field (#127).
+
 # prodigenr 0.6.0
 
 ## Major changes
