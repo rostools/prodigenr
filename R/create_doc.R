@@ -14,7 +14,7 @@
 #' create_report()
 #' create_slides()
 #' }
-create_doc <- function(type = c("report", "slides")) {
+create_doc <- function(type = c("report", "slides", "SAP")) {
     if (!is_rproj_folder())
         rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
 
@@ -51,6 +51,14 @@ create_report <- function() {
 #' @export
 create_manuscript <- create_report
 
+#' @describeIn create_doc Creates a Statistical Analysis Plan (SAP) R Markdown document in the `doc/` folder.
+#' @export
+create_SAP <- function() {
+  create_doc(type = "SAP")
+  return(invisible())
+}
+
+
 #' @describeIn create_doc Creates a R Markdown document for making slides in the `doc/` folder.
 #' @export
 create_slides <- function() {
@@ -66,4 +74,4 @@ create_slides <- function() {
 #' @examples
 #' template_list
 #'
-template_list <- c("report", "slides")
+template_list <- c("report", "slides", "SAP")

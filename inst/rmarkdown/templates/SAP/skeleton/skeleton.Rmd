@@ -1,0 +1,124 @@
+---
+title: "Project Name"
+subtitle: "Statistical Analysis Plan - SAP"
+author: " "
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+  word_document:
+    reference_docx: "word-styles-reference-01.docx"
+---
+
+```{r setup, include=FALSE}
+options(knitr.kable.NA = "")
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message = FALSE)
+
+Sys.setenv(LANG = "en")
+set.seed(684324)
+Sys.setlocale("LC_TIME", "C")
+
+devtools::install_deps()
+```
+ \newline
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+
+ 
+ 
+
+**Trial registration number**:
+
+**SAP version**: 001-`r format(Sys.time(), '%d/%m/%Y')`
+
+**Protocol version**:
+
+**SAP revision**:
+
+**SAP contributors**:
+
+
+\newpage
+
+A statistical analysis plan includes many features of a research project with a particular emphasis on mapping out how research questions will be answered and what is necessary to answer the question.
+
+# General information
+
+**Study title**:  
+ 
+**Person in charge of the project**:  
+ 
+**Date of Plan**: 
+ 
+**Person conducting data analysis**: 
+ 
+**Analysis team members**: 
+ 
+
+# Background to the study analysis
+Provide an overview of the necessary background for the study including evidence of what is already known in the area of study and what the gaps are in the literature. Finish with a clear stated aim of the project.
+
+**Number of study participants**: 
+ 
+**Duration of study**: 
+ 
+**Specific hypothesis under study**: 
+ 
+**Endpoints or outcomes of interest**: 
+
+
+# Data Details
+**Study type**: 
+
+**Data sets used**: 
+ 
+**Analysis package**: 
+ 
+**Study population**: 
+ 
+**Inclusion/exclusion criteria for participants**: 
+ 
+**Exposure variables**: 
+ 
+**Outcome measures**: 
+ 
+**Covariates**: 
+ 
+**Sub-groups**: 
+ 
+**Approach to dealing with missing data**: 
+
+  
+  
+## Outline proposed analytical strategy
+Include: 
+
+- Outline of main comparison groups 
+
+- Frequency and cross-tabulations of main variables 
+
+- Basic analysis model (usually age- and sex-adjusted)
+
+- Final analysis model (including adjustment for other confounders) 
+
+
+## Analysis dissemination strategy
+Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).
+
+## Interpretation
+Detail how you will interpret the results in the context of your stated hypothesis. I.e. if the results do/do not meet your hypothesis, what will you conclude? A concept map (see below) may assist with this.
+
+## Concept map
+Concept map or directed acyclic graph Drawing a diagram of the ways in which the exposure might be related to the outcome will help to visualise your hypotheses as well as serving as a basis for clearly communicating this to your collaborators. The diagram should include the possible confounders or mediators of the relationship. This will require good knowledge of the background to the study
+
+## Dummy tables and Charts
+Dummy tables and charts are empty skeleton tables and charts which show how the results will be presented but which do not contain any data/results.
+
+
