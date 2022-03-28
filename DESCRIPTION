@@ -1,18 +1,19 @@
-Package: prodigenr
-Title: Research Project Directory Generator
-Version: 0.6.1.9000
+Package: prodigenr_ccms
+Type: Package
+Title: Research Project Directory Generator adjusted to fit the needs of CCMS, LIH
+Version: 0.0.1.0000
 Authors@R: person("Luke", "Johnston", , "lwjohnst@gmail.com", c("aut", "cre"),
     comment = c(ORCID = "0000-0003-4169-2616"))
 Description: Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
     as well as for them to be standardized. Designed specifically with scientists
-    in mind (mainly bio-medical researchers, but likely applies to other fields).
+    in mind (mainly bio-medical researchers, but likely applies to other fields) and adapted for CCMS.
 License: MIT + file LICENSE
 URL: https://github.com/rostools/prodigenr, 
     https://rostools.github.io/prodigenr/
 BugReports: https://github.com/rostools/prodigenr/issues
 Depends: 
-    R (>= 3.4.0)
+    R (>= 4.1.2)
 Imports: 
     fs,
     rmarkdown,

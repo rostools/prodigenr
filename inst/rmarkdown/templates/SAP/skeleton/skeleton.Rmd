@@ -5,7 +5,7 @@ author: " "
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output: 
   word_document:
-    reference_docx: "word-styles-reference-01.docx"
+    reference_docx: "word-styles-reference-SAP.docx"
 ---
 
 ```{r setup, include=FALSE}
