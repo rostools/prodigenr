@@ -64,7 +64,7 @@ And the development version from [GitHub](https://github.com/) with:
 remotes::install_github("rostools/prodigenr")
 ```
 
-## Usage prdigenrCCMS
+## Usage prodigenrCCMS
 
 ``` r
 library(prodigenrCCMS2)
