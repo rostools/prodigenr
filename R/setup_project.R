@@ -65,10 +65,10 @@ include_readmes <- function(proj_name) {
         "README.md",
         data = list(ProjectName = proj_name)
     )
-    use_template("doc-README.md", "03-Outputs/Results/README.md")
+    use_template("results-README.md", "03-Outputs/Results/README.md")
     use_template("data-README.md", "02-Process/Data/README.md")
     use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
-    use_template("R-README.md", "02-Process/Programs/README.md")
+    use_template("programs-README.md", "02-Process/Programs/README.md")
 }
 
 
