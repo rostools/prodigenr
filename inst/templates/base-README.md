@@ -15,6 +15,9 @@ The following folders contain:
 - `data/`:
 - `doc/`:
 - `R/`:
+- `SAS/`:
+- `datamanagement/`: 
+- `literature/`:
 
 # Installing project R package dependencies
 
