@@ -1,6 +1,6 @@
 Package: prodigenrCCMS
 Type: Package
-Title: Research Project Directory Generator adjusted to fit the needs of CCMS, LIH
+Title: Research Project Directory Generator adjusted to fit the needs of CCMS
 Version: 0.0.1.0000
 Authors@R: person("Luke", "Johnston", , "lwjohnst@gmail.com", c("aut", "cre"),
     comment = c(ORCID = "0000-0003-4169-2616"))
