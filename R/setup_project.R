@@ -61,6 +61,7 @@ include_readmes <- function(proj_name) {
     use_template("data-README.md", "data/README.md")
     use_template("data-raw-README.md", "data-raw/README.md")
     use_template("R-README.md", "R/README.md")
+    use_template("SAS-README.md", "SAS/README.md")
 }
 
 # Git setup functions -------------------------------------------
