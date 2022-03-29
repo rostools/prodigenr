@@ -11,6 +11,7 @@ Description: Create a project directory structure, along with typical files
 License: MIT + file LICENSE
 URL: https://github.com/rostools/prodigenr, 
     https://rostools.github.io/prodigenr/
+    https://github.com/ccmsLIH/prodigenrCCMS
 BugReports: https://github.com/rostools/prodigenr/issues
 Depends: 
     R (>= 4.1.2)
@@ -21,7 +22,8 @@ Imports:
     withr,
     rlang,
     cli,
-    whisker
+    whisker,
+    devtools
 Suggests: 
     testthat,
     knitr,
