@@ -41,7 +41,7 @@ render_template <- function(template, data = list()) {
 
 # Taken from usethis package and modified to this package.
 find_template <- function(template_name) {
-    fs::path_package(package = "prodigenr", "templates", template_name)
+    fs::path_package(package = "prodigenrCCMS", "templates", template_name)
 }
 
 # Taken from usethis package
