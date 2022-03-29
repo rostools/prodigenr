@@ -58,6 +58,14 @@ add_rproj_file <- function(proj_name) {
     )
 }
 
+# Adding an R file by default with code to create documents and connect to git
+add_Rfile <- function(proj_name){
+    new <- use_template(
+        "DocumentCreation_Git",
+        "02-Process/Programs/DocumentCreation_Git.R"
+    )
+}
+
 # Taken from usethis:::uses_git
 has_git <- function(project_path = ".") {
     repo <- tryCatch(gert::git_find(project_path), error = function(e) NULL)

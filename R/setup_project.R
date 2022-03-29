@@ -36,12 +36,20 @@ setup_project <-
                 add_description_file(proj_name)
                 create_directories()
                 include_readmes(proj_name)
+                add_Rfile(proj_name)
                 use_template("TODO.md")
             })
     }
 
 create_directories <- function() {
-    fs::dir_create(c("R", "data", "doc", "data-raw", "SAS", "datamanagement", "literature"))
+    fs::dir_create(c("00-Administration", "01-Inputs", "02-Process", "03-Outputs"))
+    fs::dir_create(c("00-Administration/Report", "00-Administration/Meetings",
+                     "00-Administration/Contract", "00-Administration/Quality"))
+    fs::dir_create(c("01-Inputs/Bibliography", "01-Inputs/Methodology", "01-Inputs/Datamanagement"))
+    fs::dir_create(c("01-Inputs/Methodology/SAP", "01-Inputs/Methodology/SampleSize"))
+    fs::dir_create(c("01-Inputs/Datamanagement/Codebook", "01-Inputs/Datamanagement/AnnotedQuestionnaire"))
+    fs::dir_create(c("02-Process/Data-raw", "02-Process/Data","02-Process/Programs", "02-Process/ExtractionGrid"))
+    fs::dir_create(c("03-Outputs/Results", "03-Outputs/Posters", "03-Outputs/Articles"))
 }
 
 # File inclusion functions --------------------------------------
@@ -57,12 +65,14 @@ include_readmes <- function(proj_name) {
         "README.md",
         data = list(ProjectName = proj_name)
     )
-    use_template("doc-README.md", "doc/README.md")
-    use_template("data-README.md", "data/README.md")
-    use_template("data-raw-README.md", "data-raw/README.md")
-    use_template("R-README.md", "R/README.md")
-    use_template("SAS-README.md", "SAS/README.md")
+    use_template("doc-README.md", "03-Outputs/Results/README.md")
+    use_template("data-README.md", "02-Process/Data/README.md")
+    use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
+    use_template("R-README.md", "02-Process/Programs/README.md")
 }
+
+
+
 
 # Git setup functions -------------------------------------------
 

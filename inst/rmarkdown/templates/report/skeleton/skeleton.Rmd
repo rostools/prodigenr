@@ -5,7 +5,8 @@ author: " "
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output: 
   word_document:
-    reference_docx: "word-styles-reference-report.docx"
+    reference_docx: "ReportTemplate.docx"
+    toc: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -13,21 +14,38 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
+\newpage
+
+# Abstract 
+*A brief summary of the report and the conclusions. The aim is to make the reader understand what the report is about.Use ordinary, non-statistical language.*
 
 # Introduction
+*What is the problem and what is the structure of the report.*
 
 # Objective
+*Short and precise description of the goal of the study/report.*
+
+# Data
+*What are the data and how were they obtained?*
 
 # Methods
+*Which methods have you used and why they were chosen.*
 
 # Results
+*Results of the analysis.*
+
 
 # Conclusions
+*Summary of what have been learned and what it means. Strength and limitations of the analysis.*
 
 # References
+*Include paper that are cited in the report*
 
 # Tables
+*If you do not want to include tables in the Results part directly.*
 
 # Figures
+*If you do not want to include figures in the Results part directly.*
 
 # Supplemental Material
+*Additional material*
