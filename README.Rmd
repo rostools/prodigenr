@@ -41,7 +41,16 @@ makes use of the existing and established applications and workflows ([RStudio],
 open scientific practices by following a standard, consistent, and established
 folder and file structure for data analysis projects.
 
-## Installation
+## Installation prodigenrCCMS
+```r
+# install.packages(devtools)
+library(devtools)
+
+install_github("ccmsLIH/prodigenrCCMS2")
+
+```
+
+## Installation prodigenr
 
 You can install the released version of prodigenr from [CRAN] with:
 
@@ -56,7 +65,15 @@ And the development version from [GitHub](https://github.com/) with:
 remotes::install_github("rostools/prodigenr")
 ```
 
-## Usage
+## usage prdigenrCCMS
+
+```r
+library(prodigenrCCMS2)
+prodigenrCCMS2::setup_project("L:/Projects folder/YourProjectName")
+
+```
+
+## Usage prodigenr
 
 There are two ways of creating a new project: using the R console or using the
 RStudio "New Project" menu option.
