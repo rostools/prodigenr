@@ -39,7 +39,16 @@ aims to make it easier to adhere to open scientific practices by
 following a standard, consistent, and established folder and file
 structure for data analysis projects.
 
-## Installation
+## Installation prodigenrCCMS
+
+``` r
+# install.packages(devtools)
+library(devtools)
+
+install_github("ccmsLIH/prodigenrCCMS2")
+```
+
+## Installation prodigenr
 
 You can install the released version of prodigenr from
 [CRAN](https://cran.r-project.org) with:
@@ -55,7 +64,14 @@ And the development version from [GitHub](https://github.com/) with:
 remotes::install_github("rostools/prodigenr")
 ```
 
-## Usage
+## Usage prdigenrCCMS
+
+``` r
+library(prodigenrCCMS2)
+prodigenrCCMS2::setup_project("L:/Projects folder/YourProjectName")
+```
+
+## Usage prodigenr
 
 There are two ways of creating a new project: using the R console or
 using the RStudio “New Project” menu option.
@@ -70,8 +86,8 @@ setup_project("~/Desktop/DiseaseDiet")
 
 This then creates a directory tree, with template files for starting
 your analysis! Open the newly created project via the `.Rproj` file. For
-the RStudio approach, go to “File -&gt; New Project”, then “New
-directory” and find the prodigenr project in the list:
+the RStudio approach, go to “File -> New Project”, then “New directory”
+and find the prodigenr project in the list:
 
 ![Creating a prodigenr project in
 RStudio](man/figures/rstudio-projects.gif)
