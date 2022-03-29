@@ -4,14 +4,11 @@
 \name{prodigenrCCMS-package}
 \alias{prodigenrCCMS}
 \alias{prodigenrCCMS-package}
-\title{prodigenrCCMS: Research Project Directory Generator}
+\title{prodigenrCCMS: Research Project Directory Generator adjusted to fit the needs of CCMS}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Create a project directory structure, along with typical files
-    for that project.  This allows projects to be quickly and easily created,
-    as well as for them to be standardized. Designed specifically with scientists
-    in mind (mainly bio-medical researchers, but likely applies to other fields).
+Create a project directory structure, along with typical files for that project. This allows projects to be quickly and easily created, as well as for them to be standardized. Designed specifically with scientists in mind (mainly bio-medical researchers, but likely applies to other fields) and adapted for CCMS.
 }
 \seealso{
 Useful links:
