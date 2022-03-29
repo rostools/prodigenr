@@ -41,7 +41,7 @@ setup_project <-
     }
 
 create_directories <- function() {
-    fs::dir_create(c("R", "data", "doc", "data-raw", "SAS", "DM", "literature"))
+    fs::dir_create(c("R", "data", "doc", "data-raw", "SAS", "datamanagement", "literature"))
 }
 
 # File inclusion functions --------------------------------------
@@ -61,6 +61,7 @@ include_readmes <- function(proj_name) {
     use_template("data-README.md", "data/README.md")
     use_template("data-raw-README.md", "data-raw/README.md")
     use_template("R-README.md", "R/README.md")
+    use_template("doc-word-styles-reference-report.docx", "doc/doc-word-styles-reference-report.docx")
 }
 
 # Git setup functions -------------------------------------------
