@@ -10,7 +10,7 @@ Description: Create a project directory structure, along with typical files
     in mind (mainly bio-medical researchers, but likely applies to other fields) and adapted for CCMS.
 License: MIT + file LICENSE
 URL: https://github.com/rostools/prodigenr, 
-    https://rostools.github.io/prodigenr/
+    https://rostools.github.io/prodigenr/,
     https://github.com/ccmsLIH/prodigenrCCMS
 BugReports: https://github.com/rostools/prodigenr/issues
 Depends: 
