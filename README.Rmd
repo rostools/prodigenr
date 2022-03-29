@@ -50,6 +50,14 @@ install_github("ccmsLIH/prodigenrCCMS2")
 
 ```
 
+## Usage prodigenrCCMS
+
+```r
+library(prodigenrCCMS2)
+prodigenrCCMS2::setup_project("L:/Projects folder/YourProjectName")
+
+```
+
 ## Installation prodigenr
 
 You can install the released version of prodigenr from [CRAN] with:
@@ -65,13 +73,7 @@ And the development version from [GitHub](https://github.com/) with:
 remotes::install_github("rostools/prodigenr")
 ```
 
-## Usage prodigenrCCMS
 
-```r
-library(prodigenrCCMS2)
-prodigenrCCMS2::setup_project("L:/Projects folder/YourProjectName")
-
-```
 
 ## Usage prodigenr
 
