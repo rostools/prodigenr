@@ -47,7 +47,11 @@ devtools::install_deps()
 
 \newpage
 
-A statistical analysis plan includes many features of a research project with a particular emphasis on mapping out how research questions will be answered and what is necessary to answer the question.
+*A statistical analysis plan includes many features of a research project with a particular emphasis on mapping out how research questions will be answered and what is necessary to answer the question. More information can be found here:*
+
+*Gamble, Carrol, et al. "Guidelines for the content of statistical analysis plans in clinical trials." Jama 318.23 (2017): 2337-2343.*
+
+*Not all sections might be necessary or applicable to your project!*
 
 # General information
 
@@ -62,63 +66,127 @@ A statistical analysis plan includes many features of a research project with a 
 **Analysis team members**: 
  
 
-# Background to the study analysis
-Provide an overview of the necessary background for the study including evidence of what is already known in the area of study and what the gaps are in the literature. Finish with a clear stated aim of the project.
+# Introduction
 
-**Number of study participants**: 
- 
-**Duration of study**: 
+## Background and rationale
+*Provide an overview of the necessary background for the study including evidence of what is already known in the area of study and what the gaps are in the literature. Finish with a clear stated aim of the project.*
+
+## Objectives
+*Description of specific objectives or hypotheses*
+
  
 **Specific hypothesis under study**: 
  
-**Endpoints or outcomes of interest**: 
 
 
-# Data Details
-**Study type**: 
+# Study Methods
 
-**Data sets used**: 
- 
-**Analysis package**: 
- 
-**Study population**: 
- 
-**Inclusion/exclusion criteria for participants**: 
- 
-**Exposure variables**: 
- 
-**Outcome measures**: 
- 
-**Covariates**: 
- 
-**Sub-groups**: 
- 
-**Approach to dealing with missing data**: 
+## Trial design
+*Brief description of trial design including type of trial (eg, parallel group, multiarm, crossover, factorial) and allocation ratio and may include brief description of interventions*
 
+## Randomization
+*Randomization details, eg, whether any minimization or stratification occurred (including stratifying factors used or the location of that information if it is not held within the SAP)*
+
+## Sample Size
+*Full sample size calculation or reference to sample size calculation in protocol (instead of replication in SAP)*
+
+**Number of study participants**: 
+
+**Duration of study**:  
+
+
+## Framework
+*Superiority, equivalence, or noninferiority hypothesis testing framework, including which comparisons will be presented on this basis*
+
+## Statistical interim analyses and stopping guidance
+- *Information on interim analyses specifying what interim analyses will be carried out and listing of time points*
+- *Any planned adjustment of the significance level due to interim analysis*
+- *Details of guidelines for stopping the trial early*
+
+## Timing of final analysis
+*Timing of final analysis, eg, all outcomes analyzed collectively or timing stratified by planned length of follow-up*
+
+## Timing of outcome assessments
+*Time points at which the outcomes are measured including visit “windows”*
+
+
+# Statistical Principles
+
+## Confidence intervals and P values
+- *Level of statistical significance*
+- *Description and rationale for any adjustment for multiplicity and, if so, detailing how the type 1 error is to be controlled*
+- *Confidence intervals to be reported*
+
+## Adherence and protocol deviations
+- *Definition of adherence to the intervention and how this is assessed including extent of exposure*
+- *Description of how adherence to the intervention will be presented*
+- *Definition of protocol deviations for the trial*
+- *Description of which protocol deviations will be summarized*
+
+## Analysis population
+*Definition of analysis populations, eg, intention to treat, per protocol, complete case, safety*
   
-  
-## Outline proposed analytical strategy
-Include: 
+# Trial population
 
-- Outline of main comparison groups 
+## Screening data
+*Reporting of screening data (if collected) to describe representativeness of trial sample*
 
-- Frequency and cross-tabulations of main variables 
+## Eligibility
+*Summary of eligibility criteria*
 
-- Basic analysis model (usually age- and sex-adjusted)
+## Recruitment
+*Information to be included in the CONSORT flow diagram*
 
-- Final analysis model (including adjustment for other confounders) 
+## Withdrawal/follow-up
+- *Level of withdrawal, eg, from intervention and/or from follow-up*
+- *Timing of withdrawal/lost to follow-up data*
+- *Reasons and details of how withdrawal/lost to follow-up data will be presented*
 
+## Baseline patient characteristics
+- *List of baseline characteristics to be summarized*
+- *Details of how baseline characteristics will be descriptively summarized*
+
+# Analysis
+
+## Outcome definitions
+*List and describe each primary and secondary outcome including details of:*
+
+- *specification of outcomes and timings. If applicable include the order of importance of primary or key secondary end points (eg, order in which they will be tested)*
+- *specific measurement and units (eg, glucose control, hbA1c [mmol/mol or %])*
+- *any calculation or transformation used to derive the outcome (eg, change from baseline, QoL score, time to event, logarithm, etc)*
+
+## Analysis methods
+- *what analysis method will be used and how the treatment effects will be presented*
+- *any adjustment for covariates*
+- *methods used for assumptions to be checked for statistical methods*
+- *details of alternative methods to be used if distributional assumptions do not hold, eg, normality, proportional hazards, etc*
+- *any planned sensitivity analyses for each outcome where applicable*
+- *any planned subgroup analyses for each outcome including how subgroups are defined*
+
+## Missing data
+*Reporting and assumptions/statistical methods to handle missing data (eg, multiple imputation)*
+
+## Additional analyses
+*Details of any additional statistical analyses required, eg, complier-average causal effect analysis*
 
 ## Analysis dissemination strategy
-Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).
+*Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).*
 
 ## Interpretation
-Detail how you will interpret the results in the context of your stated hypothesis. I.e. if the results do/do not meet your hypothesis, what will you conclude? A concept map (see below) may assist with this.
-
-## Concept map
-Concept map or directed acyclic graph Drawing a diagram of the ways in which the exposure might be related to the outcome will help to visualise your hypotheses as well as serving as a basis for clearly communicating this to your collaborators. The diagram should include the possible confounders or mediators of the relationship. This will require good knowledge of the background to the study
+*Detail how you will interpret the results in the context of your stated hypothesis. I.e. if the results do/do not meet your hypothesis, what will you conclude?* 
 
 ## Dummy tables and Charts
-Dummy tables and charts are empty skeleton tables and charts which show how the results will be presented but which do not contain any data/results.
+*Dummy tables and charts are empty skeleton tables and charts which show how the results will be presented but which do not contain any data/results.*
 
+## Harms
+*Sufficient detail on summarizing safety data, eg, information on severity, expectedness, and causality; details of how adverse events are coded or categorized; how adverse event data will be analyzed, ie, grade 3/4 only, incidence case analysis, intervention emergent analysis*
 
+## Statistical Software
+*Details of statistical packages to be used to carry out analyses*
+
+## References
+- *References to be provided for nonstandard statistical methods*
+- *Reference to Data Management Plan*
+- *Reference to the Trial Master File and Statistical Master File*
+- *Reference to other standard operating procedures or documents to be adhered to*
+  
