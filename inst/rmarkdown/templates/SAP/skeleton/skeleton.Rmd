@@ -47,7 +47,7 @@ devtools::install_deps()
 
 \newpage
 
-*A statistical analysis plan includes many features of a research project with a particular emphasis on mapping out how research questions will be answered and what is necessary to answer the question. More information can be found here:*
+*A statistical analysis plan includes many features of a research project with a particular emphasis on mapping out how research questions will be answered and what is necessary to answer the question. The reference to this SAP template and more information can be found here:*
 
 *Gamble, Carrol, et al. "Guidelines for the content of statistical analysis plans in clinical trials." Jama 318.23 (2017): 2337-2343.*
 
