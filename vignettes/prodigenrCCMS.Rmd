@@ -1,6 +1,6 @@
 ---
-title: "Getting started with prodigenr"
-author: "Luke W. Johnston"
+title: "Getting started with prodigenr/ prodigenrCCMS"
+author: "Luke W. Johnston, adapted to CCMS needs by Anna Schritz"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 prodigenr, or *pro*ject *di*rectory *gen*erator, was designed to simplify the process of
 creating new data analysis projects and to help make your workflow more
 reproducible from the beginning.
+prodigenrCCMS is an adapted package of the original package prodigenr to the needs of CCMS.
 Standard files and folders are created for specific projects (e.g. abstracts or
 manuscripts). While creating individual folders and files manually for new 
 projects doesn't take too much time, over time and over many researchers, this
@@ -26,25 +27,29 @@ can quickly add up to a lot of time! Plus, when a standard structure is followed
 it makes it easier to share code and establish reproducible practices earlier on
 in the project.
 
-## Setting up a project with prodigenr
+## Setting up a project with prodigenrCCMS
 
 Starting a research project? Create a project directory like so:
 
 ```{r manuscript-proj}
-library(prodigenr)
-# Create a temporary folder using the fs package
-new_project_path <- fs::path_temp("HeartDiseaseExercise")
-setup_project(new_project_path)
+# install.packages(devtools) # only needs to be installed once
+# install_github("ccmsLIH/prodigenrCCMS") # only needs to be installed once
+
+library(devtools)
+library(prodigenrCCMS)
+
+
+prodigenrCCMS::setup_project("path/YourProjectName")
 ```
 
-Or via RStudio's interface (with RStudio version >1.1):
+Or via RStudio's interface (only for prodigenr, not prodigenrCCMS) (with RStudio version >1.1):
 
 ![Creating a prodigenr project in RStudio](../man/figures/rstudio-projects.gif)
 
 The resulting file structure should look something like this:
 
 ```{r folder-tree, echo=FALSE, comment="", results="markup"}
-prodigenr:::viz_project_tree(new_project_path)
+prodigenrCCMS:::viz_project_tree(new_project_path)
 ```
 
 
@@ -54,15 +59,18 @@ a bit more about what each folder and file are used for, which is briefly descri
 here:
 
 - `R/`: Should contain the R scripts and functions used for the analysis.
+- `SAS`: Should contain the SAS scripts and macros used for the analysis.
 - `doc/`: Should contain the files related to presenting the project's
 scientific output (e.g. manuscript).
 - `data/`: If relevant, is where the processed (or simulated) data is kept that
 is used for the project as well as the results of the project's analyses.
 - `data-raw/`: If relevant, is where the scripts that process the raw data into 
 the usable data are kept and, optionally where the raw data is also kept.
+- `datamanagement/`: A folder for all data management files
 - `DESCRIPTION`: Is a standard file that includes metadata about your project, in
 a machine readable format, and that also stores a list of the R packages your project
 depends on.
+- `literature/`: If relevant, all useful literature references can be put here.
 - `.Rproj`: Is a standard file used by RStudio to set some R Project specific
 settings.
 
@@ -94,7 +102,7 @@ structure should look something like this:
 withr::with_dir(fs::path_temp(), {fs::dir_tree(basename(new_project_path))})
 ```
 
-At present, there are only two template files that you can view:
+At present, there are only three template files (SAP added for CCMS) that you can view:
 
 ```{r templates}
 template_list

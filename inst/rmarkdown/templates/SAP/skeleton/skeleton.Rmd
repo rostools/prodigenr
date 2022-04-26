@@ -1,0 +1,220 @@
+---
+title: "*TITLE: Descriptive title that matches the protocol, with SAP either as a forerunner or subtitle,and trial acronym (if applicable)*"
+subtitle: "Statistical Analysis Plan - SAP"
+author: " "
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+  word_document:
+    reference_docx: "SAPtemplate.docx"
+---
+
+```{r setup, include=FALSE}
+options(knitr.kable.NA = "")
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message = FALSE)
+
+Sys.setenv(LANG = "en")
+set.seed(684324)
+Sys.setlocale("LC_TIME", "C")
+
+devtools::install_deps()
+
+library(knitr)
+```
+ \newline
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+
+ 
+ 
+
+**Trial registration number**:
+
+**SAP version**: 001-`r format(Sys.time(), '%d/%m/%Y')`
+
+**Protocol version**: *Reference to version of protocol being used*
+
+**SAP revision**: *SAP revision history*
+```{r revision table}
+revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
+colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
+
+kable(revtab)
+
+
+```
+
+
+**SAP contributors**: 
+
+*Names, affiliations, and roles of SAP contributors*
+
+**Signatures**:
+
+*Person writing the SAP*
+
+*Senior statistician responsible*
+
+*Chief investigator/ clinical lead*
+
+
+
+\newpage
+
+*A statistical analysis plan includes many features of a research project with a particular emphasis on mapping out how research questions will be answered and what is necessary to answer the question. The reference to this SAP template and more information can be found here:*
+
+*Gamble, Carrol, et al. "Guidelines for the content of statistical analysis plans in clinical trials." Jama 318.23 (2017): 2337-2343.*
+
+*Not all sections might be necessary or applicable to your project!*
+
+# General information
+
+**Study title**:  
+ 
+**Person in charge of the project**:  
+ 
+**Person conducting data analysis**: 
+ 
+**Analysis team members**: 
+ 
+
+# Introduction
+
+## Background and rationale
+*Provide an overview of the necessary background for the study including evidence of what is already known in the area of study and what the gaps are in the literature. A  brief synopsis is sufficient within a SAP to avoid duplication of information in the protocol. Finish with a clear stated aim of the project.*
+
+## Objectives
+*Description of specific objectives or hypotheses*
+
+ 
+**Specific hypothesis under study**: 
+
+**Study objectives**:
+ 
+
+
+# Study Methods
+
+## Trial design
+*Brief description of trial design including type of trial (eg, parallel group, multiarm, crossover, factorial) and allocation ratio and may include brief description of interventions*
+
+## Randomization
+*Randomization details, eg, whether any minimization or stratification occurred (including stratifying factors used or the location of that information if it is not held within the SAP)*
+
+## Sample Size
+*Full sample size calculation or reference to sample size calculation in protocol (instead of replication in SAP).*
+*Sufficient detail must be provided to enable another statistician to reproduce the calculation.*
+
+**Number of study participants**: 
+
+**Duration of study**:  
+
+
+## Framework
+*Superiority, equivalence, or non-inferiority hypothesis testing framework, including which comparisons will be presented on this basis*
+*The SAP should clearly specify the framework for each outcome or provide a global statement  .*
+
+## Statistical interim analyses and stopping guidance
+- *Information on interim analyses specifying what interim analyses will be carried out, who will perform the analyses and listing of time points. If interim analyses are not planned then this should be stated for clarity.*
+- *Any planned adjustment of the significance level due to interim analysis*
+- *Details of guidelines for stopping the trial early*
+
+## Timing of final analysis
+*Timing of final analysis, eg, all outcomes analyzed collectively or timing stratified by planned length of follow-up*
+
+## Timing of outcome assessments
+*Time points at which the outcomes are measured including visit “windows”*
+*This information may be provided in a table format.*
+
+# Statistical Principles
+
+## Confidence intervals and P values
+- *Level of statistical significance, including wheater tests will be one- or two-sided*
+- *Description and rationale for any adjustment for multiplicity and, if so, detailing how the type 1 error is to be controlled. If no adjustment for multiplicity is planned then this should be stated for clarity.*
+- *Confidence intervals with their confidence levels to be reported*
+
+## Adherence and protocol deviations
+- *Definition of adherence to the intervention and how this is assessed including extent of exposure*
+- *Description of how adherence to the intervention will be presented*
+- *Definition of protocol deviations for the trial*
+- *Description of which protocol deviations will be summarized (e.g. number and type of protocol deviations, by group)*
+
+## Analysis population
+*Definition of analysis populations, eg, intention to treat, per protocol, complete case, safety*
+*This includes which outcomes will be analysed according to which analysis population.*
+  
+# Trial population
+
+## Screening data
+*Reporting of screening data (if collected) to describe representativeness of trial sample*
+
+## Eligibility
+*Summary of eligibility criteria*
+
+## Recruitment
+*Information to be included in the CONSORT flow diagram*
+*According to the CONSORT guidelines, a flow diagram must be completed in order to be compliant with the CONSORT 2010 standards .*
+
+## Withdrawal/follow-up
+- *Level of withdrawal, eg, from intervention and/or from follow-up*
+- *Timing of withdrawal/lost to follow-up data*
+- *Reasons and details of how withdrawal/lost to follow-up data will be presented*
+
+## Baseline patient characteristics
+- *List of baseline characteristics to be summarized*
+- *Any factors on which the randomisation has been stratified/minimised should be included so that balance across the randomised groups can be demonstrated*
+- *Details of how baseline characteristics will be descriptively summarized*
+
+# Analysis
+
+## Outcome definitions
+*List and describe each primary and secondary outcome including details of:*
+
+- *specification of outcomes and timings. If applicable include the order of importance of primary or key secondary end points (eg, order in which they will be tested)*
+- *specific measurement and units (eg, glucose control, hbA1c [mmol/mol or %])*
+- *any calculation or transformation used to derive the outcome (eg, change from baseline, QoL score, time to event, logarithm, etc)*
+
+## Analysis methods
+*List and describe each primary and secondary outcome inclduing details of:*
+- *what analysis method will be used and how the treatment effects will be presented*
+- *any adjustment for covariates (covariates to be used and how these will be included in the model)*
+- *methods used for assumptions to be checked for statistical methods*
+- *details of alternative methods to be used if distributional assumptions do not hold, eg, normality, proportional hazards, etc*
+- *any planned sensitivity analyses for each outcome where applicable*
+- *any planned subgroup analyses for each outcome including how subgroups are defined, the statistical method that will be used and how the results will be presented (eg, forest plot)*
+
+*If  more than one method is to be used to analyse the primary outcome, e.g. adjusted and unadjusted for covariates, then the primary analysis method should be identified.*
+
+## Missing data
+*Reporting and assumptions/statistical methods to handle missing data (eg, multiple imputation)*
+
+## Additional analyses
+*Details of any additional statistical analyses required, eg, complier-average causal effect analysis*
+
+## Harms
+*Sufficient detail on summarizing safety data, eg, information on severity, expectedness, and causality; details of how adverse events are coded or categorized; how adverse event data will be analyzed, ie, grade 3/4 only, incidence case analysis, intervention emergent analysis*
+
+## Analysis dissemination strategy
+*Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).*
+
+## Interpretation
+*Detail how you will interpret the results in the context of your stated hypothesis. I.e. if the results do/do not meet your hypothesis, what will you conclude?* 
+
+## Statistical Software
+*Details of statistical packages to be used to carry out analyses*
+
+## References
+- *References to be provided for nonstandard statistical methods*
+- *Reference to Data Management Plan*
+- *Reference to the Trial Master File and Statistical Master File*
+- *Reference to document with Dummy tables and Charts*
+- *Reference to other standard operating procedures or documents to be adhered to*
+  

@@ -3,9 +3,9 @@
 \docType{data}
 \name{template_list}
 \alias{template_list}
-\title{List project templates within \pkg{prodigenr}.}
+\title{List project templates within \pkg{prodigenrCCMS}.}
 \format{
-An object of class \code{character} of length 2.
+An object of class \code{character} of length 3.
 }
 \usage{
 template_list

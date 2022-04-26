@@ -1,44 +1,113 @@
 ---
-title: ""
-author:
-  - name: ""
-    url: ""
-    affiliation: ""
-date: "`r Sys.Date()`"
-output: distill::distill_article
+title: "Project Name"
+subtitle: "Statistical Report"
+author: " "
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+  word_document:
+    reference_docx: "ReportTemplate.docx"
+    toc: TRUE
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+options(knitr.kable.NA = "")
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message = FALSE)
+
+Sys.setenv(LANG = "en")
+set.seed(684324)
+Sys.setlocale("LC_TIME", "C")
+
+devtools::install_deps()
+
+library(knitr)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
 
-# Abstract
+ \newline
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
 
-Objective:
+**Trial registration number**:
 
-Research Design and Methods:
+**Report version**: 001-`r format(Sys.time(), '%d/%m/%Y')`
 
-Results:
+**Protocol version**: *Reference to version of protocol being used*
 
-Conclusions:
+**Report revision**: *Report revision history*
+```{r revision table}
+revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
+colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
 
-# Introduction 
+kable(revtab)
 
-# Research Design and Methods
+
+```
+
+
+**Report contributors**: 
+
+*Names, affiliations, and roles of SAP contributors*
+
+**Signatures**:
+
+*Person writing the Report*
+
+*Senior statistician responsible*
+
+*Chief investigator/ clinical lead*
+
+
+\newpage
+
+# Abstract 
+*A brief summary of the report and the conclusions. The aim is to make the reader understand what the report is about.Use ordinary, non-statistical language.*
+
+# Introduction
+*What is the problem and what is the structure of the report.*
+
+# Objective of the report
+*Short and precise description of the goal of the study/report.*
+
+# Data
+*What are the data and how were they obtained?*
+
+# Methods
+*Which methods have you used and why they were chosen.*
+*Reference to the SAP if available is sufficient. Additional analyses, not mentioned in the SAP, can be stated here.*
 
 # Results
+*Results of the analysis.*
+
+## Screening data
+
+## Baseline characteristics
+
+## Main Outcome
+
+## Secondary Outcomes
+
+## Safety
+
 
 # Conclusions
-
-# Acknowledgements
+*Summary of what have been learned and what it means. Strength and limitations of the analysis.*
 
 # References
+*Include paper that are cited in the report*
 
 # Tables
+*If you do not want to include tables in the Results part directly.*
 
 # Figures
+*If you do not want to include figures in the Results part directly.*
 
 # Supplemental Material
+*Additional material*

@@ -4,14 +4,17 @@
 \alias{create_doc}
 \alias{create_report}
 \alias{create_manuscript}
+\alias{create_SAP}
 \alias{create_slides}
 \title{Create a basic R Markdown document from a template.}
 \usage{
-create_doc(type = c("report", "slides"))
+create_doc(type = c("report", "slides", "SAP"))
 
 create_report()
 
 create_manuscript()
+
+create_SAP()
 
 create_slides()
 }
@@ -31,6 +34,8 @@ the \verb{doc/} folder.
 
 \item \code{create_manuscript}: Creates a manuscript R Markdown document in
 the \verb{doc/} folder. Is the same as \code{\link[=create_report]{create_report()}}.
+
+\item \code{create_SAP}: Creates a Statistical Analysis Plan (SAP) R Markdown document in the \verb{doc/} folder.
 
 \item \code{create_slides}: Creates a R Markdown document for making slides in the \verb{doc/} folder.
 }}

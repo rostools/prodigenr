@@ -1,4 +1,5 @@
 library(testthat)
-library(prodigenr)
+library(prodigenrCCMS)
+library(devtools)
 
-test_check("prodigenr")
+test_check("prodigenrCCMS")

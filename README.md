@@ -39,7 +39,45 @@ aims to make it easier to adhere to open scientific practices by
 following a standard, consistent, and established folder and file
 structure for data analysis projects.
 
-## Installation
+## Installation and usage of CCMS modified package prodigenrCCMS
+
+Copy and paste the following two code blocks in R. Specify the project
+name and path to where the project folders should be placed and run the
+code.
+
+### Installation prodigenrCCMS
+
+``` r
+# installation of devtools package needed one time only when first using/running devtools:
+
+install.packages(devtools)
+library(devtools)
+
+# installation of prodigenrCCMS package is also only needed once, except if updates are published on github
+
+install_github("ccmsLIH/prodigenrCCMS")
+```
+
+### Usage prodigenrCCMS
+
+``` r
+library(prodigenrCCMS2)
+
+# Specify project name
+YourProject <- "ProjectName"
+
+# Specify path where the project folder should be placed (use "/" instead of "\" in path)
+# Example:
+# Path <- "L:/Projects folder/"
+Path <- "PathToProjectFolder"
+
+# Setup Project
+prodigenrCCMS::setup_project(paste0(Path, YourProject))
+```
+
+## Installation and usage of original package prodigenr
+
+### Installation prodigenr
 
 You can install the released version of prodigenr from
 [CRAN](https://cran.r-project.org) with:
@@ -55,7 +93,7 @@ And the development version from [GitHub](https://github.com/) with:
 remotes::install_github("rostools/prodigenr")
 ```
 
-## Usage
+### Usage prodigenr
 
 There are two ways of creating a new project: using the R console or
 using the RStudio “New Project” menu option.
@@ -70,8 +108,8 @@ setup_project("~/Desktop/DiseaseDiet")
 
 This then creates a directory tree, with template files for starting
 your analysis! Open the newly created project via the `.Rproj` file. For
-the RStudio approach, go to “File -&gt; New Project”, then “New
-directory” and find the prodigenr project in the list:
+the RStudio approach, go to “File -> New Project”, then “New directory”
+and find the prodigenr project in the list:
 
 ![Creating a prodigenr project in
 RStudio](man/figures/rstudio-projects.gif)
