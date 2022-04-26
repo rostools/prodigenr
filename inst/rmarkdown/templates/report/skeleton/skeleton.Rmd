@@ -10,8 +10,59 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+options(knitr.kable.NA = "")
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message = FALSE)
+
+Sys.setenv(LANG = "en")
+set.seed(684324)
+Sys.setlocale("LC_TIME", "C")
+
+devtools::install_deps()
+
+library(knitr)
 ```
+
+
+ \newline
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+ 
+ <br>
+
+**Trial registration number**:
+
+**Report version**: 001-`r format(Sys.time(), '%d/%m/%Y')`
+
+**Protocol version**: *Reference to version of protocol being used*
+
+**Report revision**: *Report revision history*
+```{r revision table}
+revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
+colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
+
+kable(revtab)
+
+
+```
+
+
+**Report contributors**: 
+
+*Names, affiliations, and roles of SAP contributors*
+
+**Signatures**:
+
+*Person writing the Report*
+
+*Senior statistician responsible*
+
+*Chief investigator/ clinical lead*
 
 
 \newpage
@@ -22,7 +73,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Introduction
 *What is the problem and what is the structure of the report.*
 
-# Objective
+# Objective of the report
 *Short and precise description of the goal of the study/report.*
 
 # Data
@@ -30,9 +81,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Methods
 *Which methods have you used and why they were chosen.*
+*Reference to the SAP if available is sufficient. Additional analyses, not mentioned in the SAP, can be stated here.*
 
 # Results
 *Results of the analysis.*
+
+## Screening data
+
+## Baseline characteristics
+
+## Main Outcome
+
+## Secondary Outcomes
+
+## Safety
 
 
 # Conclusions

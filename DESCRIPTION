@@ -23,10 +23,10 @@ Imports:
     rlang,
     cli,
     whisker,
-    devtools
+    devtools,
+    knitr
 Suggests: 
     testthat,
-    knitr,
     gert
 VignetteBuilder: knitr
 Encoding: UTF-8
