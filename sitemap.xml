@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/index.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/create_doc.html</loc>
+    <loc>/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/prodigenr-package.html</loc>
+    <loc>/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/setup_project.html</loc>
+    <loc>/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/reference/template_list.html</loc>
+    <loc>/LICENSE.html</loc>
   </url>
   <url>
-    <loc>http://prodigenr.lukewjohnston.com/articles/prodigenr.html</loc>
+    <loc>/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>/articles/prodigenr.html</loc>
+  </url>
+  <url>
+    <loc>/authors.html</loc>
+  </url>
+  <url>
+    <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/create_doc.html</loc>
+  </url>
+  <url>
+    <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/prodigenr-package.html</loc>
+  </url>
+  <url>
+    <loc>/reference/setup_project.html</loc>
+  </url>
+  <url>
+    <loc>/reference/setup_with_git.html</loc>
+  </url>
+  <url>
+    <loc>/reference/template_list.html</loc>
   </url>
 </urlset>

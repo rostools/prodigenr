@@ -30,6 +30,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -42,7 +44,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">prodigenr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.6.1.9000</span>
       </span>
     </div>
 
@@ -50,7 +52,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -69,8 +71,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/rostools/prodigenr">
-    <span class="fas fa-github fa-lg"></span>
+  <a href="https://github.com/rostools/prodigenr" class="external-link">
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -86,123 +88,132 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-" class="anchor"></a>Project creation with prodigenr: A component of reproducible and open scientific projects <img src="reference/figures/logo.png" align="right">
+<div class="section level1">
+<div class="page-header"><h1 id="project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-">Project creation with prodigenr: A component of reproducible and open scientific projects <img src="reference/figures/logo.png" align="right"><a class="anchor" aria-label="anchor" href="#project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-"></a>
 </h1></div>
 <!-- badges: start -->
-
-<p>This <a href="https://cran.r-project.org">R</a> package is part of a <a href="https://github.com/rostools">series</a> of (planned) packages that are aimed at creating a toolkit for doing reproducible and open science. Many researchers (especially in biomedicine, medicine, or health, which is my area of research) have little to no knowledge on what open science is or what reproducibility is, let alone how to do it. Our goal is create an <a href="https://rostools.gitlab.io/manifesto">(opinionated) toolkit</a> to automate and simplify the process of doing open and reproducible science.</p>
-<p>This specific package is a <em>pro</em>ject <em>di</em>rectory <em>gen</em>erato<em>r</em> (prodigenr). It will create a standardized project folder structure with the necessary template files for managing and analyzing data and for creating common scientific output (e.g. manuscripts). Because of the standardized structure and because of the focus on a “one project, one scientific output”, this allows the final code and documents to be fairly modular, self-contained, easy to share and make public… and be as reproducible as possible. This folder structure also makes use of the existing and established applications and workflows (<a href="https://www.rstudio.com/">RStudio</a>, <a href="https://CRAN.R-project.org/package=devtools">devtools</a>, and <a href="https://CRAN.R-project.org/package=usethis">usethis</a>). This package aims to make it easier to adhere to open scientific practices by following a standard, consistent, and established folder and file structure for data analysis projects.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the released version of prodigenr from <a href="https://cran.r-project.org">CRAN</a> with:</p>
+<p>This <a href="https://cran.r-project.org" class="external-link">R</a> package is part of a <a href="https://github.com/rostools" class="external-link">series</a> of (planned) packages that are aimed at creating a toolkit for doing reproducible and open science. Many researchers (especially in biomedicine, medicine, or health, which is my area of research) have little to no knowledge on what open science is or what reproducibility is, let alone how to do it. Our goal is create an <a href="https://rostools.gitlab.io/manifesto" class="external-link">(opinionated) toolkit</a> to automate and simplify the process of doing open and reproducible science.</p>
+<p>This specific package is a <em>pro</em>ject <em>di</em>rectory <em>gen</em>erato<em>r</em> (prodigenr). It will create a standardized project folder structure with the necessary template files for managing and analyzing data and for creating common scientific output (e.g. manuscripts). Because of the standardized structure and because of the focus on a “one project, one scientific output”, this allows the final code and documents to be fairly modular, self-contained, easy to share and make public… and be as reproducible as possible. This folder structure also makes use of the existing and established applications and workflows (<a href="https://www.rstudio.com/" class="external-link">RStudio</a>, <a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a>, and <a href="https://CRAN.R-project.org/package=usethis" class="external-link">usethis</a>). This package aims to make it easier to adhere to open scientific practices by following a standard, consistent, and established folder and file structure for data analysis projects.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the released version of prodigenr from <a href="https://cran.r-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"prodigenr"</span><span class="op">)</span></code></pre></div>
-<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"prodigenr"</span><span class="op">)</span></span></code></pre></div>
+<p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"rostools/prodigenr"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rostools/prodigenr"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <p>There are two ways of creating a new project: using the R console or using the RStudio “New Project” menu option.</p>
 <p>Through the console, use the <code><a href="reference/setup_project.html">setup_project()</a></code> command. So, for instance, if you want a manuscript project, type out:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rostools/prodigenr">prodigenr</a></span><span class="op">)</span>
-<span class="fu"><a href="reference/setup_project.html">setup_project</a></span><span class="op">(</span><span class="st">"~/Desktop/DiseaseDiet"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rostools/prodigenr" class="external-link">prodigenr</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/setup_project.html">setup_project</a></span><span class="op">(</span><span class="st">"~/Desktop/DiseaseDiet"</span><span class="op">)</span></span></code></pre></div>
 <p>This then creates a directory tree, with template files for starting your analysis! Open the newly created project via the <code>.Rproj</code> file. For the RStudio approach, go to “File -&gt; New Project”, then “New directory” and find the prodigenr project in the list:</p>
-<p><img src="reference/figures/rstudio-projects.gif" alt="Creating a prodigenr project in RStudio"></p>
+<div class="figure">
+<img src="reference/figures/rstudio-projects.gif" alt=""><p class="caption">Creating a prodigenr project in RStudio</p>
+</div>
 <p>Once in the project, you can add a manuscript R Markdown file or poster using:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/create_doc.html">create_manuscript</a></span><span class="op">(</span><span class="op">)</span> 
-<span class="co"># Or...</span>
-<span class="fu">create_poster</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/create_doc.html">create_manuscript</a></span><span class="op">(</span><span class="op">)</span> </span>
+<span><span class="co"># Or...</span></span>
+<span><span class="fu">create_poster</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>The main secondary function is the <code>template_list</code> command, which lists the available template files (submit a PR if you want another template included!):</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">template_list</span>
-<span class="co">#&gt; [1] "report" "slides"</span></code></pre></div>
-<!-- TODO: Add gif for using RStudio "new file" -->
-<p>For a more detailed tutorial, see the introduction vignette:</p>
+<code class="sourceCode R"><span><span class="va">template_list</span></span>
+<span><span class="co">#&gt; [1] "report" "slides"</span></span></code></pre></div>
+<!-- TODO: Add gif for using RStudio "new file" --><p>For a more detailed tutorial, see the introduction vignette:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html">vignette</a></span><span class="op">(</span><span class="st">'prodigenr'</span>, <span class="st">'prodigenr'</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">'prodigenr'</span>, <span class="st">'prodigenr'</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="related-packages-or-projects" class="section level2">
-<h2 class="hasAnchor">
-<a href="#related-packages-or-projects" class="anchor"></a>Related packages or projects</h2>
+<div class="section level2">
+<h2 id="related-packages-or-projects">Related packages or projects<a class="anchor" aria-label="anchor" href="#related-packages-or-projects"></a>
+</h2>
 <p>There are several existing packages for creating projects, each of which has it’s own pros and cons. Try them out and see which you like!</p>
 <ul>
-<li><a href="http://projecttemplate.net/">ProjectTemplate</a></li>
-<li><a href="https://cran.r-project.org/package=makeProject">makeProject</a></li>
-<li>R package structure via <a href="https://CRAN.R-project.org/package=devtools">devtools</a>, argued for in this <a href="https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html">blog</a>
+<li><a href="http://projecttemplate.net/" class="external-link">ProjectTemplate</a></li>
+<li><a href="https://cran.r-project.org/package=makeProject" class="external-link">makeProject</a></li>
+<li>R package structure via <a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a>, argued for in this <a href="https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html" class="external-link">blog</a>
 </li>
-<li><a href="https://github.com/benmarwick/rrtools">rrtools</a></li>
+<li><a href="https://github.com/benmarwick/rrtools" class="external-link">rrtools</a></li>
 </ul>
-<p>prodigenr tries to use ideas from R packages/<a href="https://CRAN.R-project.org/package=devtools">devtools</a> while still being as simple as possible and to be more specific to academic researchers primarily in biomedical/non-computer science fields. However, it can always improve! I welcome any suggestions, just submit a <a href="https://github.com/rostools/prodigenr/issues">GitHub issue</a>!</p>
+<p>prodigenr tries to use ideas from R packages/<a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a> while still being as simple as possible and to be more specific to academic researchers primarily in biomedical/non-computer science fields. However, it can always improve! I welcome any suggestions, just submit a <a href="https://github.com/rostools/prodigenr/issues" class="external-link">GitHub issue</a>!</p>
 </div>
-<div id="interested-in-contributing" class="section level2">
-<h2 class="hasAnchor">
-<a href="#interested-in-contributing" class="anchor"></a>Interested in contributing?</h2>
-<p>See the <a href="https://rostools.github.io/prodigenr/CONTRIBUTING.html">contributing documentation</a> for information on how to contribute. Please note that this project is released with a <a href="https://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
-<p>Special thanks to <br><span class="math display">@<em>z</em><em>s</em><em>e</em><em>m</em><em>n</em><em>a</em><em>n</em><em>i</em></span><br>(<a href="https://twitter.com/zsemnani?lang=en" class="uri">https://twitter.com/zsemnani?lang=en</a>) for creating the logo!</p>
+<div class="section level2">
+<h2 id="interested-in-contributing">Interested in contributing?<a class="anchor" aria-label="anchor" href="#interested-in-contributing"></a>
+</h2>
+<p>See the <a href="https://rostools.github.io/prodigenr/CONTRIBUTING.html" class="external-link">contributing documentation</a> for information on how to contribute. Please note that this project is released with a <a href="https://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+<p>Special thanks to [@zsemnani](<a href="https://twitter.com/zsemnani?lang=en" class="external-link uri">https://twitter.com/zsemnani?lang=en</a>) for creating the logo!</p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=prodigenr">https://​cloud.r-project.org/​package=prodigenr</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/rostools/prodigenr/">https://​github.com/​rostools/​prodigenr/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/rostools/prodigenr/issues">https://​github.com/​rostools/​prodigenr/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=prodigenr" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/rostools/prodigenr/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/rostools/prodigenr/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CONTRIBUTING.html">Contributing guide</a></li>
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
-<div class="developers">
-<h2>Developers</h2>
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li>Luke Johnston <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4169-2616" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html#citation">Citing prodigenr</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=prodigenr"><img src="http://www.r-pkg.org/badges/version/prodigenr" alt="CRAN Status Badge"></a></li>
-<li><a href="https://github.com/rostools/prodigenr/actions"><img src="https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
-<li><a href="https://www.r-pkg.org:443/pkg/prodigenr"><img src="http://cranlogs.r-pkg.org/badges/prodigenr" alt="CRAN RStudio mirror downloads"></a></li>
+<li>Luke Johnston <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4169-2616" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=prodigenr" class="external-link"><img src="http://www.r-pkg.org/badges/version/prodigenr" alt="CRAN Status Badge"></a></li>
+<li><a href="https://github.com/rostools/prodigenr/actions" class="external-link"><img src="https://github.com/rostools/prodigenr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
+<li><a href="https://www.r-pkg.org:443/pkg/prodigenr" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/prodigenr" alt="CRAN RStudio mirror downloads"></a></li>
+</ul>
 </div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Luke Johnston.</p>
+  <p></p>
+<p>Developed by Luke Johnston.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -210,6 +221,8 @@
 
   
 
+
+  
 
   </body>
 </html>
