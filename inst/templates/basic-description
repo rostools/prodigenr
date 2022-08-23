@@ -3,6 +3,5 @@ Type: Project
 Version: 0.0.1
 Imports:
     knitr,
-    rmarkdown,
-    distill
+    rmarkdown
 Encoding: UTF-8
