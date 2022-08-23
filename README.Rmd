@@ -29,17 +29,21 @@ have little to no knowledge on what open science is or what reproducibility is,
 let alone how to do it. Our goal is create an [(opinionated) toolkit][rostools-manifesto] to automate
 and simplify the process of doing open and reproducible science.
 
-This specific package is a *pro*ject *di*rectory *gen*erato*r* (prodigenr). It
-will create a standardized project folder structure with the necessary template
-files for managing and analyzing data and for creating common scientific output
-(e.g. manuscripts). Because of the standardized structure
-and because of the focus on a "one project, one scientific output", this allows
-the final code and documents to be fairly modular, self-contained, easy to share
-and make public... and be as reproducible as possible. This folder structure also
+This package has a simple aim of being a *pro*ject *di*rectory *gen*erato*r*
+(prodigenr), with a simple focus on:
+
+1. Creating a standardized project folder structure with a few template files
+needed for beginning a data analysis project
+2. Following a "one project, one (main) scientific output" principle, such as a
+paper, report, or manuscript
+3. Adhering to established best practices that make it easier for the project to
+be reproducible and open
+
+This standardized approach to how a scientific project is structured helps ensure
+that the final code and documents are fairly modular, self-contained, easy to share
+and make public, and be as reproducible as possible. The structure also
 makes use of the existing and established applications and workflows ([RStudio],
-[devtools], and [usethis]). This package aims to make it easier to adhere to
-open scientific practices by following a standard, consistent, and established
-folder and file structure for data analysis projects.
+[devtools], and [usethis]). 
 
 ## Installation
 

@@ -17,10 +17,9 @@ knitr::opts_chunk$set(
 ```
 
 prodigenr, or *pro*ject *di*rectory *gen*erator, was designed to simplify the process of
-creating new data analysis projects and to help make your workflow more
-reproducible from the beginning.
-Standard files and folders are created for specific projects (e.g. abstracts or
-manuscripts). While creating individual folders and files manually for new 
+creating new scientific data analysis projects and to help make your workflow more
+reproducible and open from the beginning.
+While creating individual folders and files manually for new 
 projects doesn't take too much time, over time and over many researchers, this
 can quickly add up to a lot of time! Plus, when a standard structure is followed
 it makes it easier to share code and establish reproducible practices earlier on
