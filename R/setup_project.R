@@ -31,17 +31,18 @@ setup_project <-
             cli::cli_abort(c("The {.val {proj_path}} folder already exists, so project creation is canceled.",
                          "i" = "Delete the folder or use another name (not {.val {proj_name}}) for your project."))
         }
-        fs::dir_create(proj_path)
+        proj_template <- find_template("projects", "basic-analysis")
+        fs::dir_copy(proj_template, new_path = proj_path)
 
         withr::with_dir(
             new = proj_path,
             code = {
-                proj_template <- find_template("projects", "basic-analysis")
-                fs::dir_copy(proj_template, new_path = proj_name)
                 update_template("description", "DESCRIPTION", data = list(ProjectName = proj_name))
+                fs::file_delete("description")
                 update_template("template-rproj", paste0(proj_name, ".Rproj"))
+                fs::file_delete("template-rproj")
                 update_template("README.md", data = list(ProjectName = proj_name))
-                create_report()
+                suppressMessages(create_report())
             })
     }
 

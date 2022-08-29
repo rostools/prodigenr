@@ -28,7 +28,7 @@ update_template <- function(template,
                             save_as = template,
                             data = list()) {
     template_contents <-
-        base::strsplit(whisker::whisker.render(read_utf8(template_path),
+        base::strsplit(whisker::whisker.render(read_utf8(template),
                                                data), "\n")[[1]]
     new <- base::writeLines(template_contents, save_as)
     invisible(new)
