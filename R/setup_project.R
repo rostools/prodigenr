@@ -37,10 +37,9 @@ setup_project <-
         withr::with_dir(
             new = proj_path,
             code = {
-                update_template("description", "DESCRIPTION", data = list(ProjectName = proj_name))
-                fs::file_delete("description")
-                update_template("template-rproj", paste0(proj_name, ".Rproj"))
-                fs::file_delete("template-rproj")
+                update_template("DESCRIPTION", data = list(ProjectName = proj_name))
+                update_template("template-Rproj", paste0(proj_name, ".Rproj"))
+                fs::file_delete("template-Rproj")
                 update_template("README.md", data = list(ProjectName = proj_name))
                 suppressMessages(create_report())
             })
