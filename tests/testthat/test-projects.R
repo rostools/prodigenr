@@ -14,8 +14,8 @@ test_that("project is set up", {
                  sort(c("R", "doc", "data", "data-raw")))
 
     withr::local_dir(new = new_project)
-    expect_true(file.exists("DESCRIPTION"))
-    expect_true(file.exists("testing.Rproj"))
+    expect_true(fs::file_exists("DESCRIPTION"))
+    expect_true(fs::file_exists("testing.Rproj"))
 })
 
 test_that("git gets added", {

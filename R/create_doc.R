@@ -24,7 +24,7 @@ create_doc <- function(type = c("report", "slides")) {
     type <- match.arg(type)
     file_name <- normalizePath(file.path("doc", paste0(type, ".Rmd")), mustWork = FALSE)
     template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
-    if (file.exists(file_name)) {
+    if (fs::file_exists(file_name)) {
         rlang::abort(paste0("The file '", type, ".Rmd' already exists in the doc folder."))
     } else {
         rmarkdown::draft(

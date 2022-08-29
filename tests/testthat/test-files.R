@@ -9,7 +9,7 @@ test_that("Report and slides created", {
     quiet_test(create_slides())
 
     withr::local_dir(new = file.path(new_project, "doc"))
-    expect_true(file.exists("slides.Rmd"))
+    expect_true(fs::file_exists("slides.Rmd"))
 
     # Needs a Rproj file.
     file.remove("../testing-docs.Rproj")
