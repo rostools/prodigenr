@@ -6,12 +6,9 @@
 \alias{prodigenr-package}
 \title{prodigenr: Research Project Directory Generator}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Create a project directory structure, along with typical files
-    for that project.  This allows projects to be quickly and easily created,
-    as well as for them to be standardized. Designed specifically with scientists
-    in mind (mainly bio-medical researchers, but likely applies to other fields).
+Create a project directory structure, along with typical files for that project. This allows projects to be quickly and easily created, as well as for them to be standardized. Designed specifically with scientists in mind (mainly bio-medical researchers, but likely applies to other fields).
 }
 \seealso{
 Useful links:

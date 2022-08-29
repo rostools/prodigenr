@@ -27,14 +27,14 @@ the \verb{doc/} folder.
 }
 \section{Functions}{
 \itemize{
-\item \code{create_report}: Creates a report R Markdown document in the \verb{doc/} folder.
+\item \code{create_report()}: Creates a report R Markdown document in the \verb{doc/} folder.
 
-\item \code{create_manuscript}: Creates a manuscript R Markdown document in
+\item \code{create_manuscript()}: Creates a manuscript R Markdown document in
 the \verb{doc/} folder. Is the same as \code{\link[=create_report]{create_report()}}.
 
-\item \code{create_slides}: Creates a R Markdown document for making slides in the \verb{doc/} folder.
-}}
+\item \code{create_slides()}: Creates a R Markdown document for making slides in the \verb{doc/} folder.
 
+}}
 \examples{
 \dontrun{
 create_manuscript()
