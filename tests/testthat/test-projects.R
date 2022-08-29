@@ -13,16 +13,17 @@ test_that("project is set up", {
     expect_equal(sort(basename(folders_created)),
                  sort(c("R", "doc", "data", "data-raw")))
 
-    withr::local_dir(new = new_project)
-    expect_true(fs::file_exists("DESCRIPTION"))
-    expect_true(fs::file_exists("testing.Rproj"))
+    expect_match(files_created, ".*DESCRIPTION$", all = FALSE)
+    expect_match(files_created, ".*testing\\.Rproj$", all = FALSE)
 })
 
 test_that("git gets added", {
-    withr::local_dir(new = new_project)
-    capture_output(setup_with_git())
-    expect_true(fs::dir_exists(".git"))
-    expect_true(fs::file_exists(".gitignore"))
+    withr::with_dir(new = new_project, {
+        capture_output(setup_with_git())
+        git_files <- fs::dir_ls(new_project, all = TRUE)
+        expect_match(git_files, ".*\\.git$", all = FALSE)
+        expect_match(git_files, ".*\\.gitignore$", all = FALSE)
+    })
 })
 
 fs::dir_delete(new_project)
