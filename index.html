@@ -17,8 +17,7 @@
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
-<meta property="og:title" content="Research Project Directory Generator">
+<script src="pkgdown.js"></script><meta property="og:title" content="Research Project Directory Generator">
 <meta property="og:description" content="Create a project directory structure, along with typical files
     for that project.  This allows projects to be quickly and easily created,
     as well as for them to be standardized. Designed specifically with scientists
@@ -89,11 +88,17 @@
       </header><div class="row">
   <div class="contents col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-">Project creation with prodigenr: A component of reproducible and open scientific projects <img src="reference/figures/logo.png" align="right"><a class="anchor" aria-label="anchor" href="#project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-"></a>
+<div class="page-header"><h1 id="project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-">Project creation with prodigenr: A component of reproducible and open scientific projects <img src="reference/figures/logo.png" style="text-align: right;"><a class="anchor" aria-label="anchor" href="#project-creation-with-prodigenr-a-component-of-reproducible-and-open-scientific-projects-"></a>
 </h1></div>
 <!-- badges: start -->
 <p>This <a href="https://cran.r-project.org" class="external-link">R</a> package is part of a <a href="https://github.com/rostools" class="external-link">series</a> of (planned) packages that are aimed at creating a toolkit for doing reproducible and open science. Many researchers (especially in biomedicine, medicine, or health, which is my area of research) have little to no knowledge on what open science is or what reproducibility is, let alone how to do it. Our goal is create an <a href="https://rostools.gitlab.io/manifesto" class="external-link">(opinionated) toolkit</a> to automate and simplify the process of doing open and reproducible science.</p>
-<p>This specific package is a <em>pro</em>ject <em>di</em>rectory <em>gen</em>erato<em>r</em> (prodigenr). It will create a standardized project folder structure with the necessary template files for managing and analyzing data and for creating common scientific output (e.g. manuscripts). Because of the standardized structure and because of the focus on a “one project, one scientific output”, this allows the final code and documents to be fairly modular, self-contained, easy to share and make public… and be as reproducible as possible. This folder structure also makes use of the existing and established applications and workflows (<a href="https://www.rstudio.com/" class="external-link">RStudio</a>, <a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a>, and <a href="https://CRAN.R-project.org/package=usethis" class="external-link">usethis</a>). This package aims to make it easier to adhere to open scientific practices by following a standard, consistent, and established folder and file structure for data analysis projects.</p>
+<p>This package has a simple aim of being a <em>pro</em>ject <em>di</em>rectory <em>gen</em>erato<em>r</em> (prodigenr), with a simple focus on:</p>
+<ol style="list-style-type: decimal">
+<li>Creating a standardized project folder structure with a few template files needed for beginning a data analysis project</li>
+<li>Following a “one project, one (main) output” principle, such as a report/manuscript in the case of scientific output or a book or website for things like courses or workshops</li>
+<li>Adhering to established best practices that make it easier for the project to be reproducible and open</li>
+</ol>
+<p>This standardized approach to how a scientific project is structured helps ensure that the final code and documents are fairly modular, self-contained, easy to share and make public, and be as reproducible as possible. The structure also makes use of the existing and established applications and workflows (<a href="https://www.rstudio.com/" class="external-link">RStudio</a>, <a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a>, and <a href="https://CRAN.R-project.org/package=usethis" class="external-link">usethis</a>).</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -117,11 +122,9 @@
 <div class="figure">
 <img src="reference/figures/rstudio-projects.gif" alt=""><p class="caption">Creating a prodigenr project in RStudio</p>
 </div>
-<p>Once in the project, you can add a manuscript R Markdown file or poster using:</p>
+<p>Once in the project, you can add a manuscript R Markdown file using:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/create_doc.html">create_manuscript</a></span><span class="op">(</span><span class="op">)</span> </span>
-<span><span class="co"># Or...</span></span>
-<span><span class="fu">create_poster</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/create_doc.html">create_manuscript</a></span><span class="op">(</span><span class="op">)</span> </span></code></pre></div>
 <p>The main secondary function is the <code>template_list</code> command, which lists the available template files (submit a PR if you want another template included!):</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">template_list</span></span>
@@ -133,21 +136,14 @@
 <div class="section level2">
 <h2 id="related-packages-or-projects">Related packages or projects<a class="anchor" aria-label="anchor" href="#related-packages-or-projects"></a>
 </h2>
-<p>There are several existing packages for creating projects, each of which has it’s own pros and cons. Try them out and see which you like!</p>
-<ul>
-<li><a href="http://projecttemplate.net/" class="external-link">ProjectTemplate</a></li>
-<li><a href="https://cran.r-project.org/package=makeProject" class="external-link">makeProject</a></li>
-<li>R package structure via <a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a>, argued for in this <a href="https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html" class="external-link">blog</a>
-</li>
-<li><a href="https://github.com/benmarwick/rrtools" class="external-link">rrtools</a></li>
-</ul>
-<p>prodigenr tries to use ideas from R packages/<a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a> while still being as simple as possible and to be more specific to academic researchers primarily in biomedical/non-computer science fields. However, it can always improve! I welcome any suggestions, just submit a <a href="https://github.com/rostools/prodigenr/issues" class="external-link">GitHub issue</a>!</p>
+<p>There are several existing packages for creating projects, each of which has it’s own pros and cons. Check out the last section of the <code><a href="articles/prodigenr.html">vignette("prodigenr")</a></code> for more details. Try them out and see which you like!</p>
+<p>prodigenr tries to use ideas from R packages/<a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a> while still being as simple as possible and to be more specific to academic researchers primarily in biomedical/non-computer science fields. However, it can always improve! I welcome any suggestions, just submit a <a href="https://github.com/rostools/prodigenr/issues" class="external-link">GitHub issue</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="interested-in-contributing">Interested in contributing?<a class="anchor" aria-label="anchor" href="#interested-in-contributing"></a>
 </h2>
 <p>See the <a href="https://rostools.github.io/prodigenr/CONTRIBUTING.html" class="external-link">contributing documentation</a> for information on how to contribute. Please note that this project is released with a <a href="https://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
-<p>Special thanks to [@zsemnani](<a href="https://twitter.com/zsemnani?lang=en" class="external-link uri">https://twitter.com/zsemnani?lang=en</a>) for creating the logo!</p>
+<p>Special thanks to <a href="https://twitter.com/zsemnani?lang=en" class="external-link">@zsemnani</a> for creating the logo!</p>
 </div>
 </div>
   </div>

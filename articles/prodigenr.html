@@ -17,8 +17,7 @@
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<meta property="og:title" content="Getting started with prodigenr">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with prodigenr">
 <meta property="og:description" content="prodigenr">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -89,7 +88,7 @@
       <h1 data-toc-skip>Getting started with prodigenr</h1>
                         <h4 data-toc-skip class="author">Luke W. Johnston</h4>
             
-            <h4 data-toc-skip class="date">2022-08-23</h4>
+            <h4 data-toc-skip class="date">2022-08-29</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/rostools/prodigenr/blob/HEAD/vignettes/prodigenr.Rmd" class="external-link"><code>vignettes/prodigenr.Rmd</code></a></small>
       <div class="hidden name"><code>prodigenr.Rmd</code></div>
@@ -114,7 +113,6 @@
 </div>
 <p>The resulting file structure should look something like this:</p>
 <pre><code> [01;34mHeartDiseaseExercise [0m
-├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 ├──  [01;34mR [0m
 │   └── README.md
@@ -125,13 +123,14 @@
 ├──  [01;34mdata-raw [0m
 │   └── README.md
 └──  [01;34mdoc [0m
-    └── README.md</code></pre>
+    ├── README.md
+    └──  [32mreport.Rmd [0m</code></pre>
 <p><code>README.md</code> files are contained within each project and in each folder that explains a bit more about what each folder and file are used for, which is briefly described here:</p>
 <ul>
 <li>
 <code>R/</code>: Should contain the R scripts and functions used for the analysis.</li>
 <li>
-<code>doc/</code>: Should contain the files related to presenting the project’s scientific output (e.g. manuscript).</li>
+<code>doc/</code>: Should contain the files related to presenting the project’s scientific output. Already has the report/manuscript inside.</li>
 <li>
 <code>data/</code>: If relevant, is where the processed (or simulated) data is kept that is used for the project as well as the results of the project’s analyses.</li>
 <li>
@@ -141,16 +140,13 @@
 <li>
 <code>.Rproj</code>: Is a standard file used by RStudio to set some R Project specific settings.</li>
 </ul>
-<p>To add a new document (e.g. slides, manuscript), run any of the <code>create_*()</code> commands (e.g. <code><a href="../reference/create_doc.html">create_manuscript()</a></code>) in the console while in RStudio in the newly created project (via the <code>.Rproj</code> file):</p>
+<p>To add a new document (e.g. slides, manuscript), run any of the <code>create_*()</code> commands (e.g. <code><a href="../reference/create_doc.html">create_slides()</a></code>) in the console while in RStudio in the newly created project (via the <code>.Rproj</code> file):</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># you need to run these in the project's console</span></span>
-<span><span class="fu"><a href="../reference/create_doc.html">create_manuscript</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/create_doc.html">create_slides</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> Creating a <span style="color: #0000BB;">"report"</span> file in the <span style="color: #0000BB;">"doc/"</span> folder.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> Creating a <span style="color: #0000BB;">"slides"</span> file in the <span style="color: #0000BB;">"doc/"</span> folder.</span></span></code></pre>
+<pre><code><span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> Creating a <span style="color: #0000BB;">"slides"</span> file in the <span style="color: #0000BB;">"doc/"</span> folder.</span></span></code></pre>
 <p>Now two more files have been added to the <code>doc/</code> folder. The resulting file structure should look something like this:</p>
 <pre><code> [01;34mHeartDiseaseExercise [0m
-├── DESCRIPTION
 ├── HeartDiseaseExercise.Rproj
 ├──  [01;34mR [0m
 │   └── README.md
@@ -184,7 +180,7 @@
 <li>
 <a href="https://github.com/benmarwick/rrtools" class="external-link"><code>rrtools</code></a> is very similar to prodigenr, except it focuses only on manuscripts. Is well thought out and the documentation is well written.</li>
 <li>
-<a href="https://github.com/jdblischak/workflowr" class="external-link"><code>workflowr</code></a> is a workflow for creating online, data science content.</li>
+<a href="https://github.com/workflowr/workflowr" class="external-link"><code>workflowr</code></a> is a workflow for creating online, data science content.</li>
 </ul>
 <p>There is also a list of other similar projects <a href="https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia" class="external-link">on the rOpenSci GitHub repository</a>. It’s up to you to decide which style to use.</p>
 </div>
