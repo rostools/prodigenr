@@ -34,8 +34,9 @@ This package has a simple aim of being a *pro*ject *di*rectory *gen*erato*r*
 
 1. Creating a standardized project folder structure with a few template files
 needed for beginning a data analysis project
-2. Following a "one project, one (main) scientific output" principle, such as a
-paper, report, or manuscript
+2. Following a "one project, one (main) output" principle, such as a
+report/manuscript in the case of scientific output or a book or website for things
+like courses or workshops
 3. Adhering to established best practices that make it easier for the project to
 be reproducible and open
 
@@ -80,12 +81,10 @@ prodigenr project in the list:
 
 ![Creating a prodigenr project in RStudio](man/figures/rstudio-projects.gif)
 
-Once in the project, you can add a manuscript R Markdown file or poster using:
+Once in the project, you can add a manuscript R Markdown file using:
 
 ``` r
 create_manuscript() 
-# Or...
-create_poster()
 ```
 
 The main secondary function is the `template_list` command, which lists the
@@ -110,19 +109,14 @@ vignette('prodigenr', 'prodigenr')
 ## Related packages or projects
 
 There are several existing packages for creating projects, each of which has
-it's own pros and cons. Try them out and see which you like!
-
-- [ProjectTemplate](http://projecttemplate.net/) 
-- [makeProject](https://cran.r-project.org/package=makeProject)
-- R package structure via [devtools], argued for in this
-[blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html) 
-- [rrtools](https://github.com/benmarwick/rrtools)
+it's own pros and cons. Check out the last section of the `vignette("prodigenr")`
+for more details. Try them out and see which you like!
 
 prodigenr tries to use ideas from R packages/[devtools] while still being as simple
 as possible and to be more specific to academic researchers primarily in
 biomedical/non-computer science fields. However, it can always improve! I
 welcome any suggestions, just submit a 
-[GitHub issue](https://github.com/rostools/prodigenr/issues)!
+[GitHub issue](https://github.com/rostools/prodigenr/issues).
 
 ## Interested in contributing?
 

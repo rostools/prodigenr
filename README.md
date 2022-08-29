@@ -23,21 +23,24 @@ create an [(opinionated) toolkit](https://rostools.gitlab.io/manifesto)
 to automate and simplify the process of doing open and reproducible
 science.
 
-This specific package is a *pro*ject *di*rectory *gen*erato*r*
-(prodigenr). It will create a standardized project folder structure with
-the necessary template files for managing and analyzing data and for
-creating common scientific output (e.g. manuscripts). Because of the
-standardized structure and because of the focus on a “one project, one
-scientific output”, this allows the final code and documents to be
-fairly modular, self-contained, easy to share and make public… and be as
-reproducible as possible. This folder structure also makes use of the
-existing and established applications and workflows
-([RStudio](https://www.rstudio.com/),
+This package has a simple aim of being a *pro*ject *di*rectory
+*gen*erato*r* (prodigenr), with a simple focus on:
+
+1.  Creating a standardized project folder structure with a few template
+    files needed for beginning a data analysis project
+2.  Following a “one project, one (main) output” principle, such as a
+    report/manuscript in the case of scientific output or a book or
+    website for things like courses or workshops
+3.  Adhering to established best practices that make it easier for the
+    project to be reproducible and open
+
+This standardized approach to how a scientific project is structured
+helps ensure that the final code and documents are fairly modular,
+self-contained, easy to share and make public, and be as reproducible as
+possible. The structure also makes use of the existing and established
+applications and workflows ([RStudio](https://www.rstudio.com/),
 [devtools](https://CRAN.R-project.org/package=devtools), and
-[usethis](https://CRAN.R-project.org/package=usethis)). This package
-aims to make it easier to adhere to open scientific practices by
-following a standard, consistent, and established folder and file
-structure for data analysis projects.
+[usethis](https://CRAN.R-project.org/package=usethis)).
 
 ## Installation
 
@@ -70,19 +73,16 @@ setup_project("~/Desktop/DiseaseDiet")
 
 This then creates a directory tree, with template files for starting
 your analysis! Open the newly created project via the `.Rproj` file. For
-the RStudio approach, go to “File -&gt; New Project”, then “New
-directory” and find the prodigenr project in the list:
+the RStudio approach, go to “File -\> New Project”, then “New directory”
+and find the prodigenr project in the list:
 
 ![Creating a prodigenr project in
 RStudio](man/figures/rstudio-projects.gif)
 
-Once in the project, you can add a manuscript R Markdown file or poster
-using:
+Once in the project, you can add a manuscript R Markdown file using:
 
 ``` r
 create_manuscript() 
-# Or...
-create_poster()
 ```
 
 The main secondary function is the `template_list` command, which lists
@@ -105,22 +105,16 @@ vignette('prodigenr', 'prodigenr')
 ## Related packages or projects
 
 There are several existing packages for creating projects, each of which
-has it’s own pros and cons. Try them out and see which you like!
-
--   [ProjectTemplate](http://projecttemplate.net/)
--   [makeProject](https://cran.r-project.org/package=makeProject)
--   R package structure via
-    [devtools](https://CRAN.R-project.org/package=devtools), argued for
-    in this
-    [blog](https://rmflight.github.io/posts/2014/07/vignetteAnalysis.html)
--   [rrtools](https://github.com/benmarwick/rrtools)
+has it’s own pros and cons. Check out the last section of the
+`vignette("prodigenr")` for more details. Try them out and see which you
+like!
 
 prodigenr tries to use ideas from R
 packages/[devtools](https://CRAN.R-project.org/package=devtools) while
 still being as simple as possible and to be more specific to academic
 researchers primarily in biomedical/non-computer science fields.
 However, it can always improve! I welcome any suggestions, just submit a
-[GitHub issue](https://github.com/rostools/prodigenr/issues)!
+[GitHub issue](https://github.com/rostools/prodigenr/issues).
 
 ## Interested in contributing?
 
@@ -131,5 +125,5 @@ released with a [Contributor Code of
 Conduct](https://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html). By
 participating in this project you agree to abide by its terms.
 
-Special thanks to \[@zsemnani\](<https://twitter.com/zsemnani?lang=en>)
-for creating the logo!
+Special thanks to [@zsemnani](https://twitter.com/zsemnani?lang=en) for
+creating the logo!
