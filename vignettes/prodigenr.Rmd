@@ -46,15 +46,13 @@ The resulting file structure should look something like this:
 prodigenr:::viz_project_tree(new_project_path)
 ```
 
-
-
 `README.md` files are contained within each project and in each folder that explains
 a bit more about what each folder and file are used for, which is briefly described
 here:
 
 - `R/`: Should contain the R scripts and functions used for the analysis.
-- `doc/`: Should contain the files related to presenting the project's
-scientific output (e.g. manuscript).
+- `doc/`: Should contain the files related to presenting the project's scientific
+output. Already has the report/manuscript inside.
 - `data/`: If relevant, is where the processed (or simulated) data is kept that
 is used for the project as well as the results of the project's analyses.
 - `data-raw/`: If relevant, is where the scripts that process the raw data into 
@@ -66,21 +64,19 @@ depends on.
 settings.
 
 To add a new document (e.g. slides, manuscript), run any of the `create_*()`
-commands (e.g. `create_manuscript()`) in the console while in RStudio in the
+commands (e.g. `create_slides()`) in the console while in RStudio in the
 newly created project (via the `.Rproj` file):
 
 ```{r example-create-function, eval=FALSE}
 # you need to run these in the project's console
-create_manuscript()
 create_slides()
 ```
 
-```{r poster-abstract-hide, echo=FALSE}
+```{r example-create-functions-hide, echo=FALSE}
 # you need to run these in the project's console
 withr::with_dir(
     new = new_project_path,
     code = {
-        create_manuscript()
         create_slides()
     }
 )
