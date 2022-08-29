@@ -127,7 +127,7 @@ compared to `ProjectTemplate` in this
 - [`rrtools`](https://github.com/benmarwick/rrtools) is very similar to prodigenr, 
 except it focuses only on manuscripts. Is well thought out and the documentation
 is well written.
-- [`workflowr`](https://github.com/jdblischak/workflowr) is a workflow for creating
+- [`workflowr`](https://github.com/workflowr/workflowr) is a workflow for creating
 online, data science content.
 
 There is also a list of other similar projects 

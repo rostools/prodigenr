@@ -87,7 +87,7 @@ description (#38, #80).
 * `prodigen()` now creates a new project structure that mimics R package development
 more, specifically `devtools` (since it is well documented and actively
 maintained) (#18, #15, #14). The old style has been removed.
-* Added a function to include a [STROBE](https://www.strobe-statement.org/index.php?id=strobe-home) 
+* Added a function to include a [STROBE](https://www.strobe-statement.org/) 
 checklist for  reporting guidelines (#21).
 * Added function to include an `rfigshare` script to send to [figshare](https://figshare.com/) (#19).
 * Added function to include a more complete MIT license (#20).
