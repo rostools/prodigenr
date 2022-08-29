@@ -1,19 +1,18 @@
 ---
+# Uses Quarto metadata: https://quarto.org/docs/journals/authors.html
 title: ""
 author:
   - name: ""
-    url: ""
-    affiliation: ""
+    orcid: ""
+    affiliations: 
+        - name: ""
 date: "`r Sys.Date()`"
-output: distill::distill_article
+format: html
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
 
 # Abstract
 

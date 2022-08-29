@@ -1,4 +1,4 @@
-name: Manuscript with basic outline (from distill)
+name: Report/manuscript with basic outline
 description: >
- Template for creating a generic scientific manuscript, empty except
- for standard headers and the distill package metadata.
+ Template for creating a generic scientific report/manuscript, empty except
+ for standard headers and Quarto metadata.

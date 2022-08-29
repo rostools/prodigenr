@@ -2,6 +2,8 @@
 
 ## Minor changes
 
+- Removed Distill from imports and from created report, switching to using Quarto
+instead (e.g. with YAML metadata).
 - Removed AppVeyor.
 - Rearranged project creation to copy an internal folder (with necessary files)
 into the specified folder on the users computer. This hopefully will make it easier
