@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Project creation with prodigenr: A component of reproducible and open scientific projects <img src="man/figures/logo.png" align="right" />
+# Project creation with prodigenr: A component of reproducible and open scientific projects <img src="man/figures/logo.png" style='text-align: right;' />
 
 <!-- badges: start -->
 
