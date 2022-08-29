@@ -20,48 +20,30 @@ setup_project <-
     function(path) {
         stopifnot(is.character(path))
         proj_path <- fs::path_abs(path)
+        proj_name <- fs::path_file(proj_path)
 
         if (grepl(" ", basename(proj_path))) {
             rlang::warn("Project name has a space in it, replacing with a dash (-).")
             proj_path <- path_remove_spaces(proj_path)
         }
 
+        if (fs::dir_exists(proj_path)) {
+            cli::cli_abort(c("The {.val {proj_path}} folder already exists, so project creation is canceled.",
+                         "i" = "Delete the folder or use another name (not {.val {proj_name}}) for your project."))
+        }
         fs::dir_create(proj_path)
 
         withr::with_dir(
             new = proj_path,
             code = {
-                proj_name <- fs::path_file(proj_path)
-                add_rproj_file(proj_name)
-                add_description_file(proj_name)
-                create_directories()
-                include_readmes(proj_name)
-                use_template("TODO.md")
+                proj_template <- find_template("projects", "basic-analysis")
+                fs::dir_copy(proj_template, new_path = proj_name)
+                update_template("description", "DESCRIPTION", data = list(ProjectName = proj_name))
+                update_template("template-rproj", paste0(proj_name, ".Rproj"))
+                update_template("README.md", data = list(ProjectName = proj_name))
+                create_report()
             })
     }
-
-create_directories <- function() {
-    fs::dir_create(c("R", "data", "doc", "data-raw"))
-}
-
-# File inclusion functions --------------------------------------
-
-add_description_file <- function(proj_name) {
-    use_template("basic-description", "DESCRIPTION",
-                 data = list(ProjectName = proj_name))
-}
-
-include_readmes <- function(proj_name) {
-    use_template(
-        "base-README.md",
-        "README.md",
-        data = list(ProjectName = proj_name)
-    )
-    use_template("doc-README.md", "doc/README.md")
-    use_template("data-README.md", "data/README.md")
-    use_template("data-raw-README.md", "data-raw/README.md")
-    use_template("R-README.md", "R/README.md")
-}
 
 # Git setup functions -------------------------------------------
 
