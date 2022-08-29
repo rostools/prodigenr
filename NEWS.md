@@ -1,5 +1,9 @@
 # prodigenr (development version)
 
+## Minor changes
+
+* Removed AppVeyor
+
 # prodigenr 0.6.1
 
 ## Bug fix
