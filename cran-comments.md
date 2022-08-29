@@ -1,9 +1,9 @@
 
-- Minor bug patch
+- Minor bug patch to fix CRAN notes.
 
 ## Test environments
 
-- Ubunto 20.04 (local), R 4.0.5
+- Ubunto 22.04 (local), R 4.2.1
 - winbuilder
 - R-hub windows-x86_64-devel (r-devel)
 - R-hub ubuntu-gcc-release (r-release)

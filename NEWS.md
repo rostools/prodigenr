@@ -1,6 +1,6 @@
 # prodigenr (development version)
 
-## Minor changes
+## Minor changes and CRAN fixes
 
 - Removed Distill from imports and from created report, switching to using Quarto
 instead (e.g. with YAML metadata).
@@ -9,6 +9,7 @@ instead (e.g. with YAML metadata).
 into the specified folder on the users computer. This hopefully will make it easier
 to add other templates later on.
 - Updated package aims to be clearer and more focused.
+- Fixes to CRAN notes about HTML5.
 
 # prodigenr 0.6.1
 
