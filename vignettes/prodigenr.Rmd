@@ -133,3 +133,7 @@ online, data science content.
 There is also a list of other similar projects 
 [on the rOpenSci GitHub repository](https://github.com/ropensci/rrrpkg#useful-tools-and-templates-for-making-research-compendia). 
 It's up to you to decide which style to use. 
+
+```{r remove-created-project, include=FALSE}
+fs::dir_delete(new_project_path)
+```
