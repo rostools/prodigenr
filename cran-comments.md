@@ -14,10 +14,16 @@
 
 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
-Only non-package related note from r-devel
+Only non-package related note from R-hub from Windows:
 
-> * checking for future file timestamps ... NOTE
-> unable to verify current time
+> * checking for detritus in the temp directory ... NOTE
+Found the following files/directories:
+> 'lastMiKTeXException'
+
+And from Fedora Linux:
+
+> * checking HTML version of manual ... NOTE
+> Skipping checking HTML validation: no command 'tidy' found
 
 ## Reverse dependencies
 
