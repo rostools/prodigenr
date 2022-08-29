@@ -1,5 +1,4 @@
 context("Creating some files for project.")
-skip_on_cran()
 
 new_project <- fs::path_temp("testing-docs")
 setup_project(new_project)
