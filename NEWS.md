@@ -8,6 +8,7 @@ instead (e.g. with YAML metadata).
 - Rearranged project creation to copy an internal folder (with necessary files)
 into the specified folder on the users computer. This hopefully will make it easier
 to add other templates later on.
+- Updated package aims to be clearer and more focused.
 
 # prodigenr 0.6.1
 
