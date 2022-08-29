@@ -1,6 +1,6 @@
 Package: prodigenr
 Title: Research Project Directory Generator
-Version: 0.6.1.9000
+Version: 0.6.2
 Authors@R: person("Luke", "Johnston", , "lwjohnst@gmail.com", c("aut", "cre"),
     comment = c(ORCID = "0000-0003-4169-2616"))
 Description: Create a project directory structure, along with typical files

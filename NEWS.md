@@ -1,4 +1,4 @@
-# prodigenr (development version)
+# prodigenr 0.6.2
 
 ## Minor changes and CRAN fixes
 
