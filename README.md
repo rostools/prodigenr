@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Project creation with prodigenr: A component of reproducible and open scientific projects <img src="man/figures/logo.png" style='text-align: right;' />
+# Project creation with prodigenr: A component of reproducible and open scientific projects <img src="man/figures/logo.png" style="text-align: right;"/>
 
 <!-- badges: start -->
 
@@ -11,28 +11,19 @@ Badge](http://www.r-pkg.org/badges/version/prodigenr)](https://cran.r-project.or
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](https://www.r-pkg.org:443/pkg/prodigenr)
-<!-- badges: end -->
 
-This [R](https://cran.r-project.org) package is part of a
-[series](https://github.com/rostools) of (planned) packages that are
-aimed at creating a toolkit for doing reproducible and open science.
-Many researchers (especially in biomedicine, medicine, or health, which
-is my area of research) have little to no knowledge on what open science
-is or what reproducibility is, let alone how to do it. Our goal is
-create an [(opinionated) toolkit](https://rostools.gitlab.io/manifesto)
-to automate and simplify the process of doing open and reproducible
-science.
+<!-- badges: end -->
 
 This package has a simple aim of being a *pro*ject *di*rectory
 *gen*erato*r* (prodigenr), with a simple focus on:
 
 1.  Creating a standardized project folder structure with a few template
-    files needed for beginning a data analysis project
+    files needed for beginning a data analysis project.
 2.  Following a “one project, one (main) output” principle, such as a
     report/manuscript in the case of scientific output or a book or
-    website for things like courses or workshops
+    website for things like courses or workshops.
 3.  Adhering to established best practices that make it easier for the
-    project to be reproducible and open
+    project to be reproducible and open.
 
 This standardized approach to how a scientific project is structured
 helps ensure that the final code and documents are fairly modular,
@@ -54,8 +45,8 @@ install.packages("prodigenr")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("rostools/prodigenr")
+# install.packages("pak")
+pak::pak("rostools/prodigenr")
 ```
 
 ## Usage
@@ -76,25 +67,27 @@ your analysis! Open the newly created project via the `.Rproj` file. For
 the RStudio approach, go to “File -\> New Project”, then “New directory”
 and find the prodigenr project in the list:
 
-![Creating a prodigenr project in
-RStudio](man/figures/rstudio-projects.gif)
+<figure>
+<img src="man/figures/rstudio-projects.gif"
+alt="Creating a prodigenr project in RStudio" />
+<figcaption aria-hidden="true">Creating a prodigenr project in
+RStudio</figcaption>
+</figure>
 
-Once in the project, you can add a manuscript R Markdown file using:
+Once in the project, you can add a manuscript/report
+[Quarto](https://quarto.org/) file using:
 
 ``` r
-create_manuscript() 
+create_report() 
 ```
 
 The main secondary function is the `template_list` command, which lists
-the available template files (submit a PR if you want another template
-included!):
+the available template files:
 
 ``` r
 template_list
 #> [1] "report" "slides"
 ```
-
-<!-- TODO: Add gif for using RStudio "new file" -->
 
 For a more detailed tutorial, see the introduction vignette:
 
