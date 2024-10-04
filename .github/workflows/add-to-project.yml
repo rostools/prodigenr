@@ -1,6 +1,11 @@
-name: Assign PR to creator
+name: Add to project board
 
 on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - transferred
   pull_request: 
     types:
       - reopened
@@ -10,10 +15,16 @@ permissions:
   pull-requests: write
 
 jobs:
-  assign-pr-to-creator:
-    name: Assign PR to creator
+  add-to-project:
+    name: Add to project
     runs-on: ubuntu-latest
     steps:
+      - name: Add issue or PR to project board
+        uses: actions/add-to-project@v1.0.2
+        with: 
+          project-url: https://github.com/orgs/rostools/projects/12
+          github-token: ${{ secrets.ADD_TO_BOARD }}
+
       - name: Assign PR to creator
         if: ${{ github.event_name == 'pull_request' }}
         run: |
@@ -22,3 +33,5 @@ jobs:
           AUTHOR: ${{ github.event.pull_request.user.login }}
           PR: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
