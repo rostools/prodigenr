@@ -4,7 +4,7 @@ on:
   push:
     paths: ["R/**"]
 
-name: document.yaml
+name: Run roxygen2
 
 permissions: read-all
 
