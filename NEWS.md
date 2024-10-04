@@ -6,7 +6,7 @@
     usethis functions, so it is added to the created `DESCRIPTION` file
     (#137).
 - When creating a new `.gitignore`, include `.quarto` and `.DS_Store`
-    files (#140).
+    files (#141).
 
 # prodigenr 0.6.2
 
