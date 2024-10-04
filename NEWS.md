@@ -7,6 +7,9 @@
     (#137).
 - When creating a new `.gitignore`, include `.quarto` and `.DS_Store`
     files (#141).
+- It isn't always useful to have the report created when the project
+    is setup, so adding the report via `create_report()` is removed from
+    `project_setup()` (#142).
 
 # prodigenr 0.6.2
 

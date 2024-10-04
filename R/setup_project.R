@@ -41,8 +41,7 @@ setup_project <-
                 update_template("template-Rproj", paste0(proj_name, ".Rproj"))
                 fs::file_delete("template-Rproj")
                 update_template("README.md", data = list(ProjectName = proj_name))
-                suppressMessages(create_report())
-            })
+
     }
 
 # Git setup functions -------------------------------------------
