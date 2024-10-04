@@ -1,4 +1,3 @@
-
 #' Create a basic R Markdown document from a template.
 #'
 #' Creates manuscript/report or slide R Markdown file and saves it into
@@ -15,35 +14,37 @@
 #' create_slides()
 #' }
 create_doc <- function(type = c("report", "slides")) {
-    if (!is_rproj_folder())
-        rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
+  if (!is_rproj_folder()) {
+    rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
+  }
 
-    if (!dir.exists("doc"))
-        rlang::abort("What happened to your `doc/` folder?")
+  if (!dir.exists("doc")) {
+    rlang::abort("What happened to your `doc/` folder?")
+  }
 
-    type <- match.arg(type)
-    file_name <- normalizePath(file.path("doc", paste0(type, ".Rmd")), mustWork = FALSE)
-    template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
-    if (fs::file_exists(file_name)) {
-        rlang::abort(paste0("The file '", type, ".Rmd' already exists in the doc folder."))
-    } else {
-        rmarkdown::draft(
-            file = file_name,
-            template = template_file,
-            package = NULL,
-            create_dir = FALSE,
-            edit = FALSE
-        )
-        cli::cli_alert_success("Creating a {.val {type}} file in the {.val {'doc/'}} folder.")
-    }
-    invisible()
+  type <- match.arg(type)
+  file_name <- normalizePath(file.path("doc", paste0(type, ".Rmd")), mustWork = FALSE)
+  template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
+  if (fs::file_exists(file_name)) {
+    rlang::abort(paste0("The file '", type, ".Rmd' already exists in the doc folder."))
+  } else {
+    rmarkdown::draft(
+      file = file_name,
+      template = template_file,
+      package = NULL,
+      create_dir = FALSE,
+      edit = FALSE
+    )
+    cli::cli_alert_success("Creating a {.val {type}} file in the {.val {'doc/'}} folder.")
+  }
+  invisible()
 }
 
 #' @describeIn create_doc Creates a report R Markdown document in the `doc/` folder.
 #' @export
 create_report <- function() {
-    create_doc(type = "report")
-    return(invisible())
+  create_doc(type = "report")
+  return(invisible())
 }
 
 #' @describeIn create_doc Creates a manuscript R Markdown document in
@@ -54,7 +55,7 @@ create_manuscript <- create_report
 #' @describeIn create_doc Creates a R Markdown document for making slides in the `doc/` folder.
 #' @export
 create_slides <- function() {
-    create_doc(type = "slides")
+  create_doc(type = "slides")
 }
 
 #' List project templates within \pkg{prodigenr}.

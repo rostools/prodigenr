@@ -27,25 +27,27 @@
 update_template <- function(template,
                             save_as = template,
                             data = list()) {
-    template_contents <-
-        base::strsplit(whisker::whisker.render(read_utf8(template),
-                                               data), "\n")[[1]]
-    new <- base::writeLines(template_contents, save_as)
-    invisible(new)
+  template_contents <-
+    base::strsplit(whisker::whisker.render(
+      read_utf8(template),
+      data
+    ), "\n")[[1]]
+  new <- base::writeLines(template_contents, save_as)
+  invisible(new)
 }
 
 # Taken from usethis package and modified to this package.
 find_template <- function(...) {
-    fs::path_package(package = "prodigenr", "templates", ...)
+  fs::path_package(package = "prodigenr", "templates", ...)
 }
 
 # Taken from usethis package
 read_utf8 <- function(path, n = -1L) {
-    base::readLines(path, n = n, encoding = "UTF-8", warn = FALSE)
+  base::readLines(path, n = n, encoding = "UTF-8", warn = FALSE)
 }
 
 # Taken from usethis:::uses_git
 has_git <- function(project_path = ".") {
-    repo <- tryCatch(gert::git_find(project_path), error = function(e) NULL)
-    !is.null(repo)
+  repo <- tryCatch(gert::git_find(project_path), error = function(e) NULL)
+  !is.null(repo)
 }
