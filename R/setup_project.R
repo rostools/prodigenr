@@ -83,8 +83,10 @@ setup_with_git <- function() {
 # Utilities -----------------------------------------------------
 
 set_git_ignore_files <- function() {
-    base::writeLines(c(".Rhistory", ".RData", ".Rproj.user"),
-                     ".gitignore")
+  base::writeLines(
+    c(".Rhistory", ".RData", ".Rproj.user", ".DS_Store", ".quarto"),
+    ".gitignore"
+  )
 }
 
 path_remove_spaces <- function(path) {
