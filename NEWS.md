@@ -5,6 +5,8 @@
 - The `title` field in the `DESCRIPTION` file is needed by many
     usethis functions, so it is added to the created `DESCRIPTION` file
     (#137).
+- When creating a new `.gitignore`, include `.quarto` and `.DS_Store`
+    files (#140).
 
 # prodigenr 0.6.2
 
