@@ -1,4 +1,5 @@
 Package: {{ProjectName}}
+Title: Analysis Project for {{ProjectName}}
 Type: Project
 Version: 0.0.1
 Imports:
