@@ -10,6 +10,8 @@
 -   It isn't always useful to have the report created when the project
     is setup, so adding the report via `create_report()` is removed from
     `project_setup()` (#142).
+-   Move `gert` to imports, since it makes more sense that it should be
+    a hard dependency as the project is an opinionated project creator (#145).
 
 # prodigenr 0.6.2
 
