@@ -28,7 +28,8 @@ setup_project <-
     }
 
     if (fs::dir_exists(proj_path)) {
-      cli::cli_abort(c("The {.val {proj_path}} folder already exists, so project creation is canceled.",
+      cli::cli_abort(c(
+        "The {.val {proj_path}} folder already exists, so project creation is canceled.",
         "i" = "Delete the folder or use another name (not {.val {proj_name}}) for your project."
       ))
     }
@@ -61,9 +62,9 @@ setup_project <-
 #'
 setup_with_git <- function() {
   if (!requireNamespace("gert", quietly = TRUE)) {
-    cli::cli_abort(
-      c("This function relies on the gert package, please install it and then run the function again.",
-        "i" = "Install with: {.code install.packages('gert')}"
+    cli::cli_abort(c(
+      "This function relies on the gert package, please install it and then run the function again.",
+      "i" = "Install with: {.code install.packages('gert')}"
       )
     )
   }
