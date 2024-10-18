@@ -28,7 +28,8 @@ setup_project <-
     }
 
     if (fs::dir_exists(proj_path)) {
-      cli::cli_abort(c("The {.val {proj_path}} folder already exists, so project creation is canceled.",
+      cli::cli_abort(c(
+        "The {.val {proj_path}} folder already exists, so project creation is canceled.",
         "i" = "Delete the folder or use another name (not {.val {proj_name}}) for your project."
       ))
     }
@@ -60,14 +61,6 @@ setup_project <-
 #' @seealso [setup_project()] for starting the project.
 #'
 setup_with_git <- function() {
-  if (!requireNamespace("gert", quietly = TRUE)) {
-    cli::cli_abort(
-      c("This function relies on the gert package, please install it and then run the function again.",
-        "i" = "Install with: {.code install.packages('gert')}"
-      )
-    )
-  }
-
   if (!is_rproj_folder()) {
     cli::cli_abort(c("The folder does not contain an {.val .Rproj} file.",
       "i" = "Please use this function while in the project created from {.code prodigenr::setup_project().}"
@@ -80,7 +73,7 @@ setup_with_git <- function() {
 
   gert::git_init()
   set_git_ignore_files()
-  cli::cli_alert_info("You'll need to restart RStudio to see the Git pane.")
+  cli::cli_alert_info("You might need to restart RStudio to see the Git pane.")
   return(invisible(NULL))
 }
 
