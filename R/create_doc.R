@@ -15,7 +15,10 @@
 #' }
 create_doc <- function(type = c("report", "slides")) {
   if (!is_rproj_folder()) {
-    rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
+    cli::cli_abort(
+      "The folder does not contain an `.Rproj` file.",
+      "i" = "Please use this function while in the project created from `setup_project().`"
+      )
   }
 
   if (!dir.exists("doc")) {
