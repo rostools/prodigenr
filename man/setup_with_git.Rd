@@ -13,7 +13,7 @@ Adds Git and \code{.gitignore} file to the project.
 Takes a lot of inspiration from the usethis \code{use_git()} function, except
 it only adds Git and nothing more (doesn't commit, doesn't restart RStudio
 automatically). Must run this function inside the project you created from
-\code{\link[=setup_project]{setup_project()}}
+\code{\link[=setup_project]{setup_project()}}.
 }
 \seealso{
 \code{\link[=setup_project]{setup_project()}} for starting the project.
