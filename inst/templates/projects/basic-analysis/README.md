@@ -13,14 +13,15 @@ data, docs and R folders.
 
 The following folders contain:
 
-- `data/`:
+-   `data/`:
 -   `docs/`:
-- `R/`:
+-   `R/`:
 
 # Installing project R package dependencies
 
-If dependencies have been managed by using `usethis::use_package("packagename")`
-through the `DESCRIPTION` file, installing dependencies is as easy as opening the
+If dependencies have been managed by using
+`usethis::use_package("packagename")` through the `DESCRIPTION` file,
+installing dependencies is as easy as opening the
 `{{ProjectName}}.Rproj` file and running this command in the console:
 
 ```         
