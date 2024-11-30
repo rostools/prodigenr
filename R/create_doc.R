@@ -14,18 +14,21 @@
 #' }
 create_doc <- function(type = c("report", "slides")) {
   if (!is_rproj_folder()) {
-    rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
+    cli::cli_abort(c(
+      "The folder does not contain an {.val .Rproj} file.",
+      "i" = "Use while in a project made with {.fn prodigenr::setup_project}."
+    ))
   }
 
   if (!dir.exists("docs")) {
-    rlang::abort("What happened to your `docs/` folder?")
+    cli::cli_abort("We can't find a {.path docs/} folder, but need it.")
   }
 
   type <- match.arg(type)
   file_name <- normalizePath(file.path("docs", paste0(type, ".qmd")), mustWork = FALSE)
   template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
   if (fs::file_exists(file_name)) {
-    rlang::abort(paste0("The file '", type, ".qmd' already exists in the docs folder."))
+    cli::cli_abort("The file {.file docs/{type}.qmd} already exists.")
   } else {
     rmarkdown::draft(
       file = file_name,
@@ -34,7 +37,7 @@ create_doc <- function(type = c("report", "slides")) {
       create_dir = FALSE,
       edit = FALSE
     )
-    cli::cli_alert_success("Creating a {.val {type}} file in the {.val {'docs/'}} folder.")
+    cli::cli_alert_success("Created the {.file docs/{type}.qmd}!")
   }
   invisible()
 }
