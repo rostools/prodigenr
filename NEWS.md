@@ -1,12 +1,20 @@
 # prodigenr (development version)
 
+## Features and additions
+
+-   When creating a new `.gitignore`, include `.quarto` and `.DS_Store`
+    files (#141) as well as `.Rbuildignore` files (#143).
+-   New projects have `.Rproj` set with same options as
+    `usethis::use_blank_slate("project")` (#144).
+
 ## Fixes and improvements
 
+-   Rename `doc/` to `docs/` in the basic analysis project folder. This
+    is to match the semantics that the `docs/` folder usually will have
+    more than one document in it (#149).
 -   The `title` field in the `DESCRIPTION` file is needed by many
     usethis functions, so it is added to the created `DESCRIPTION` file
     (#137).
--   When creating a new `.gitignore`, include `.quarto` and `.DS_Store`
-    files (#141).
 
 # prodigenr 0.6.2
 
