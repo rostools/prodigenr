@@ -4,12 +4,17 @@
   just --list --unsorted
 
 # Run build recipes and install the package
-build: style document install-package check
+build: style document test install-package check
 
 # Install the package and its dependencies
 install-package:
   #!/usr/bin/Rscript
   devtools::install()
+
+# Run tests
+test:
+  #!/usr/bin/Rscript
+  devtools::test()
 
 # Re-build Roxygen docs
 document:
