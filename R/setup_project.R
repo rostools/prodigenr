@@ -65,7 +65,7 @@ setup_project <-
 setup_with_git <- function() {
   if (!is_rproj_folder()) {
     cli::cli_abort(c("The folder does not contain an {.val .Rproj} file.",
-      "i" = "Please use this function while in the project created from {.code prodigenr::setup_project().}"
+      "i" = "Use while in the project made with {.code prodigenr::setup_project().}"
     ))
   }
 
