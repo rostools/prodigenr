@@ -84,7 +84,7 @@ setup_with_git <- function() {
 
 set_git_ignore_files <- function() {
   base::writeLines(
-    c(".Rhistory", ".RData", ".Rproj.user", ".DS_Store", ".quarto"),
+    c(".Rhistory", ".RData", ".Rproj.user", ".Rbuildignore", ".DS_Store", ".quarto"),
     ".gitignore"
   )
 }
