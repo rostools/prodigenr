@@ -14,7 +14,8 @@ Project setup with folders and files necessary for a standard research project.
 }
 \description{
 This starts the project by setting up a common folder and file infrastructure,
-as well as adding some useful files to start the project.
+as well as adding some useful files to start the project. Also adds Git to the
+project.
 }
 \examples{
 \dontrun{
