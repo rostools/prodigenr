@@ -6,6 +6,8 @@
     files (#141) as well as `.Rbuildignore` files (#143).
 -   New projects have `.Rproj` set with same options as
     `usethis::use_blank_slate("project")` (#144).
+-   New projects have Git added from the beginning, so don't need to use
+    `setup_with_git()` (#148).
 
 ## Fixes and improvements
 
