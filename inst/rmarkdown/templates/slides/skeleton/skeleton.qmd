@@ -1,15 +1,9 @@
 ---
 title: ""
+date: last-modified
+date-format: long
 author: ""
-date: ""
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      ratio: "16:9"
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+format: revealjs
 ---
 
-<!-- Instructions on use are found in https://github.com/yihui/xaringan -->
+<!-- Instructions on use are found in https://quarto.org/docs/presentations/revealjs/ -->

@@ -1,11 +1,11 @@
-#' Create a basic R Markdown document from a template.
+#' Create a basic Quarto document from a template.
 #'
-#' Creates manuscript/report or slide R Markdown file and saves it into
+#' Creates manuscript/report or slide Quarto file and saves it into
 #' the `docs/` folder.
 #'
 #' @param type The file type (e.g. report, slides).
 #'
-#' @return A created `.Rmd` file in the `docs/` folder.
+#' @return A created `.qmd` file in the `docs/` folder.
 #'
 #' @examples
 #' \dontrun{
@@ -22,10 +22,10 @@ create_doc <- function(type = c("report", "slides")) {
   }
 
   type <- match.arg(type)
-  file_name <- normalizePath(file.path("docs", paste0(type, ".Rmd")), mustWork = FALSE)
+  file_name <- normalizePath(file.path("docs", paste0(type, ".qmd")), mustWork = FALSE)
   template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
   if (fs::file_exists(file_name)) {
-    rlang::abort(paste0("The file '", type, ".Rmd' already exists in the docs folder."))
+    rlang::abort(paste0("The file '", type, ".qmd' already exists in the docs folder."))
   } else {
     rmarkdown::draft(
       file = file_name,
@@ -39,14 +39,14 @@ create_doc <- function(type = c("report", "slides")) {
   invisible()
 }
 
-#' @describeIn create_doc Creates a report R Markdown document in the `docs/` folder.
+#' @describeIn create_doc Creates a report Quarto document in the `docs/` folder.
 #' @export
 create_report <- function() {
   create_doc(type = "report")
   return(invisible())
 }
 
-#' @describeIn create_doc Creates a R Markdown document for making slides in the `docs/` folder.
+#' @describeIn create_doc Creates a Quarto document for making slides in the `docs/` folder.
 #' @export
 create_slides <- function() {
   create_doc(type = "slides")
