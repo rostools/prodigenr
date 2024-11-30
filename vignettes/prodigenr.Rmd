@@ -16,14 +16,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-prodigenr, or *pro*ject *di*rectory *gen*erator, was designed to
-simplify the process of creating new scientific data analysis projects
-and to help make your workflow more reproducible and open from the
-beginning. While creating individual folders and files manually for new
-projects doesn't take too much time, over time and over many
-researchers, this can quickly add up to a lot of time! Plus, when a
-standard structure is followed it makes it easier to share code and
-establish reproducible practices earlier on in the project.
+prodigenr, or project directory generator, was designed to simplify the
+process of creating new scientific data analysis projects and to help
+make your workflow more reproducible and open from the beginning. While
+creating individual folders and files manually for new projects doesn't
+take too much time, over time and over many researchers, this can
+quickly add up to a lot of time! Plus, when a standard structure is
+followed it makes it easier to share code and establish reproducible
+practices earlier on in the project.
 
 ## Setting up a project with prodigenr
 
@@ -104,7 +104,7 @@ template_list
 
 These template files are what an academic researcher likely typically
 encounters. However, if you have a suggestion or want to add a template,
-please create a [Github
+please create a [GitHub
 issue](https://github.com/rostools/prodigenr/issues) or submit a [Pull
 Request](https://github.com/rostools/prodigenr/pulls)!
 

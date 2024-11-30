@@ -14,8 +14,8 @@ downloads](http://cranlogs.r-pkg.org/badges/prodigenr)](https://www.r-pkg.org:44
 
 <!-- badges: end -->
 
-This package has a simple aim of being a *pro*ject *di*rectory
-*gen*erato*r* (prodigenr), with a simple focus on:
+This package has a simple aim of being a project directory generator
+(prodigenr), with a simple focus on:
 
 1.  Creating a standardized project folder structure with a few template
     files needed for beginning a data analysis project.
