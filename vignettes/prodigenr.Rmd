@@ -36,10 +36,7 @@ new_project_path <- fs::path_temp("HeartDiseaseExercise")
 setup_project(new_project_path)
 ```
 
-Or via RStudio's interface (with RStudio version \>1.1):
-
-![Creating a prodigenr project in
-RStudio](../man/figures/rstudio-projects.gif)
+Or via RStudio's "New Project" interface (with RStudio version \>1.1).
 
 The resulting file structure should look something like this:
 

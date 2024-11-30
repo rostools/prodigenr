@@ -29,7 +29,7 @@ This standardized approach to how a scientific project is structured
 helps ensure that the final code and documents are fairly modular,
 self-contained, easy to share and make public, and be as reproducible as
 possible. The structure also makes use of the existing and established
-applications and workflows ([RStudio](https://www.rstudio.com/),
+applications and workflows ([RStudio](https://posit.co/),
 [devtools](https://CRAN.R-project.org/package=devtools), and
 [usethis](https://CRAN.R-project.org/package=usethis)).
 
@@ -65,14 +65,7 @@ setup_project("~/Desktop/DiseaseDiet")
 This then creates a directory tree, with template files for starting
 your analysis! Open the newly created project via the `.Rproj` file. For
 the RStudio approach, go to “File -\> New Project”, then “New directory”
-and find the prodigenr project in the list:
-
-<figure>
-<img src="man/figures/rstudio-projects.gif"
-alt="Creating a prodigenr project in RStudio" />
-<figcaption aria-hidden="true">Creating a prodigenr project in
-RStudio</figcaption>
-</figure>
+and find the prodigenr project in the list.
 
 Once in the project, you can add a manuscript/report
 [Quarto](https://quarto.org/) file using:
@@ -118,5 +111,4 @@ released with a [Contributor Code of
 Conduct](https://rostools.github.io/prodigenr/CODE_OF_CONDUCT.html). By
 participating in this project you agree to abide by its terms.
 
-Special thanks to [@zsemnani](https://twitter.com/zsemnani?lang=en) for
-creating the logo!
+Special thanks to Zhila Semnani for creating the logo!

@@ -10,33 +10,38 @@ install-package-dependencies:
   pak::pak(ask = FALSE)
 
 # Run document generators
-document: 
+document:
   #!/usr/bin/Rscript
   devtools::document()
 
 # Run tests
-test: 
+test:
   #!/usr/bin/Rscript
   devtools::test()
 
 # Check spelling
-spell-check: 
+spell-check:
   #!/usr/bin/Rscript
   devtools::spell_check()
 
+# Check URLs
+url-check:
+  #!/usr/bin/Rscript
+  urlchecker::url_check()
+
 # Style all R code
-style: 
+style:
   #!/usr/bin/Rscript
   styler::style_pkg()
 
 # Run linter
-lint: 
+lint:
   #!/usr/bin/Rscript
   devtools::lint(
   )
 
 # Build pkgdown website
-build-site: 
+build-site:
   #!/usr/bin/Rscript
   devtools::build_site()
 
