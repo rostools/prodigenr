@@ -1,31 +1,34 @@
 # prodigenr (development version)
 
+## Breaking changes
+
+-   New projects have Git added from the beginning, so don't need to use
+    `setup_with_git()` (#148).
+-   `rmarkdown::draft()` can't have Quarto docs in the `template/`
+    folders, so instead move them as generic Quarto template files.
+-   Rename `doc/` to `docs/` in the basic analysis project folder. This
+    is to match the semantics that the `docs/` folder usually will have
+    more than one document in it (#149).
+-   It isn't always useful to have the report created when the project
+    is setup, so adding the report via `create_report()` is removed from
+    `project_setup()` (#142).
+-   Use Quarto instead of R Markdown for template files (#150).
+
 ## Features and additions
 
 -   When creating a new `.gitignore`, include `.quarto` and `.DS_Store`
     files (#141) as well as `.Rbuildignore` files (#143).
 -   New projects have `.Rproj` set with same options as
     `usethis::use_blank_slate("project")` (#144).
--   New projects have Git added from the beginning, so don't need to use
-    `setup_with_git()` (#148).
 -   Move `gert` to imports, since it makes more sense that it should be
     a hard dependency as the project is an opinionated project creator
     (#145).
 
 ## Fixes and improvements
 
--   `rmarkdown::draft()` can't have Quarto docs in the `template/`
-    folders, so instead move them as generic Quarto template files.
--   Rename `doc/` to `docs/` in the basic analysis project folder. This
-    is to match the semantics that the `docs/` folder usually will have
-    more than one document in it (#149).
 -   The `title` field in the `DESCRIPTION` file is needed by many
     usethis functions, so it is added to the created `DESCRIPTION` file
     (#137).
--   It isn't always useful to have the report created when the project
-    is setup, so adding the report via `create_report()` is removed from
-    `project_setup()` (#142).
--   Use Quarto instead of R Markdown for template files (#150).
 
 # prodigenr 0.6.2
 
@@ -139,4 +142,3 @@
 -   Added a `NEWS.md` file to track changes to the package.
 -   Fixed a bug that prevented an `.Rproj` file and the `.Rprofile`
     files from being installed and created.
-
