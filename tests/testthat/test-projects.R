@@ -21,6 +21,7 @@ test_that("project is set up", {
 
 test_that("git gets added", {
   withr::with_dir(new = new_project, {
+    fs::dir_delete(".git")
     capture_output(setup_with_git())
     git_files <- fs::dir_ls(new_project, all = TRUE)
     expect_match(git_files, ".*\\.git$", all = FALSE)
