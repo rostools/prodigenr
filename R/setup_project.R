@@ -1,7 +1,8 @@
 #' Setup a standardized folder and file structure for a research analysis project.
 #'
 #' This starts the project by setting up a common folder and file infrastructure,
-#' as well as adding some useful files to start the project.
+#' as well as adding some useful files to start the project. Also adds Git to the
+#' project.
 #'
 #' @param path A path to a new directory.
 #'
@@ -41,8 +42,8 @@ setup_project <-
                 update_template("template-Rproj", paste0(proj_name, ".Rproj"))
                 fs::file_delete("template-Rproj")
                 update_template("README.md", data = list(ProjectName = proj_name))
-                suppressMessages(create_report())
-            })
+        gert::git_init()
+      }
     }
 
 # Git setup functions -------------------------------------------
