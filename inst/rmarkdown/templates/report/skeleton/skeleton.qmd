@@ -6,12 +6,14 @@ author:
     orcid: ""
     affiliations: 
         - name: ""
-date: "`r Sys.Date()`"
+date: last-modified
 format: html
+execute:
+  echo: false
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r setup}
+#| include: false
 ```
 
 # Abstract

@@ -1,3 +1,3 @@
-name: Empty slides (from xaringan)
+name: Empty slides (from Quarto)
 description: >
- Template for creating slides, empty except for the xaringan package YAML metadata.
+ Template for creating slides, empty except for the Quarto slides YAML metadata.
