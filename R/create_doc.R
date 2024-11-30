@@ -24,18 +24,16 @@ create_doc <- function(type = c("report", "slides")) {
     cli::cli_abort("We can't find a {.path docs/} folder, but need it.")
   }
 
-  type <- match.arg(type)
-  file_name <- normalizePath(file.path("docs", paste0(type, ".qmd")), mustWork = FALSE)
-  template_file <- fs::path_package("prodigenr", "rmarkdown", "templates", type)
+  type <- rlang::arg_match(type)
+  type <- fs::path_ext_set(type, "qmd")
+  file_name <- normalizePath(file.path("docs", paste0(type)), mustWork = FALSE)
+  template_file <- fs::path_package("prodigenr", "templates", "documents", type)
   if (fs::file_exists(file_name)) {
     cli::cli_abort("The file {.file docs/{type}.qmd} already exists.")
   } else {
-    rmarkdown::draft(
-      file = file_name,
-      template = template_file,
-      package = NULL,
-      create_dir = FALSE,
-      edit = FALSE
+    fs::file_copy(
+      path = template_file,
+      new_path = file_name
     )
     cli::cli_alert_success("Created the {.file docs/{type}.qmd}!")
   }

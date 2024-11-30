@@ -14,6 +14,8 @@
 
 ## Fixes and improvements
 
+-   `rmarkdown::draft()` can't have Quarto docs in the `template/`
+    folders, so instead move them as generic Quarto template files.
 -   Rename `doc/` to `docs/` in the basic analysis project folder. This
     is to match the semantics that the `docs/` folder usually will have
     more than one document in it (#149).
@@ -23,6 +25,7 @@
 -   It isn't always useful to have the report created when the project
     is setup, so adding the report via `create_report()` is removed from
     `project_setup()` (#142).
+-   Use Quarto instead of R Markdown for template files (#150).
 
 # prodigenr 0.6.2
 
@@ -94,7 +97,7 @@
 
 ## New feature
 
--   Use RMarkdown template files to draft the posters, slides,
+-   Use R Markdown template files to draft the posters, slides,
     manuscripts, and abstract (#70, #75). See `create_*` type commands.
 -   New function to setup a general project, but excluding the
     individual document types such manuscript, slides, etc (#72).
@@ -109,11 +112,11 @@
 
 ## Minor fixes
 
--   Added additional information to template README.md (#29, #30, #32)
+-   Added additional information to template `README.md` (#29, #30, #32)
 
 ## Misc additions
 
--   Todo items to created README
+-   TODO items to created README
 -   Added code coverage #65
 
 # prodigenr 0.3.0
@@ -134,6 +137,6 @@
 # prodigenr 0.2.7
 
 -   Added a `NEWS.md` file to track changes to the package.
--   Fixed a bug that prevented an Rproj file and the Rprofile files from
-    being installed and created.
+-   Fixed a bug that prevented an `.Rproj` file and the `.Rprofile`
+    files from being installed and created.
 
