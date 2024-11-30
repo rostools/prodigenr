@@ -8,7 +8,7 @@ test_that("Report and slides created", {
         capture_output(create_slides())
     })
 
-    withr::with_dir(new = file.path(new_project, "doc"), {
+    withr::with_dir(new = file.path(new_project, "docs"), {
         expect_true(fs::file_exists("slides.Rmd"))
         # Needs a Rproj file.
         fs::file_delete("../testing-docs.Rproj")

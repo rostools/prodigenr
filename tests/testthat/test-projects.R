@@ -11,7 +11,7 @@ test_that("project is set up", {
     files_created <- fs::dir_ls(new_project, recurse = TRUE)
     folders_created <- fs::dir_ls(new_project, type = "directory")
     expect_equal(sort(basename(folders_created)),
-                 sort(c("R", "doc", "data", "data-raw")))
+                 sort(c("R", "docs", "data", "data-raw")))
 
     expect_match(files_created, ".*DESCRIPTION$", all = FALSE)
     expect_match(files_created, ".*testing\\.Rproj$", all = FALSE)

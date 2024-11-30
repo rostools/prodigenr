@@ -50,18 +50,9 @@ prodigenr:::viz_project_tree(new_project_path)
 a bit more about what each folder and file are used for, which is briefly described
 here:
 
-- `R/`: Should contain the R scripts and functions used for the analysis.
-- `doc/`: Should contain the files related to presenting the project's scientific
-output. Already has the report/manuscript inside.
-- `data/`: If relevant, is where the processed (or simulated) data is kept that
-is used for the project as well as the results of the project's analyses.
-- `data-raw/`: If relevant, is where the scripts that process the raw data into 
-the usable data are kept and, optionally where the raw data is also kept.
-- `DESCRIPTION`: Is a standard file that includes metadata about your project, in
-a machine readable format, and that also stores a list of the R packages your project
-depends on.
-- `.Rproj`: Is a standard file used by RStudio to set some R Project specific
-settings.
+-   `docs/`: Should contain the files related to presenting the
+    project's scientific output. Already has the report/manuscript
+    inside.
 
 To add a new document (e.g. slides, manuscript), run any of the `create_*()`
 commands (e.g. `create_slides()`) in the console while in RStudio in the
@@ -82,8 +73,8 @@ withr::with_dir(
 )
 ```
 
-Now two more files have been added to the `doc/` folder. The resulting file
-structure should look something like this:
+Now two more files have been added to the `docs/` folder. The resulting
+file structure should look something like this:
 
 ```{r file-structure-with-doc, echo=FALSE, results="markup", comment=""}
 withr::with_dir(fs::path_temp(), {fs::dir_tree(basename(new_project_path))})
