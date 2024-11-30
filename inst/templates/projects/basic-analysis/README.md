@@ -23,8 +23,10 @@ If dependencies have been managed by using `usethis::use_package("packagename")`
 through the `DESCRIPTION` file, installing dependencies is as easy as opening the
 `{{ProjectName}}.Rproj` file and running this command in the console:
 
-    # install.packages("remotes")
-    remotes::install_deps()
+```         
+# install.packages("pak")
+pak::pak()
+```
 
 You'll need to have remotes installed for this to work.
 
