@@ -8,6 +8,9 @@
     `usethis::use_blank_slate("project")` (#144).
 -   New projects have Git added from the beginning, so don't need to use
     `setup_with_git()` (#148).
+-   Move `gert` to imports, since it makes more sense that it should be
+    a hard dependency as the project is an opinionated project creator
+    (#145).
 
 ## Fixes and improvements
 
@@ -17,6 +20,9 @@
 -   The `title` field in the `DESCRIPTION` file is needed by many
     usethis functions, so it is added to the created `DESCRIPTION` file
     (#137).
+-   It isn't always useful to have the report created when the project
+    is setup, so adding the report via `create_report()` is removed from
+    `project_setup()` (#142).
 
 # prodigenr 0.6.2
 
@@ -130,3 +136,4 @@
 -   Added a `NEWS.md` file to track changes to the package.
 -   Fixed a bug that prevented an Rproj file and the Rprofile files from
     being installed and created.
+

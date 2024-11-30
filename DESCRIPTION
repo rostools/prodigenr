@@ -20,11 +20,11 @@ Imports:
     withr,
     rlang,
     cli,
-    whisker
+    whisker,
+    gert
 Suggests: 
     testthat,
-    knitr,
-    gert
+    knitr
 VignetteBuilder: knitr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

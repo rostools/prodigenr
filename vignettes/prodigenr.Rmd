@@ -80,18 +80,20 @@ create_slides()
 ```{r example-create-functions-hide, echo=FALSE}
 # you need to run these in the project's console
 withr::with_dir(
-    new = new_project_path,
-    code = {
-        create_slides()
-    }
+  new = new_project_path,
+  code = {
+    create_slides()
+  }
 )
 ```
 
 Now two more files have been added to the `docs/` folder. The resulting
 file structure should look something like this:
 
-```{r file-structure-with-docs, echo=FALSE, results="markup", comment=""}
-withr::with_dir(fs::path_temp(), {fs::dir_tree(basename(new_project_path))})
+```{r file-structure-with-doc, echo=FALSE, results="markup", comment=""}
+withr::with_dir(fs::path_temp(), {
+  fs::dir_tree(basename(new_project_path))
+})
 ```
 
 At present, there are only two template files that you can view:
