@@ -43,6 +43,7 @@ setup_project <-
         update_template("DESCRIPTION", data = list(ProjectName = proj_name))
         update_template("template-Rproj", paste0(proj_name, ".Rproj"))
         fs::file_delete("template-Rproj")
+        fs::file_move("gitignore", ".gitignore")
         update_template("README.md", data = list(ProjectName = proj_name))
         gert::git_init()
       }
