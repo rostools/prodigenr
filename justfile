@@ -37,13 +37,12 @@ style:
 # Run linter
 lint:
   #!/usr/bin/Rscript
-  devtools::lint(
-  )
+  devtools::lint()
 
 # Build pkgdown website
 build-site:
   #!/usr/bin/Rscript
-  devtools::build_site()
+  pkgdown::build_site()
 
 # Run local CRAN checks
 check:
