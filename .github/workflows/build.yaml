@@ -40,7 +40,7 @@ jobs:
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  cran-check:
+  pkgdown:
     uses: ./.github/workflows/reusable-pkgdown.yaml
     needs: cran-check
     permissions:
