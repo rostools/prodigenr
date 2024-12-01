@@ -29,13 +29,13 @@ create_doc <- function(type = c("report", "slides")) {
   file_name <- normalizePath(file.path("docs", paste0(type)), mustWork = FALSE)
   template_file <- fs::path_package("prodigenr", "templates", "documents", type)
   if (fs::file_exists(file_name)) {
-    cli::cli_abort("The file {.file docs/{type}.qmd} already exists.")
+    cli::cli_abort("The file {.file docs/{type}} already exists.")
   } else {
     fs::file_copy(
       path = template_file,
       new_path = file_name
     )
-    cli::cli_alert_success("Created the {.file docs/{type}.qmd}!")
+    cli::cli_alert_success("Created the {.file docs/{type}}!")
   }
   invisible()
 }
