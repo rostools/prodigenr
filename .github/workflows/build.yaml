@@ -1,0 +1,49 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+  release:
+    types: [published]
+
+name: Build package
+
+permissions: read-all
+
+jobs:
+  style:
+    uses: ./.github/workflows/reusable-style.yaml
+    permissions:
+      contents: write
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  document:
+    uses: ./.github/workflows/reusable-document.yaml
+    needs: style
+    permissions:
+      contents: write
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  test-coverage:
+    uses: ./.github/workflows/reusable-coverage.yaml
+    needs: document
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  cran-check:
+    uses: ./.github/workflows/reusable-cran-check.yaml
+    needs: test-coverage
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  cran-check:
+    uses: ./.github/workflows/reusable-pkgdown.yaml
+    needs: cran-check
+    permissions:
+      contents: write
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
