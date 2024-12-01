@@ -1,20 +1,18 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
-  push:
-    paths: ["**.[rR]", "**.[qrR]md", "**.[rR]markdown", "**.[rR]nw", "**.[rR]profile"]
+  workflow_call:
+    secrets:
+      github-token:
+        required: true
 
-name: Run styler 
-
-permissions: read-all
+name: Run styler to reformat R code
 
 jobs:
   style:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.github-token }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

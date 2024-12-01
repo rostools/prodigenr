@@ -1,20 +1,18 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
-  push:
-    paths: ["R/**"]
+  workflow_call:
+    secrets:
+      github-token:
+        required: true
 
-name: Run roxygen2
-
-permissions: read-all
+name: Run roxygen2 to build function documentation
 
 jobs:
   document:
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    permissions:
-      contents: write
+      GITHUB_PAT: ${{ secrets.github-token }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

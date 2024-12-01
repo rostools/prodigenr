@@ -1,20 +1,18 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
-  push:
-    branches: main
-  pull_request:
-    branches: main
+  workflow_call:
+    secrets:
+      github-token:
+        required: true
 
 name: Run test coverage
-
-permissions: read-all
 
 jobs:
   test-coverage:
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.github-token }}
 
     steps:
       - uses: actions/checkout@v4
