@@ -28,15 +28,9 @@ jobs:
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  test-coverage:
-    uses: ./.github/workflows/reusable-coverage.yaml
-    needs: document
-    secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
-
   cran-check:
     uses: ./.github/workflows/reusable-cran-check.yaml
-    needs: test-coverage
+    needs: document
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
