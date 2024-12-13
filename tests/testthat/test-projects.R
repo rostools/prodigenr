@@ -40,3 +40,16 @@ test_that("project checks work correctly", {
   expect_true(fs::file_exists(sub("test new", "test-new", proj_with_space)))
   fs::dir_delete(sub("test new", "test-new", proj_with_space))
 })
+
+test_that("project still creates if Git already exists", {
+  new_project <- fs::path_temp("test-with-git")
+  fs::dir_create(new_project)
+  withr::with_dir(new = new_project, {
+    gert::git_init()
+  })
+  expect_message(
+    setup_project(new_project),
+    regexp = ".*has [Gg]it.*"
+  )
+  expect_true(fs::dir_exists(new_project))
+})

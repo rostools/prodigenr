@@ -29,13 +29,17 @@ setup_project <-
     }
 
     if (fs::dir_exists(proj_path)) {
-      cli::cli_abort(c(
-        "The {.val {proj_path}} folder already exists, so project creation is canceled.",
-        "i" = "Delete the folder or use another name (not {.val {proj_name}}) for your project."
-      ))
+      if (has_only_git(proj_path)) {
+        cli::cli_alert_info("The project already has Git added, so we will skip setting up Git.")
+      } else {
+        cli::cli_abort(c(
+          "The {.val {proj_path}} folder already exists, so project creation is canceled.",
+          "i" = "Delete the folder or use another name (not {.val {proj_name}}) for your project."
+        ))
+      }
     }
     proj_template <- find_template("projects", "basic-analysis")
-    fs::dir_copy(proj_template, new_path = proj_path)
+    fs::dir_copy(proj_template, new_path = proj_path, overwrite = TRUE)
 
     withr::with_dir(
       new = proj_path,
@@ -45,10 +49,16 @@ setup_project <-
         fs::file_delete("template-Rproj")
         fs::file_move("gitignore", ".gitignore")
         update_template("README.md", data = list(ProjectName = proj_name))
-        gert::git_init()
+        if (!fs::dir_exists(".git")) {
+          gert::git_init()
+        }
       }
     )
   }
+
+has_only_git <- function(path) {
+  all(basename(fs::dir_ls(path, all = TRUE)) == ".git")
+}
 
 # Git setup functions -------------------------------------------
 
