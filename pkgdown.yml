@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   prodigenr: prodigenr.html
-last_built: 2024-12-13T13:49Z
+last_built: 2024-12-13T18:19Z
 urls:
   reference: https://rostools.github.io/prodigenr/reference
   article: https://rostools.github.io/prodigenr/articles
